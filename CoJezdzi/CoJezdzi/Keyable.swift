@@ -1,8 +1,3 @@
-//
-//  Created by Lukasz Stocki on 26/02/16.
-//  Copyright © 2016 A.C.M.E. All rights reserved.
-//
-
 import Foundation
 
 public protocol Keyable {
