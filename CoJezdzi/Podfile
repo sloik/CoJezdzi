@@ -1,0 +1,26 @@
+platform :ios, '10.0'
+
+use_frameworks!
+
+#swift_version = '3.0'
+
+target 'CoJezdzi' do
+
+	pod 'HTTPStatusCodes'
+    pod 'SnapKit', :git => 'https://github.com/SnapKit/SnapKit.git', :branch => 'swift-4'
+	pod 'Unbox'
+    pod 'ActionSheetPicker-3.0'
+    pod 'Colours'
+    pod 'PromiseKit', :git => 'https://github.com/mxcl/PromiseKit.git', :branch => 'swift4-beta1'
+
+end
+
+# dsymys for all installed pods
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf-with-dsym'
+        end
+    end
+end
+
