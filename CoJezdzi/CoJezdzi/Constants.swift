@@ -2,6 +2,11 @@ import MapKit
 import UIKit
 
 struct C {
+    
+    struct API {
+        static let FakeAPI = "YOUR_WARSAW_API_API_KEY"
+    }
+    
     struct Error {
         static let Domain = "Co.Jezdzi.Error"
         
@@ -83,10 +88,5 @@ struct C {
         static let WarsawCenter = CLLocationCoordinate2D(latitude: 52.2429341157752, longitude: 21.0083538438228)
         static let DefaultSpreadDistance: CLLocationDistance = 14000
         static let WarsawRegion = MKCoordinateRegionMakeWithDistance(WarsawCenter, DefaultSpreadDistance, DefaultSpreadDistance)
-    }
-
-    struct Adds {
-        static let MapBannerTestID       = "ca-app-pub-3940256099942544/2934735716"
-        static let MapBannerProductionID = "ca-app-pub-3061604519345756/4564629627"
     }
 }

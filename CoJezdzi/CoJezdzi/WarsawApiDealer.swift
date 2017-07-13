@@ -42,7 +42,7 @@ struct WarsawAPI {
     }
     
     struct ParamValue {
-        static let APIKey     = "YOUR_WARSAW_API_API_KEY"
+        static let APIKey     = C.API.FakeAPI // get your api key from https://api.um.warszawa.pl
         static let ResourceID = "c7238cfe-8b1f-4c38-bb4a-de386db7e776"
         static let TypeTram   = "2"
         static let TypeBus    = "1"
@@ -84,6 +84,7 @@ class WarsawApiDealer: DataPullerDataProvider {
     }
     
     private func getBusData() -> Promise<[TData]> {
+        assert(WarsawAPI.ParamValue.APIKey != C.API.FakeAPI, "you need warsaw api developer key!")
 
         return Promise { fulfill, reject in
             let sessionConfig = URLSessionConfiguration.default
@@ -128,6 +129,8 @@ class WarsawApiDealer: DataPullerDataProvider {
     }
     
     private func getTramData() -> Promise<[TData]> {
+        assert(WarsawAPI.ParamValue.APIKey != C.API.FakeAPI, "you need warsaw api developer key!")
+        
         return Promise { fulfill, reject in
             let sessionConfig = URLSessionConfiguration.default
             let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
