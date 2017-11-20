@@ -415,21 +415,6 @@ extension MapScene: UserLocationProvider {
     }
 
     fileprivate func regnerateAnnotations(_ data: [TData]) {
-
-        let toBeRemoved = mapView.annotations 
-        
-        mapView.annotations.forEach { (annotation) in
-            if let annView = mapView.view(for: annotation),
-                let tann = annView as? TAnnotationView {
-                
-                let index = toBeRemoved.index(of: tann.annotation!)
-                
-                
-                
-            }
-        }
-        
-        
         // remove all annotation views...
         mapView.removeAnnotations(mapView.annotations)
 
