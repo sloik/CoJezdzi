@@ -2,10 +2,9 @@ import Foundation
 
 enum AvailableCity: String {
     case Warszawa = "Warszawa"
-    case Krakow   = "Kraków"
     
     static var allCases: [AvailableCity] {
-        return [.Warszawa, .Krakow]
+        return [.Warszawa]
     }
 }
 

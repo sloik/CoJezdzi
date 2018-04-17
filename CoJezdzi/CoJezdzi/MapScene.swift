@@ -18,12 +18,7 @@ struct PayloadData {
 extension SettingsPersistance {
     var cityApiDealer: DataPullerDataProvider {
         get {
-            return KrakowApiDealer()
-            
-            let dealers: [AvailableCity: DataPullerDataProvider] =
-                [.Warszawa: WarsawApiDealer(), .Krakow: KrakowApiDealer()]
-            
-            return dealers[seletedCity]!
+            return WarsawApiDealer()
         }
     }
 }
@@ -240,7 +235,7 @@ private extension MapScene {
 extension MapScene {
 
     @IBAction func userDidTapRefreshMapData(_ sender: UIButton) {
-        triggerDataRefreshOrShowAlertToUser();
+        triggerDataRefresh();
     }
 
     @IBAction func userDidTapShowCurrentLocation(_ sender: UIButton) {
@@ -273,69 +268,12 @@ private extension MapScene {
         return false
     }
 
-    func triggerDataRefreshOrShowAlertToUser() {
+    func triggerDataRefresh() {
         refreshMapDataButton.isEnabled = false
 
         if shouldRefreshData {
             dataPuller!.refreshData()
-        } else {
-            showEducationalAlertToTheUser()
         }
-    }
-
-    func showEducationalAlertToTheUser() {
-        refreshMapDataButton.isEnabled = true
-
-        let alertMessage = "Dane udostępnane przez Warszawskie API (serwer) są aktualizowane co 30-35 sekund. Więc wygląda na to, że jeszcze nie ma dostępnych najnowszych. Jeżeli chcesz aby były aktualizowane częściej lub też aby pokazywały trasy, kierunek jazdy oraz pozycję autbusów itp. trzeba wejść na stronę warszawskiego API i wypełnić formulaż kontaktowy wraz z opisem oczekiwanych funkcjonalności (wiadomość będzie w schowku). \n\nRazem możemy więcej! 👍🏻"
-        let alertControler = UIAlertController.init(title: "🤔 Serwer Nie Ma Najnowszych Danych",
-                                                    message: alertMessage,
-                                                    preferredStyle: .alert)
-
-        let actionOk = UIAlertAction.init(title: "Ok 😎", style: .default, handler: nil)
-        alertControler.addAction(actionOk)
-
-        let actionGoToPage = UIAlertAction.init(title: "Wypełnij Formularz Na Stronie ✍🏻", style: .default) { (_) in
-
-            let message =
-            "Witam serdecznie,\n\n" +
-
-            "Warszawskie API jest fajne niestery brakuje w nim kilku funkcjonalności, które by sprawiły że byłoby doskonał! Manowicie:\n" +
-            " - brakuje położeń autobusów,\n" +
-            " - brakuje kierunków jazdy danych składów,\n" +
-            " - unikalnych identyfikatorów pojazdów/składów\n" +
-            " - brakuje informacji o trasach (przebieg, przystanki)\n" +
-            " - dane aktualizowane są za rzadko\n\n" +
-
-            "Dlatego zwracam się z uprzejmą prośbą o dodanie tych funkcjonalności.\n" +
-            "Pozdrawiam :)"
-
-            if MFMailComposeViewController.canSendMail() {
-
-                #if DEBUG
-                    let email =  "stocki.lukasz+webform@gmail.com"
-                #else
-                    let email =  "webapi@um.warszawa.pl"
-                #endif
-
-                let composeVC = MFMailComposeViewController()
-                composeVC.mailComposeDelegate = self
-
-                // Configure the fields of the interface.
-                composeVC.setToRecipients([email])
-                composeVC.setSubject("Proszę o poszerzenie funkcjonalności warszawskiego API")
-                composeVC.setMessageBody(message, isHTML: false)
-
-                // Present the view controller modally.
-                self.present(composeVC, animated: true, completion: nil)
-            }
-            else {
-                UIPasteboard.general.string = message
-                self.performSegue(withIdentifier: C.Storyboard.SegueID.ShowWebAPIForm, sender: nil)
-            }
-        }
-        alertControler.addAction(actionGoToPage)
-
-        self.present(alertControler, animated: true, completion: nil)
     }
 }
 
@@ -519,13 +457,6 @@ extension MapScene: CLLocationManagerDelegate {
         default:
             break
         }
-    }
-}
-
-// MARK: - MFMailComposeViewControllerDelegate
-extension MapScene: MFMailComposeViewControllerDelegate {
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        self.dismiss(animated: true, completion: nil)
     }
 }
 

@@ -34,10 +34,8 @@
 		EF6392971EA7E32300AF6055 /* PeristanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392961EA7E32300AF6055 /* PeristanceModel.swift */; };
 		EF63929F1EAAB02C00AF6055 /* DataPullerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929E1EAAB02C00AF6055 /* DataPullerDataProvider.swift */; };
 		EF6392A31EAAB0E300AF6055 /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392A21EAAB0E300AF6055 /* URL_Extensions.swift */; };
-		EF6392A51EAAB1AC00AF6055 /* KrakowApiDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392A41EAAB1AC00AF6055 /* KrakowApiDealer.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
-		EFE05BD81EABDEB5004D7AFA /* KrakowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BD71EABDEB5004D7AFA /* KrakowData.swift */; };
 		EFE05BDA1EACA3D1004D7AFA /* JSON_Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BD91EACA3D1004D7AFA /* JSON_Utilities.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
 /* End PBXBuildFile section */
@@ -99,10 +97,8 @@
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF63929E1EAAB02C00AF6055 /* DataPullerDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerDataProvider.swift; sourceTree = "<group>"; };
 		EF6392A21EAAB0E300AF6055 /* URL_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Extensions.swift; sourceTree = "<group>"; };
-		EF6392A41EAAB1AC00AF6055 /* KrakowApiDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KrakowApiDealer.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		EF7657411EAB3AED007C4E3D /* CoJezdziTests copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy2-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy2-Info.plist"; sourceTree = "<absolute>"; };
-		EFE05BD71EABDEB5004D7AFA /* KrakowData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KrakowData.swift; sourceTree = "<group>"; };
 		EFE05BD91EACA3D1004D7AFA /* JSON_Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSON_Utilities.swift; path = Assets.xcassets/JSON_Utilities.swift; sourceTree = "<group>"; };
 		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
 		F0BFC42A0906562B0FEAA840 /* Pods-CoJezdzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,7 +241,6 @@
 				EF63929D1EAAAFCF00AF6055 /* APIDealers */,
 				BABDD4AA1C7774CD00152EBD /* DataPuller.swift */,
 				BA56857F1C7677AB00D3B5FE /* TData.swift */,
-				EFE05BD71EABDEB5004D7AFA /* KrakowData.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -292,7 +287,6 @@
 		EF63929D1EAAAFCF00AF6055 /* APIDealers */ = {
 			isa = PBXGroup;
 			children = (
-				EF6392A41EAAB1AC00AF6055 /* KrakowApiDealer.swift */,
 				BA56857C1C765DB600D3B5FE /* WarsawApiDealer.swift */,
 				EF3743D11EB3DA7100684757 /* WarsawApiResponseParser.swift */,
 			);
@@ -549,12 +543,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFE05BD81EABDEB5004D7AFA /* KrakowData.swift in Sources */,
 				BABDD4BD1C78FC8100152EBD /* SettingsVC.swift in Sources */,
 				BA56857D1C765DB600D3B5FE /* WarsawApiDealer.swift in Sources */,
 				BA6160C31C9D44B3008F3DD3 /* FilterCollectionViewCell.swift in Sources */,
 				BA773DA61C8323BA005A54CA /* ButtonTableViewCell.swift in Sources */,
-				EF6392A51EAAB1AC00AF6055 /* KrakowApiDealer.swift in Sources */,
 				BA5685781C7647E400D3B5FE /* MapScene.swift in Sources */,
 				BABDD4AF1C785DA300152EBD /* TAnnotationView.swift in Sources */,
 				BABDD4B71C78708900152EBD /* TAnnotation.swift in Sources */,
@@ -673,7 +665,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
@@ -721,7 +713,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
