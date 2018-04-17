@@ -15,6 +15,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.5.0):
     - PromiseKit/CorePromise
+  - ReSwift (4.0.1)
   - SnapKit (4.0.0)
   - Unbox (2.5.0)
 
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Colours
   - HTTPStatusCodes
   - PromiseKit
+  - ReSwift
   - SnapKit
   - Unbox
 
@@ -31,9 +33,10 @@ SPEC CHECKSUMS:
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   HTTPStatusCodes: 88155ba36826366a898a7b4f34d311f49083d546
   PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
 
-PODFILE CHECKSUM: 9911b6081db4c5373f89f310bb70c3cd7291d873
+PODFILE CHECKSUM: a66b11e216fab8ec310ec6dcb90c81347d6a9add
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
