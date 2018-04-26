@@ -103,7 +103,7 @@ class MapScene: UIViewController, LinesProvider {
         edgesForExtendedLayout = UIRectEdge()
 
         mapView.delegate = self
-        dataPuller!.startPullingTData()
+//        dataPuller!.startPullingTData()
 
         styleSettingsButton()
         styleCurrentLocationButton()
