@@ -1,6 +1,10 @@
 
 import Foundation
 
-struct FetchTramsAction {
-    
+import ReSwift
+
+struct FetchTramsAction: Action {
+    init() {
+        print(#function)
+    }
 }

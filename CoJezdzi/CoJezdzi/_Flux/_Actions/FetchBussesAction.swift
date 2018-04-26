@@ -1,6 +1,10 @@
 
 import Foundation
 
-struct FetchBussesAction {
-    
+import ReSwift
+
+struct FetchBussesAction: Action {
+    init() {
+        print(#function)
+    }
 }
