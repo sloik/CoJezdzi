@@ -2,8 +2,8 @@
 import Foundation
 
 import HTTPStatusCodes
-import PromiseKit
-import Unbox
+//import PromiseKit
+//import Unbox
 
 //    • Time - datetime - znacznik czasu
 //    • Lat - float - szerokość geograficzna GPS
@@ -69,108 +69,110 @@ class WarsawApiDealer: DataPullerDataProvider {
     var apiBaseUrl: String { return WarsawAPI.BaseURL }
     
     func getTramsAndBusData(_ completion: @escaping FullDataPullingCompletion) {
-        when(fulfilled: getBusData(), getTramData()).then { (busData:[TData], tramData:[TData]) in
-            completion(tramData, busData)
-        }.catch {_ in
-            self.trams = []
-            self.busses = []
-            
-            completion([], [])
-        }
+//        when(fulfilled: getBusData(), getTramData()).then { (busData:[TData], tramData:[TData]) in
+//            completion(tramData, busData)
+//        }.catch {_ in
+//            self.trams = []
+//            self.busses = []
+//
+//            completion([], [])
+//        }
     }
     
     func getLastFetchedData(_ completion: @escaping FullDataPullingCompletion) {
         completion(trams, busses)
     }
     
-    private func getBusData() -> Promise<[TData]> {
+    private func getBusData() -> [TData] {
+        return []
         assert(WarsawAPI.ParamValue.APIKey != C.API.FakeAPI, "you need warsaw api developer key!")
 
-        return Promise { fulfill, reject in
-            let sessionConfig = URLSessionConfiguration.default
-            let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-            
-            var URL = Foundation.URL(string: WarsawAPI.BaseURL)
-            let URLParams = [
-                WarsawAPI.ParamKey.ResourceID: WarsawAPI.ParamValue.ResourceID,
-                WarsawAPI.ParamKey.APIKey    : WarsawAPI.ParamValue.APIKey,
-                WarsawAPI.ParamKey.TypeKey   : WarsawAPI.ParamValue.TypeBus
-            ]
-            
-            URL = URL?.NSURLByAppending(queryParameters: URLParams)
-            
-            let request = NSMutableURLRequest(url: URL!)
-            request.httpMethod = C.Networking.HTTPMethod.POST
-            
-            // Start the task
-            let task = session.dataTask(with: request as URLRequest) {
-                (data: Data?, response: URLResponse?, err: Error? ) in
-                
-                let mapping = { (dic: JsonDictionary) throws -> TData in
-                    let unboxableDic = dic as UnboxableDictionary
-                    var bus = try unbox(dictionary: unboxableDic) as TData
-                    bus.type = .Bus
-                    
-                    return bus
-                }
-                
-                let postMaping = {
-                    self.busses = $0
-                }
-                
-                self.responseParser.parseApiData(data: data, response: response, error: err,
-                                                 fulfill: fulfill, reject: reject,
-                                                 mapping: mapping,
-                                                 postMaping: postMaping)
-            }
-            
-            task.resume()
-        }
+//        return Promise { fulfill, reject in
+//            let sessionConfig = URLSessionConfiguration.default
+//            let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+//
+//            var URL = Foundation.URL(string: WarsawAPI.BaseURL)
+//            let URLParams = [
+//                WarsawAPI.ParamKey.ResourceID: WarsawAPI.ParamValue.ResourceID,
+//                WarsawAPI.ParamKey.APIKey    : WarsawAPI.ParamValue.APIKey,
+//                WarsawAPI.ParamKey.TypeKey   : WarsawAPI.ParamValue.TypeBus
+//            ]
+//
+//            URL = URL?.NSURLByAppending(queryParameters: URLParams)
+//
+//            let request = NSMutableURLRequest(url: URL!)
+//            request.httpMethod = C.Networking.HTTPMethod.POST
+//
+//            // Start the task
+//            let task = session.dataTask(with: request as URLRequest) {
+//                (data: Data?, response: URLResponse?, err: Error? ) in
+//
+//                let mapping = { (dic: JsonDictionary) throws -> TData in
+//                    let unboxableDic = dic as UnboxableDictionary
+//                    var bus = try unbox(dictionary: unboxableDic) as TData
+//                    bus.type = .Bus
+//
+//                    return bus
+//                }
+//
+//                let postMaping = {
+//                    self.busses = $0
+//                }
+//
+//                self.responseParser.parseApiData(data: data, response: response, error: err,
+//                                                 fulfill: fulfill, reject: reject,
+//                                                 mapping: mapping,
+//                                                 postMaping: postMaping)
+//            }
+//        
+//            task.resume()
+//        }
     }
     
-    private func getTramData() -> Promise<[TData]> {
+    private func getTramData() -> [TData] {
+        return []
         assert(WarsawAPI.ParamValue.APIKey != C.API.FakeAPI, "you need warsaw api developer key!")
         
-        return Promise { fulfill, reject in
-            let sessionConfig = URLSessionConfiguration.default
-            let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
-            
-            var URL = Foundation.URL(string: WarsawAPI.BaseURL)
-            let URLParams = [
-                WarsawAPI.ParamKey.ResourceID: WarsawAPI.ParamValue.ResourceID,
-                WarsawAPI.ParamKey.APIKey    : WarsawAPI.ParamValue.APIKey,
-                WarsawAPI.ParamKey.TypeKey   : WarsawAPI.ParamValue.TypeTram
-            ]
-            
-            URL = URL?.NSURLByAppending(queryParameters: URLParams)
-            
-            let request = NSMutableURLRequest(url: URL!)
-            request.httpMethod = C.Networking.HTTPMethod.POST
-            
-            // Start the task
-            let task = session.dataTask(with: request as URLRequest) {
-                (data: Data?, response: URLResponse?, err: Error? ) in
-                
-                let mapping = { (dic: JsonDictionary) throws -> TData in
-                    let unboxableDic = dic as UnboxableDictionary
-                    var tram = try unbox(dictionary: unboxableDic) as TData
-                    tram.type = .Tram
-                    
-                    return tram
-                }
-                
-                let postMaping = {
-                    self.trams = $0
-                }
-                
-                self.responseParser.parseApiData(data: data, response: response, error: err,
-                                                 fulfill: fulfill, reject: reject,
-                                                 mapping: mapping,
-                                                 postMaping: postMaping)
-            }
-            
-            task.resume()
-        }
+//        return Promise { fulfill, reject in
+//            let sessionConfig = URLSessionConfiguration.default
+//            let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+//
+//            var URL = Foundation.URL(string: WarsawAPI.BaseURL)
+//            let URLParams = [
+//                WarsawAPI.ParamKey.ResourceID: WarsawAPI.ParamValue.ResourceID,
+//                WarsawAPI.ParamKey.APIKey    : WarsawAPI.ParamValue.APIKey,
+//                WarsawAPI.ParamKey.TypeKey   : WarsawAPI.ParamValue.TypeTram
+//            ]
+//
+//            URL = URL?.NSURLByAppending(queryParameters: URLParams)
+//
+//            let request = NSMutableURLRequest(url: URL!)
+//            request.httpMethod = C.Networking.HTTPMethod.POST
+//
+//            // Start the task
+//            let task = session.dataTask(with: request as URLRequest) {
+//                (data: Data?, response: URLResponse?, err: Error? ) in
+//
+//                let mapping = { (dic: JsonDictionary) throws -> TData in
+//                    let unboxableDic = dic as UnboxableDictionary
+//                    var tram = try unbox(dictionary: unboxableDic) as TData
+//                    tram.type = .Tram
+//
+//                    return tram
+//                }
+//
+//                let postMaping = {
+//                    self.trams = $0
+//                }
+//
+//                self.responseParser.parseApiData(data: data, response: response, error: err,
+//                                                 fulfill: fulfill, reject: reject,
+//                                                 mapping: mapping,
+//                                                 postMaping: postMaping)
+//            }
+//
+//            task.resume()
+//        }
     }
 }
 

@@ -102,21 +102,21 @@ class MapScene: UIViewController, LinesProvider {
 
         edgesForExtendedLayout = UIRectEdge()
 
-        mapView.delegate = self
-//        dataPuller!.startPullingTData()
-
-        styleSettingsButton()
-        styleCurrentLocationButton()
-        styleRefreshMapDataButton()
-
-        zoomMapOnTheCity()
-        zoomOnUserLocationIfNotShity()
-
-        timeIndycatorView?.backgroundColor = UIColor.grape()
-
-        mapView.snp.makeConstraints { (make) in
-            make.top.equalTo(view)
-        }
+//        mapView.delegate = self
+////        dataPuller!.startPullingTData()
+//
+//        styleSettingsButton()
+//        styleCurrentLocationButton()
+//        styleRefreshMapDataButton()
+//
+//        zoomMapOnTheCity()
+//        zoomOnUserLocationIfNotShity()
+//
+//        timeIndycatorView?.backgroundColor = UIColor.grape()
+//
+//        mapView.snp.makeConstraints { (make) in
+//            make.top.equalTo(view)
+//        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

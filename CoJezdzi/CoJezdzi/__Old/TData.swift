@@ -1,6 +1,6 @@
 import Foundation
 import CoreLocation
-import Unbox
+//import Unbox
 
 enum VehicleType {
     case Bus
@@ -8,7 +8,7 @@ enum VehicleType {
     case Unknown
 }
 
-struct TData: Unboxable {
+struct TData {
 
     let lat      : Double
     
@@ -21,19 +21,19 @@ struct TData: Unboxable {
     
     var type     : VehicleType = .Unknown
     
-    init(unboxer: Unboxer) {
-        lon       = try! unboxer.unbox(key: "Lon")
-        lat       = try! unboxer.unbox(key: "Lat")
-
-        let unboxedLines: String     = try! unboxer.unbox(key: "Lines")
-        lines = unboxedLines.trimmingCharacters(in: .whitespacesAndNewlines)
-        fullLines = nil
-
-        time      = try! unboxer.unbox(key: "Time")
-
-        let unboxedBrigade: String   = try! unboxer.unbox(key: "Brigade")
-        brigade = unboxedBrigade.trimmingCharacters(in: .whitespacesAndNewlines)
-    }
+//    init(unboxer: Unboxer) {
+//        lon       = try! unboxer.unbox(key: "Lon")
+//        lat       = try! unboxer.unbox(key: "Lat")
+//
+//        let unboxedLines: String     = try! unboxer.unbox(key: "Lines")
+//        lines = unboxedLines.trimmingCharacters(in: .whitespacesAndNewlines)
+//        fullLines = nil
+//
+//        time      = try! unboxer.unbox(key: "Time")
+//
+//        let unboxedBrigade: String   = try! unboxer.unbox(key: "Brigade")
+//        brigade = unboxedBrigade.trimmingCharacters(in: .whitespacesAndNewlines)
+//    }
 
 }
 

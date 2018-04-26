@@ -1,42 +1,26 @@
 PODS:
-  - ActionSheetPicker-3.0 (2.2.0)
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
-  - HTTPStatusCodes (3.1.2)
-  - PromiseKit (4.5.0):
-    - PromiseKit/Foundation (= 4.5.0)
-    - PromiseKit/QuartzCore (= 4.5.0)
-    - PromiseKit/UIKit (= 4.5.0)
-  - PromiseKit/CorePromise (4.5.0)
-  - PromiseKit/Foundation (4.5.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.5.0):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.5.0):
-    - PromiseKit/CorePromise
+  - HTTPStatusCodes (3.2.0)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
   - ReSwift (4.0.1)
-  - SnapKit (4.0.0)
-  - Unbox (2.5.0)
 
 DEPENDENCIES:
-  - ActionSheetPicker-3.0
   - Colours
   - HTTPStatusCodes
-  - PromiseKit
+  - R.swift
   - ReSwift
-  - SnapKit
-  - Unbox
 
 SPEC CHECKSUMS:
-  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
-  HTTPStatusCodes: 88155ba36826366a898a7b4f34d311f49083d546
-  PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
+  HTTPStatusCodes: 69f50d229c4b5d6dcb48fad9c86e32ded975bcd3
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
 
-PODFILE CHECKSUM: a66b11e216fab8ec310ec6dcb90c81347d6a9add
+PODFILE CHECKSUM: 0c5c29b081b7a7ca380021e59c7d14092f4c76de
 
 COCOAPODS: 1.4.0

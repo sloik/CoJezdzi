@@ -9,7 +9,7 @@ target 'CoJezdzi' do
     pod 'Colours'
     pod 'HTTPStatusCodes'
     pod 'ReSwift'
-    pod 'Rswift'
+    pod 'R.swift'
 
 end
 

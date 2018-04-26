@@ -1,6 +1,6 @@
 import UIKit
 
-import ActionSheetPicker_3_0
+//import ActionSheetPicker_3_0
 
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
@@ -343,22 +343,22 @@ typealias CityChooser = SettingsVC
 extension CityChooser {
     func displayCityChooser() {
         
-        let currentCity = persisatance!.seletedCity
-        ActionSheetStringPicker.show(withTitle: "Wybierz miasto",
-                                     rows: AvailableCity.allCases.map{ $0.rawValue },
-                                     initialSelection: AvailableCity.allCases.index(of: currentCity)!,
-                                     doneBlock: { (_, _, values) in
-                                        guard let selectedCity = values as? String else {
-                                            return
-                                        }
-                                        
-                                        if let city = AvailableCity(rawValue: selectedCity), city != currentCity {
-                                            self.persisatance!.seletedCity = city
-                                            self.refreshVisibleRows()
-                                        }
-        }, cancel: { picker in
-            return
-        }, origin: self.tableView)
+//        let currentCity = persisatance!.seletedCity
+//        ActionSheetStringPicker.show(withTitle: "Wybierz miasto",
+//                                     rows: AvailableCity.allCases.map{ $0.rawValue },
+//                                     initialSelection: AvailableCity.allCases.index(of: currentCity)!,
+//                                     doneBlock: { (_, _, values) in
+//                                        guard let selectedCity = values as? String else {
+//                                            return
+//                                        }
+//                                        
+//                                        if let city = AvailableCity(rawValue: selectedCity), city != currentCity {
+//                                            self.persisatance!.seletedCity = city
+//                                            self.refreshVisibleRows()
+//                                        }
+//        }, cancel: { picker in
+//            return
+//        }, origin: self.tableView)
         
     }
 }

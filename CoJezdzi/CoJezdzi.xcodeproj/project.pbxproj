@@ -13,33 +13,34 @@
 		BA56854D1C763EA600D3B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA56854C1C763EA600D3B5FE /* Assets.xcassets */; };
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
-		EF4266AC209262350076238D /* DataPuller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426697209262340076238D /* DataPuller.swift */; };
-		EF4266AD209262350076238D /* FilerResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426698209262340076238D /* FilerResultHandler.swift */; };
-		EF4266AE209262350076238D /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426699209262340076238D /* SwitchTableViewCell.swift */; };
-		EF4266AF209262350076238D /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669A209262340076238D /* MapScene.swift */; };
-		EF4266B0209262350076238D /* WarsawApiDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669B209262340076238D /* WarsawApiDealer.swift */; };
-		EF4266B1209262350076238D /* WarsawApiResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669C209262340076238D /* WarsawApiResponseParser.swift */; };
-		EF4266B2209262350076238D /* PeristanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669D209262340076238D /* PeristanceModel.swift */; };
-		EF4266B3209262350076238D /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
-		EF4266B4209262350076238D /* TData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669F209262340076238D /* TData.swift */; };
-		EF4266B5209262350076238D /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A0209262340076238D /* WebScene.swift */; };
-		EF4266B6209262350076238D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A1209262340076238D /* SettingsVC.swift */; };
-		EF4266B7209262350076238D /* SettingsPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A2209262340076238D /* SettingsPersistance.swift */; };
-		EF4266B8209262350076238D /* DataPullerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A3209262340076238D /* DataPullerDataProvider.swift */; };
-		EF4266B9209262350076238D /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A4209262340076238D /* ButtonTableViewCell.swift */; };
-		EF4266BA209262350076238D /* Keyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A5209262350076238D /* Keyable.swift */; };
-		EF4266BB209262350076238D /* TAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A6209262350076238D /* TAnnotation.swift */; };
-		EF4266BC209262350076238D /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A7209262350076238D /* FilterCollectionViewCell.swift */; };
-		EF4266BD209262350076238D /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
-		EF4266BE209262350076238D /* TAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A9209262350076238D /* TAnnotationView.swift */; };
-		EF4266BF209262350076238D /* FilterLinesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AA209262350076238D /* FilterLinesCVC.swift */; };
-		EF4266C0209262350076238D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
 		EF4266C3209263250076238D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C2209263250076238D /* AppState.swift */; };
 		EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C62092641C0076238D /* FetchTramsAction.swift */; };
 		EF4266C9209264640076238D /* FetchBussesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C8209264640076238D /* FetchBussesAction.swift */; };
 		EF4266CB209264DC0076238D /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266CA209264DC0076238D /* AppReducer.swift */; };
 		EF4266CF209266560076238D /* WarsawTramDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266CE209266560076238D /* WarsawTramDto.swift */; };
 		EF4266D2209267DC0076238D /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266D1209267DC0076238D /* VehicleType.swift */; };
+		EF4266D52092733A0076238D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266D42092733A0076238D /* R.generated.swift */; };
+		EF4266EC209273C80076238D /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A4209262340076238D /* ButtonTableViewCell.swift */; };
+		EF4266ED209273C80076238D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
+		EF4266EE209273C80076238D /* DataPuller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426697209262340076238D /* DataPuller.swift */; };
+		EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A3209262340076238D /* DataPullerDataProvider.swift */; };
+		EF4266F0209273C80076238D /* FilerResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426698209262340076238D /* FilerResultHandler.swift */; };
+		EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A7209262350076238D /* FilterCollectionViewCell.swift */; };
+		EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AA209262350076238D /* FilterLinesCVC.swift */; };
+		EF4266F3209273C80076238D /* Keyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A5209262350076238D /* Keyable.swift */; };
+		EF4266F4209273C80076238D /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669A209262340076238D /* MapScene.swift */; };
+		EF4266F5209273C80076238D /* PeristanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669D209262340076238D /* PeristanceModel.swift */; };
+		EF4266F6209273C80076238D /* SettingsPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A2209262340076238D /* SettingsPersistance.swift */; };
+		EF4266F7209273C80076238D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A1209262340076238D /* SettingsVC.swift */; };
+		EF4266F8209273C80076238D /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426699209262340076238D /* SwitchTableViewCell.swift */; };
+		EF4266F9209273C80076238D /* TAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A6209262350076238D /* TAnnotation.swift */; };
+		EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A9209262350076238D /* TAnnotationView.swift */; };
+		EF4266FB209273C80076238D /* TData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669F209262340076238D /* TData.swift */; };
+		EF4266FC209273C80076238D /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
+		EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
+		EF4266FE209273C80076238D /* WarsawApiDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669B209262340076238D /* WarsawApiDealer.swift */; };
+		EF4266FF209273C80076238D /* WarsawApiResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669C209262340076238D /* WarsawApiResponseParser.swift */; };
+		EF426700209273C80076238D /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A0209262340076238D /* WebScene.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
@@ -106,6 +107,7 @@
 		EF4266CA209264DC0076238D /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		EF4266CE209266560076238D /* WarsawTramDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawTramDto.swift; sourceTree = "<group>"; };
 		EF4266D1209267DC0076238D /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
+		EF4266D42092733A0076238D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -195,6 +197,7 @@
 				BA5685511C763EA600D3B5FE /* Info.plist */,
 				BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */,
 				BA5685491C763EA600D3B5FE /* Main.storyboard */,
+				EF4266D42092733A0076238D /* R.generated.swift */,
 			);
 			path = CoJezdzi;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildConfigurationList = BA56856A1C763EA600D3B5FE /* Build configuration list for PBXNativeTarget "CoJezdzi" */;
 			buildPhases = (
 				6A16703F009F8ADF718EF658 /* [CP] Check Pods Manifest.lock */,
+				EF426701209275410076238D /* Rswift */,
 				BA56853E1C763EA600D3B5FE /* Sources */,
 				BA56853F1C763EA600D3B5FE /* Frameworks */,
 				BA5685401C763EA600D3B5FE /* Resources */,
@@ -527,6 +531,20 @@
 			shellPath = /bin/sh;
 			shellScript = "#\n# http://blog.jaredsinclair.com/post/97193356620/the-best-of-all-possible-xcode-automated-build\n#\n# Set the build number to the current git commit count.\n# If we're using the Dev scheme, then we'll suffix the build\n# number with the current branch name, to make collisions\n# far less likely across feature branches.\n# Based on: http://w3facility.info/question/how-do-i-force-xcode-to-rebuild-the-info-plist-file-in-my-project-every-time-i-build-the-project/\n#\n# Updated with dSYM handling from http://yellowfeather.co.uk/blog/auto-incrementing-build-number-in-xcode-revisited/\n#\n\ngit=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD --count`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\necho \"Incremented the build number ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
 		};
+		EF426701209275410076238D /* Rswift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Rswift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -534,34 +552,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4266F6209273C80076238D /* SettingsPersistance.swift in Sources */,
+				EF4266EC209273C80076238D /* ButtonTableViewCell.swift in Sources */,
+				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
+				EF4266FF209273C80076238D /* WarsawApiResponseParser.swift in Sources */,
+				EF4266F8209273C80076238D /* SwitchTableViewCell.swift in Sources */,
+				EF4266F9209273C80076238D /* TAnnotation.swift in Sources */,
+				EF4266FC209273C80076238D /* TDataAnnotation.swift in Sources */,
 				EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */,
-				EF4266BD209262350076238D /* TDataAnnotation.swift in Sources */,
-				EF4266C0209262350076238D /* Constants.swift in Sources */,
-				EF4266B4209262350076238D /* TData.swift in Sources */,
-				EF4266B0209262350076238D /* WarsawApiDealer.swift in Sources */,
-				EF4266B7209262350076238D /* SettingsPersistance.swift in Sources */,
 				EF4266CB209264DC0076238D /* AppReducer.swift in Sources */,
-				EF4266BB209262350076238D /* TAnnotation.swift in Sources */,
-				EF4266B3209262350076238D /* URL_Extensions.swift in Sources */,
-				EF4266AF209262350076238D /* MapScene.swift in Sources */,
-				EF4266BF209262350076238D /* FilterLinesCVC.swift in Sources */,
+				EF4266F5209273C80076238D /* PeristanceModel.swift in Sources */,
+				EF4266D52092733A0076238D /* R.generated.swift in Sources */,
 				EF4266C3209263250076238D /* AppState.swift in Sources */,
-				EF4266BA209262350076238D /* Keyable.swift in Sources */,
+				EF4266F3209273C80076238D /* Keyable.swift in Sources */,
+				EF4266EE209273C80076238D /* DataPuller.swift in Sources */,
+				EF4266F7209273C80076238D /* SettingsVC.swift in Sources */,
+				EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */,
+				EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */,
+				EF4266ED209273C80076238D /* Constants.swift in Sources */,
 				BA5685461C763EA600D3B5FE /* AppDelegate.swift in Sources */,
-				EF4266B8209262350076238D /* DataPullerDataProvider.swift in Sources */,
-				EF4266B6209262350076238D /* SettingsVC.swift in Sources */,
-				EF4266BC209262350076238D /* FilterCollectionViewCell.swift in Sources */,
-				EF4266B1209262350076238D /* WarsawApiResponseParser.swift in Sources */,
+				EF4266F4209273C80076238D /* MapScene.swift in Sources */,
 				EF4266C9209264640076238D /* FetchBussesAction.swift in Sources */,
-				EF4266AE209262350076238D /* SwitchTableViewCell.swift in Sources */,
+				EF426700209273C80076238D /* WebScene.swift in Sources */,
 				EF4266CF209266560076238D /* WarsawTramDto.swift in Sources */,
-				EF4266AC209262350076238D /* DataPuller.swift in Sources */,
-				EF4266AD209262350076238D /* FilerResultHandler.swift in Sources */,
-				EF4266B9209262350076238D /* ButtonTableViewCell.swift in Sources */,
-				EF4266B2209262350076238D /* PeristanceModel.swift in Sources */,
-				EF4266BE209262350076238D /* TAnnotationView.swift in Sources */,
+				EF4266FE209273C80076238D /* WarsawApiDealer.swift in Sources */,
+				EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */,
+				EF4266FB209273C80076238D /* TData.swift in Sources */,
+				EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */,
+				EF4266F0209273C80076238D /* FilerResultHandler.swift in Sources */,
 				EF4266D2209267DC0076238D /* VehicleType.swift in Sources */,
-				EF4266B5209262350076238D /* WebScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

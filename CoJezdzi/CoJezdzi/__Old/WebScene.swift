@@ -2,7 +2,7 @@
 import SafariServices
 import UIKit
 
-import SnapKit
+//import SnapKit
 
 class WebScene: UIViewController {
 
@@ -20,8 +20,8 @@ class WebScene: UIViewController {
         addChildViewController(webVC)
         view.addSubview(webVC.view)
 
-        webVC.view.snp.makeConstraints { (make) in
-            make.edges.equalTo(spacer)
-        }
+//        webVC.view.snp.makeConstraints { (make) in
+//            make.edges.equalTo(spacer)
+//        }
     }
 }

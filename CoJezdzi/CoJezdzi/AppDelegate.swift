@@ -1,5 +1,6 @@
 import UIKit
 
+import Colours
 import ReSwift
 
 @UIApplicationMain
