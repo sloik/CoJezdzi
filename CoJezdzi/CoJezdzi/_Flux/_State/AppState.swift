@@ -3,7 +3,7 @@ import Foundation
 
 import ReSwift
 
-struct State: StateType {
+struct AppState: StateType {
     var currentTrams : [WarsawTramDto] = []
     var previousTrams: [WarsawTramDto] = []
 }
