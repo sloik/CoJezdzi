@@ -13,30 +13,29 @@
 		BA56854D1C763EA600D3B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA56854C1C763EA600D3B5FE /* Assets.xcassets */; };
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
-		BA5685741C76414D00D3B5FE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5685731C76414D00D3B5FE /* MapKit.framework */; };
-		BA5685781C7647E400D3B5FE /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685771C7647E400D3B5FE /* MapScene.swift */; };
-		BA56857A1C764A1E00D3B5FE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685791C764A1E00D3B5FE /* Constants.swift */; };
-		BA56857D1C765DB600D3B5FE /* WarsawApiDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56857C1C765DB600D3B5FE /* WarsawApiDealer.swift */; };
-		BA5685801C7677AB00D3B5FE /* TData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56857F1C7677AB00D3B5FE /* TData.swift */; };
-		BA6160C11C9D438A008F3DD3 /* FilterLinesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6160C01C9D438A008F3DD3 /* FilterLinesCVC.swift */; };
-		BA6160C31C9D44B3008F3DD3 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6160C21C9D44B3008F3DD3 /* FilterCollectionViewCell.swift */; };
-		BA6160C51C9D478D008F3DD3 /* FilerResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6160C41C9D478D008F3DD3 /* FilerResultHandler.swift */; };
-		BA6160C71C9D9258008F3DD3 /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6160C61C9D9258008F3DD3 /* WebScene.swift */; };
-		BA773DA61C8323BA005A54CA /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA773DA51C8323BA005A54CA /* ButtonTableViewCell.swift */; };
-		BABDD4AB1C7774CD00152EBD /* DataPuller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD4AA1C7774CD00152EBD /* DataPuller.swift */; };
-		BABDD4AF1C785DA300152EBD /* TAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD4AE1C785DA300152EBD /* TAnnotationView.swift */; };
-		BABDD4B51C78704300152EBD /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD4B41C78704300152EBD /* TDataAnnotation.swift */; };
-		BABDD4B71C78708900152EBD /* TAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD4B61C78708900152EBD /* TAnnotation.swift */; };
-		BABDD4BD1C78FC8100152EBD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD4BC1C78FC8100152EBD /* SettingsVC.swift */; };
-		BABDD4BF1C7907DB00152EBD /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD4BE1C7907DB00152EBD /* SwitchTableViewCell.swift */; };
-		BABDD4C31C7A478900152EBD /* SettingsPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABDD4C21C7A478900152EBD /* SettingsPersistance.swift */; };
-		EF3743D21EB3DA7100684757 /* WarsawApiResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3743D11EB3DA7100684757 /* WarsawApiResponseParser.swift */; };
-		EF6392971EA7E32300AF6055 /* PeristanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392961EA7E32300AF6055 /* PeristanceModel.swift */; };
-		EF63929F1EAAB02C00AF6055 /* DataPullerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929E1EAAB02C00AF6055 /* DataPullerDataProvider.swift */; };
-		EF6392A31EAAB0E300AF6055 /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392A21EAAB0E300AF6055 /* URL_Extensions.swift */; };
+		EF4266AC209262350076238D /* DataPuller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426697209262340076238D /* DataPuller.swift */; };
+		EF4266AD209262350076238D /* FilerResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426698209262340076238D /* FilerResultHandler.swift */; };
+		EF4266AE209262350076238D /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426699209262340076238D /* SwitchTableViewCell.swift */; };
+		EF4266AF209262350076238D /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669A209262340076238D /* MapScene.swift */; };
+		EF4266B0209262350076238D /* WarsawApiDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669B209262340076238D /* WarsawApiDealer.swift */; };
+		EF4266B1209262350076238D /* WarsawApiResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669C209262340076238D /* WarsawApiResponseParser.swift */; };
+		EF4266B2209262350076238D /* PeristanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669D209262340076238D /* PeristanceModel.swift */; };
+		EF4266B3209262350076238D /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
+		EF4266B4209262350076238D /* TData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669F209262340076238D /* TData.swift */; };
+		EF4266B5209262350076238D /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A0209262340076238D /* WebScene.swift */; };
+		EF4266B6209262350076238D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A1209262340076238D /* SettingsVC.swift */; };
+		EF4266B7209262350076238D /* SettingsPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A2209262340076238D /* SettingsPersistance.swift */; };
+		EF4266B8209262350076238D /* DataPullerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A3209262340076238D /* DataPullerDataProvider.swift */; };
+		EF4266B9209262350076238D /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A4209262340076238D /* ButtonTableViewCell.swift */; };
+		EF4266BA209262350076238D /* Keyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A5209262350076238D /* Keyable.swift */; };
+		EF4266BB209262350076238D /* TAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A6209262350076238D /* TAnnotation.swift */; };
+		EF4266BC209262350076238D /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A7209262350076238D /* FilterCollectionViewCell.swift */; };
+		EF4266BD209262350076238D /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
+		EF4266BE209262350076238D /* TAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A9209262350076238D /* TAnnotationView.swift */; };
+		EF4266BF209262350076238D /* FilterLinesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AA209262350076238D /* FilterLinesCVC.swift */; };
+		EF4266C0209262350076238D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
-		EFE05BDA1EACA3D1004D7AFA /* JSON_Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BD91EACA3D1004D7AFA /* JSON_Utilities.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,33 +72,32 @@
 		BA5685611C763EA600D3B5FE /* CoJezdziUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoJezdziUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoJezdziUITests.swift; sourceTree = "<group>"; };
 		BA5685671C763EA600D3B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA5685731C76414D00D3B5FE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		BA5685771C7647E400D3B5FE /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
-		BA5685791C764A1E00D3B5FE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		BA56857C1C765DB600D3B5FE /* WarsawApiDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiDealer.swift; sourceTree = "<group>"; };
-		BA56857F1C7677AB00D3B5FE /* TData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TData.swift; sourceTree = "<group>"; };
-		BA6160C01C9D438A008F3DD3 /* FilterLinesCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterLinesCVC.swift; sourceTree = "<group>"; };
-		BA6160C21C9D44B3008F3DD3 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
-		BA6160C41C9D478D008F3DD3 /* FilerResultHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilerResultHandler.swift; sourceTree = "<group>"; };
-		BA6160C61C9D9258008F3DD3 /* WebScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebScene.swift; sourceTree = "<group>"; };
-		BA773DA51C8323BA005A54CA /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
-		BABDD4AA1C7774CD00152EBD /* DataPuller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPuller.swift; sourceTree = "<group>"; };
-		BABDD4AE1C785DA300152EBD /* TAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAnnotationView.swift; sourceTree = "<group>"; };
-		BABDD4B41C78704300152EBD /* TDataAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDataAnnotation.swift; sourceTree = "<group>"; };
-		BABDD4B61C78708900152EBD /* TAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAnnotation.swift; sourceTree = "<group>"; };
 		BABDD4BA1C78CDD500152EBD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		BABDD4BC1C78FC8100152EBD /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		BABDD4BE1C7907DB00152EBD /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
-		BABDD4C21C7A478900152EBD /* SettingsPersistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistance.swift; sourceTree = "<group>"; };
-		EF3743D11EB3DA7100684757 /* WarsawApiResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiResponseParser.swift; sourceTree = "<group>"; };
-		EF6392961EA7E32300AF6055 /* PeristanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModel.swift; sourceTree = "<group>"; };
+		EF426697209262340076238D /* DataPuller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPuller.swift; sourceTree = "<group>"; };
+		EF426698209262340076238D /* FilerResultHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilerResultHandler.swift; sourceTree = "<group>"; };
+		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		EF42669A209262340076238D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
+		EF42669B209262340076238D /* WarsawApiDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiDealer.swift; sourceTree = "<group>"; };
+		EF42669C209262340076238D /* WarsawApiResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiResponseParser.swift; sourceTree = "<group>"; };
+		EF42669D209262340076238D /* PeristanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModel.swift; sourceTree = "<group>"; };
+		EF42669E209262340076238D /* URL_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Extensions.swift; sourceTree = "<group>"; };
+		EF42669F209262340076238D /* TData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TData.swift; sourceTree = "<group>"; };
+		EF4266A0209262340076238D /* WebScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebScene.swift; sourceTree = "<group>"; };
+		EF4266A1209262340076238D /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		EF4266A2209262340076238D /* SettingsPersistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistance.swift; sourceTree = "<group>"; };
+		EF4266A3209262340076238D /* DataPullerDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerDataProvider.swift; sourceTree = "<group>"; };
+		EF4266A4209262340076238D /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
+		EF4266A5209262350076238D /* Keyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyable.swift; sourceTree = "<group>"; };
+		EF4266A6209262350076238D /* TAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAnnotation.swift; sourceTree = "<group>"; };
+		EF4266A7209262350076238D /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF4266A8209262350076238D /* TDataAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDataAnnotation.swift; sourceTree = "<group>"; };
+		EF4266A9209262350076238D /* TAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAnnotationView.swift; sourceTree = "<group>"; };
+		EF4266AA209262350076238D /* FilterLinesCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterLinesCVC.swift; sourceTree = "<group>"; };
+		EF4266AB209262350076238D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
-		EF63929E1EAAB02C00AF6055 /* DataPullerDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerDataProvider.swift; sourceTree = "<group>"; };
-		EF6392A21EAAB0E300AF6055 /* URL_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Extensions.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		EF7657411EAB3AED007C4E3D /* CoJezdziTests copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy2-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy2-Info.plist"; sourceTree = "<absolute>"; };
-		EFE05BD91EACA3D1004D7AFA /* JSON_Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSON_Utilities.swift; path = Assets.xcassets/JSON_Utilities.swift; sourceTree = "<group>"; };
 		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
 		F0BFC42A0906562B0FEAA840 /* Pods-CoJezdzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA5685741C76414D00D3B5FE /* MapKit.framework in Frameworks */,
 				7EAF57B028A0F8C9F6E1D4F6 /* Pods_CoJezdzi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,19 +175,12 @@
 		BA5685441C763EA600D3B5FE /* CoJezdzi */ = {
 			isa = PBXGroup;
 			children = (
+				EF426696209262090076238D /* _Old */,
 				BA5685511C763EA600D3B5FE /* Info.plist */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
-				BA5685791C764A1E00D3B5FE /* Constants.swift */,
 				BA56854C1C763EA600D3B5FE /* Assets.xcassets */,
-				BABDD4B21C786FEF00152EBD /* Classes */,
-				EF6392A11EAAB0A300AF6055 /* Extensions */,
-				BA5685751C76417400D3B5FE /* Frameworks */,
 				BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */,
 				BA5685491C763EA600D3B5FE /* Main.storyboard */,
-				BA56857B1C765AC900D3B5FE /* Networking */,
-				BABDD4B31C786FFB00152EBD /* Protocols */,
-				BA5685761C7647C700D3B5FE /* ViewControllers */,
-				BABDD4AD1C785D7400152EBD /* Views Cells */,
 			);
 			path = CoJezdzi;
 			sourceTree = "<group>";
@@ -215,91 +205,32 @@
 			path = CoJezdziUITests;
 			sourceTree = "<group>";
 		};
-		BA5685751C76417400D3B5FE /* Frameworks */ = {
+		EF426696209262090076238D /* _Old */ = {
 			isa = PBXGroup;
 			children = (
-				BA5685731C76414D00D3B5FE /* MapKit.framework */,
+				EF4266A4209262340076238D /* ButtonTableViewCell.swift */,
+				EF4266AB209262350076238D /* Constants.swift */,
+				EF426697209262340076238D /* DataPuller.swift */,
+				EF4266A3209262340076238D /* DataPullerDataProvider.swift */,
+				EF426698209262340076238D /* FilerResultHandler.swift */,
+				EF4266A7209262350076238D /* FilterCollectionViewCell.swift */,
+				EF4266AA209262350076238D /* FilterLinesCVC.swift */,
+				EF4266A5209262350076238D /* Keyable.swift */,
+				EF42669A209262340076238D /* MapScene.swift */,
+				EF42669D209262340076238D /* PeristanceModel.swift */,
+				EF4266A2209262340076238D /* SettingsPersistance.swift */,
+				EF4266A1209262340076238D /* SettingsVC.swift */,
+				EF426699209262340076238D /* SwitchTableViewCell.swift */,
+				EF4266A6209262350076238D /* TAnnotation.swift */,
+				EF4266A9209262350076238D /* TAnnotationView.swift */,
+				EF42669F209262340076238D /* TData.swift */,
+				EF4266A8209262350076238D /* TDataAnnotation.swift */,
+				EF42669E209262340076238D /* URL_Extensions.swift */,
+				EF42669B209262340076238D /* WarsawApiDealer.swift */,
+				EF42669C209262340076238D /* WarsawApiResponseParser.swift */,
+				EF4266A0209262340076238D /* WebScene.swift */,
 			);
-			name = Frameworks;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		BA5685761C7647C700D3B5FE /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				BA5685771C7647E400D3B5FE /* MapScene.swift */,
-				BABDD4BC1C78FC8100152EBD /* SettingsVC.swift */,
-				BA6160C01C9D438A008F3DD3 /* FilterLinesCVC.swift */,
-				BA6160C61C9D9258008F3DD3 /* WebScene.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		BA56857B1C765AC900D3B5FE /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				EF63929D1EAAAFCF00AF6055 /* APIDealers */,
-				BABDD4AA1C7774CD00152EBD /* DataPuller.swift */,
-				BA56857F1C7677AB00D3B5FE /* TData.swift */,
-			);
-			name = Networking;
-			sourceTree = "<group>";
-		};
-		BABDD4AD1C785D7400152EBD /* Views Cells */ = {
-			isa = PBXGroup;
-			children = (
-				BABDD4AE1C785DA300152EBD /* TAnnotationView.swift */,
-				BABDD4BE1C7907DB00152EBD /* SwitchTableViewCell.swift */,
-				BA773DA51C8323BA005A54CA /* ButtonTableViewCell.swift */,
-				BA6160C21C9D44B3008F3DD3 /* FilterCollectionViewCell.swift */,
-			);
-			name = "Views Cells";
-			sourceTree = "<group>";
-		};
-		BABDD4B21C786FEF00152EBD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				EF6392951EA7E2EE00AF6055 /* Persistance */,
-				BABDD4B61C78708900152EBD /* TAnnotation.swift */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		BABDD4B31C786FFB00152EBD /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				EF63929E1EAAB02C00AF6055 /* DataPullerDataProvider.swift */,
-				BABDD4B41C78704300152EBD /* TDataAnnotation.swift */,
-				BA6160C41C9D478D008F3DD3 /* FilerResultHandler.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		EF6392951EA7E2EE00AF6055 /* Persistance */ = {
-			isa = PBXGroup;
-			children = (
-				BABDD4C21C7A478900152EBD /* SettingsPersistance.swift */,
-				EF6392961EA7E32300AF6055 /* PeristanceModel.swift */,
-			);
-			name = Persistance;
-			sourceTree = "<group>";
-		};
-		EF63929D1EAAAFCF00AF6055 /* APIDealers */ = {
-			isa = PBXGroup;
-			children = (
-				BA56857C1C765DB600D3B5FE /* WarsawApiDealer.swift */,
-				EF3743D11EB3DA7100684757 /* WarsawApiResponseParser.swift */,
-			);
-			name = APIDealers;
-			sourceTree = "<group>";
-		};
-		EF6392A11EAAB0A300AF6055 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EF6392A21EAAB0E300AF6055 /* URL_Extensions.swift */,
-				EFE05BD91EACA3D1004D7AFA /* JSON_Utilities.swift */,
-			);
-			name = Extensions;
+			path = _Old;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,28 +476,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABDD4BD1C78FC8100152EBD /* SettingsVC.swift in Sources */,
-				BA56857D1C765DB600D3B5FE /* WarsawApiDealer.swift in Sources */,
-				BA6160C31C9D44B3008F3DD3 /* FilterCollectionViewCell.swift in Sources */,
-				BA773DA61C8323BA005A54CA /* ButtonTableViewCell.swift in Sources */,
-				BA5685781C7647E400D3B5FE /* MapScene.swift in Sources */,
-				BABDD4AF1C785DA300152EBD /* TAnnotationView.swift in Sources */,
-				BABDD4B71C78708900152EBD /* TAnnotation.swift in Sources */,
-				BABDD4BF1C7907DB00152EBD /* SwitchTableViewCell.swift in Sources */,
-				BA5685801C7677AB00D3B5FE /* TData.swift in Sources */,
-				EF3743D21EB3DA7100684757 /* WarsawApiResponseParser.swift in Sources */,
-				BA6160C71C9D9258008F3DD3 /* WebScene.swift in Sources */,
-				EFE05BDA1EACA3D1004D7AFA /* JSON_Utilities.swift in Sources */,
+				EF4266BD209262350076238D /* TDataAnnotation.swift in Sources */,
+				EF4266C0209262350076238D /* Constants.swift in Sources */,
+				EF4266B4209262350076238D /* TData.swift in Sources */,
+				EF4266B0209262350076238D /* WarsawApiDealer.swift in Sources */,
+				EF4266B7209262350076238D /* SettingsPersistance.swift in Sources */,
+				EF4266BB209262350076238D /* TAnnotation.swift in Sources */,
+				EF4266B3209262350076238D /* URL_Extensions.swift in Sources */,
+				EF4266AF209262350076238D /* MapScene.swift in Sources */,
+				EF4266BF209262350076238D /* FilterLinesCVC.swift in Sources */,
+				EF4266BA209262350076238D /* Keyable.swift in Sources */,
 				BA5685461C763EA600D3B5FE /* AppDelegate.swift in Sources */,
-				EF6392971EA7E32300AF6055 /* PeristanceModel.swift in Sources */,
-				EF6392A31EAAB0E300AF6055 /* URL_Extensions.swift in Sources */,
-				BABDD4AB1C7774CD00152EBD /* DataPuller.swift in Sources */,
-				BABDD4B51C78704300152EBD /* TDataAnnotation.swift in Sources */,
-				BABDD4C31C7A478900152EBD /* SettingsPersistance.swift in Sources */,
-				BA6160C51C9D478D008F3DD3 /* FilerResultHandler.swift in Sources */,
-				BA6160C11C9D438A008F3DD3 /* FilterLinesCVC.swift in Sources */,
-				EF63929F1EAAB02C00AF6055 /* DataPullerDataProvider.swift in Sources */,
-				BA56857A1C764A1E00D3B5FE /* Constants.swift in Sources */,
+				EF4266B8209262350076238D /* DataPullerDataProvider.swift in Sources */,
+				EF4266B6209262350076238D /* SettingsVC.swift in Sources */,
+				EF4266BC209262350076238D /* FilterCollectionViewCell.swift in Sources */,
+				EF4266B1209262350076238D /* WarsawApiResponseParser.swift in Sources */,
+				EF4266AE209262350076238D /* SwitchTableViewCell.swift in Sources */,
+				EF4266AC209262350076238D /* DataPuller.swift in Sources */,
+				EF4266AD209262350076238D /* FilerResultHandler.swift in Sources */,
+				EF4266B9209262350076238D /* ButtonTableViewCell.swift in Sources */,
+				EF4266B2209262350076238D /* PeristanceModel.swift in Sources */,
+				EF4266BE209262350076238D /* TAnnotationView.swift in Sources */,
+				EF4266B5209262350076238D /* WebScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
