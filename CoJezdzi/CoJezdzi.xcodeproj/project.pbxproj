@@ -34,6 +34,12 @@
 		EF4266BE209262350076238D /* TAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A9209262350076238D /* TAnnotationView.swift */; };
 		EF4266BF209262350076238D /* FilterLinesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AA209262350076238D /* FilterLinesCVC.swift */; };
 		EF4266C0209262350076238D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
+		EF4266C3209263250076238D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C2209263250076238D /* AppState.swift */; };
+		EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C62092641C0076238D /* FetchTramsAction.swift */; };
+		EF4266C9209264640076238D /* FetchBussesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C8209264640076238D /* FetchBussesAction.swift */; };
+		EF4266CB209264DC0076238D /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266CA209264DC0076238D /* AppReducer.swift */; };
+		EF4266CF209266560076238D /* WarsawTramDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266CE209266560076238D /* WarsawTramDto.swift */; };
+		EF4266D2209267DC0076238D /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266D1209267DC0076238D /* VehicleType.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
@@ -94,6 +100,12 @@
 		EF4266A9209262350076238D /* TAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAnnotationView.swift; sourceTree = "<group>"; };
 		EF4266AA209262350076238D /* FilterLinesCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterLinesCVC.swift; sourceTree = "<group>"; };
 		EF4266AB209262350076238D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EF4266C2209263250076238D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		EF4266C62092641C0076238D /* FetchTramsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTramsAction.swift; sourceTree = "<group>"; };
+		EF4266C8209264640076238D /* FetchBussesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBussesAction.swift; sourceTree = "<group>"; };
+		EF4266CA209264DC0076238D /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		EF4266CE209266560076238D /* WarsawTramDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawTramDto.swift; sourceTree = "<group>"; };
+		EF4266D1209267DC0076238D /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -175,10 +187,12 @@
 		BA5685441C763EA600D3B5FE /* CoJezdzi */ = {
 			isa = PBXGroup;
 			children = (
-				EF426696209262090076238D /* _Old */,
-				BA5685511C763EA600D3B5FE /* Info.plist */,
+				EF426696209262090076238D /* __Old */,
+				EF4266CD209265AB0076238D /* _DTOs */,
+				EF4266CC209265870076238D /* _Flux */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
 				BA56854C1C763EA600D3B5FE /* Assets.xcassets */,
+				BA5685511C763EA600D3B5FE /* Info.plist */,
 				BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */,
 				BA5685491C763EA600D3B5FE /* Main.storyboard */,
 			);
@@ -205,7 +219,7 @@
 			path = CoJezdziUITests;
 			sourceTree = "<group>";
 		};
-		EF426696209262090076238D /* _Old */ = {
+		EF426696209262090076238D /* __Old */ = {
 			isa = PBXGroup;
 			children = (
 				EF4266A4209262340076238D /* ButtonTableViewCell.swift */,
@@ -230,7 +244,51 @@
 				EF42669C209262340076238D /* WarsawApiResponseParser.swift */,
 				EF4266A0209262340076238D /* WebScene.swift */,
 			);
-			path = _Old;
+			path = __Old;
+			sourceTree = "<group>";
+		};
+		EF4266C1209262FC0076238D /* _State */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266C2209263250076238D /* AppState.swift */,
+			);
+			path = _State;
+			sourceTree = "<group>";
+		};
+		EF4266C4209263550076238D /* _Actions */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266C8209264640076238D /* FetchBussesAction.swift */,
+				EF4266C62092641C0076238D /* FetchTramsAction.swift */,
+			);
+			path = _Actions;
+			sourceTree = "<group>";
+		};
+		EF4266C52092638D0076238D /* _Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266CA209264DC0076238D /* AppReducer.swift */,
+			);
+			path = _Reducers;
+			sourceTree = "<group>";
+		};
+		EF4266CC209265870076238D /* _Flux */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266C4209263550076238D /* _Actions */,
+				EF4266C52092638D0076238D /* _Reducers */,
+				EF4266C1209262FC0076238D /* _State */,
+			);
+			path = _Flux;
+			sourceTree = "<group>";
+		};
+		EF4266CD209265AB0076238D /* _DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266D1209267DC0076238D /* VehicleType.swift */,
+				EF4266CE209266560076238D /* WarsawTramDto.swift */,
+			);
+			path = _DTOs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,27 +534,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */,
 				EF4266BD209262350076238D /* TDataAnnotation.swift in Sources */,
 				EF4266C0209262350076238D /* Constants.swift in Sources */,
 				EF4266B4209262350076238D /* TData.swift in Sources */,
 				EF4266B0209262350076238D /* WarsawApiDealer.swift in Sources */,
 				EF4266B7209262350076238D /* SettingsPersistance.swift in Sources */,
+				EF4266CB209264DC0076238D /* AppReducer.swift in Sources */,
 				EF4266BB209262350076238D /* TAnnotation.swift in Sources */,
 				EF4266B3209262350076238D /* URL_Extensions.swift in Sources */,
 				EF4266AF209262350076238D /* MapScene.swift in Sources */,
 				EF4266BF209262350076238D /* FilterLinesCVC.swift in Sources */,
+				EF4266C3209263250076238D /* AppState.swift in Sources */,
 				EF4266BA209262350076238D /* Keyable.swift in Sources */,
 				BA5685461C763EA600D3B5FE /* AppDelegate.swift in Sources */,
 				EF4266B8209262350076238D /* DataPullerDataProvider.swift in Sources */,
 				EF4266B6209262350076238D /* SettingsVC.swift in Sources */,
 				EF4266BC209262350076238D /* FilterCollectionViewCell.swift in Sources */,
 				EF4266B1209262350076238D /* WarsawApiResponseParser.swift in Sources */,
+				EF4266C9209264640076238D /* FetchBussesAction.swift in Sources */,
 				EF4266AE209262350076238D /* SwitchTableViewCell.swift in Sources */,
+				EF4266CF209266560076238D /* WarsawTramDto.swift in Sources */,
 				EF4266AC209262350076238D /* DataPuller.swift in Sources */,
 				EF4266AD209262350076238D /* FilerResultHandler.swift in Sources */,
 				EF4266B9209262350076238D /* ButtonTableViewCell.swift in Sources */,
 				EF4266B2209262350076238D /* PeristanceModel.swift in Sources */,
 				EF4266BE209262350076238D /* TAnnotationView.swift in Sources */,
+				EF4266D2209267DC0076238D /* VehicleType.swift in Sources */,
 				EF4266B5209262350076238D /* WebScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
