@@ -6,13 +6,10 @@ use_frameworks!
 
 target 'CoJezdzi' do
 
-    pod 'ActionSheetPicker-3.0'
     pod 'Colours'
     pod 'HTTPStatusCodes'
-    pod 'PromiseKit'
     pod 'ReSwift'
-    pod 'SnapKit'
-    pod 'Unbox'
+    pod 'Rswift'
 
 end
 
