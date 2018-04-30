@@ -5,7 +5,7 @@ private typealias pKey = WarsawApiConstants.ParamKey
 private typealias pValue = WarsawApiConstants.ParamValue
 
 struct WarsawApi {
-    static func getTrams(completion: @escaping (Any?) -> Void) {
+    static func getTrams(completion: @escaping (Result<Any>) -> Void) {
         
         let urlComponents = NSURLComponents(string: WarsawApiConstants.BaseURL)!
         urlComponents.queryItems = [URLQueryItem(name: pKey.ResourceID, value: pValue.ResourceID),
@@ -21,7 +21,12 @@ struct WarsawApi {
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
-            completion(data)
+            if let error = error  {
+                defer { completion(.error(error)) }
+                return
+            }
+            
+            completion(.succes(data as Any))
         }
         
         task.resume()
