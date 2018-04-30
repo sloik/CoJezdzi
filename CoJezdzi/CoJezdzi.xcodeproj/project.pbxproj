@@ -198,6 +198,7 @@
 				EF426696209262090076238D /* __Old */,
 				EF4266CD209265AB0076238D /* _DTOs */,
 				EF4266CC209265870076238D /* _Flux */,
+				EF42670E2097A16A0076238D /* _Scenes */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
 				EF42670C2097924A0076238D /* AppRouter.swift */,
 				BA56854C1C763EA600D3B5FE /* Assets.xcassets */,
@@ -240,7 +241,6 @@
 				EF4266A7209262350076238D /* FilterCollectionViewCell.swift */,
 				EF4266AA209262350076238D /* FilterLinesCVC.swift */,
 				EF4266A5209262350076238D /* Keyable.swift */,
-				EF42669A209262340076238D /* MapScene.swift */,
 				EF42669D209262340076238D /* PeristanceModel.swift */,
 				EF4266A2209262340076238D /* SettingsPersistance.swift */,
 				EF4266A1209262340076238D /* SettingsVC.swift */,
@@ -301,6 +301,14 @@
 				EF4266CE209266560076238D /* WarsawTramDto.swift */,
 			);
 			path = _DTOs;
+			sourceTree = "<group>";
+		};
+		EF42670E2097A16A0076238D /* _Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EF42669A209262340076238D /* MapScene.swift */,
+			);
+			path = _Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
