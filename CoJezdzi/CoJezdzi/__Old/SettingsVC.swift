@@ -97,7 +97,7 @@ extension SettingsVC {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
-                performSegue(withIdentifier: C.Storyboard.SegueID.SettingsFilterLines, sender: nil)
+                break
                 
             case C.UI.Settings.MenuLabels.City:
                 displayCityChooser()
@@ -110,7 +110,7 @@ extension SettingsVC {
             break
             
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
-            performSegue(withIdentifier: C.Storyboard.SegueID.AboutApplication, sender: nil)
+            break
             
         case C.Storyboard.CellReuseId.SettingsSwitchCell:
             tableView.visibleCells.forEach{ (cell: UITableViewCell) in
@@ -123,55 +123,6 @@ extension SettingsVC {
             
         default:
             return
-        }
-    }
-}
-
-
-// MARK: - Navigation
-extension SettingsVC {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == C.Storyboard.SegueID.SettingsFilterLines {
-            guard tLinesProvider != nil else { return }
-
-            // get the info about current lines...
-            var providedLines = Set(tLinesProvider!.typeTLines)
-
-            // get the info about lines that were persisted...
-            if let selectedLines = persisatance?.selectedLines {
-
-                // merge them...
-                providedLines.formUnion(selectedLines)
-            }
-
-            // now lines are combined and sorted...
-            let sortedList = providedLines.sorted { Int($0) < Int($1) }
-
-            // create line info array with selected lines alredy marked...
-            let lineInfo = sortedList.map{ (line: String) -> LineInfo in
-                if let selectedLines = persisatance?.selectedLines {
-                    if selectedLines.contains(line) {
-                        return (line, true)
-                    }
-                    else {
-                        return (line, false)
-                    }
-                }
-                else {
-                    return (line, false)
-                }
-            }
-
-            // pass the generetad lines down the controller stack
-            let filterVC = segue.destination as! FilterLinesCVC
-            filterVC.linesToSelect = lineInfo
-
-            // 
-            filterVC.resultHandler = self
-        }
-        else if segue.identifier == C.Storyboard.SegueID.AboutApplication {
-            let webScene = segue.destination as! WebScene
-            webScene.goToURLString = C.Networking.GoToURL.AboutApp
         }
     }
 }

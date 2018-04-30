@@ -38,13 +38,6 @@ struct C {
 
             static let FilterLinesCell         = "FilterLinesCell"
         }
-
-        struct SegueID {
-            static let SettingsFilterLines = "SettingsFilterLines"
-            static let AboutApplication    = "AboutApplication"
-            static let ShowSettings        = "ShowSettings"
-            static let ShowWebAPIForm      = "ShowWebAPIForm"
-        }
     }
 
     struct UI {
