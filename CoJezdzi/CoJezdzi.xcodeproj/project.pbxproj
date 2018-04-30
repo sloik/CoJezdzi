@@ -57,6 +57,8 @@
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
 		EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */; };
 		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
+		EFEE79002097D40D00F95E77 /* MapSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FF2097D40D00F95E77 /* MapSceneState.swift */; };
+		EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE79012097D46800F95E77 /* MapSceneReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +141,8 @@
 		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
 		EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
+		EFEE78FF2097D40D00F95E77 /* MapSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSceneState.swift; sourceTree = "<group>"; };
+		EFEE79012097D46800F95E77 /* MapSceneReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSceneReducer.swift; sourceTree = "<group>"; };
 		F0BFC42A0906562B0FEAA840 /* Pods-CoJezdzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,12 +225,11 @@
 				EF42670E2097A16A0076238D /* _Scenes */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
 				EF42670C2097924A0076238D /* AppRouter.swift */,
-				EF42671A2097CB1D0076238D /* Result.swift */,
-				EF4266D42092733A0076238D /* R.generated.swift */,
 				BA56854C1C763EA600D3B5FE /* Assets.xcassets */,
 				BA5685511C763EA600D3B5FE /* Info.plist */,
 				BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */,
 				BA5685491C763EA600D3B5FE /* Main.storyboard */,
+				EF4266D42092733A0076238D /* R.generated.swift */,
 			);
 			path = CoJezdzi;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4266C2209263250076238D /* AppState.swift */,
+				EFEE78FF2097D40D00F95E77 /* MapSceneState.swift */,
 				EF42670820978E940076238D /* RoutingState.swift */,
 				EF4267042097543A0076238D /* TramsState.swift */,
 			);
@@ -304,6 +308,7 @@
 				EF4266CA209264DC0076238D /* AppReducer.swift */,
 				EF42670A2097918A0076238D /* RoutingReducer.swift */,
 				EF426706209754DC0076238D /* TramsReducer.swift */,
+				EFEE79012097D46800F95E77 /* MapSceneReducer.swift */,
 			);
 			path = _Reducers;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 			children = (
 				EF4266CD209265AB0076238D /* _DTOs */,
 				EF4267142097BD030076238D /* C.Networking.swift */,
+				EF42671A2097CB1D0076238D /* Result.swift */,
 				EF4267122097B9760076238D /* WarsawApi.swift */,
 				EF4267102097B9290076238D /* WarsawApiConstants.swift */,
 				EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */,
@@ -586,11 +592,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFEE79002097D40D00F95E77 /* MapSceneState.swift in Sources */,
 				EF4266F6209273C80076238D /* SettingsPersistance.swift in Sources */,
 				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF4266EC209273C80076238D /* ButtonTableViewCell.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
+				EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */,
 				EF4266FF209273C80076238D /* WarsawApiResponseParser.swift in Sources */,
 				EF42671B2097CB1D0076238D /* Result.swift in Sources */,
 				EF4266F8209273C80076238D /* SwitchTableViewCell.swift in Sources */,
