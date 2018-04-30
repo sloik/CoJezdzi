@@ -43,6 +43,8 @@
 		EF426700209273C80076238D /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A0209262340076238D /* WebScene.swift */; };
 		EF4267052097543A0076238D /* TramsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267042097543A0076238D /* TramsState.swift */; };
 		EF426707209754DC0076238D /* TramsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426706209754DC0076238D /* TramsReducer.swift */; };
+		EF42670920978E940076238D /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670820978E940076238D /* RoutingState.swift */; };
+		EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670A2097918A0076238D /* RoutingReducer.swift */; };
 		EF42670D2097924A0076238D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670C2097924A0076238D /* AppRouter.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
@@ -113,6 +115,8 @@
 		EF4266D42092733A0076238D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		EF4267042097543A0076238D /* TramsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramsState.swift; sourceTree = "<group>"; };
 		EF426706209754DC0076238D /* TramsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramsReducer.swift; sourceTree = "<group>"; };
+		EF42670820978E940076238D /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
+		EF42670A2097918A0076238D /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
 		EF42670C2097924A0076238D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4266C2209263250076238D /* AppState.swift */,
+				EF42670820978E940076238D /* RoutingState.swift */,
 				EF4267042097543A0076238D /* TramsState.swift */,
 			);
 			path = _State;
@@ -279,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4266CA209264DC0076238D /* AppReducer.swift */,
+				EF42670A2097918A0076238D /* RoutingReducer.swift */,
 				EF426706209754DC0076238D /* TramsReducer.swift */,
 			);
 			path = _Reducers;
@@ -555,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF4266F6209273C80076238D /* SettingsPersistance.swift in Sources */,
+				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
 				EF4266EC209273C80076238D /* ButtonTableViewCell.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
 				EF4266FF209273C80076238D /* WarsawApiResponseParser.swift in Sources */,
@@ -576,6 +583,7 @@
 				BA5685461C763EA600D3B5FE /* AppDelegate.swift in Sources */,
 				EF4266F4209273C80076238D /* MapScene.swift in Sources */,
 				EF4266C9209264640076238D /* FetchBussesAction.swift in Sources */,
+				EF42670920978E940076238D /* RoutingState.swift in Sources */,
 				EF426700209273C80076238D /* WebScene.swift in Sources */,
 				EF4266CF209266560076238D /* WarsawTramDto.swift in Sources */,
 				EF4266FE209273C80076238D /* WarsawApiDealer.swift in Sources */,
