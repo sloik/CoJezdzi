@@ -43,6 +43,7 @@
 		EF426700209273C80076238D /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A0209262340076238D /* WebScene.swift */; };
 		EF4267052097543A0076238D /* TramsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267042097543A0076238D /* TramsState.swift */; };
 		EF426707209754DC0076238D /* TramsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426706209754DC0076238D /* TramsReducer.swift */; };
+		EF42670D2097924A0076238D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670C2097924A0076238D /* AppRouter.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
@@ -112,6 +113,7 @@
 		EF4266D42092733A0076238D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		EF4267042097543A0076238D /* TramsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramsState.swift; sourceTree = "<group>"; };
 		EF426706209754DC0076238D /* TramsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramsReducer.swift; sourceTree = "<group>"; };
+		EF42670C2097924A0076238D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -197,6 +199,7 @@
 				EF4266CD209265AB0076238D /* _DTOs */,
 				EF4266CC209265870076238D /* _Flux */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
+				EF42670C2097924A0076238D /* AppRouter.swift */,
 				BA56854C1C763EA600D3B5FE /* Assets.xcassets */,
 				BA5685511C763EA600D3B5FE /* Info.plist */,
 				BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */,
@@ -573,6 +576,7 @@
 				EF4266FB209273C80076238D /* TData.swift in Sources */,
 				EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */,
 				EF4266F0209273C80076238D /* FilerResultHandler.swift in Sources */,
+				EF42670D2097924A0076238D /* AppRouter.swift in Sources */,
 				EF4266D2209267DC0076238D /* VehicleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
