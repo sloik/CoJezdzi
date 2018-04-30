@@ -99,11 +99,18 @@ class MapScene: UIViewController, LinesProvider {
         zoomOnUserLocationIfNotShity()
 
         timeIndycatorView?.backgroundColor = UIColor.grape()
+        
+        store.dispatch(FetchTramsAction.fetch)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+//        store.subscribe(self)
+        
+        store.dispatch(RoutingAction(destination: .map))
 
+        
         invalidateTramsPosytionMarkers()
     }
     
