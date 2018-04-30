@@ -5,5 +5,4 @@ import ReSwift
 
 struct AppState: StateType {
     var currentTrams : TramsState
-    var previousTrams: TramsState
 }
