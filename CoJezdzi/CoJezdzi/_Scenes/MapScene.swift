@@ -36,7 +36,7 @@ class MapScene: UIViewController, LinesProvider {
     @IBOutlet weak var timeIndycatorView: UIView?
 
     // MARK: -
-    fileprivate let locationManager: CLLocationManager
+    let locationManager: CLLocationManager
     fileprivate let persisatance: SettingsPersistance
 
     fileprivate weak var settingsVC: SettingsVC?
@@ -89,7 +89,7 @@ class MapScene: UIViewController, LinesProvider {
 
         edgesForExtendedLayout = UIRectEdge()
 
-        mapView.delegate = self
+        mapView.delegate = self as MKMapViewDelegate
 
         styleSettingsButton()
         styleCurrentLocationButton()
@@ -117,22 +117,6 @@ class MapScene: UIViewController, LinesProvider {
         super.viewWillDisappear(animated)
         
         store.unsubscribe(self)
-    }
-
-    // MARK: - Naviagation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == C.Storyboard.SegueID.ShowSettings {
-            let settingsVC = (segue.destination as! UINavigationController).topViewController as! SettingsVC
-            settingsVC.tLinesProvider = self
-            settingsVC.persisatance = persisatance
-
-            self.settingsVC = settingsVC
-        }
-        else if segue.identifier == C.Storyboard.SegueID.ShowWebAPIForm {
-            let webScene = segue.destination as! WebScene
-            webScene.goToURLString = C.Networking.GoToURL.APIUMWarszawa
-        }
     }
 }
 
@@ -249,36 +233,6 @@ private extension MapScene {
     }
 }
 
-// MARK: - Map View Delegate
-extension MapScene: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is MKUserLocation {
-            return nil
-        }
-
-        var view = mapView.dequeueReusableAnnotationView(withIdentifier: TAnnotationView.ReuseID) as? TAnnotationView
-
-        if view == nil {
-            view = TAnnotationView.init(annotation: annotation, reuseIdentifier: TAnnotationView.ReuseID)
-        }
-
-        view?.frame.size = C.UI.Map.Dimonsion.AnnotationViewSize
-        view?.configure(annotation as! TAnnotation)
-        view?.canShowCallout = true
-
-        return view
-    }
-
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-
-        let zloto = overlay as! MKPolyline
-        let poly = MKPolylineRenderer(polyline: zloto)
-        poly.lineWidth = 3
-        poly.strokeColor = UIColor.coolGray()
-
-        return poly
-    }
-}
 
 // MARK: - Updating Map
 private extension MapScene {
@@ -387,31 +341,6 @@ private extension MapScene {
 
     @objc func invalidateTramsPosytionMarkers() {
 
-    }
-}
-
-// MARK: - Core Location
-
-extension MapScene: CLLocationManagerDelegate {
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-
-        showCurrentLocationButton?.isHidden = false
-
-        switch status {
-
-        case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.startUpdatingLocation()
-
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-
-        case .denied:
-            showCurrentLocationButton?.isHidden = true
-
-        default:
-            break
-        }
     }
 }
 

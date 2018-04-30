@@ -55,6 +55,8 @@
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
+		EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */; };
+		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		EF7657411EAB3AED007C4E3D /* CoJezdziTests copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy2-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy2-Info.plist"; sourceTree = "<absolute>"; };
 		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
+		EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
+		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		F0BFC42A0906562B0FEAA840 /* Pods-CoJezdzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,6 +331,8 @@
 			isa = PBXGroup;
 			children = (
 				EF42669A209262340076238D /* MapScene.swift */,
+				EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */,
+				EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */,
 			);
 			path = _Scenes;
 			sourceTree = "<group>";
@@ -589,6 +595,7 @@
 				EF42671B2097CB1D0076238D /* Result.swift in Sources */,
 				EF4266F8209273C80076238D /* SwitchTableViewCell.swift in Sources */,
 				EF4266F9209273C80076238D /* TAnnotation.swift in Sources */,
+				EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */,
 				EF4266FC209273C80076238D /* TDataAnnotation.swift in Sources */,
 				EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */,
 				EF4266CB209264DC0076238D /* AppReducer.swift in Sources */,
@@ -601,6 +608,7 @@
 				EF4266EE209273C80076238D /* DataPuller.swift in Sources */,
 				EF4266F7209273C80076238D /* SettingsVC.swift in Sources */,
 				EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */,
+				EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */,
 				EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */,
 				EF4266ED209273C80076238D /* Constants.swift in Sources */,
 				BA5685461C763EA600D3B5FE /* AppDelegate.swift in Sources */,
