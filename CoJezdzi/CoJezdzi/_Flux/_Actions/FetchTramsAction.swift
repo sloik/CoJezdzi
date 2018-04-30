@@ -1,10 +1,10 @@
 
-import Foundation
-
 import ReSwift
 
 struct FetchTramsAction: Action {
-    init() {
-        print(#function)
+    let fetched: [WarsawTramDto]
+    
+    static func fetch(state: AppState, store: Store<AppState>) -> FetchTramsAction {
+        return FetchTramsAction(fetched: [])
     }
 }
