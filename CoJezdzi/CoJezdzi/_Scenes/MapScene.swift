@@ -403,4 +403,12 @@ extension MapScene: CLLocationManagerDelegate {
     }
 }
 
+// MARK: - StoreSubscriber
+
+extension MapScene: StoreSubscriber {
+    func newState(state: TramsState) {
+        print(#function + " \(state)")
+    }
+}
+
 // MARK: -
