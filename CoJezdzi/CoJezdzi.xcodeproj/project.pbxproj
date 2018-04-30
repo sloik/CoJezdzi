@@ -586,6 +586,7 @@
 				EF4266CB209264DC0076238D /* AppReducer.swift in Sources */,
 				EF4266F5209273C80076238D /* PeristanceModel.swift in Sources */,
 				EF4266D52092733A0076238D /* R.generated.swift in Sources */,
+				EF4267152097BD030076238D /* C.Networking.swift in Sources */,
 				EF4266C3209263250076238D /* AppState.swift in Sources */,
 				EF4267052097543A0076238D /* TramsState.swift in Sources */,
 				EF4266F3209273C80076238D /* Keyable.swift in Sources */,
