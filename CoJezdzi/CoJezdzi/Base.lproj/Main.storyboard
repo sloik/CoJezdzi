@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UPP-Ft-hI7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,12 +15,12 @@
         <scene sceneID="9DY-eu-WIk">
             <objects>
                 <viewController storyboardIdentifier="MapScene" title="Mapa" id="UPP-Ft-hI7" userLabel="Map Scene" customClass="MapScene" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="qdX-Xj-456">
+                    <view key="view" contentMode="scaleToFill" id="qdX-Xj-456">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-Os-Vwg" userLabel="mapView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-Os-Vwg" userLabel="mapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UI-hL-SXh">
                                 <rect key="frame" x="323" y="575" width="42" height="42"/>
@@ -37,7 +37,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOc-6O-VsM" userLabel="copyrightLabel">
-                                <rect key="frame" x="10" y="31" width="133" height="24"/>
+                                <rect key="frame" x="10" y="31" width="132.5" height="24"/>
                                 <string key="text">Miasto Stołeczne Warszawa
 http://api.um.warszawa.pl</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="10"/>
@@ -63,18 +63,18 @@ http://api.um.warszawa.pl</string>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FWe-Os-Vwg" firstAttribute="leading" secondItem="KJ1-GZ-KvV" secondAttribute="leading" id="8LL-bY-ZRa"/>
                             <constraint firstItem="dOc-6O-VsM" firstAttribute="top" secondItem="KJ1-GZ-KvV" secondAttribute="top" constant="10" id="Eob-Y2-Kkn"/>
                             <constraint firstItem="KJ1-GZ-KvV" firstAttribute="trailing" secondItem="W8T-Lq-e8b" secondAttribute="trailing" id="FsM-Cg-Vhm"/>
                             <constraint firstItem="Iob-TS-gtL" firstAttribute="bottom" secondItem="mXk-At-R5Q" secondAttribute="top" constant="-12" id="HyC-P7-dF3"/>
                             <constraint firstItem="dOc-6O-VsM" firstAttribute="leading" secondItem="KJ1-GZ-KvV" secondAttribute="leading" constant="10" id="N2m-wQ-fqg"/>
+                            <constraint firstItem="FWe-Os-Vwg" firstAttribute="top" secondItem="qdX-Xj-456" secondAttribute="top" id="O7I-9l-3ye"/>
                             <constraint firstItem="mXk-At-R5Q" firstAttribute="right" secondItem="KJ1-GZ-KvV" secondAttribute="right" constant="-10" id="Syj-8X-6jE"/>
-                            <constraint firstItem="KJ1-GZ-KvV" firstAttribute="bottom" secondItem="FWe-Os-Vwg" secondAttribute="bottom" id="ZOu-3F-3sZ"/>
-                            <constraint firstItem="FWe-Os-Vwg" firstAttribute="top" secondItem="KJ1-GZ-KvV" secondAttribute="top" placeholder="YES" id="eVc-Fu-jrH"/>
+                            <constraint firstItem="FWe-Os-Vwg" firstAttribute="trailing" secondItem="KJ1-GZ-KvV" secondAttribute="trailing" id="avA-mK-KDW"/>
+                            <constraint firstItem="FWe-Os-Vwg" firstAttribute="bottom" secondItem="KJ1-GZ-KvV" secondAttribute="bottom" id="erw-Cn-lva"/>
                             <constraint firstItem="mXk-At-R5Q" firstAttribute="bottom" secondItem="1UI-hL-SXh" secondAttribute="top" constant="-12" id="gFE-tE-KD2"/>
                             <constraint firstItem="Iob-TS-gtL" firstAttribute="right" secondItem="KJ1-GZ-KvV" secondAttribute="right" constant="-10" id="hdq-zy-PzN"/>
-                            <constraint firstItem="KJ1-GZ-KvV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dOc-6O-VsM" secondAttribute="trailing" constant="20" symbolic="YES" id="ltD-7X-zbk"/>
-                            <constraint firstItem="KJ1-GZ-KvV" firstAttribute="trailing" secondItem="FWe-Os-Vwg" secondAttribute="trailing" id="nBg-Sr-aoM"/>
+                            <constraint firstItem="KJ1-GZ-KvV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dOc-6O-VsM" secondAttribute="trailing" symbolic="YES" id="ltD-7X-zbk"/>
+                            <constraint firstItem="FWe-Os-Vwg" firstAttribute="leading" secondItem="KJ1-GZ-KvV" secondAttribute="leading" id="mpH-uI-WgJ"/>
                             <constraint firstItem="KJ1-GZ-KvV" firstAttribute="right" secondItem="1UI-hL-SXh" secondAttribute="right" constant="10" id="nMu-Wd-Cah"/>
                             <constraint firstItem="W8T-Lq-e8b" firstAttribute="leading" secondItem="KJ1-GZ-KvV" secondAttribute="leading" id="szE-ie-RXa"/>
                             <constraint firstItem="dOc-6O-VsM" firstAttribute="top" secondItem="W8T-Lq-e8b" secondAttribute="bottom" constant="8" id="vgb-bQ-bFC"/>
@@ -120,13 +120,13 @@ http://api.um.warszawa.pl</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tylko Niskopodłogowe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YV-MO-Pik">
-                                            <rect key="frame" x="16" y="12.5" width="162.5" height="19.5"/>
+                                            <rect key="frame" x="24" y="12.5" width="162.5" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="czQ-AD-gao">
-                                            <rect key="frame" x="310" y="6" width="51" height="31"/>
+                                            <rect key="frame" x="302" y="6" width="51" height="31"/>
                                             <connections>
                                                 <action selector="userDidInteractWithSwitch:" destination="qDV-p0-qVF" eventType="valueChanged" id="Tx3-Az-l2n"/>
                                             </connections>
@@ -150,7 +150,7 @@ http://api.um.warszawa.pl</string>
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Geo-IF-FMy" id="iJ1-7U-d1n">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Wybrane Linie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LsY-qa-LbK">
@@ -178,7 +178,7 @@ http://api.um.warszawa.pl</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46N-0Z-oLm">
-                                            <rect key="frame" x="16" y="7" width="98" height="30"/>
+                                            <rect key="frame" x="24" y="7" width="98" height="30"/>
                                             <state key="normal" title="Usuń Reklamy"/>
                                         </button>
                                     </subviews>
@@ -197,7 +197,7 @@ http://api.um.warszawa.pl</string>
                                 <rect key="frame" x="0.0" y="160" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eu0-v4-tbk" id="C0S-xC-wxV">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mwW-4l-Nk0">
@@ -296,12 +296,12 @@ http://api.um.warszawa.pl</string>
         <scene sceneID="O3a-TK-Ajx">
             <objects>
                 <viewController title="O Aplikacji" id="ys3-Wv-ume" customClass="WebScene" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="WxG-hA-Rd4">
+                    <view key="view" contentMode="scaleToFill" id="WxG-hA-Rd4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al3-14-fey" userLabel="spacer">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -328,7 +328,7 @@ http://api.um.warszawa.pl</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0dN-YF-zbQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Le9-RO-sNU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -347,6 +347,6 @@ http://api.um.warszawa.pl</string>
         <image name="UserSettings" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m6l-cO-Ehv"/>
+        <segue reference="aHu-Gl-GDO"/>
     </inferredMetricsTieBreakers>
 </document>
