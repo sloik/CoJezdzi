@@ -1,6 +1,6 @@
 import MapKit
-import MessageUI
 import UIKit
+import ReSwift
 
 struct PayloadData {
     let busses: [TData]
@@ -57,11 +57,7 @@ class MapScene: UIViewController, LinesProvider {
     var latestData  : PayloadData?
     var previousData: PayloadData?
 
-    var dataPuller:DataPuller?
-
-
     required init?(coder aDecoder: NSCoder) {
-        dataPuller = nil
         locationManager = CLLocationManager.init()
         persisatance = SettingsPersistance.init(defaults: UserDefaults.standard)
         
@@ -69,15 +65,6 @@ class MapScene: UIViewController, LinesProvider {
         
         persisatance.eventDelegate = self
         locationManager.delegate = self
-
-        dataPuller = DataPuller(apiDealer: persisatance.cityApiDealer) { [unowned self] (trams: [TData], busses: [TData]) in
-            self.refreshMapDataButton.isEnabled = true
-            self.processDataDate = Date()
-
-            self.handleUpdate(trams: trams, busses: busses)
-
-            self.processData(trams: trams, busses: busses)
-        }
 
         NotificationCenter.default.addObserver(self,
                                              selector: #selector(invalidateTramsPosytionMarkers),
@@ -103,7 +90,6 @@ class MapScene: UIViewController, LinesProvider {
         edgesForExtendedLayout = UIRectEdge()
 
         mapView.delegate = self
-////        dataPuller!.startPullingTData()
 
         styleSettingsButton()
         styleCurrentLocationButton()
@@ -149,9 +135,6 @@ extension MapScene: SettingsEvent {
     func settingsPersistanceDidChangeCity(_ persistance: SettingsPersistance) {
         latestData = nil
         previousData = nil
-        
-        dataPuller?.apiDealer = persisatance.cityApiDealer
-        dataPuller?.refreshData()
     }
 
 }
@@ -175,7 +158,7 @@ private extension MapScene {
                     // shring animation
                     constraint.constant = t ? self.view.frame.size.width : 0
 
-                    let time = self.dataPuller != nil ? self.dataPuller!.timeToNextPull : self.dataPuller!.defaultRefresRate
+                    let time: TimeInterval = 18
 
                     UIView.animate(withDuration: time,
                         delay: 0,
@@ -246,30 +229,11 @@ extension MapScene {
 private extension MapScene {
 
     var shouldRefreshData: Bool  {
-
-        // no data so it should be allowd to get them
-        guard let latestData = latestData,
-        dataPuller!.curentApiBaseUrl == WarsawApiConstants.BaseURL else { return true }
-
-        let hasDataToDisplay = latestData.count > 0
-        if hasDataToDisplay == false {
-            return true
-        }
-
-        let enoughtTimeHasPassed = fabs(processDataDate.timeIntervalSinceNow) > 5
-        if enoughtTimeHasPassed {
-            return true
-        }
-
-        return false
+        return true
     }
 
     func triggerDataRefresh() {
         refreshMapDataButton.isEnabled = false
-
-        if shouldRefreshData {
-            dataPuller!.refreshData()
-        }
     }
 }
 
@@ -331,7 +295,7 @@ private extension MapScene {
     }
 
     func updateCopyrightLabelText(_ data: [TData]) {
-        var copyright = dataPuller?.copyRightInfo ?? ""
+        var copyright = ""
 
         if let anyData = data.first {
             copyright += anyData.time.replacingOccurrences(of: "T", with: " ")
@@ -410,24 +374,7 @@ private extension MapScene {
     }
 
     @objc func invalidateTramsPosytionMarkers() {
-        // calculate the difference
-        if let randomData = latestData?.trams.first {
-            
-            let puller = dataPuller!
-            let dateFormatter = puller.currentDateFormatter
-            let lastUpdateDate = dateFormatter.date(from: randomData.time)
 
-            // if its bigger than some threshold
-            if fabs(lastUpdateDate?.timeIntervalSinceNow ?? puller.refresRate * 2) > puller.refresRate * 1.95 {
-                // drop the stored previous datata it's too old
-                previousData = nil
-            }
-        }
-
-        // be safe and proces it again
-        if let data = latestData {
-            processData(trams: data.trams, busses: data.busses)
-        }
     }
 }
 
