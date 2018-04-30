@@ -249,7 +249,7 @@ private extension MapScene {
 
         // no data so it should be allowd to get them
         guard let latestData = latestData,
-        dataPuller!.curentApiBaseUrl == WarsawAPI.BaseURL else { return true }
+        dataPuller!.curentApiBaseUrl == WarsawApiConstants.BaseURL else { return true }
 
         let hasDataToDisplay = latestData.count > 0
         if hasDataToDisplay == false {

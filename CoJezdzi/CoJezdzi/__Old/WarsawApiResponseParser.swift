@@ -53,7 +53,7 @@ struct WarsawApiResponseParser {
         // try to parse json
         guard let json = try? JSONSerialization.jsonObject(with: jsonData,
                                                            options: .allowFragments) as? JsonDictionary,
-            let apiData = json?[WarsawAPI.Response.Key.Result] as? [JsonDictionary] else {
+            let apiData = json?[WarsawApiConstants.Response.Key.Result] as? [JsonDictionary] else {
                 
                 let userInfo = [
                     NSLocalizedFailureReasonErrorKey: "Unable to parse JSON",

@@ -24,36 +24,7 @@ import HTTPStatusCodes
 //    "Time": "2017-04-10 20:16:16"
 //},
 
-struct WarsawAPI {
-    static let BaseURL     = "https://api.um.warszawa.pl/api/action/busestrams_get"
-    static let RefreshRate: TimeInterval = 18.0
-    
-    static let DateFormatter: Foundation.DateFormatter = {
-        let formatter = Foundation.DateFormatter.init()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        return formatter
-    }()
-    
-    struct ParamKey {
-        static let APIKey     = "apikey"
-        static let ResourceID = "resource_id"
-        static let TypeKey    = "type"
-    }
-    
-    struct ParamValue {
-        static let APIKey     = C.API.FakeAPI // get your api key from https://api.um.warszawa.pl
-        static let ResourceID = "c7238cfe-8b1f-4c38-bb4a-de386db7e776"
-        static let TypeTram   = "2"
-        static let TypeBus    = "1"
-    }
-    
-    struct Response {
-        struct Key {
-            static let Result = "result"
-        }
-    }
-}
+
 
 class WarsawApiDealer: DataPullerDataProvider {
     
@@ -62,11 +33,11 @@ class WarsawApiDealer: DataPullerDataProvider {
     
     fileprivate let responseParser = WarsawApiResponseParser()
     
-    var refreshRate: TimeInterval { return WarsawAPI.RefreshRate }
+    var refreshRate: TimeInterval { return WarsawApiConstants.RefreshRate }
     
-    var dateFormatter: DateFormatter { return WarsawAPI.DateFormatter }
+    var dateFormatter: DateFormatter { return WarsawApiConstants.DateFormatter }
     
-    var apiBaseUrl: String { return WarsawAPI.BaseURL }
+    var apiBaseUrl: String { return WarsawApiConstants.BaseURL }
     
     func getTramsAndBusData(_ completion: @escaping FullDataPullingCompletion) {
 //        when(fulfilled: getBusData(), getTramData()).then { (busData:[TData], tramData:[TData]) in
@@ -85,7 +56,7 @@ class WarsawApiDealer: DataPullerDataProvider {
     
     private func getBusData() -> [TData] {
         return []
-        assert(WarsawAPI.ParamValue.APIKey != C.API.FakeAPI, "you need warsaw api developer key!")
+        assert(WarsawApiConstants.ParamValue.APIKey != C.API.FakeAPI, "you need warsaw api developer key!")
 
 //        return Promise { fulfill, reject in
 //            let sessionConfig = URLSessionConfiguration.default
@@ -131,7 +102,7 @@ class WarsawApiDealer: DataPullerDataProvider {
     
     private func getTramData() -> [TData] {
         return []
-        assert(WarsawAPI.ParamValue.APIKey != C.API.FakeAPI, "you need warsaw api developer key!")
+        assert(WarsawApiConstants.ParamValue.APIKey != C.API.FakeAPI, "you need warsaw api developer key!")
         
 //        return Promise { fulfill, reject in
 //            let sessionConfig = URLSessionConfiguration.default
