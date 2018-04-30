@@ -46,6 +46,7 @@
 		EF42670920978E940076238D /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670820978E940076238D /* RoutingState.swift */; };
 		EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670A2097918A0076238D /* RoutingReducer.swift */; };
 		EF42670D2097924A0076238D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670C2097924A0076238D /* AppRouter.swift */; };
+		EF4267152097BD030076238D /* C.Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267142097BD030076238D /* C.Networking.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
@@ -118,6 +119,7 @@
 		EF42670820978E940076238D /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
 		EF42670A2097918A0076238D /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
 		EF42670C2097924A0076238D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		EF4267142097BD030076238D /* C.Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.Networking.swift; sourceTree = "<group>"; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -315,6 +317,18 @@
 				EF42669A209262340076238D /* MapScene.swift */,
 			);
 			path = _Scenes;
+			sourceTree = "<group>";
+		};
+		EF42670F2097B9020076238D /* _Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266CD209265AB0076238D /* _DTOs */,
+				EF4267142097BD030076238D /* C.Networking.swift */,
+				EF4267122097B9760076238D /* WarsawApi.swift */,
+				EF4267102097B9290076238D /* WarsawApiConstants.swift */,
+				EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */,
+			);
+			path = _Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
