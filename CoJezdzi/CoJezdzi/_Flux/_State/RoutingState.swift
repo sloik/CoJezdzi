@@ -7,7 +7,7 @@ enum RoutingDestination:String {
 }
 
 struct RoutingState: StateType {
-    let navigationState: RoutingDestination
+    var navigationState: RoutingDestination
     
     init(navigationState: RoutingDestination = .map ) {
         self.navigationState = navigationState
