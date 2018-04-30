@@ -106,6 +106,12 @@ class MapScene: UIViewController, LinesProvider {
 
         invalidateTramsPosytionMarkers()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        store.unsubscribe(self)
+    }
 
     // MARK: - Naviagation
 
