@@ -106,13 +106,13 @@ class MapScene: UIViewController, LinesProvider {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        store.subscribe(self)
+        store.subscribe(self)
         
         store.dispatch(RoutingAction(destination: .map))
         
         invalidateTramsPosytionMarkers()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -418,7 +418,7 @@ extension MapScene: CLLocationManagerDelegate {
 // MARK: - StoreSubscriber
 
 extension MapScene: StoreSubscriber {
-    func newState(state: TramsState) {
+    func newState(state: AppState) {
         print(#function + " \(state)")
     }
 }
