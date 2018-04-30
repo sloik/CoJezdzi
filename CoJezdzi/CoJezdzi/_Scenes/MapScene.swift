@@ -109,7 +109,6 @@ class MapScene: UIViewController, LinesProvider {
 //        store.subscribe(self)
         
         store.dispatch(RoutingAction(destination: .map))
-
         
         invalidateTramsPosytionMarkers()
     }
