@@ -206,8 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				EF426696209262090076238D /* __Old */,
-				EF4266CD209265AB0076238D /* _DTOs */,
 				EF4266CC209265870076238D /* _Flux */,
+				EF42670F2097B9020076238D /* _Networking */,
 				EF42670E2097A16A0076238D /* _Scenes */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
 				EF42670C2097924A0076238D /* AppRouter.swift */,
