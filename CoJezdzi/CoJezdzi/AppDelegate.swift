@@ -36,8 +36,8 @@ extension AppDelegate: StoreSubscriber {
 extension AppDelegate {
 
     func tempWipCodeForStuff() {
-        appStore.dispatch(FetchTramsAction())
-        appStore.dispatch(FetchBussesAction())
+        appStore.dispatch(FetchTramsAction.fetch)
+        appStore.dispatch(FetchBussesAction.fetch)
     }
     
     func subscribeToStore() {

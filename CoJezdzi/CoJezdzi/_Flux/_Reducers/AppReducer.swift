@@ -5,8 +5,7 @@ import ReSwift
 
 
 func appReducer(action: Action, state: AppState?) -> AppState {
-    var s: AppState = state ?? AppState()
-    
-    return s
+    return AppState(currentTrams:  tramsReducer(action: action, state: state?.currentTrams),
+                    previousTrams: tramsReducer(action: action, state: state?.currentTrams))
 }
 
