@@ -306,7 +306,6 @@
 				BA56853E1C763EA600D3B5FE /* Sources */,
 				BA56853F1C763EA600D3B5FE /* Frameworks */,
 				BA5685401C763EA600D3B5FE /* Resources */,
-				BA56857E1C766E2F00D3B5FE /* Mark Tags */,
 				BA724EEC1CB62CB300ACC84E /* Bup Build Number */,
 				6860C709354CD82E0145D889 /* [CP] Embed Pods Frameworks */,
 				7331AC2194BFF9BDCCD8C685 /* [CP] Copy Pods Resources */,
@@ -502,20 +501,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		BA56857E1C766E2F00D3B5FE /* Mark Tags */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Mark Tags";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
 		};
 		BA724EEC1CB62CB300ACC84E /* Bup Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
