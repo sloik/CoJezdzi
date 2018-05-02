@@ -116,7 +116,7 @@ extension MapScene: SettingsEvent {
     func settingsPersistanceDidPersist(_ persistance: SettingsPersistance) {
         
         if let latestData = latestData {
-            processData(trams: latestData.trams, busses: latestData.busses)
+//            processData(trams: latestData.trams, busses: latestData.busses)
         }
     }
     
@@ -229,11 +229,12 @@ private extension MapScene {
 // MARK: - Updating Map
 private extension MapScene {
 
-    func processData(trams: [WarsawVehicleDto], busses: [WarsawVehicleDto]) {
+    func processData(_ state: MapSceneState) {
         var filteredData: [WarsawVehicleDto] = {
-            let filtered = (persisatance.onlyTrams ? [] : busses) + (persisatance.onlyBusses ? [] : trams)
-            
-            return filtered
+//            let filtered = (persisatance.onlyTrams ? [] : busses) + (persisatance.onlyBusses ? [] : trams)
+//
+//            return filtered
+            return []
         }()
 
         // when selected lines are seleted check those to
@@ -336,10 +337,7 @@ private extension MapScene {
 
 extension MapScene: StoreSubscriber {
     func newState(state: AppState) {
-        print(#function + " \(state)")
-        
-        processData(trams: state.mapSceneState.currentTrams.data, busses: [])
-
+        processData(state.mapSceneState)
     }
 }
 
