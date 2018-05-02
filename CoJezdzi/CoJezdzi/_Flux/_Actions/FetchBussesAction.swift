@@ -2,7 +2,7 @@
 import ReSwift
 
 struct FetchBussesAction: Action {
-    let fetched: [WarsawTramDto]
+    let fetched: [WarsawVehicleDto]
     
     static func fetch(state: AppState, store: Store<AppState>) -> FetchBussesAction {
         return FetchBussesAction(fetched: [])

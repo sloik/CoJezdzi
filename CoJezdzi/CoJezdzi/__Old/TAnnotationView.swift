@@ -57,11 +57,11 @@ extension TAnnotationView {
     fileprivate func configureColors(_ annotation: TAnnotation) {
 
         switch annotation.type {
-        case .Bus:
+        case .bus:
             backgroundColor      = UIColor.infoBlue()
             lineLabel?.textColor = UIColor.babyBlue()
 
-        case .Tram:
+        case .tram:
             backgroundColor      = UIColor.peach()
             lineLabel?.textColor = UIColor.chiliPowder()
             

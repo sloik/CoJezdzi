@@ -37,41 +37,15 @@ struct TData {
 
 }
 
-extension TData: CustomStringConvertible {
-    var description: String {
-        return "<[T] Lines: \(lines)>"
-    }
-}
-
-extension TData: CustomDebugStringConvertible {
-    var debugDescription: String {
-        return fullKeyID
-    }
-}
-
-extension TData {
-    var keyID: String {
-        return "Lines:\(lines) Brigade:\(brigade)"
-    }
-
-    var fullKeyID: String {
-        return keyID + " " + "Lon:\(lon) Lat:\(lat) Time:\(time)"
-    }
-
-    var coordinate2D: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D.init(latitude: lat, longitude: lon)
-    }
-}
-
-func ==(lhs: TData, rhs: TData) -> Bool {
-   return lhs.hashValue == rhs.hashValue
-}
-
-extension TData: Hashable {
-
-    var hashValue: Int {
-        return fullKeyID.hashValue
-    }
-}
+//func ==(lhs: TData, rhs: TData) -> Bool {
+//   return lhs.hashValue == rhs.hashValue
+//}
+//
+//extension TData: Hashable {
+//
+//    var hashValue: Int {
+//        return fullKeyID.hashValue
+//    }
+//}
 
 

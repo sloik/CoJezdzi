@@ -3,10 +3,10 @@ import UIKit
 import ReSwift
 
 struct PayloadData {
-    let busses: [TData]
-    let trams: [TData]
+    let busses: [WarsawVehicleDto]
+    let trams: [WarsawVehicleDto]
     
-    var all: [TData] {
+    var all: [WarsawVehicleDto] {
         return busses + trams
     }
     
@@ -45,7 +45,7 @@ class MapScene: UIViewController, LinesProvider {
 
     var typeTLines: [String] {
         if let hasLaytestData = latestData?.all {
-            return hasLaytestData.map{ (data: TData) -> String in
+            return hasLaytestData.map{ (data: WarsawVehicleDto) -> String in
                 return data.lines
             }
         }
@@ -65,15 +65,9 @@ class MapScene: UIViewController, LinesProvider {
         
         persisatance.eventDelegate = self
         locationManager.delegate = self
-
-        NotificationCenter.default.addObserver(self,
-                                             selector: #selector(invalidateTramsPosytionMarkers),
-                                             name: NSNotification.Name.UIApplicationDidBecomeActive,
-                                             object: nil)
-
     }
 
-    fileprivate func handleUpdate(trams: [TData], busses: [TData]) {
+    fileprivate func handleUpdate(trams: [WarsawVehicleDto], busses: [WarsawVehicleDto]) {
 
         previousData = latestData
         latestData   = PayloadData(busses: busses, trams: trams)
@@ -109,8 +103,6 @@ class MapScene: UIViewController, LinesProvider {
         store.subscribe(self)
         
         store.dispatch(RoutingAction(destination: .map))
-        
-        invalidateTramsPosytionMarkers()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -237,8 +229,8 @@ private extension MapScene {
 // MARK: - Updating Map
 private extension MapScene {
 
-    func processData(trams: [TData], busses: [TData]) {
-        var filteredData: [TData] = {
+    func processData(trams: [WarsawVehicleDto], busses: [WarsawVehicleDto]) {
+        var filteredData: [WarsawVehicleDto] = {
             let filtered = (persisatance.onlyTrams ? [] : busses) + (persisatance.onlyBusses ? [] : trams)
             
             return filtered
@@ -260,7 +252,7 @@ private extension MapScene {
         resetTimeIndycator()
     }
 
-    func updateCopyrightLabelText(_ data: [TData]) {
+    func updateCopyrightLabelText(_ data: [WarsawVehicleDto]) {
         var copyright = ""
 
         if let anyData = data.first {
@@ -278,12 +270,12 @@ extension MapScene: UserLocationProvider {
         return locationManager.location
     }
 
-    fileprivate func regnerateAnnotations(_ data: [TData]) {
+    fileprivate func regnerateAnnotations(_ data: [WarsawVehicleDto]) {
         // remove all annotation views...
         mapView.removeAnnotations(mapView.annotations)
 
         // map
-        let annotations = data.map { (tdata:TData) -> TAnnotation in
+        let annotations = data.map { (tdata:WarsawVehicleDto) -> TAnnotation in
             let annotation = TAnnotation(data: tdata)
             annotation.locationProvider = self
 
@@ -297,7 +289,7 @@ extension MapScene: UserLocationProvider {
 
 // MARK: - Trams Way Marks
 private extension MapScene {
-    func regenerateTramsLocationIndycatiors(_ data: [TData]) {
+    func regenerateTramsLocationIndycatiors(_ data: [WarsawVehicleDto]) {
 
         // remove all
         mapView.overlays.forEach {
@@ -338,10 +330,6 @@ private extension MapScene {
             mapView.add(value)
         }
     }
-
-    @objc func invalidateTramsPosytionMarkers() {
-
-    }
 }
 
 // MARK: - StoreSubscriber
@@ -349,6 +337,9 @@ private extension MapScene {
 extension MapScene: StoreSubscriber {
     func newState(state: AppState) {
         print(#function + " \(state)")
+        
+        processData(trams: state.mapSceneState.currentTrams.data, busses: [])
+
     }
 }
 

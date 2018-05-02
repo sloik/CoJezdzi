@@ -1,6 +1,6 @@
 import MapKit
 
 protocol TDataAnnotation: class, MKAnnotation {
-    var type: VehicleType { get }
-    init(data:TData)
+    var type: WarsawVehicleType { get }
+    init(data:WarsawVehicleDto)
 }

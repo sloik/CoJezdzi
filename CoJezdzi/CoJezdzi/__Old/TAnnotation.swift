@@ -6,12 +6,11 @@ protocol UserLocationProvider: class {
 }
 
 class TAnnotation: NSObject, TDataAnnotation {
-
-    fileprivate let tdata: TData
+    fileprivate let tdata: WarsawVehicleDto
 
     weak var locationProvider: UserLocationProvider? = nil
     
-    var type: VehicleType {
+    var type: WarsawVehicleType {
         return tdata.type
     }
 
@@ -19,7 +18,7 @@ class TAnnotation: NSObject, TDataAnnotation {
         return "l:\(tdata.lines) B:\(tdata.brigade)"
     }
 
-    required init(data:TData) {
+    required init(data:WarsawVehicleDto) {
         tdata = data
         super.init()
     }
@@ -27,7 +26,7 @@ class TAnnotation: NSObject, TDataAnnotation {
 
 extension TAnnotation: MKAnnotation {
     var coordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: tdata.lat, longitude: tdata.lon)
+        return CLLocationCoordinate2D(latitude: tdata.latitude, longitude: tdata.longitude)
     }
     
     var lines: String {
@@ -35,19 +34,15 @@ extension TAnnotation: MKAnnotation {
     }
     
     var fullLine: String {
-        if let fullName = tdata.fullLines {
-            return fullName
-        }
-        
         return lines
     }
 
     var shortTitle: String {
         let title: String = {
             switch tdata.type {
-            case .Bus:
+            case .bus:
                 return "🚍 \(self.fullLine)"
-            case .Tram:
+            case .tram:
                 return "🚋 \(self.fullLine)"
             default:
                 return self.lines
