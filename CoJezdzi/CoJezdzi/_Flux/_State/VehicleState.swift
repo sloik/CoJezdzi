@@ -1,7 +1,7 @@
 
 import ReSwift
 
-struct TramsState: StateType {
+struct VehicleState: StateType {
     let data: [WarsawVehicleDto]
     let previousData: [WarsawVehicleDto]
 }
