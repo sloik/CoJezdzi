@@ -15,11 +15,6 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
-
-protocol LinesProvider: class {
-    var typeTLines: [String] { get }
-}
-
 private struct ViewModel {
     let reuseID: String
     let title  : String
@@ -33,7 +28,6 @@ private struct ViewModel {
 class SettingsVC: UITableViewController {
 
     var persisatance: SettingsPersistance?
-    weak var tLinesProvider: LinesProvider?
     var picker: UIPickerView?
 
     fileprivate var cellOrdering: [ViewModel]  {

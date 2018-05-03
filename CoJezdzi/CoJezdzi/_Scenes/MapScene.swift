@@ -23,7 +23,7 @@ extension SettingsPersistance {
     }
 }
 
-class MapScene: UIViewController, LinesProvider {
+class MapScene: UIViewController {
 
     // MARK: - UI
     @IBOutlet weak var copyrightLable: UILabel!
