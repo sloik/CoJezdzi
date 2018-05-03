@@ -28,17 +28,30 @@ class MapScene: UIViewController {
     // MARK: - UI
     @IBOutlet weak var copyrightLable: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var showCurrentLocationButton: UIButton?
-    @IBOutlet weak var userSettingsButton: UIButton!
-    @IBOutlet weak var refreshMapDataButton: UIButton!
+    
+    @IBOutlet weak var showCurrentLocationButton: UIButton? {
+        didSet {
+            styleButton(showCurrentLocationButton)
+        }
+    }
+    
+    @IBOutlet weak var userSettingsButton: UIButton! {
+        didSet {
+            styleButton(userSettingsButton)
+        }
+    }
+    
+    @IBOutlet weak var refreshMapDataButton: UIButton! {
+        didSet {
+            styleButton(refreshMapDataButton)
+        }
+    }
 
     @IBOutlet weak var timeIndycatorRight: NSLayoutConstraint?
     @IBOutlet weak var timeIndycatorView: UIView?
 
     // MARK: -
     let locationManager: CLLocationManager
-
-    fileprivate weak var settingsVC: SettingsVC?
 
     fileprivate var processDataDate = Date()
 
@@ -57,10 +70,6 @@ class MapScene: UIViewController {
         edgesForExtendedLayout = UIRectEdge()
 
         mapView.delegate = self as MKMapViewDelegate
-
-        styleSettingsButton()
-        styleCurrentLocationButton()
-        styleRefreshMapDataButton()
 
         zoomMapOnTheCity()
         zoomOnUserLocationIfNotShity()
@@ -140,18 +149,6 @@ private extension MapScene {
         button?.layer.shadowOffset = CGSize(width: 3, height: 5)
 
         button?.tintColor = UIColor.eggplant()
-    }
-
-    func styleCurrentLocationButton() {
-        styleButton(showCurrentLocationButton)
-    }
-
-    func styleSettingsButton() {
-        styleButton(userSettingsButton)
-    }
-
-    func styleRefreshMapDataButton() {
-        styleButton(refreshMapDataButton)
     }
 }
 
