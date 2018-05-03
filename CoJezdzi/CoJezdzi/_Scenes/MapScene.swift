@@ -43,20 +43,6 @@ class MapScene: UIViewController {
 
     fileprivate var processDataDate = Date()
 
-    var typeTLines: [String] {
-        if let hasLaytestData = latestData?.all {
-            return hasLaytestData.map{ (data: WarsawVehicleDto) -> String in
-                return data.lines
-            }
-        }
-        else {
-            return []
-        }
-    }
-
-    var latestData  : PayloadData?
-    var previousData: PayloadData?
-
     required init?(coder aDecoder: NSCoder) {
         locationManager = CLLocationManager.init()
         persisatance = SettingsPersistance.init(defaults: UserDefaults.standard)
@@ -65,16 +51,6 @@ class MapScene: UIViewController {
         
         persisatance.eventDelegate = self
         locationManager.delegate = self
-    }
-
-    fileprivate func handleUpdate(trams: [WarsawVehicleDto], busses: [WarsawVehicleDto]) {
-
-        previousData = latestData
-        latestData   = PayloadData(busses: busses, trams: trams)
-    }
-
-    deinit {
-        NotificationCenter.default.removeObserver(self)
     }
 
     // MARK: - View Events
@@ -114,15 +90,11 @@ class MapScene: UIViewController {
 
 extension MapScene: SettingsEvent {
     func settingsPersistanceDidPersist(_ persistance: SettingsPersistance) {
-        
-        if let latestData = latestData {
-//            processData(trams: latestData.trams, busses: latestData.busses)
-        }
+        debugPrint(#function)
     }
     
     func settingsPersistanceDidChangeCity(_ persistance: SettingsPersistance) {
-        latestData = nil
-        previousData = nil
+        debugPrint(#function)
     }
 
 }
@@ -230,33 +202,33 @@ private extension MapScene {
 private extension MapScene {
 
     func processData(_ state: MapSceneState) {
-        var filteredData: [WarsawVehicleDto] = {
-//            let filtered = (persisatance.onlyTrams ? [] : busses) + (persisatance.onlyBusses ? [] : trams)
+//        var filteredData: [WarsawVehicleDto] = {
+////            let filtered = (persisatance.onlyTrams ? [] : busses) + (persisatance.onlyBusses ? [] : trams)
+////
+////            return filtered
+//            return []
+//        }()
 //
-//            return filtered
-            return []
-        }()
-
-        // when selected lines are seleted check those to
-        if persisatance.selectedLines.count > 0 {
-            filteredData = filteredData.filter{
-                persisatance.selectedLines.contains($0.lines)
-            }
-        }
+//        // when selected lines are seleted check those to
+//        if persisatance.selectedLines.count > 0 {
+//            filteredData = filteredData.filter{
+//                persisatance.selectedLines.contains($0.lines)
+//            }
+//        }
 
         // now filtered data has only stuff that user is interested in...
-        regnerateAnnotations(filteredData)
-        updateCopyrightLabelText(filteredData)
+        regnerateAnnotations(state)
+        updateCopyrightLabelText(state)
 
-        regenerateTramsLocationIndycatiors(filteredData)
+        regenerateTramsLocationIndycatiors(state)
 
         resetTimeIndycator()
     }
 
-    func updateCopyrightLabelText(_ data: [WarsawVehicleDto]) {
+    func updateCopyrightLabelText(_ state: MapSceneState) {
         var copyright = ""
 
-        if let anyData = data.first {
+        if let anyData = state.currentTrams.data.first {
             copyright += anyData.time.replacingOccurrences(of: "T", with: " ")
         }
 
@@ -271,12 +243,12 @@ extension MapScene: UserLocationProvider {
         return locationManager.location
     }
 
-    fileprivate func regnerateAnnotations(_ data: [WarsawVehicleDto]) {
+    fileprivate func regnerateAnnotations(_ state: MapSceneState) {
         // remove all annotation views...
         mapView.removeAnnotations(mapView.annotations)
 
         // map
-        let annotations = data.map { (tdata:WarsawVehicleDto) -> TAnnotation in
+        let annotations = state.currentTrams.data.map { (tdata:WarsawVehicleDto) -> TAnnotation in
             let annotation = TAnnotation(data: tdata)
             annotation.locationProvider = self
 
@@ -290,41 +262,41 @@ extension MapScene: UserLocationProvider {
 
 // MARK: - Trams Way Marks
 private extension MapScene {
-    func regenerateTramsLocationIndycatiors(_ data: [WarsawVehicleDto]) {
+    func regenerateTramsLocationIndycatiors(_ state: MapSceneState) {
 
         // remove all
         mapView.overlays.forEach {
             mapView.remove($0)
         }
 
-        // make sure that there is something to show
-        guard previousData != nil && latestData != nil else { return }
-
-        // check if user wants to se the data
-        guard persisatance.showTramMarks else { return }
-
-        // go over latest and find old posytions
-        var previous: [String: CLLocationCoordinate2D] = [:]
-        for item in previousData!.all {
-            previous[item.keyID] = item.coordinate2D
-        }
-
-
-        var current: [String: CLLocationCoordinate2D] = [:]
-        for item in data {
-            current[item.keyID] = item.coordinate2D
-        }
+//        // make sure that there is something to show
+//        guard previousData != nil && latestData != nil else { return }
+//
+//        // check if user wants to se the data
+//        guard persisatance.showTramMarks else { return }
+//
+//        // go over latest and find old posytions
+//        var previous: [String: CLLocationCoordinate2D] = [:]
+//        for item in previousData!.all {
+//            previous[item.keyID] = item.coordinate2D
+//        }
+//
+//
+//        var current: [String: CLLocationCoordinate2D] = [:]
+//        for item in data {
+//            current[item.keyID] = item.coordinate2D
+//        }
 
         // generate set/array whatever with models for the poly lines
         var polyModels:[String: MKPolyline] = [:]
 
-        for (key, currentValue) in current {
-            if let prevValue = previous[key] {
-                var arr = [currentValue, prevValue]
-                let polyLine = MKPolyline.init(coordinates: &arr, count: 2)
-                polyModels[key] = polyLine
-            }
-        }
+//        for (key, currentValue) in current {
+//            if let prevValue = previous[key] {
+//                var arr = [currentValue, prevValue]
+//                let polyLine = MKPolyline.init(coordinates: &arr, count: 2)
+//                polyModels[key] = polyLine
+//            }
+//        }
 
         // add overlays
         for (_, value) in polyModels {
