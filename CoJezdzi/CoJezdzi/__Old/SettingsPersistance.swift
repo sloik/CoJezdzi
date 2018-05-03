@@ -4,12 +4,6 @@ fileprivate struct SettingsConstants {
     static let ModelKey = "ModelKey"
 }
 
-protocol SettingsEvent: class {
-    
-    func settingsPersistanceDidChangeCity(_ persistance: SettingsPersistance)
-    func settingsPersistanceDidPersist(_ persistance: SettingsPersistance)
-}
-
 protocol SettingsPersistanceStore {
     func registerDefaults(defaults: [String:Any])
     
@@ -26,11 +20,10 @@ extension UserDefaults: SettingsPersistanceStore {
 }
 
 class SettingsPersistance {
-    weak var eventDelegate: SettingsEvent?
     private var defaults: SettingsPersistanceStore
     private var currentModel: PeristanceModel
     
-    init(defaults: SettingsPersistanceStore = UserDefaults.standard, eventDelegate: SettingsEvent? = nil) {
+    init(defaults: SettingsPersistanceStore = UserDefaults.standard) {
         
         func registerDefaults() {
             let warsawModel = PeristanceModel.buildWith(city: .Warszawa)
@@ -45,7 +38,6 @@ class SettingsPersistance {
         }
         
         self.defaults = defaults
-        self.eventDelegate = eventDelegate
         
         registerDefaults()
         
@@ -83,8 +75,7 @@ class SettingsPersistance {
             // update current to the desired one
             currentModel = model 
             
-            eventDelegate?.settingsPersistanceDidChangeCity(self)
-            synchronizeAndNotify()
+            synchronize()
         }
         get {
             return currentModel.city
@@ -92,29 +83,28 @@ class SettingsPersistance {
     }
 
     var selectedLines: [String] {
-        set { currentModel.selectedLines = newValue; synchronizeAndNotify() }
+        set { currentModel.selectedLines = newValue; synchronize() }
         get { return currentModel.selectedLines }
     }
 
     var showTramMarks: Bool {
-        set { currentModel.showTramMarks = newValue;  synchronizeAndNotify()}
+        set { currentModel.showTramMarks = newValue;  synchronize()}
         get { return currentModel.showTramMarks }
     }
     
     var onlyTrams: Bool {
-        set { currentModel.onlyTrams = newValue;  synchronizeAndNotify()}
+        set { currentModel.onlyTrams = newValue;  synchronize()}
         get { return currentModel.onlyTrams }
     }
     
     var onlyBusses: Bool {
-        set { currentModel.onlyBusses = newValue; synchronizeAndNotify() }
+        set { currentModel.onlyBusses = newValue; synchronize() }
         
         get { return currentModel.onlyBusses }
     }
 
-    private func synchronizeAndNotify() {
+    private func synchronize() {
         saveCurrentModel()
-        eventDelegate?.settingsPersistanceDidPersist(self)
     }
     
     private func saveCurrentModel() {

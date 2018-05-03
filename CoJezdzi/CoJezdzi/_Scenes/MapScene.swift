@@ -37,7 +37,6 @@ class MapScene: UIViewController {
 
     // MARK: -
     let locationManager: CLLocationManager
-    fileprivate let persisatance: SettingsPersistance
 
     fileprivate weak var settingsVC: SettingsVC?
 
@@ -45,11 +44,9 @@ class MapScene: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         locationManager = CLLocationManager.init()
-        persisatance = SettingsPersistance.init(defaults: UserDefaults.standard)
         
         super.init(coder: aDecoder)
         
-        persisatance.eventDelegate = self
         locationManager.delegate = self
     }
 
@@ -86,17 +83,6 @@ class MapScene: UIViewController {
         
         store.unsubscribe(self)
     }
-}
-
-extension MapScene: SettingsEvent {
-    func settingsPersistanceDidPersist(_ persistance: SettingsPersistance) {
-        debugPrint(#function)
-    }
-    
-    func settingsPersistanceDidChangeCity(_ persistance: SettingsPersistance) {
-        debugPrint(#function)
-    }
-
 }
 
 // MARK: - Helpers
