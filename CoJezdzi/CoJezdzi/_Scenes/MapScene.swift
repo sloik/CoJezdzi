@@ -76,11 +76,11 @@ class MapScene: UIViewController {
 
         timeIndycatorView?.backgroundColor = UIColor.grape()
         
-        store.dispatch(FetchTramsAction.fetch)
-        
+        triggerDataRefresh()
+
         Timer.scheduledTimer(withTimeInterval: WarsawApiConstants.RefreshRate,
                              repeats: true) { _ in
-                                store.dispatch(FetchTramsAction.fetch)
+                                self.triggerDataRefresh()
         }
     }
 
@@ -118,7 +118,7 @@ private extension MapScene {
                     // shring animation
                     constraint.constant = t ? self.view.frame.size.width : 0
 
-                    let time: TimeInterval = 18
+                    let time: TimeInterval = WarsawApiConstants.RefreshRate
 
                     UIView.animate(withDuration: time,
                         delay: 0,
@@ -177,6 +177,7 @@ extension MapScene {
 private extension MapScene {
     func triggerDataRefresh() {
         store.dispatch(FetchTramsAction.fetch)
+        store.dispatch(FetchBussesAction.fetch)
     }
 }
 
@@ -231,7 +232,7 @@ extension MapScene: UserLocationProvider {
         mapView.removeAnnotations(mapView.annotations)
 
         // map
-        let annotations = state.currentTrams.data.map { (tdata:WarsawVehicleDto) -> TAnnotation in
+        let annotations = state.allCurrent.map { (tdata:WarsawVehicleDto) -> TAnnotation in
             let annotation = TAnnotation(data: tdata)
             annotation.locationProvider = self
 
@@ -265,8 +266,8 @@ private extension MapScene {
         }
         
         // go over latest and find old posytions
-        let previous = state.currentTrams.previousData.reduce(StringCoordinateDic(), reduceBlock)
-        let current  = state.currentTrams.data.reduce(StringCoordinateDic(), reduceBlock)
+        let previous = state.allPrevious.reduce(StringCoordinateDic(), reduceBlock)
+        let current  = state.allCurrent.reduce(StringCoordinateDic(), reduceBlock)
 
         // add overlays
         PolylineMaker.generetePolylines(previousPosytions: previous, currentPosytions: current).values.forEach{ mapView.add($0) }
