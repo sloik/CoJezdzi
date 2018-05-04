@@ -246,45 +246,30 @@ extension MapScene: UserLocationProvider {
 // MARK: - Trams Way Marks
 private extension MapScene {
     func regenerateTramsLocationIndycatiors(_ state: MapSceneState) {
-
-        // remove all
-        mapView.overlays.forEach {
-            mapView.remove($0)
+        
+        guard state.currentTrams.data.isEmpty == false && state.currentTrams.previousData.isEmpty == false else {
+            return
         }
+        
+        // remove all
+        mapView.removeOverlays(mapView.overlays)
 
-//        // make sure that there is something to show
-//        guard previousData != nil && latestData != nil else { return }
-//
 //        // check if user wants to se the data
 //        guard persisatance.showTramMarks else { return }
-//
-//        // go over latest and find old posytions
-//        var previous: [String: CLLocationCoordinate2D] = [:]
-//        for item in previousData!.all {
-//            previous[item.keyID] = item.coordinate2D
-//        }
-//
-//
-//        var current: [String: CLLocationCoordinate2D] = [:]
-//        for item in data {
-//            current[item.keyID] = item.coordinate2D
-//        }
-
-        // generate set/array whatever with models for the poly lines
-        var polyModels:[String: MKPolyline] = [:]
-
-//        for (key, currentValue) in current {
-//            if let prevValue = previous[key] {
-//                var arr = [currentValue, prevValue]
-//                let polyLine = MKPolyline.init(coordinates: &arr, count: 2)
-//                polyModels[key] = polyLine
-//            }
-//        }
+        
+        let reduceBlock = { (acc: StringCoordinateDic, vehicle: WarsawVehicleDto) -> StringCoordinateDic in
+            var ret = acc
+            ret[vehicle.keyID] = vehicle.coordinate2D
+            
+            return ret
+        }
+        
+        // go over latest and find old posytions
+        let previous = state.currentTrams.previousData.reduce(StringCoordinateDic(), reduceBlock)
+        let current  = state.currentTrams.data.reduce(StringCoordinateDic(), reduceBlock)
 
         // add overlays
-        for (_, value) in polyModels {
-            mapView.add(value)
-        }
+        PolylineMaker.generetePolylines(previousPosytions: previous, currentPosytions: current).values.forEach{ mapView.add($0) }
     }
 }
 
