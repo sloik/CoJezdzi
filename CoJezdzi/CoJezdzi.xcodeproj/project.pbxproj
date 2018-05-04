@@ -223,6 +223,7 @@
 			children = (
 				EF426696209262090076238D /* __Old */,
 				EF4266CC209265870076238D /* _Flux */,
+				EFB5C2A4209C710200BB5855 /* _Misc */,
 				EF42670F2097B9020076238D /* _Networking */,
 				EF42670E2097A16A0076238D /* _Scenes */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
@@ -271,8 +272,6 @@
 				EF4266A2209262340076238D /* SettingsPersistance.swift */,
 				EF4266A1209262340076238D /* SettingsVC.swift */,
 				EF426699209262340076238D /* SwitchTableViewCell.swift */,
-				EF4266A6209262350076238D /* TAnnotation.swift */,
-				EF4266A9209262350076238D /* TAnnotationView.swift */,
 				EF42669F209262340076238D /* TData.swift */,
 				EF4266A8209262350076238D /* TDataAnnotation.swift */,
 				EF42669E209262340076238D /* URL_Extensions.swift */,
@@ -356,6 +355,15 @@
 				EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */,
 			);
 			path = _Networking;
+			sourceTree = "<group>";
+		};
+		EFB5C2A4209C710200BB5855 /* _Misc */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266A6209262350076238D /* TAnnotation.swift */,
+				EF4266A9209262350076238D /* TAnnotationView.swift */,
+			);
+			path = _Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
