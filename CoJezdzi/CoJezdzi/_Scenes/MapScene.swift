@@ -175,13 +175,8 @@ extension MapScene {
 // MARK: - Data Refreshing 
 
 private extension MapScene {
-
-    var shouldRefreshData: Bool  {
-        return true
-    }
-
     func triggerDataRefresh() {
-        refreshMapDataButton.isEnabled = false
+        store.dispatch(FetchTramsAction.fetch)
     }
 }
 
