@@ -2,8 +2,18 @@
 import ReSwift
 
 struct MapSceneState: StateType {
-    var currentTrams:  VehicleState
-    var currentBusses: VehicleState
+    let currentTrams:  VehicleState
+    let currentBusses: VehicleState
+}
+
+extension MapSceneState {
+    func currentTrams(_ ct:VehicleState) -> MapSceneState {
+        return MapSceneState(currentTrams: ct, currentBusses: currentBusses)
+    }
+    
+    func currentBusses(_ cb:VehicleState) -> MapSceneState {
+        return MapSceneState(currentTrams: currentTrams, currentBusses: cb)
+    }
 }
 
 extension MapSceneState {

@@ -7,7 +7,7 @@ func routingReducer(action: Action, state: RoutingState?) -> RoutingState {
     switch action {
         
     case let routing as RoutingAction:
-        state.navigationState = routing.destination
+        state = state.navigationState(routing.destination) 
         
     default: break
     }
