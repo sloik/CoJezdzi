@@ -77,6 +77,11 @@ class MapScene: UIViewController {
         timeIndycatorView?.backgroundColor = UIColor.grape()
         
         store.dispatch(FetchTramsAction.fetch)
+        
+        Timer.scheduledTimer(withTimeInterval: WarsawApiConstants.RefreshRate,
+                             repeats: true) { _ in
+                                store.dispatch(FetchTramsAction.fetch)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
