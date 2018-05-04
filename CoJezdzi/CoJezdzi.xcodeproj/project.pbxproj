@@ -56,6 +56,7 @@
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
 		EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */; };
+		EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
 		EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */; };
 		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
@@ -142,6 +143,7 @@
 		EF7657411EAB3AED007C4E3D /* CoJezdziTests copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy2-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy2-Info.plist"; sourceTree = "<absolute>"; };
 		EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiResultDto.swift; sourceTree = "<group>"; };
 		EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
+		EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
 		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
 		EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				EF4266C2209263250076238D /* AppState.swift */,
 				EFEE78FF2097D40D00F95E77 /* MapSceneState.swift */,
 				EF42670820978E940076238D /* RoutingState.swift */,
+				EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */,
 				EF4267042097543A0076238D /* VehicleState.swift */,
 			);
 			path = _State;
@@ -621,6 +624,7 @@
 				EF4266FC209273C80076238D /* TDataAnnotation.swift in Sources */,
 				EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */,
 				EF4266CB209264DC0076238D /* AppReducer.swift in Sources */,
+				EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */,
 				EF4266F5209273C80076238D /* PeristanceModel.swift in Sources */,
 				EF4266D52092733A0076238D /* R.generated.swift in Sources */,
 				EF4267152097BD030076238D /* C.Networking.swift in Sources */,
