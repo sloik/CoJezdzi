@@ -224,9 +224,9 @@
 			isa = PBXGroup;
 			children = (
 				EF426696209262090076238D /* __Old */,
-				EF4266CC209265870076238D /* _Flux */,
 				EFB5C2A4209C710200BB5855 /* _Misc */,
 				EF42670F2097B9020076238D /* _Networking */,
+				EF4266CC209265870076238D /* _Redux */,
 				EF42670E2097A16A0076238D /* _Scenes */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
 				EF42670C2097924A0076238D /* AppRouter.swift */,
@@ -316,14 +316,14 @@
 			path = _Reducers;
 			sourceTree = "<group>";
 		};
-		EF4266CC209265870076238D /* _Flux */ = {
+		EF4266CC209265870076238D /* _Redux */ = {
 			isa = PBXGroup;
 			children = (
 				EF4266C4209263550076238D /* _Actions */,
 				EF4266C52092638D0076238D /* _Reducers */,
 				EF4266C1209262FC0076238D /* _State */,
 			);
-			path = _Flux;
+			path = _Redux;
 			sourceTree = "<group>";
 		};
 		EF4266CD209265AB0076238D /* _DTOs */ = {
