@@ -271,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				EF4266A4209262340076238D /* ButtonTableViewCell.swift */,
-				EF4266AB209262350076238D /* Constants.swift */,
 				EF426697209262340076238D /* DataPuller.swift */,
 				EF4266A3209262340076238D /* DataPullerDataProvider.swift */,
 				EF426698209262340076238D /* FilerResultHandler.swift */,
@@ -283,7 +282,6 @@
 				EF426699209262340076238D /* SwitchTableViewCell.swift */,
 				EF42669F209262340076238D /* TData.swift */,
 				EF4266A8209262350076238D /* TDataAnnotation.swift */,
-				EF42669E209262340076238D /* URL_Extensions.swift */,
 				EF42669B209262340076238D /* WarsawApiDealer.swift */,
 				EF42669C209262340076238D /* WarsawApiResponseParser.swift */,
 				EF4266A0209262340076238D /* WebScene.swift */,
@@ -360,6 +358,7 @@
 				EF4266CD209265AB0076238D /* _DTOs */,
 				EF4267142097BD030076238D /* C.Networking.swift */,
 				EF42671A2097CB1D0076238D /* Result.swift */,
+				EF42669E209262340076238D /* URL_Extensions.swift */,
 				EF4267122097B9760076238D /* WarsawApi.swift */,
 				EF4267102097B9290076238D /* WarsawApiConstants.swift */,
 				EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */,
@@ -371,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				EFC25B6B209E45FE002897A0 /* CollectionDataSource.swift */,
+				EF4266AB209262350076238D /* Constants.swift */,
 				EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */,
 				EFC25B6C209E45FE002897A0 /* TableDataSource.swift */,
 				EF4266A6209262350076238D /* TAnnotation.swift */,
