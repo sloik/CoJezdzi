@@ -48,9 +48,7 @@ http://api.um.warszawa.pl</string>
                                 <rect key="frame" x="323" y="521" width="42" height="42"/>
                                 <state key="normal" backgroundImage="UserSettings"/>
                                 <connections>
-                                    <segue destination="0dN-YF-zbQ" kind="popoverPresentation" identifier="ShowSettings" popoverAnchorView="mXk-At-R5Q" id="Lbp-Vv-Qfd">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <action selector="userDidTapSettingsButton" destination="UPP-Ft-hI7" eventType="touchUpInside" id="bqy-d9-ea8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iob-TS-gtL" userLabel="RefresMapData">
@@ -106,7 +104,7 @@ http://api.um.warszawa.pl</string>
         <!--Ustawienia-->
         <scene sceneID="x0w-fW-Yss">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsScene" title="Ustawienia" id="vJe-ia-FV0" customClass="SettingsVC" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Ustawienia" id="vJe-ia-FV0" customClass="SettingsVC" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xHu-5D-RGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,7 +299,7 @@ http://api.um.warszawa.pl</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al3-14-fey" userLabel="spacer">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -325,7 +323,7 @@ http://api.um.warszawa.pl</string>
         <!--Navigation Controller-->
         <scene sceneID="Nkl-sQ-478">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0dN-YF-zbQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingsScene" automaticallyAdjustsScrollViewInsets="NO" id="0dN-YF-zbQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Le9-RO-sNU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -347,6 +345,6 @@ http://api.um.warszawa.pl</string>
         <image name="UserSettings" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aHu-Gl-GDO"/>
+        <segue reference="m6l-cO-Ehv"/>
     </inferredMetricsTieBreakers>
 </document>

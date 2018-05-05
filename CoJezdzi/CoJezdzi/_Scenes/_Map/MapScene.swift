@@ -164,6 +164,10 @@ extension MapScene {
     @IBAction func userDidTapRefreshMapData(_ sender: UIButton) {
         triggerDataRefresh();
     }
+    
+    @IBAction func userDidTapSettingsButton() {
+        store.dispatch(RoutingAction(destination: .settings))
+    }
 
     @IBAction func userDidTapShowCurrentLocation(_ sender: UIButton) {
         if let userCor = mapView.userLocation.location {
