@@ -1,19 +1,8 @@
+
 import MapKit
 import UIKit
-import ReSwift
 
-struct PayloadData {
-    let busses: [WarsawVehicleDto]
-    let trams: [WarsawVehicleDto]
-    
-    var all: [WarsawVehicleDto] {
-        return busses + trams
-    }
-    
-    var count: Int {
-        return busses.count + trams.count
-    }
-}
+import ReSwift
 
 class MapScene: UIViewController {
 
