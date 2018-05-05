@@ -11,8 +11,8 @@ struct SettingsState {
         let lowFloredOnly: Bool
     }
     
-    let lines: [String]
-    let selectedLines: [String]
+    let lines: Set<String>
+    let selectedLines: Set<String>
     let switches: FilterState
     let aboutApp: String = "https://avantapp.wordpress.com/co-jezdzi/"
 }
