@@ -1,5 +1,7 @@
+
 import UIKit
 
+import ReSwift
 
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
@@ -41,7 +43,21 @@ class SettingsVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        store.subscribe(self) {
+            $0.select {
+                $0.settingsSceneState
+            }
+        }
+        
+        store.dispatch(RoutingAction(destination: .map))
+
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        store.unsubscribe(self)
     }
 }
 
@@ -263,6 +279,16 @@ private typealias UserInteraction = SettingsVC
 extension UserInteraction {
     @IBAction func uderDidTapCancelButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion:nil)
+    }
+}
+
+// MARK: ReSwift
+
+extension SettingsVC: StoreSubscriber {
+    func newState(state: SettingsState) {
+        
+        
+        tableView.reloadData()
     }
 }
 
