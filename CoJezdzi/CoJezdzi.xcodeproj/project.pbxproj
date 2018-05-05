@@ -50,6 +50,7 @@
 		EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */; };
 		EF4267192097C2090076238D /* RoutingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267182097C2090076238D /* RoutingAction.swift */; };
 		EF42671B2097CB1D0076238D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42671A2097CB1D0076238D /* Result.swift */; };
+		EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
@@ -136,6 +137,7 @@
 		EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift; sourceTree = "<group>"; };
 		EF4267182097C2090076238D /* RoutingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAction.swift; sourceTree = "<group>"; };
 		EF42671A2097CB1D0076238D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchAction.swift; sourceTree = "<group>"; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -297,6 +299,7 @@
 		EF4266C4209263550076238D /* _Actions */ = {
 			isa = PBXGroup;
 			children = (
+				EF611501209E537300E05E02 /* _State */,
 				EF4266C8209264640076238D /* FetchBussesAction.swift */,
 				EF4266C62092641C0076238D /* FetchTramsAction.swift */,
 				EF4267182097C2090076238D /* RoutingAction.swift */,
@@ -359,6 +362,14 @@
 			path = _Networking;
 			sourceTree = "<group>";
 		};
+		EF611501209E537300E05E02 /* _State */ = {
+			isa = PBXGroup;
+			children = (
+				EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */,
+			);
+			path = _State;
+			sourceTree = "<group>";
+		};
 		EFB5C2A4209C710200BB5855 /* _Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,8 +396,8 @@
 		EFC25B6A209E4270002897A0 /* _Settings */ = {
 			isa = PBXGroup;
 			children = (
-				EF426699209262340076238D /* SwitchTableViewCell.swift */,
 				EF4266A1209262340076238D /* SettingsVC.swift */,
+				EF426699209262340076238D /* SwitchTableViewCell.swift */,
 			);
 			path = _Settings;
 			sourceTree = "<group>";
@@ -664,6 +675,7 @@
 				EF42670920978E940076238D /* RoutingState.swift in Sources */,
 				EF426700209273C80076238D /* WebScene.swift in Sources */,
 				EF4267132097B9760076238D /* WarsawApi.swift in Sources */,
+				EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */,
 				EF4266CF209266560076238D /* WarsawVehicleDto.swift in Sources */,
 				EF4267192097C2090076238D /* RoutingAction.swift in Sources */,
 				EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */,
