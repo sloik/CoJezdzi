@@ -1,6 +1,5 @@
 import UIKit
 
-//import ActionSheetPicker_3_0
 
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
@@ -26,9 +25,6 @@ private struct ViewModel {
 }
 
 class SettingsVC: UITableViewController {
-
-    var persisatance: SettingsPersistance?
-    var picker: UIPickerView?
 
     fileprivate var cellOrdering: [ViewModel]  {
 
@@ -58,25 +54,23 @@ extension SettingsVC {
     }
     
     func refresSwitches() {
-        guard let persisatance = persisatance else { return } // now work
-        
         tableView.visibleCells.forEach { (cell) in
             if cell is SwitchTableViewCell {
                 let switchCell = cell as! SwitchTableViewCell
 
-                switch switchCell.switchNameLabel.text! {
-                case C.UI.Settings.MenuLabels.TramMarks:
-                    switchCell.cellSwitch.setOn(persisatance.showTramMarks, animated: true)
-                    
-                case C.UI.Settings.MenuLabels.TramsOnly:
-                    switchCell.cellSwitch.setOn(persisatance.onlyTrams, animated: true)
-                    
-                case C.UI.Settings.MenuLabels.BussesOnly:
-                    switchCell.cellSwitch.setOn(persisatance.onlyBusses, animated: true)
-                    
-                default:
-                    break
-                }
+//                switch switchCell.switchNameLabel.text! {
+//                case C.UI.Settings.MenuLabels.TramMarks:
+//                    switchCell.cellSwitch.setOn(persisatance.showTramMarks, animated: true)
+//
+//                case C.UI.Settings.MenuLabels.TramsOnly:
+//                    switchCell.cellSwitch.setOn(persisatance.onlyTrams, animated: true)
+//
+//                case C.UI.Settings.MenuLabels.BussesOnly:
+//                    switchCell.cellSwitch.setOn(persisatance.onlyBusses, animated: true)
+//
+//                default:
+//                    break
+//                }
             }
         }
     }
@@ -170,9 +164,9 @@ extension CellConfiguration {
             cell.textLabel?.text = "Wybierz Linie"
             cell.detailTextLabel?.text = "Wszystkie"
             
-            if let selectedLines = persisatance?.selectedLines, selectedLines.count > 0 {
-                cell.detailTextLabel?.text = selectedLines.joined(separator: ", ")
-            }
+//            if let selectedLines = persisatance?.selectedLines, selectedLines.count > 0 {
+//                cell.detailTextLabel?.text = selectedLines.joined(separator: ", ")
+//            }
             
         default:
             print("Unhandled title for deeper cell with title \(viewModel.title)")
@@ -190,7 +184,6 @@ extension CellConfiguration {
     func configureSwitchCell(cell: SwitchTableViewCell, atIndexPath indexPath: IndexPath) {
         
         guard indexPath.row < cellOrdering.count else { return } // this is a error, some kind of log?
-        guard let persisatance = persisatance else { return } // no persistance no work
         
         let viewModel = cellOrdering[indexPath.row]
         
@@ -198,20 +191,21 @@ extension CellConfiguration {
         cell.switchNameLabel.text = viewModel.title
         
         cell.cellSwitch.isOn = {
-            switch viewModel.title {
-            case C.UI.Settings.MenuLabels.TramMarks:
-                return persisatance.showTramMarks
-                
-            case C.UI.Settings.MenuLabels.TramsOnly:
-                return persisatance.onlyTrams
-                
-            case C.UI.Settings.MenuLabels.BussesOnly:
-                return persisatance.onlyBusses
-                
-            default:
-                print("\(#file) \(#line) -> Does not have a cell with this title: \(viewModel.title)")
-                return false
-            }
+            return false
+//            switch viewModel.title {
+//            case C.UI.Settings.MenuLabels.TramMarks:
+//                return persisatance.showTramMarks
+//
+//            case C.UI.Settings.MenuLabels.TramsOnly:
+//                return persisatance.onlyTrams
+//
+//            case C.UI.Settings.MenuLabels.BussesOnly:
+//                return persisatance.onlyBusses
+//
+//            default:
+//                print("\(#file) \(#line) -> Does not have a cell with this title: \(viewModel.title)")
+//                return false
+//            }
         }()
     }
     
@@ -227,40 +221,40 @@ extension CellConfiguration {
 //MARK: -
 extension SettingsVC: SwitchCellInteraction {
     func cellSwichValueDidChange(cell: SwitchTableViewCell, isOn: Bool) {
-        guard let persisatance = persisatance else { return } // now work
-        guard let cellTitle = cell.switchNameLabel.text else { return }
-
-        switch cellTitle {
-        case C.UI.Settings.MenuLabels.TramMarks:
-            persisatance.showTramMarks = isOn
-            
-        case C.UI.Settings.MenuLabels.TramsOnly:
-            persisatance.onlyTrams = isOn
-            
-        case C.UI.Settings.MenuLabels.BussesOnly:
-            persisatance.onlyBusses = isOn
-
-        default:
-            print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
-        }
-        
-        refresSwitches()
+//        guard let persisatance = persisatance else { return } // now work
+//        guard let cellTitle = cell.switchNameLabel.text else { return }
+//
+//        switch cellTitle {
+//        case C.UI.Settings.MenuLabels.TramMarks:
+//            persisatance.showTramMarks = isOn
+//
+//        case C.UI.Settings.MenuLabels.TramsOnly:
+//            persisatance.onlyTrams = isOn
+//
+//        case C.UI.Settings.MenuLabels.BussesOnly:
+//            persisatance.onlyBusses = isOn
+//
+//        default:
+//            print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
+//        }
+//
+//        refresSwitches()
     }
 }
 
 //: MARK: - FilerResultHandler
 extension SettingsVC: FilerResultHandler {
     func selectedLines(_ lines: [String]) {
-        if let per = persisatance {
-            per.selectedLines = lines
-
-            // 😱: relax it just finds the index and does somthing when it's not nil 😋
-            if let index = cellOrdering.index(where: {$0.reuseID == C.Storyboard.CellReuseId.SettingsGoingDeeperCell}) {
-
-                let indexPath = IndexPath.init(item: index, section: 0)
-                tableView.reloadRows(at: [indexPath], with: .fade)
-            }
-        }
+//        if let per = persisatance {
+//            per.selectedLines = lines
+//
+//            // 😱: relax it just finds the index and does somthing when it's not nil 😋
+//            if let index = cellOrdering.index(where: {$0.reuseID == C.Storyboard.CellReuseId.SettingsGoingDeeperCell}) {
+//
+//                let indexPath = IndexPath.init(item: index, section: 0)
+//                tableView.reloadRows(at: [indexPath], with: .fade)
+//            }
+//        }
     }
 }
 
