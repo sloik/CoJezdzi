@@ -5,10 +5,16 @@ import ReSwift
 
 struct SettingsState {
     
+    enum Filters {
+        case tram(on: Bool)
+        case bus(on: Bool)
+        case previousLocation(on: Bool)
+    }
+    
     struct FilterState {
-        let tramOnly: Bool
-        let busOnly: Bool
-        let lowFloredOnly: Bool
+         let tramOnly          = Filters.tram(on: false)
+         let busOnly           = Filters.bus(on: false)
+         let previousLocations = Filters.previousLocation(on: true)
     }
     
     let lines: Set<String>
