@@ -279,7 +279,6 @@
 				EF4266A5209262350076238D /* Keyable.swift */,
 				EF42669D209262340076238D /* PeristanceModel.swift */,
 				EF4266A2209262340076238D /* SettingsPersistance.swift */,
-				EF426699209262340076238D /* SwitchTableViewCell.swift */,
 				EF42669F209262340076238D /* TData.swift */,
 				EF4266A8209262350076238D /* TDataAnnotation.swift */,
 				EF42669B209262340076238D /* WarsawApiDealer.swift */,
@@ -392,6 +391,7 @@
 		EFC25B6A209E4270002897A0 /* _Settings */ = {
 			isa = PBXGroup;
 			children = (
+				EF426699209262340076238D /* SwitchTableViewCell.swift */,
 				EF4266A1209262340076238D /* SettingsVC.swift */,
 			);
 			path = _Settings;
