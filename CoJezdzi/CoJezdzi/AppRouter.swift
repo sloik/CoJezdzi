@@ -35,9 +35,13 @@ extension AppRouter: StoreSubscriber {
         let shouldAnimate = true
         
         var vc:UIViewController
+        
         switch state.navigationState {
         case .map:
             vc = R.storyboard.main.mapScene()!
+            
+        case .settings:
+            vc = R.storyboard.main.settingsScene()!
         }
         
         show(viewController: vc, animated: shouldAnimate)

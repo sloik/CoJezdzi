@@ -4,6 +4,7 @@ import Rswift
 
 enum RoutingDestination:String {
     case map = "MapScene"
+    case settings = "SettingsScene"
 }
 
 struct RoutingState: StateType {
