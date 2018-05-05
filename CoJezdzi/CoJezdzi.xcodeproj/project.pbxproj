@@ -38,8 +38,6 @@
 		EF4266FB209273C80076238D /* TData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669F209262340076238D /* TData.swift */; };
 		EF4266FC209273C80076238D /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
 		EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
-		EF4266FE209273C80076238D /* WarsawApiDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669B209262340076238D /* WarsawApiDealer.swift */; };
-		EF4266FF209273C80076238D /* WarsawApiResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669C209262340076238D /* WarsawApiResponseParser.swift */; };
 		EF426700209273C80076238D /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A0209262340076238D /* WebScene.swift */; };
 		EF4267052097543A0076238D /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267042097543A0076238D /* VehicleState.swift */; };
 		EF426707209754DC0076238D /* TramsBussesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426706209754DC0076238D /* TramsBussesReducer.swift */; };
@@ -105,8 +103,6 @@
 		EF426698209262340076238D /* FilerResultHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilerResultHandler.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		EF42669A209262340076238D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
-		EF42669B209262340076238D /* WarsawApiDealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiDealer.swift; sourceTree = "<group>"; };
-		EF42669C209262340076238D /* WarsawApiResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiResponseParser.swift; sourceTree = "<group>"; };
 		EF42669D209262340076238D /* PeristanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModel.swift; sourceTree = "<group>"; };
 		EF42669E209262340076238D /* URL_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Extensions.swift; sourceTree = "<group>"; };
 		EF42669F209262340076238D /* TData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TData.swift; sourceTree = "<group>"; };
@@ -281,8 +277,6 @@
 				EF4266A2209262340076238D /* SettingsPersistance.swift */,
 				EF42669F209262340076238D /* TData.swift */,
 				EF4266A8209262350076238D /* TDataAnnotation.swift */,
-				EF42669B209262340076238D /* WarsawApiDealer.swift */,
-				EF42669C209262340076238D /* WarsawApiResponseParser.swift */,
 				EF4266A0209262340076238D /* WebScene.swift */,
 			);
 			path = __Old;
@@ -641,7 +635,6 @@
 				EF4266EC209273C80076238D /* ButtonTableViewCell.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
 				EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */,
-				EF4266FF209273C80076238D /* WarsawApiResponseParser.swift in Sources */,
 				EF42671B2097CB1D0076238D /* Result.swift in Sources */,
 				EF4266F8209273C80076238D /* SwitchTableViewCell.swift in Sources */,
 				EF4266F9209273C80076238D /* TAnnotation.swift in Sources */,
@@ -674,7 +667,6 @@
 				EF4266CF209266560076238D /* WarsawVehicleDto.swift in Sources */,
 				EF4267192097C2090076238D /* RoutingAction.swift in Sources */,
 				EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */,
-				EF4266FE209273C80076238D /* WarsawApiDealer.swift in Sources */,
 				EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */,
 				EF426707209754DC0076238D /* TramsBussesReducer.swift in Sources */,
 				EF4266FB209273C80076238D /* TData.swift in Sources */,

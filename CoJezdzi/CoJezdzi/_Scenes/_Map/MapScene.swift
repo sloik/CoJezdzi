@@ -15,14 +15,6 @@ struct PayloadData {
     }
 }
 
-extension SettingsPersistance {
-    var cityApiDealer: DataPullerDataProvider {
-        get {
-            return WarsawApiDealer()
-        }
-    }
-}
-
 class MapScene: UIViewController {
 
     // MARK: - UI
