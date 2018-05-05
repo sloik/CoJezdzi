@@ -58,6 +58,8 @@
 		EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */; };
 		EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */; };
 		EFB5C2AA209CE14C00BB5855 /* SettingsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */; };
+		EFC25B6D209E45FE002897A0 /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC25B6B209E45FE002897A0 /* CollectionDataSource.swift */; };
+		EFC25B6E209E45FE002897A0 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC25B6C209E45FE002897A0 /* TableDataSource.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
 		EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */; };
 		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
@@ -146,6 +148,8 @@
 		EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
 		EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
 		EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsReducer.swift; sourceTree = "<group>"; };
+		EFC25B6B209E45FE002897A0 /* CollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		EFC25B6C209E45FE002897A0 /* TableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
 		EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
@@ -366,7 +370,9 @@
 		EFB5C2A4209C710200BB5855 /* _Misc */ = {
 			isa = PBXGroup;
 			children = (
+				EFC25B6B209E45FE002897A0 /* CollectionDataSource.swift */,
 				EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */,
+				EFC25B6C209E45FE002897A0 /* TableDataSource.swift */,
 				EF4266A6209262350076238D /* TAnnotation.swift */,
 				EF4266A9209262350076238D /* TAnnotationView.swift */,
 			);
@@ -655,6 +661,7 @@
 				EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */,
 				EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */,
 				EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */,
+				EFC25B6E209E45FE002897A0 /* TableDataSource.swift in Sources */,
 				EFB5C2AA209CE14C00BB5855 /* SettingsReducer.swift in Sources */,
 				EF4266ED209273C80076238D /* Constants.swift in Sources */,
 				BA5685461C763EA600D3B5FE /* AppDelegate.swift in Sources */,
@@ -674,6 +681,7 @@
 				EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */,
 				EF4266F0209273C80076238D /* FilerResultHandler.swift in Sources */,
 				EF42670D2097924A0076238D /* AppRouter.swift in Sources */,
+				EFC25B6D209E45FE002897A0 /* CollectionDataSource.swift in Sources */,
 				EF4266D2209267DC0076238D /* VehicleType.swift in Sources */,
 				EF4267112097B9290076238D /* WarsawApiConstants.swift in Sources */,
 			);
