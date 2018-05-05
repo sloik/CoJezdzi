@@ -40,6 +40,8 @@ class SettingsVC: UITableViewController {
         return cells
     }
     
+    fileprivate var latesState: SettingsState!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -286,8 +288,7 @@ extension UserInteraction {
 
 extension SettingsVC: StoreSubscriber {
     func newState(state: SettingsState) {
-        
-        
+        latesState = state
         tableView.reloadData()
     }
 }
