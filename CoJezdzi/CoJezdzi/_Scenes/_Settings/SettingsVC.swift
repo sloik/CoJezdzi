@@ -239,24 +239,23 @@ extension CellConfiguration {
 //MARK: -
 extension SettingsVC: SwitchCellInteraction {
     func cellSwichValueDidChange(cell: SwitchTableViewCell, isOn: Bool) {
-//        guard let persisatance = persisatance else { return } // now work
-//        guard let cellTitle = cell.switchNameLabel.text else { return }
-//
-//        switch cellTitle {
-//        case C.UI.Settings.MenuLabels.TramMarks:
-//            persisatance.showTramMarks = isOn
-//
-//        case C.UI.Settings.MenuLabels.TramsOnly:
-//            persisatance.onlyTrams = isOn
-//
-//        case C.UI.Settings.MenuLabels.BussesOnly:
-//            persisatance.onlyBusses = isOn
-//
-//        default:
-//            print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
-//        }
-//
-//        refresSwitches()
+        guard let cellTitle = cell.switchNameLabel.text else { return }
+
+        switch cellTitle {
+        case C.UI.Settings.MenuLabels.TramMarks:
+            store.dispatch(SettingsSwitchAction(whitchSwitch: .previousLocation(on: isOn)))
+
+        case C.UI.Settings.MenuLabels.TramsOnly:
+            store.dispatch(SettingsSwitchAction(whitchSwitch: .tram(on: isOn)))
+            
+        case C.UI.Settings.MenuLabels.BussesOnly:
+            store.dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))
+
+        default:
+            print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
+        }
+
+        refresSwitches()
     }
 }
 
