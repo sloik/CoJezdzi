@@ -33,7 +33,6 @@ class SettingsVC: UITableViewController {
     fileprivate var cellOrdering: [ViewModel]  {
 
         let cells = [
-            ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsGoingDeeperCell, title: C.UI.Settings.MenuLabels.City),
             ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsGoingDeeperCell, title: C.UI.Settings.MenuLabels.Filters),
             ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsSwitchCell,      title: C.UI.Settings.MenuLabels.BussesOnly),
             ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsSwitchCell,      title: C.UI.Settings.MenuLabels.TramsOnly),
@@ -92,9 +91,6 @@ extension SettingsVC {
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
                 break
-                
-            case C.UI.Settings.MenuLabels.City:
-                displayCityChooser()
                 
             default:
                 print("Unhandled action for cell with title \(viewModel.title)")
@@ -176,14 +172,6 @@ extension CellConfiguration {
             
             if let selectedLines = persisatance?.selectedLines, selectedLines.count > 0 {
                 cell.detailTextLabel?.text = selectedLines.joined(separator: ", ")
-            }
-            
-        case C.UI.Settings.MenuLabels.City:
-            cell.textLabel?.text = viewModel.title
-            cell.detailTextLabel?.text = viewModel.title
-            
-            if let selectedCity = persisatance?.seletedCity {
-                cell.detailTextLabel?.text = selectedCity.rawValue
             }
             
         default:
@@ -281,30 +269,6 @@ private typealias UserInteraction = SettingsVC
 extension UserInteraction {
     @IBAction func uderDidTapCancelButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion:nil)
-    }
-}
-
-typealias CityChooser = SettingsVC
-extension CityChooser {
-    func displayCityChooser() {
-        
-//        let currentCity = persisatance!.seletedCity
-//        ActionSheetStringPicker.show(withTitle: "Wybierz miasto",
-//                                     rows: AvailableCity.allCases.map{ $0.rawValue },
-//                                     initialSelection: AvailableCity.allCases.index(of: currentCity)!,
-//                                     doneBlock: { (_, _, values) in
-//                                        guard let selectedCity = values as? String else {
-//                                            return
-//                                        }
-//                                        
-//                                        if let city = AvailableCity(rawValue: selectedCity), city != currentCity {
-//                                            self.persisatance!.seletedCity = city
-//                                            self.refreshVisibleRows()
-//                                        }
-//        }, cancel: { picker in
-//            return
-//        }, origin: self.tableView)
-        
     }
 }
 

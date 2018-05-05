@@ -53,7 +53,6 @@ struct C {
 
         struct Settings {
             struct MenuLabels { // at the moment only switch cells are connected to this ;)
-                static let City       = "Wybierz miasto"
                 static let Filters    = "Filtry"
                 static let TramMarks  = "Poprzednie położenia"
                 static let AboutApp   = "O Aplikacji"
