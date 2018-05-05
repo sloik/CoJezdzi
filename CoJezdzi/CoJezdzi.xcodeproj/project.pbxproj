@@ -276,7 +276,6 @@
 				EF4266A5209262350076238D /* Keyable.swift */,
 				EF42669D209262340076238D /* PeristanceModel.swift */,
 				EF4266A2209262340076238D /* SettingsPersistance.swift */,
-				EF4266A1209262340076238D /* SettingsVC.swift */,
 				EF426699209262340076238D /* SwitchTableViewCell.swift */,
 				EF42669F209262340076238D /* TData.swift */,
 				EF4266A8209262350076238D /* TDataAnnotation.swift */,
@@ -345,9 +344,8 @@
 		EF42670E2097A16A0076238D /* _Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				EF42669A209262340076238D /* MapScene.swift */,
-				EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */,
-				EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */,
+				EFC25B69209E4260002897A0 /* _Map */,
+				EFC25B6A209E4270002897A0 /* _Settings */,
 			);
 			path = _Scenes;
 			sourceTree = "<group>";
@@ -373,6 +371,24 @@
 				EF4266A9209262350076238D /* TAnnotationView.swift */,
 			);
 			path = _Misc;
+			sourceTree = "<group>";
+		};
+		EFC25B69209E4260002897A0 /* _Map */ = {
+			isa = PBXGroup;
+			children = (
+				EF42669A209262340076238D /* MapScene.swift */,
+				EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */,
+				EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */,
+			);
+			path = _Map;
+			sourceTree = "<group>";
+		};
+		EFC25B6A209E4270002897A0 /* _Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266A1209262340076238D /* SettingsVC.swift */,
+			);
+			path = _Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
