@@ -12,6 +12,7 @@ struct SettingsState {
     }
     
     let lines: [String]
+    let selectedLines: [String]
     let switches: FilterState
     let aboutApp: String = "https://avantapp.wordpress.com/co-jezdzi/"
 }
