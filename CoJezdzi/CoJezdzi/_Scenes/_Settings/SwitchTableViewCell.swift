@@ -1,7 +1,6 @@
 import UIKit
 
 protocol SwitchCellInteraction: class {
-
     func cellSwichValueDidChange(cell: SwitchTableViewCell, isOn: Bool)
 }
 
@@ -15,9 +14,8 @@ class SwitchTableViewCell: UITableViewCell {
     @IBAction func userDidInteractWithSwitch(_ sender: UISwitch) {
         delegate?.cellSwichValueDidChange(cell: self, isOn: sender.isOn)
     }
-
-    func toogle() {
-        cellSwitch.setOn(!cellSwitch.isOn, animated: true)
-        delegate?.cellSwichValueDidChange(cell: self, isOn: cellSwitch.isOn)
+    
+    func updateSwitchState(_ state: Bool) {
+        cellSwitch.setOn(state, animated: true)
     }
 }
