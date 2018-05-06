@@ -28,3 +28,10 @@ struct SettingsState: StateType {
     let switches: FilterState
     let aboutApp: String = "https://avantapp.wordpress.com/co-jezdzi/"
 }
+
+extension SettingsState {
+    func switches(_ inSwitches: FilterState) -> SettingsState {
+        return SettingsState(lines: lines, selectedLines: selectedLines, switches: inSwitches)
+    }
+}
+
