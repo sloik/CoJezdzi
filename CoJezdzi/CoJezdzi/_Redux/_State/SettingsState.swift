@@ -15,6 +15,14 @@ struct SettingsState: StateType {
             case .previousLocation(let on): return on
             }
         }
+        
+        var reversed: SettingsState.Filter {
+            switch self {
+            case .tram(let on): return .tram(on: !on)
+            case .bus(let on): return .bus(on: !on)
+            case .previousLocation(let on): return .previousLocation(on: !on)
+            }
+        }
     }
     
     struct FilterState: StateType {
