@@ -9,6 +9,14 @@ struct SettingsState {
         case tram(on: Bool)
         case bus(on: Bool)
         case previousLocation(on: Bool)
+        
+        var isOn: Bool {
+            switch self {
+            case .tram(let on): return on
+            case .bus(let on): return on
+            case .previousLocation(let on): return on
+            }
+        }
     }
     
     struct FilterState {
