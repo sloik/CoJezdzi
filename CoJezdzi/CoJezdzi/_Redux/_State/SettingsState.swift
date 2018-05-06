@@ -1,7 +1,7 @@
 
 import ReSwift
 
-struct SettingsState {
+struct SettingsState: StateType {
     
     enum Filter {
         case tram(on: Bool)
