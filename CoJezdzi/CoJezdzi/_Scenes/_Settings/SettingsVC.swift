@@ -175,9 +175,9 @@ extension CellConfiguration {
             cell.textLabel?.text = "Wybierz Linie"
             cell.detailTextLabel?.text = "Wszystkie"
             
-//            if let selectedLines = persisatance?.selectedLines, selectedLines.count > 0 {
-//                cell.detailTextLabel?.text = selectedLines.joined(separator: ", ")
-//            }
+            if latesState.selectedLines.isEmpty == false {
+                cell.detailTextLabel?.text = latesState.selectedLines.joined(separator: ", ")
+            }
             
         default:
             print("Unhandled title for deeper cell with title \(viewModel.title)")
