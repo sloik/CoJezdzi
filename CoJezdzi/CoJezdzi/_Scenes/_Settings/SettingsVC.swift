@@ -40,6 +40,13 @@ class SettingsVC: UITableViewController {
         return cells
     }
     
+    fileprivate var titleToState: [String: SettingsState.Filter] {
+        return
+            [C.UI.Settings.MenuLabels.TramMarks : latesState.switches.previousLocations,
+             C.UI.Settings.MenuLabels.TramsOnly : latesState.switches.tramOnly,
+             C.UI.Settings.MenuLabels.BussesOnly: latesState.switches.busOnly]
+    }
+    
     fileprivate var latesState: SettingsState!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,12 +79,6 @@ extension SettingsVC {
     }
     
     func refresSwitches() {
-        let titleToState = [
-            C.UI.Settings.MenuLabels.TramMarks : latesState.switches.previousLocations,
-            C.UI.Settings.MenuLabels.TramsOnly : latesState.switches.tramOnly,
-            C.UI.Settings.MenuLabels.BussesOnly: latesState.switches.busOnly
-        ]
-        
         tableView.visibleCells
             .compactMap { return $0 as? SwitchTableViewCell }
             .forEach {
