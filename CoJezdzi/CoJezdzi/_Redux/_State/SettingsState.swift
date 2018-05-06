@@ -5,7 +5,7 @@ import ReSwift
 
 struct SettingsState {
     
-    enum Filters {
+    enum Filter {
         case tram(on: Bool)
         case bus(on: Bool)
         case previousLocation(on: Bool)
