@@ -299,9 +299,8 @@
 		EF4266C4209263550076238D /* _Actions */ = {
 			isa = PBXGroup;
 			children = (
-				EF611501209E537300E05E02 /* _State */,
-				EF4266C8209264640076238D /* FetchBussesAction.swift */,
-				EF4266C62092641C0076238D /* FetchTramsAction.swift */,
+				EF611504209EE60C00E05E02 /* _Map */,
+				EF611501209E537300E05E02 /* _Settings */,
 				EF4267182097C2090076238D /* RoutingAction.swift */,
 			);
 			path = _Actions;
@@ -362,12 +361,21 @@
 			path = _Networking;
 			sourceTree = "<group>";
 		};
-		EF611501209E537300E05E02 /* _State */ = {
+		EF611501209E537300E05E02 /* _Settings */ = {
 			isa = PBXGroup;
 			children = (
 				EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */,
 			);
-			path = _State;
+			path = _Settings;
+			sourceTree = "<group>";
+		};
+		EF611504209EE60C00E05E02 /* _Map */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266C8209264640076238D /* FetchBussesAction.swift */,
+				EF4266C62092641C0076238D /* FetchTramsAction.swift */,
+			);
+			path = _Map;
 			sourceTree = "<group>";
 		};
 		EFB5C2A4209C710200BB5855 /* _Misc */ = {
