@@ -24,7 +24,6 @@
 		EF4266ED209273C80076238D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
 		EF4266EE209273C80076238D /* DataPuller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426697209262340076238D /* DataPuller.swift */; };
 		EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A3209262340076238D /* DataPullerDataProvider.swift */; };
-		EF4266F0209273C80076238D /* FilerResultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426698209262340076238D /* FilerResultHandler.swift */; };
 		EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A7209262350076238D /* FilterCollectionViewCell.swift */; };
 		EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AA209262350076238D /* FilterLinesCVC.swift */; };
 		EF4266F3209273C80076238D /* Keyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A5209262350076238D /* Keyable.swift */; };
@@ -101,7 +100,6 @@
 		BA5685671C763EA600D3B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABDD4BA1C78CDD500152EBD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		EF426697209262340076238D /* DataPuller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPuller.swift; sourceTree = "<group>"; };
-		EF426698209262340076238D /* FilerResultHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilerResultHandler.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		EF42669A209262340076238D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
 		EF42669D209262340076238D /* PeristanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModel.swift; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 				EF4266A4209262340076238D /* ButtonTableViewCell.swift */,
 				EF426697209262340076238D /* DataPuller.swift */,
 				EF4266A3209262340076238D /* DataPullerDataProvider.swift */,
-				EF426698209262340076238D /* FilerResultHandler.swift */,
 				EF4266A7209262350076238D /* FilterCollectionViewCell.swift */,
 				EF4266AA209262350076238D /* FilterLinesCVC.swift */,
 				EF4266A5209262350076238D /* Keyable.swift */,
@@ -691,7 +688,6 @@
 				EF426707209754DC0076238D /* TramsBussesReducer.swift in Sources */,
 				EF4266FB209273C80076238D /* TData.swift in Sources */,
 				EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */,
-				EF4266F0209273C80076238D /* FilerResultHandler.swift in Sources */,
 				EF42670D2097924A0076238D /* AppRouter.swift in Sources */,
 				EFC25B6D209E45FE002897A0 /* CollectionDataSource.swift in Sources */,
 				EF4266D2209267DC0076238D /* VehicleType.swift in Sources */,

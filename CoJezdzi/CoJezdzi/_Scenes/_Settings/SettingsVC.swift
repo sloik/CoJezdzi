@@ -235,22 +235,6 @@ extension SettingsVC: SwitchCellInteraction {
     }
 }
 
-//: MARK: - FilerResultHandler
-extension SettingsVC: FilerResultHandler {
-    func selectedLines(_ lines: [String]) {
-//        if let per = persisatance {
-//            per.selectedLines = lines
-//
-//            // 😱: relax it just finds the index and does somthing when it's not nil 😋
-//            if let index = cellOrdering.index(where: {$0.reuseID == C.Storyboard.CellReuseId.SettingsGoingDeeperCell}) {
-//
-//                let indexPath = IndexPath.init(item: index, section: 0)
-//                tableView.reloadRows(at: [indexPath], with: .fade)
-//            }
-//        }
-    }
-}
-
 // MARK: -
 private typealias UserInteraction = SettingsVC
 extension UserInteraction {
