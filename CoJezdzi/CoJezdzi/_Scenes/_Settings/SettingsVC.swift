@@ -199,26 +199,8 @@ extension CellConfiguration {
         
         let viewModel = cellOrdering[indexPath.row]
         
-        // updates the title
         cell.switchNameLabel.text = viewModel.title
-        
-        cell.cellSwitch.isOn = {
-            return false
-//            switch viewModel.title {
-//            case C.UI.Settings.MenuLabels.TramMarks:
-//                return persisatance.showTramMarks
-//
-//            case C.UI.Settings.MenuLabels.TramsOnly:
-//                return persisatance.onlyTrams
-//
-//            case C.UI.Settings.MenuLabels.BussesOnly:
-//                return persisatance.onlyBusses
-//
-//            default:
-//                print("\(#file) \(#line) -> Does not have a cell with this title: \(viewModel.title)")
-//                return false
-//            }
-        }()
+        cell.cellSwitch.isOn = titleToState[viewModel.title]!.isOn
     }
     
     func refreshVisibleRows() {
