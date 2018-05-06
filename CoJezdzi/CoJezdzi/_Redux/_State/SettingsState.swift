@@ -47,10 +47,14 @@ extension SettingsState.FilterState {
     func update(_ inFilter:SettingsState.Filter) -> SettingsState.FilterState {
         switch inFilter {
 
-        case .tram:
-            return SettingsState.FilterState(tramOnly: inFilter, busOnly: busOnly,  previousLocations: previousLocations)
-        case .bus:
-            return SettingsState.FilterState(tramOnly: tramOnly, busOnly: inFilter, previousLocations: previousLocations)
+        case .tram(let isOn):
+            return SettingsState.FilterState(tramOnly: inFilter,
+                                             busOnly: isOn ? .bus(on: false) : busOnly,
+                                             previousLocations: previousLocations)
+        case .bus(let isOn):
+            return SettingsState.FilterState(tramOnly: isOn ? .tram(on: false) : tramOnly,
+                                             busOnly: inFilter,
+                                             previousLocations: previousLocations)
         case .previousLocation:
             return SettingsState.FilterState(tramOnly: tramOnly, busOnly: busOnly,  previousLocations: inFilter)
         }
