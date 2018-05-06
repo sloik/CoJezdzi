@@ -35,3 +35,16 @@ extension SettingsState {
     }
 }
 
+extension SettingsState.FilterState {
+    func update(_ inFilter:SettingsState.Filter) -> SettingsState.FilterState {
+        switch inFilter {
+
+        case .tram:
+            return SettingsState.FilterState(tramOnly: inFilter, busOnly: busOnly,  previousLocations: previousLocations)
+        case .bus:
+            return SettingsState.FilterState(tramOnly: tramOnly, busOnly: inFilter, previousLocations: previousLocations)
+        case .previousLocation:
+            return SettingsState.FilterState(tramOnly: tramOnly, busOnly: busOnly,  previousLocations: inFilter)
+        }
+    }
+}
