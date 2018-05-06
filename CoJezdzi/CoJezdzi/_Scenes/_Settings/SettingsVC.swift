@@ -72,27 +72,20 @@ extension SettingsVC {
     }
     
     func refresSwitches() {
-        tableView.visibleCells.forEach { (cell) in
-            if cell is SwitchTableViewCell {
-                let switchCell = cell as! SwitchTableViewCell
-
-//                switch switchCell.switchNameLabel.text! {
-//                case C.UI.Settings.MenuLabels.TramMarks:
-//                    switchCell.cellSwitch.setOn(persisatance.showTramMarks, animated: true)
-//
-//                case C.UI.Settings.MenuLabels.TramsOnly:
-//                    switchCell.cellSwitch.setOn(persisatance.onlyTrams, animated: true)
-//
-//                case C.UI.Settings.MenuLabels.BussesOnly:
-//                    switchCell.cellSwitch.setOn(persisatance.onlyBusses, animated: true)
-//
-//                default:
-//                    break
-//                }
-            }
+        let titleToState = [
+            C.UI.Settings.MenuLabels.TramMarks : latesState.switches.previousLocations,
+            C.UI.Settings.MenuLabels.TramsOnly : latesState.switches.tramOnly,
+            C.UI.Settings.MenuLabels.BussesOnly: latesState.switches.busOnly
+        ]
+        
+        tableView.visibleCells
+            .compactMap { return $0 as? SwitchTableViewCell }
+            .forEach {
+                if let title = $0.switchNameLabel.text, let state = titleToState[title] {
+                    $0.cellSwitch.setOn(state.isOn, animated: true)
+                }
         }
     }
-    
     
     fileprivate func actionForCell(at indexPath: IndexPath) {
         let viewModel = cellOrdering[indexPath.row]
