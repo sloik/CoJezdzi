@@ -1,6 +1,4 @@
 
-import Foundation
-
 import ReSwift
 
 struct SettingsState {
