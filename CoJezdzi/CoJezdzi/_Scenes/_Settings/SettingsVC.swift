@@ -40,14 +40,18 @@ class SettingsVC: UITableViewController {
         return cells
     }
     
-    fileprivate var titleToState: [String: SettingsState.Filter] {
+    var titleToState: [String: SettingsState.Filter] {
         return
             [C.UI.Settings.MenuLabels.TramMarks : latesState.switches.previousLocations,
              C.UI.Settings.MenuLabels.TramsOnly : latesState.switches.tramOnly,
              C.UI.Settings.MenuLabels.BussesOnly: latesState.switches.busOnly]
     }
     
-    fileprivate var latesState: SettingsState!
+    fileprivate var latesState: SettingsState! {
+        didSet {
+            refreshVisibleRows()
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -109,14 +113,12 @@ extension SettingsVC {
             break
             
         case C.Storyboard.CellReuseId.SettingsSwitchCell:
-            tableView.visibleCells.forEach{ (cell: UITableViewCell) in
-                let cellIndex = tableView.indexPath(for: cell)
-                if cellIndex == indexPath {
-                    let switchCell = cell as! SwitchTableViewCell
-                    switchCell.toogle()
-                }
-            }
             
+            let viewModel = cellOrdering[indexPath.row]
+            let currentState = titleToState[viewModel.title]!
+            
+            store.dispatch(SettingsSwitchAction(whitchSwitch: currentState.reversed))
+ 
         default:
             return
         }
@@ -200,15 +202,13 @@ extension CellConfiguration {
         let viewModel = cellOrdering[indexPath.row]
         
         cell.switchNameLabel.text = viewModel.title
-        cell.cellSwitch.isOn = titleToState[viewModel.title]!.isOn
+        cell.updateSwitchState(titleToState[viewModel.title]!.isOn)
     }
     
     func refreshVisibleRows() {
-        guard let visibleIndexes = tableView.indexPathsForVisibleRows else {
-            return
-        }
+        guard let visibleIndexes = tableView.indexPathsForVisibleRows else { return }
 
-        tableView.reloadRows(at: visibleIndexes, with: .automatic)
+        visibleIndexes.forEach { configure(cell: tableView.cellForRow(at: $0)!, at: $0) }
     }
 }
 
@@ -227,11 +227,8 @@ extension SettingsVC: SwitchCellInteraction {
         case C.UI.Settings.MenuLabels.BussesOnly:
             store.dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))
 
-        default:
-            print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
+        default: print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
         }
-
-        refresSwitches()
     }
 }
 
@@ -248,7 +245,6 @@ extension UserInteraction {
 extension SettingsVC: StoreSubscriber {
     func newState(state: SettingsState) {
         latesState = state
-        tableView.reloadData()
     }
 }
 
