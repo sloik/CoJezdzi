@@ -17,10 +17,10 @@ struct SettingsState: StateType {
         }
     }
     
-    struct FilterState {
-         let tramOnly          = Filters.tram(on: false)
-         let busOnly           = Filters.bus(on: false)
-         let previousLocations = Filters.previousLocation(on: true)
+    struct FilterState: StateType {
+        let tramOnly: Filter
+        let busOnly: Filter
+        let previousLocations: Filter
     }
     
     let lines: Set<String>
