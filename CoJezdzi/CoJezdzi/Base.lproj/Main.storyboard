@@ -234,7 +234,7 @@ http://api.um.warszawa.pl</string>
         <!--Wybrane Linie-->
         <scene sceneID="7pG-H6-p4P">
             <objects>
-                <collectionViewController id="oN4-1b-1B2" customClass="FilterLinesCVC" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="LinesFilter" id="oN4-1b-1B2" customClass="FilterLinesCVC" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="fIX-g0-bxB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
