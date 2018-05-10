@@ -2,9 +2,10 @@
 import ReSwift
 import Rswift
 
-enum RoutingDestination:String {
-    case map = "MapScene"
-    case settings = "SettingsScene"
+enum RoutingDestination: String {
+    case map         = "MapScene"
+    case settings    = "SettingsScene"
+    case linesFilter = "FilterLinesCVC"
 }
 
 struct RoutingState: StateType {
