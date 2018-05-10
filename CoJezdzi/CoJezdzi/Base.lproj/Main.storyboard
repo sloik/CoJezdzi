@@ -94,7 +94,6 @@ http://api.um.warszawa.pl</string>
                         <outlet property="timeIndycatorRight" destination="FsM-Cg-Vhm" id="mUQ-D3-bzy"/>
                         <outlet property="timeIndycatorView" destination="W8T-Lq-e8b" id="iQx-PN-OBf"/>
                         <outlet property="userSettingsButton" destination="mXk-At-R5Q" id="pLt-ZE-99N"/>
-                        <segue destination="ys3-Wv-ume" kind="presentation" identifier="ShowWebAPIForm" id="aHu-Gl-GDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybd-8B-oxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,10 +221,6 @@ http://api.um.warszawa.pl</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="oN4-1b-1B2" kind="show" identifier="SettingsFilterLines" id="zFn-Dj-JaT"/>
-                        <segue destination="ys3-Wv-ume" kind="show" identifier="AboutApplication" id="m6l-cO-Ehv"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpU-B6-fSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,7 +294,7 @@ http://api.um.warszawa.pl</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Al3-14-fey" userLabel="spacer">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -344,7 +339,4 @@ http://api.um.warszawa.pl</string>
         <image name="RefreshData" width="42" height="42"/>
         <image name="UserSettings" width="42" height="42"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="m6l-cO-Ehv"/>
-    </inferredMetricsTieBreakers>
 </document>

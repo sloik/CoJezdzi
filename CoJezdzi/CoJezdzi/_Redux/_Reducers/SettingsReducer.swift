@@ -4,8 +4,7 @@ import Foundation
 import ReSwift
 
 func settingsReducer(action: Action, state: SettingsState?) -> SettingsState {
-    let state = state ?? SettingsState(lines: [],
-                                       selectedLines: selectedStateReducer(action: action, state: nil),
+    let state = state ?? SettingsState(selectedLines: selectedStateReducer(action: action, state: nil),
                                        switches: settingsSwitchReducer(action: action, state: nil))
     
     return state

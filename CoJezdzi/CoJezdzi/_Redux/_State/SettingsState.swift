@@ -31,7 +31,6 @@ struct SettingsState: StateType {
         let previousLocations: Filter
     }
     
-    let lines: Set<String>
     let selectedLines: SelectedLinesState
     let switches: FilterState
     let aboutApp: String = "https://avantapp.wordpress.com/co-jezdzi/"
@@ -39,7 +38,7 @@ struct SettingsState: StateType {
 
 extension SettingsState {
     func switches(_ inSwitches: FilterState) -> SettingsState {
-        return SettingsState(lines: lines, selectedLines: selectedLines, switches: inSwitches)
+        return SettingsState(selectedLines: selectedLines, switches: inSwitches)
     }
 }
 

@@ -4,19 +4,22 @@ import ReSwift
 
 class FilterLinesCVC: UICollectionViewController {
     
-    fileprivate var latesState: SettingsState! {
+    fileprivate var latesState: AppState! {
         didSet {
+            lines = latesState.mapSceneState.allCurrent
+                .map { $0.lines.trimmingCharacters(in: .whitespaces) }
+                .sorted()
+            
             refreshVisibleRows()
         }
     }
+    
+    fileprivate var lines: [String] = []
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
-        store.subscribe(self) {
-            $0.select{ (appState) in
-                appState.settingsSceneState
-            }
-        }
+        store.subscribe(self)
         
         store.dispatch(RoutingAction(destination: .linesFilter))
     }
@@ -34,8 +37,9 @@ extension FilterLinesCVC {
     func configure(cell: UICollectionViewCell, at indexPath: IndexPath) {
         switch cell {
         case let cell as FilterCollectionViewCell:
-            cell.labelText = "dasda"
-            cell.active = true
+            let lineName = lines[indexPath.row]
+            cell.labelText = lineName
+            cell.active = latesState.settingsSceneState.selectedLines.lines.contains(LineInfo(name: lineName))
             
         default: break
         }
@@ -46,7 +50,27 @@ extension FilterLinesCVC {
         
         collectionView.indexPathsForVisibleItems.forEach {
             configure(cell: collectionView.cellForItem(at: $0)!, at: $0 )
-        }        
+        }
+        
+        collectionView.reloadData()
+    }
+}
+
+// MARK: - Data Source
+
+extension FilterLinesCVC {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return lines.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: C.Storyboard.CellReuseId.FilterLinesCell,
+                                                      for: indexPath)
+        
+        configure(cell: cell, at: indexPath)
+        
+        return cell
     }
 }
 
@@ -87,7 +111,7 @@ extension FilterLinesCVC {
 // MARK: ReSwift
 
 extension FilterLinesCVC: StoreSubscriber {
-    func newState(state: SettingsState) {
+    func newState(state: AppState) {
         latesState = state
     }
 }
