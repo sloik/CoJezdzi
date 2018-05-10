@@ -11,6 +11,9 @@ func selectedStateReducer(action: Action, state: SelectedLinesState?) -> Selecte
     case let action as SelectedLineRemoveAction:
         return state.remove(LineInfo(name: action.line))
         
+    case _ as SelectedLineRemoveAllAction:
+        return SelectedLinesState(lines: [])
+        
     default:
         return state
     }    
