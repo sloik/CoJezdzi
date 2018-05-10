@@ -62,7 +62,7 @@ class SettingsVC: UITableViewController {
             }
         }
         
-        store.dispatch(RoutingAction(destination: .map))
+        store.dispatch(RoutingAction(destination: .settings))
 
         tableView.reloadData()
     }
@@ -100,7 +100,7 @@ extension SettingsVC {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
-                break
+                store.dispatch(RoutingAction(destination: .linesFilter))
                 
             default:
                 print("Unhandled action for cell with title \(viewModel.title)")
