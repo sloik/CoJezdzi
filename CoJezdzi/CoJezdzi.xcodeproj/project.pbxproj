@@ -64,7 +64,7 @@
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
 		EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */; };
 		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
-		EFEE79002097D40D00F95E77 /* MapSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FF2097D40D00F95E77 /* MapSceneState.swift */; };
+		EFEE79002097D40D00F95E77 /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FF2097D40D00F95E77 /* MapState.swift */; };
 		EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE79012097D46800F95E77 /* MapSceneReducer.swift */; };
 /* End PBXBuildFile section */
 
@@ -155,7 +155,7 @@
 		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
 		EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
-		EFEE78FF2097D40D00F95E77 /* MapSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSceneState.swift; sourceTree = "<group>"; };
+		EFEE78FF2097D40D00F95E77 /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
 		EFEE79012097D46800F95E77 /* MapSceneReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSceneReducer.swift; sourceTree = "<group>"; };
 		F0BFC42A0906562B0FEAA840 /* Pods-CoJezdzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4266C2209263250076238D /* AppState.swift */,
-				EFEE78FF2097D40D00F95E77 /* MapSceneState.swift */,
+				EFEE78FF2097D40D00F95E77 /* MapState.swift */,
 				EF42670820978E940076238D /* RoutingState.swift */,
 				EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */,
 				EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */,
@@ -662,7 +662,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF61151020A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift in Sources */,
-				EFEE79002097D40D00F95E77 /* MapSceneState.swift in Sources */,
+				EFEE79002097D40D00F95E77 /* MapState.swift in Sources */,
 				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
 				EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,

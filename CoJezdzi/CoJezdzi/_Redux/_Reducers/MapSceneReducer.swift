@@ -1,9 +1,9 @@
 
 import ReSwift
 
-func mapSceneReducer(action: Action, state: MapSceneState?) -> MapSceneState {
-    let state: MapSceneState =
-        state ?? MapSceneState(currentTrams: VehicleState(data: [], previousData: []),
+func mapSceneReducer(action: Action, state: MapState?) -> MapState {
+    let state: MapState =
+        state ?? MapState(currentTrams: VehicleState(data: [], previousData: []),
                                currentBusses: VehicleState(data: [], previousData: []))
     
     return state

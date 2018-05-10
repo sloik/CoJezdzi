@@ -5,6 +5,6 @@ import ReSwift
 
 struct AppState: StateType {
     let routingState: RoutingState
-    let mapSceneState: MapSceneState
+    let mapSceneState: MapState
     let settingsSceneState: SettingsState
 }

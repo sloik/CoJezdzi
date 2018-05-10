@@ -170,7 +170,7 @@ private extension MapScene {
 // MARK: - Updating Map
 private extension MapScene {
 
-    func processData(_ state: MapSceneState) {
+    func processData(_ state: MapState) {
 //        var filteredData: [WarsawVehicleDto] = {
 ////            let filtered = (persisatance.onlyTrams ? [] : busses) + (persisatance.onlyBusses ? [] : trams)
 ////
@@ -194,7 +194,7 @@ private extension MapScene {
         resetTimeIndycator()
     }
 
-    func updateCopyrightLabelText(_ state: MapSceneState) {
+    func updateCopyrightLabelText(_ state: MapState) {
         var copyright = ""
 
         if let anyData = state.currentTrams.data.first {
@@ -212,7 +212,7 @@ extension MapScene: UserLocationProvider {
         return locationManager.location
     }
 
-    fileprivate func regnerateAnnotations(_ state: MapSceneState) {
+    fileprivate func regnerateAnnotations(_ state: MapState) {
         // remove all annotation views...
         mapView.removeAnnotations(mapView.annotations)
 
@@ -231,7 +231,7 @@ extension MapScene: UserLocationProvider {
 
 // MARK: - Trams Way Marks
 private extension MapScene {
-    func regenerateTramsLocationIndycatiors(_ state: MapSceneState) {
+    func regenerateTramsLocationIndycatiors(_ state: MapState) {
         
         guard state.currentTrams.data.isEmpty == false && state.currentTrams.previousData.isEmpty == false else {
             return
