@@ -3,7 +3,7 @@ import ReSwift
 import Rswift
 
 final class AppRouter {
-    let currentViewController: UIViewController
+    private(set) var currentViewController: UIViewController
     
     init(window: UIWindow) {
         currentViewController = R.storyboard.main.mapScene()!
@@ -17,22 +17,46 @@ final class AppRouter {
     }
 }
 
+
+// TODO: fix app routing xD
 fileprivate extension AppRouter {
-    func show(viewController: UIViewController, animated: Bool) {
+    func show(viewController: UIViewController, animated: Bool) -> Bool {
         let newViewControllerType = type(of: viewController)
         
-        switch currentViewController {
-        case let nav as UINavigationController:
-            if type(of: nav.topViewController) == newViewControllerType { return }
-            
-            nav.pushViewController(viewController, animated: true)
-            
-        default:
-            if type(of: currentViewController) == newViewControllerType { return }
-            
-            currentViewController.present(viewController, animated: animated, completion: nil)
+        debugPrint("- - - - - -")
+        debugPrint("current: \(currentViewController)) new: \(viewController)")
+        
+        if currentViewController is UINavigationController && viewController is UINavigationController {
+            return false
         }
         
+        // check if is navigation controller
+        if let nav = currentViewController as? UINavigationController {
+            // make shure that it's not visible
+            guard type(of: nav.topViewController!) != newViewControllerType else { return false }
+            nav.pushViewController(viewController, animated: true)
+            
+            return true
+        }
+        
+        // check if in navigation controller
+        if let nav = currentViewController.navigationController {
+            
+            // make shure that it's not visible
+            guard type(of: nav.topViewController!) != newViewControllerType else { return false }
+            nav.pushViewController(viewController, animated: true)
+            
+            return true
+        }
+        
+        
+        // check if not visible already
+        guard type(of: currentViewController) != newViewControllerType else { return false }
+        
+        
+        currentViewController.present(viewController, animated: animated, completion: nil)
+        
+        return true
     }
 }
 
@@ -53,6 +77,8 @@ extension AppRouter: StoreSubscriber {
             vc = R.storyboard.main.linesFilter()!
         }
         
-        show(viewController: vc, animated: shouldAnimate)
+        if show(viewController: vc, animated: shouldAnimate) {
+            currentViewController = vc
+        }
     }
 }
