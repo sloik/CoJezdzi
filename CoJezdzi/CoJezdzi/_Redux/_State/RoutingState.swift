@@ -5,7 +5,7 @@ import Rswift
 enum RoutingDestination: String {
     case map         = "MapScene"
     case settings    = "SettingsScene"
-    case linesFilter = "FilterLinesCVC"
+    case linesFilter = "LinesFilter"
 }
 
 struct RoutingState: StateType {
