@@ -50,6 +50,10 @@
 		EF4267192097C2090076238D /* RoutingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267182097C2090076238D /* RoutingAction.swift */; };
 		EF42671B2097CB1D0076238D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42671A2097CB1D0076238D /* Result.swift */; };
 		EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */; };
+		EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */; };
+		EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */; };
+		EF61150C20A4C05500E05E02 /* SelectedLineAddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */; };
+		EF61150E20A4C08C00E05E02 /* SelectedLineRemoveAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
@@ -136,6 +140,10 @@
 		EF4267182097C2090076238D /* RoutingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAction.swift; sourceTree = "<group>"; };
 		EF42671A2097CB1D0076238D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchAction.swift; sourceTree = "<group>"; };
+		EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLinesState.swift; sourceTree = "<group>"; };
+		EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLinesReducer.swift; sourceTree = "<group>"; };
+		EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineAddAction.swift; sourceTree = "<group>"; };
+		EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineRemoveAction.swift; sourceTree = "<group>"; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -287,6 +295,7 @@
 				EF4266C2209263250076238D /* AppState.swift */,
 				EFEE78FF2097D40D00F95E77 /* MapSceneState.swift */,
 				EF42670820978E940076238D /* RoutingState.swift */,
+				EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */,
 				EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */,
 				EF4267042097543A0076238D /* VehicleState.swift */,
 			);
@@ -309,6 +318,7 @@
 				EF4266CA209264DC0076238D /* AppReducer.swift */,
 				EFEE79012097D46800F95E77 /* MapSceneReducer.swift */,
 				EF42670A2097918A0076238D /* RoutingReducer.swift */,
+				EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */,
 				EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */,
 				EF426706209754DC0076238D /* TramsBussesReducer.swift */,
 			);
@@ -338,6 +348,7 @@
 		EF42670E2097A16A0076238D /* _Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EF61150620A4BD9E00E05E02 /* _LinesFilter */,
 				EFC25B69209E4260002897A0 /* _Map */,
 				EFC25B6A209E4270002897A0 /* _Settings */,
 			);
@@ -361,6 +372,8 @@
 		EF611501209E537300E05E02 /* _Settings */ = {
 			isa = PBXGroup;
 			children = (
+				EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */,
+				EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */,
 				EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */,
 			);
 			path = _Settings;
@@ -373,6 +386,13 @@
 				EF4266C62092641C0076238D /* FetchTramsAction.swift */,
 			);
 			path = _Map;
+			sourceTree = "<group>";
+		};
+		EF61150620A4BD9E00E05E02 /* _LinesFilter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = _LinesFilter;
 			sourceTree = "<group>";
 		};
 		EFB5C2A4209C710200BB5855 /* _Misc */ = {
@@ -647,9 +667,11 @@
 				EFEE79002097D40D00F95E77 /* MapSceneState.swift in Sources */,
 				EF4266F6209273C80076238D /* SettingsPersistance.swift in Sources */,
 				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
+				EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF4266EC209273C80076238D /* ButtonTableViewCell.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
+				EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */,
 				EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */,
 				EF42671B2097CB1D0076238D /* Result.swift in Sources */,
 				EF4266F8209273C80076238D /* SwitchTableViewCell.swift in Sources */,
@@ -667,6 +689,7 @@
 				EF4266F3209273C80076238D /* Keyable.swift in Sources */,
 				EF4266EE209273C80076238D /* DataPuller.swift in Sources */,
 				EF4266F7209273C80076238D /* SettingsVC.swift in Sources */,
+				EF61150C20A4C05500E05E02 /* SelectedLineAddAction.swift in Sources */,
 				EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */,
 				EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */,
 				EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */,
@@ -679,6 +702,7 @@
 				EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */,
 				EF42670920978E940076238D /* RoutingState.swift in Sources */,
 				EF426700209273C80076238D /* WebScene.swift in Sources */,
+				EF61150E20A4C08C00E05E02 /* SelectedLineRemoveAction.swift in Sources */,
 				EF4267132097B9760076238D /* WarsawApi.swift in Sources */,
 				EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */,
 				EF4266CF209266560076238D /* WarsawVehicleDto.swift in Sources */,
