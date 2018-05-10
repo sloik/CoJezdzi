@@ -32,7 +32,7 @@ struct SettingsState: StateType {
     }
     
     let lines: Set<String>
-    let selectedLines: Set<String>
+    let selectedLines: SelectedLinesState
     let switches: FilterState
     let aboutApp: String = "https://avantapp.wordpress.com/co-jezdzi/"
 }

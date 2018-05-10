@@ -178,8 +178,11 @@ extension CellConfiguration {
             cell.textLabel?.text = "Wybierz Linie"
             cell.detailTextLabel?.text = "Wszystkie"
             
-            if latesState.selectedLines.isEmpty == false {
-                cell.detailTextLabel?.text = latesState.selectedLines.joined(separator: ", ")
+            if latesState.selectedLines.lines.isEmpty == false {
+                cell.detailTextLabel?.text =
+                    latesState.selectedLines.lines
+                        .map { $0.name }
+                        .joined(separator: ", ")
             }
             
         default:
