@@ -1,39 +1,65 @@
 import UIKit
 
+import ReSwift
+
 class FilterLinesCVC: UICollectionViewController {
-
-    let cellReuseID = C.Storyboard.CellReuseId.FilterLinesCell
-
-    // MARK: UICollectionViewDataSource
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseID, for: indexPath)
     
-        // Configure the cell
-
-        if let filterCell = cell as? FilterCollectionViewCell {
-//            let currentLineInfo = linesToSelect[indexPath.row]
-//            filterCell.labelText = currentLineInfo.line
-//            filterCell.active = currentLineInfo.active
+    fileprivate var latesState: SettingsState! {
+        didSet {
+            refreshVisibleRows()
         }
-    
-        return cell
     }
-
-    // MARK: UICollectionViewDelegate
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     
+        store.subscribe(self) {
+            $0.select{ (appState) in
+                appState.settingsSceneState
+            }
+        }
+        
+        store.dispatch(RoutingAction(destination: .linesFilter))
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // 3
+        store.unsubscribe(self)
+    }
+}
+
+// MARK: - Cells Configuration
+extension FilterLinesCVC {
+    
+    func configure(cell: UICollectionViewCell, at indexPath: IndexPath) {
+        switch cell {
+        case let cell as FilterCollectionViewCell:
+            cell.labelText = "dasda"
+            cell.active = true
+            
+        default: break
+        }
+    }
+    
+    func refreshVisibleRows() {
+        guard let collectionView = collectionView else { return }
+        
+        collectionView.indexPathsForVisibleItems.forEach {
+            configure(cell: collectionView.cellForItem(at: $0)!, at: $0 )
+        }        
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension FilterLinesCVC {
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         // TODO: dispatch action
         collectionView.reloadData()
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-
+        
         // TODO: dispatch action
         collectionView.reloadData()
     }
@@ -57,3 +83,13 @@ extension FilterLinesCVC {
         }
     }
 }
+
+// MARK: ReSwift
+
+extension FilterLinesCVC: StoreSubscriber {
+    func newState(state: SettingsState) {
+        latesState = state
+    }
+}
+
+// MARK: -
