@@ -20,13 +20,19 @@ final class AppRouter {
 fileprivate extension AppRouter {
     func show(viewController: UIViewController, animated: Bool) {
         let newViewControllerType = type(of: viewController)
-        let currentViewControllerType = type(of: currentViewController)
         
-        if newViewControllerType == currentViewControllerType {
-            return
+        switch currentViewController {
+        case let nav as UINavigationController:
+            if type(of: nav.topViewController) == newViewControllerType { return }
+            
+            nav.pushViewController(viewController, animated: true)
+            
+        default:
+            if type(of: currentViewController) == newViewControllerType { return }
+            
+            currentViewController.present(viewController, animated: animated, completion: nil)
         }
-
-        currentViewController.present(viewController, animated: animated, completion: nil)
+        
     }
 }
 
@@ -34,7 +40,7 @@ extension AppRouter: StoreSubscriber {
     func newState(state: RoutingState) {
         let shouldAnimate = true
         
-        var vc:UIViewController
+        var vc: UIViewController
         
         switch state.navigationState {
         case .map:
@@ -42,6 +48,9 @@ extension AppRouter: StoreSubscriber {
             
         case .settings:
             vc = R.storyboard.main.settingsScene()!
+            
+        case .linesFilter:
+            vc = R.storyboard.main.linesFilter()!
         }
         
         show(viewController: vc, animated: shouldAnimate)
