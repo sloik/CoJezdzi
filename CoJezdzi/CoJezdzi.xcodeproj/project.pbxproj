@@ -276,7 +276,6 @@
 				EF426697209262340076238D /* DataPuller.swift */,
 				EF4266A3209262340076238D /* DataPullerDataProvider.swift */,
 				EF4266A7209262350076238D /* FilterCollectionViewCell.swift */,
-				EF4266AA209262350076238D /* FilterLinesCVC.swift */,
 				EF4266A5209262350076238D /* Keyable.swift */,
 				EF42669D209262340076238D /* PeristanceModel.swift */,
 				EF42669F209262340076238D /* TData.swift */,
@@ -388,6 +387,7 @@
 		EF61150620A4BD9E00E05E02 /* _LinesFilter */ = {
 			isa = PBXGroup;
 			children = (
+				EF4266AA209262350076238D /* FilterLinesCVC.swift */,
 			);
 			path = _LinesFilter;
 			sourceTree = "<group>";
