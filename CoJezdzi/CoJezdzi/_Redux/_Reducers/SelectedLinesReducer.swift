@@ -2,7 +2,7 @@
 import ReSwift
 
 func selectedStateReducer(action: Action, state: SelectedLinesState?) -> SelectedLinesState {
-    let state = state ?? SelectedLinesState(selectedLines: [])
+    let state = state ?? SelectedLinesState(lines: [])
     
     switch action {
     case let action as SelectedLineAddAction:

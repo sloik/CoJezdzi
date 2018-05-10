@@ -10,15 +10,15 @@ struct LineInfo: Hashable {
 }
 
 struct SelectedLinesState: StateType {
-    let selectedLines: Set<LineInfo>
+    let lines: Set<LineInfo>
 }
 
 extension SelectedLinesState {
     func add(_ line: LineInfo) -> SelectedLinesState {
-        return SelectedLinesState(selectedLines: selectedLines.union([line]))
+        return SelectedLinesState(lines: lines.union([line]))
     }
     
     func remove(_ line: LineInfo) -> SelectedLinesState {
-        return SelectedLinesState(selectedLines: selectedLines.subtracting([line]))
+        return SelectedLinesState(lines: lines.subtracting([line]))
     }
 }

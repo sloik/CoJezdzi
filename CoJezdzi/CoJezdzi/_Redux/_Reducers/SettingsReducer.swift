@@ -5,7 +5,7 @@ import ReSwift
 
 func settingsReducer(action: Action, state: SettingsState?) -> SettingsState {
     let state = state ?? SettingsState(lines: [],
-                                       selectedLines: [],
+                                       selectedLines: selectedStateReducer(action: action, state: nil),
                                        switches: settingsSwitchReducer(action: action, state: nil))
     
     return state
