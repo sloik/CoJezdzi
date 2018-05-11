@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-Os-Vwg" userLabel="mapView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UI-hL-SXh">
                                 <rect key="frame" x="323" y="575" width="42" height="42"/>
@@ -74,7 +74,7 @@ http://api.um.warszawa.pl</string>
                             <constraint firstItem="Iob-TS-gtL" firstAttribute="right" secondItem="KJ1-GZ-KvV" secondAttribute="right" constant="-10" id="hdq-zy-PzN"/>
                             <constraint firstItem="KJ1-GZ-KvV" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dOc-6O-VsM" secondAttribute="trailing" symbolic="YES" id="ltD-7X-zbk"/>
                             <constraint firstItem="KJ1-GZ-KvV" firstAttribute="right" secondItem="1UI-hL-SXh" secondAttribute="right" constant="10" id="nMu-Wd-Cah"/>
-                            <constraint firstItem="FWe-Os-Vwg" firstAttribute="top" secondItem="KJ1-GZ-KvV" secondAttribute="top" id="rab-HR-cei"/>
+                            <constraint firstItem="FWe-Os-Vwg" firstAttribute="top" secondItem="qdX-Xj-456" secondAttribute="top" id="rab-HR-cei"/>
                             <constraint firstItem="W8T-Lq-e8b" firstAttribute="leading" secondItem="KJ1-GZ-KvV" secondAttribute="leading" id="szE-ie-RXa"/>
                             <constraint firstItem="dOc-6O-VsM" firstAttribute="top" secondItem="W8T-Lq-e8b" secondAttribute="bottom" constant="8" id="vgb-bQ-bFC"/>
                             <constraint firstItem="FWe-Os-Vwg" firstAttribute="bottom" secondItem="KJ1-GZ-KvV" secondAttribute="bottom" id="vjO-ue-1Fa"/>
