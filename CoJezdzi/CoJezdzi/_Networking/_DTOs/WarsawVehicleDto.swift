@@ -24,8 +24,8 @@ struct WarsawVehicleDto: Codable {
     init(latitude: Double, longitude: Double, lines: String, brigade: String, time: String, type: WarsawVehicleType) {
         self.latitude = latitude
         self.longitude = longitude
-        self.lines = lines
-        self.brigade = brigade
+        self.lines = lines.trimmingCharacters(in: .whitespacesAndNewlines)
+        self.brigade = brigade.trimmingCharacters(in: .whitespacesAndNewlines)
         self.time = time
         self.type = type
     }
