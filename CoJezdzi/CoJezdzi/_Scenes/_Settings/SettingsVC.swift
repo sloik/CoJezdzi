@@ -169,6 +169,7 @@ extension CellConfiguration {
                 cell.detailTextLabel?.text =
                     latesState.selectedLines.lines
                         .map { $0.name }
+                        .sorted { Int($0) < Int($1) }
                         .joined(separator: ", ")
             }
             
