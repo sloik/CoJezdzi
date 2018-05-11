@@ -6,6 +6,7 @@ enum RoutingDestination: String {
     case map         = "MapScene"
     case settings    = "SettingsScene"
     case linesFilter = "LinesFilter"
+    case aboutApp    = "AboutApp"
 }
 
 struct RoutingState: StateType {

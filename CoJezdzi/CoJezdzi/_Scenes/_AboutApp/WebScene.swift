@@ -22,4 +22,10 @@ class WebScene: UIViewController {
         
         webVC.view.frame = spacer.frame
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        store.dispatch(RoutingAction(destination: .aboutApp))
+    }
 }
