@@ -2,8 +2,6 @@
 import SafariServices
 import UIKit
 
-//import SnapKit
-
 class WebScene: UIViewController {
 
     @IBOutlet weak var spacer: UIView!
@@ -19,9 +17,11 @@ class WebScene: UIViewController {
 
         addChildViewController(webVC)
         view.addSubview(webVC.view)
-
-//        webVC.view.snp.makeConstraints { (make) in
-//            make.edges.equalTo(spacer)
-//        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        webVC.view.frame = view.frame
     }
 }
