@@ -62,23 +62,6 @@ fileprivate extension AppRouter {
 
 extension AppRouter: StoreSubscriber {
     func newState(state: RoutingState) {
-        let shouldAnimate = true
-        
-        var vc: UIViewController
-        
-        switch state.navigationState {
-        case .map:
-            vc = R.storyboard.main.mapScene()!
-            
-        case .settings:
-            vc = R.storyboard.main.settingsScene()!
-            
-        case .linesFilter:
-            vc = R.storyboard.main.linesFilter()!
-        }
-        
-        if show(viewController: vc, animated: shouldAnimate) {
-            currentViewController = vc
-        }
+        debugPrint(state)
     }
 }

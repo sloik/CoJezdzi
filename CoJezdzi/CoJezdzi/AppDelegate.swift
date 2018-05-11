@@ -16,11 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UINavigationBar.appearance().tintColor = UIColor.eggplant()
         
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
-        window.makeKeyAndVisible()
-        
-        appRouter = AppRouter(window: window)
+        // TODO: some day it will be AppRouter
 
         return true
     }
