@@ -274,7 +274,9 @@ private extension MapScene {
             .reduce(StringCoordinateDic(), reduceBlock)
         
         // add overlays
-        PolylineMaker.generetePolylines(previousPosytions: previous, currentPosytions: current).values.forEach{ mapView.add($0) }
+        PolylineMaker.generetePolylines(previousPosytions: previous, currentPosytions: current)
+            .values
+            .forEach{ mapView.add($0) }
     }
 }
 
