@@ -252,8 +252,8 @@ private extension MapScene {
         // remove all
         mapView.removeOverlays(mapView.overlays)
 
-//        // check if user wants to se the data
-//        guard persisatance.showTramMarks else { return }
+        // check if user wants to se the data
+        guard state.settingsState.switches.previousLocations.isOn else { return }
         
         let reduceBlock = { (acc: StringCoordinateDic, vehicle: WarsawVehicleDto) -> StringCoordinateDic in
             var ret = acc
