@@ -36,12 +36,6 @@ struct SettingsState: StateType {
     let aboutApp: String = "https://avantapp.wordpress.com/co-jezdzi/"
 }
 
-extension SettingsState {
-    func switches(_ inSwitches: FilterState) -> SettingsState {
-        return SettingsState(selectedLines: selectedLines, switches: inSwitches)
-    }
-}
-
 extension SettingsState.FilterState {
     func update(_ inFilter:SettingsState.Filter) -> SettingsState.FilterState {
         switch inFilter {
