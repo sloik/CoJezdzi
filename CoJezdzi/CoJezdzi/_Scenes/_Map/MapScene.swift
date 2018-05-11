@@ -176,7 +176,7 @@ private extension MapScene {
         regnerateAnnotations(state)
         updateCopyrightLabelText(state.mapState)
 
-        regenerateTramsLocationIndycatiors(state.mapState)
+        regenerateTramsLocationIndycatiors(state)
 
         resetTimeIndycator()
     }
@@ -206,21 +206,8 @@ extension MapScene: UserLocationProvider {
         // map
         let annotations = state.mapState
             .allCurrent
-            .filter { // by line
-                let selectedLines = state.settingsState.selectedLines.lines
-                return selectedLines.isEmpty ? true
-                                             : selectedLines.contains(LineInfo(name: $0.lines))
-            }
-            .filter { // by type
-                let types = state.settingsState.switches
-                let switches = (types.tramOnly.isOn, types.busOnly.isOn)
-                
-                switch switches {
-                case (true, _): return $0.type == .tram
-                case (_, true): return $0.type == .bus
-                case (_, _)   : return true
-                }
-            }
+            .filter { filterByLine(state: state, dto: $0) }
+            .filter { filterByType(state: state, dto: $0) }
             .map { (tdata:WarsawVehicleDto) -> TAnnotation in
             let annotation = TAnnotation(data: tdata)
             annotation.locationProvider = self
@@ -233,11 +220,32 @@ extension MapScene: UserLocationProvider {
     }
 }
 
+// MARK: - Filters
+
+private extension MapScene {
+    func filterByLine(state: AppState, dto: WarsawVehicleDto) -> Bool {
+        let selectedLines = state.settingsState.selectedLines.lines
+        return selectedLines.isEmpty ? true
+                                     : selectedLines.contains(LineInfo(name: dto.lines))
+    }
+    
+    func filterByType(state: AppState, dto: WarsawVehicleDto) -> Bool {
+        let types = state.settingsState.switches
+        let switches = (types.tramOnly.isOn, types.busOnly.isOn)
+        
+        switch switches {
+        case (true, _): return dto.type == .tram
+        case (_, true): return dto.type == .bus
+        case (_, _)   : return true
+        }
+    }
+}
+
 // MARK: - Trams Way Marks
 private extension MapScene {
-    func regenerateTramsLocationIndycatiors(_ state: MapState) {
+    func regenerateTramsLocationIndycatiors(_ state: AppState) {
         
-        guard state.currentTrams.data.isEmpty == false && state.currentTrams.previousData.isEmpty == false else {
+        guard state.mapState.currentTrams.data.isEmpty == false && state.mapState.currentTrams.previousData.isEmpty == false else {
             return
         }
         
@@ -255,9 +263,16 @@ private extension MapScene {
         }
         
         // go over latest and find old posytions
-        let previous = state.allPrevious.reduce(StringCoordinateDic(), reduceBlock)
-        let current  = state.allCurrent.reduce(StringCoordinateDic(), reduceBlock)
-
+        let previous = state.mapState
+            .allPrevious
+            .filter { filterByLine(state: state, dto: $0) }
+            .filter { filterByType(state: state, dto: $0) }
+            .reduce(StringCoordinateDic(), reduceBlock)
+        
+        let current  = state.mapState
+            .allCurrent
+            .reduce(StringCoordinateDic(), reduceBlock)
+        
         // add overlays
         PolylineMaker.generetePolylines(previousPosytions: previous, currentPosytions: current).values.forEach{ mapView.add($0) }
     }
