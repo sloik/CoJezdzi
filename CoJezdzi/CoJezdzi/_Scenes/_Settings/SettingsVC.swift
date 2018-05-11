@@ -100,7 +100,7 @@ extension SettingsVC {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
-                store.dispatch(RoutingAction(destination: .linesFilter))
+                performSegue(withIdentifier: R.segue.settingsVC.settingsFilterLines.identifier , sender: nil)
                 
             default:
                 print("Unhandled action for cell with title \(viewModel.title)")
@@ -110,7 +110,7 @@ extension SettingsVC {
             break
             
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
-            break
+             performSegue(withIdentifier: R.segue.settingsVC.aboutApplication.identifier, sender: nil)
             
         case C.Storyboard.CellReuseId.SettingsSwitchCell:
             
