@@ -170,26 +170,13 @@ private extension MapScene {
 // MARK: - Updating Map
 private extension MapScene {
 
-    func processData(_ state: MapState) {
-//        var filteredData: [WarsawVehicleDto] = {
-////            let filtered = (persisatance.onlyTrams ? [] : busses) + (persisatance.onlyBusses ? [] : trams)
-////
-////            return filtered
-//            return []
-//        }()
-//
-//        // when selected lines are seleted check those to
-//        if persisatance.selectedLines.count > 0 {
-//            filteredData = filteredData.filter{
-//                persisatance.selectedLines.contains($0.lines)
-//            }
-//        }
+    func processData(_ state: AppState) {
 
         // now filtered data has only stuff that user is interested in...
         regnerateAnnotations(state)
-        updateCopyrightLabelText(state)
+        updateCopyrightLabelText(state.mapState)
 
-        regenerateTramsLocationIndycatiors(state)
+        regenerateTramsLocationIndycatiors(state.mapState)
 
         resetTimeIndycator()
     }
@@ -212,12 +199,29 @@ extension MapScene: UserLocationProvider {
         return locationManager.location
     }
 
-    fileprivate func regnerateAnnotations(_ state: MapState) {
+    fileprivate func regnerateAnnotations(_ state: AppState) {
         // remove all annotation views...
         mapView.removeAnnotations(mapView.annotations)
 
         // map
-        let annotations = state.allCurrent.map { (tdata:WarsawVehicleDto) -> TAnnotation in
+        let annotations = state.mapState
+            .allCurrent
+            .filter { // by line
+                let selectedLines = state.settingsState.selectedLines.lines
+                return selectedLines.isEmpty ? true
+                                             : selectedLines.contains(LineInfo(name: $0.lines))
+            }
+            .filter { // by type
+                let types = state.settingsState.switches
+                let switches = (types.tramOnly.isOn, types.busOnly.isOn)
+                
+                switch switches {
+                case (true, _): return $0.type == .tram
+                case (_, true): return $0.type == .bus
+                case (_, _)   : return true
+                }
+            }
+            .map { (tdata:WarsawVehicleDto) -> TAnnotation in
             let annotation = TAnnotation(data: tdata)
             annotation.locationProvider = self
 
@@ -263,7 +267,7 @@ private extension MapScene {
 
 extension MapScene: StoreSubscriber {
     func newState(state: AppState) {
-        processData(state.mapSceneState)
+        processData(state)
     }
 }
 
