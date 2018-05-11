@@ -6,10 +6,8 @@ class WebScene: UIViewController {
 
     @IBOutlet weak var spacer: UIView!
 
-    var goToURLString: String = "https://www.google.pl"
-
     lazy var webVC: SFSafariViewController = { [unowned self] in
-        return  SFSafariViewController(url: URL(string:self.goToURLString)!)
+        return  SFSafariViewController(url: URL(string:C.Networking.GoToURL.AboutApp)!)
     }()
 
     override func viewDidLoad() {
@@ -22,6 +20,6 @@ class WebScene: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        webVC.view.frame = view.frame
+        webVC.view.frame = spacer.frame
     }
 }
