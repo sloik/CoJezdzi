@@ -91,16 +91,15 @@ extension FilterLinesCVC {
 
 // MARK: - UICollectionViewDelegate
 extension FilterLinesCVC {
-    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let selectedLine = lines[indexPath.row]
-        store.dispatch(SelectedLineRemoveAction(line: selectedLine))
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
         let selectedLine = lines[indexPath.row]
-        store.dispatch(SelectedLineAddAction(line: selectedLine))
+        if latesState.settingsSceneState.selectedLines.lines.contains(LineInfo(name: selectedLine)) {
+            store.dispatch(SelectedLineRemoveAction(line: selectedLine))
+        } else {
+            store.dispatch(SelectedLineAddAction(line: selectedLine))
+        }
     }
 }
 
