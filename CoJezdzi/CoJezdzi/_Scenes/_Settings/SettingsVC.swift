@@ -45,7 +45,7 @@ class SettingsVC: UITableViewController {
         
         store.subscribe(self) {
             $0.select {
-                $0.settingsSceneState
+                $0.settingsState
             }
         }
         

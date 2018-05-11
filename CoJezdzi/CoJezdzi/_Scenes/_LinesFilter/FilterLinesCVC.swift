@@ -7,7 +7,7 @@ class FilterLinesCVC: UICollectionViewController {
     fileprivate var latesState: AppState! {
         didSet {
             lines =
-            latesState.mapSceneState
+            latesState.mapState
                 .allCurrent
                 .reduce(into: Set<String>()) { accu, dto in accu.insert(dto.lines) }
                 .sorted { Int($0) < Int($1) }
@@ -41,7 +41,7 @@ extension FilterLinesCVC {
         case let cell as FilterCollectionViewCell:
             let lineName = lines[indexPath.row]
             cell.labelText = lineName
-            cell.active = latesState.settingsSceneState.selectedLines.lines.contains(LineInfo(name: lineName))
+            cell.active = latesState.settingsState.selectedLines.lines.contains(LineInfo(name: lineName))
             
         default: break
         }
@@ -82,7 +82,7 @@ extension FilterLinesCVC {
         collectionView.deselectItem(at: indexPath, animated: true)
         
         let selectedLine = lines[indexPath.row]
-        if latesState.settingsSceneState.selectedLines.lines.contains(LineInfo(name: selectedLine)) {
+        if latesState.settingsState.selectedLines.lines.contains(LineInfo(name: selectedLine)) {
             store.dispatch(SelectedLineRemoveAction(line: selectedLine))
         } else {
             store.dispatch(SelectedLineAddAction(line: selectedLine))
