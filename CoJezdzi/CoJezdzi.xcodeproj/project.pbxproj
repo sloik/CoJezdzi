@@ -21,19 +21,13 @@
 		EF4266D2209267DC0076238D /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266D1209267DC0076238D /* VehicleType.swift */; };
 		EF4266D52092733A0076238D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266D42092733A0076238D /* R.generated.swift */; };
 		EF4266ED209273C80076238D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
-		EF4266EE209273C80076238D /* DataPuller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426697209262340076238D /* DataPuller.swift */; };
-		EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A3209262340076238D /* DataPullerDataProvider.swift */; };
 		EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A7209262350076238D /* FilterCollectionViewCell.swift */; };
 		EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AA209262350076238D /* FilterLinesCVC.swift */; };
-		EF4266F3209273C80076238D /* Keyable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A5209262350076238D /* Keyable.swift */; };
 		EF4266F4209273C80076238D /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669A209262340076238D /* MapScene.swift */; };
-		EF4266F5209273C80076238D /* PeristanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669D209262340076238D /* PeristanceModel.swift */; };
 		EF4266F7209273C80076238D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A1209262340076238D /* SettingsVC.swift */; };
 		EF4266F8209273C80076238D /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426699209262340076238D /* SwitchTableViewCell.swift */; };
 		EF4266F9209273C80076238D /* TAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A6209262350076238D /* TAnnotation.swift */; };
 		EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A9209262350076238D /* TAnnotationView.swift */; };
-		EF4266FB209273C80076238D /* TData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669F209262340076238D /* TData.swift */; };
-		EF4266FC209273C80076238D /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
 		EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
 		EF426700209273C80076238D /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A0209262340076238D /* WebScene.swift */; };
 		EF4267052097543A0076238D /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267042097543A0076238D /* VehicleState.swift */; };
@@ -54,6 +48,7 @@
 		EF61150E20A4C08C00E05E02 /* SelectedLineRemoveAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */; };
 		EF61151020A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */; };
 		EF61151220A6380D00E05E02 /* GlobalUtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */; };
+		EF61151420A645A800E05E02 /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
@@ -101,17 +96,11 @@
 		BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoJezdziUITests.swift; sourceTree = "<group>"; };
 		BA5685671C763EA600D3B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABDD4BA1C78CDD500152EBD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		EF426697209262340076238D /* DataPuller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPuller.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		EF42669A209262340076238D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
-		EF42669D209262340076238D /* PeristanceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModel.swift; sourceTree = "<group>"; };
 		EF42669E209262340076238D /* URL_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Extensions.swift; sourceTree = "<group>"; };
-		EF42669F209262340076238D /* TData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TData.swift; sourceTree = "<group>"; };
 		EF4266A0209262340076238D /* WebScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebScene.swift; sourceTree = "<group>"; };
 		EF4266A1209262340076238D /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		EF4266A3209262340076238D /* DataPullerDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerDataProvider.swift; sourceTree = "<group>"; };
-		EF4266A4209262340076238D /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
-		EF4266A5209262350076238D /* Keyable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyable.swift; sourceTree = "<group>"; };
 		EF4266A6209262350076238D /* TAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAnnotation.swift; sourceTree = "<group>"; };
 		EF4266A7209262350076238D /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF4266A8209262350076238D /* TDataAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDataAnnotation.swift; sourceTree = "<group>"; };
@@ -232,7 +221,6 @@
 		BA5685441C763EA600D3B5FE /* CoJezdzi */ = {
 			isa = PBXGroup;
 			children = (
-				EF426696209262090076238D /* __Old */,
 				EFB5C2A4209C710200BB5855 /* _Misc */,
 				EF42670F2097B9020076238D /* _Networking */,
 				EF4266CC209265870076238D /* _Redux */,
@@ -266,20 +254,6 @@
 				BA5685671C763EA600D3B5FE /* Info.plist */,
 			);
 			path = CoJezdziUITests;
-			sourceTree = "<group>";
-		};
-		EF426696209262090076238D /* __Old */ = {
-			isa = PBXGroup;
-			children = (
-				EF4266A4209262340076238D /* ButtonTableViewCell.swift */,
-				EF426697209262340076238D /* DataPuller.swift */,
-				EF4266A3209262340076238D /* DataPullerDataProvider.swift */,
-				EF4266A5209262350076238D /* Keyable.swift */,
-				EF42669D209262340076238D /* PeristanceModel.swift */,
-				EF42669F209262340076238D /* TData.swift */,
-				EF4266A8209262350076238D /* TDataAnnotation.swift */,
-			);
-			path = __Old;
 			sourceTree = "<group>";
 		};
 		EF4266C1209262FC0076238D /* _State */ = {
@@ -408,6 +382,7 @@
 				EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */,
 				EF4266A6209262350076238D /* TAnnotation.swift */,
 				EF4266A9209262350076238D /* TAnnotationView.swift */,
+				EF4266A8209262350076238D /* TDataAnnotation.swift */,
 			);
 			path = _Misc;
 			sourceTree = "<group>";
@@ -679,23 +654,20 @@
 				EF4266F8209273C80076238D /* SwitchTableViewCell.swift in Sources */,
 				EF4266F9209273C80076238D /* TAnnotation.swift in Sources */,
 				EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */,
-				EF4266FC209273C80076238D /* TDataAnnotation.swift in Sources */,
 				EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */,
 				EF4266CB209264DC0076238D /* AppReducer.swift in Sources */,
 				EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */,
-				EF4266F5209273C80076238D /* PeristanceModel.swift in Sources */,
 				EF4266D52092733A0076238D /* R.generated.swift in Sources */,
 				EF4267152097BD030076238D /* C.Networking.swift in Sources */,
 				EF4266C3209263250076238D /* AppState.swift in Sources */,
 				EF4267052097543A0076238D /* VehicleState.swift in Sources */,
-				EF4266F3209273C80076238D /* Keyable.swift in Sources */,
-				EF4266EE209273C80076238D /* DataPuller.swift in Sources */,
 				EF4266F7209273C80076238D /* SettingsVC.swift in Sources */,
 				EF61150C20A4C05500E05E02 /* SelectedLineAddAction.swift in Sources */,
 				EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */,
 				EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */,
 				EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */,
 				EFB5C2AA209CE14C00BB5855 /* SettingsReducer.swift in Sources */,
+				EF61151420A645A800E05E02 /* TDataAnnotation.swift in Sources */,
 				EF4266ED209273C80076238D /* Constants.swift in Sources */,
 				BA5685461C763EA600D3B5FE /* AppDelegate.swift in Sources */,
 				EF4266F4209273C80076238D /* MapScene.swift in Sources */,
@@ -712,8 +684,6 @@
 				EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */,
 				EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */,
 				EF426707209754DC0076238D /* TramsBussesReducer.swift in Sources */,
-				EF4266FB209273C80076238D /* TData.swift in Sources */,
-				EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */,
 				EF42670D2097924A0076238D /* AppRouter.swift in Sources */,
 				EF4266D2209267DC0076238D /* VehicleType.swift in Sources */,
 				EF4267112097B9290076238D /* WarsawApiConstants.swift in Sources */,
