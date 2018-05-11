@@ -18,7 +18,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 class FilterLinesCVC: UICollectionViewController {
     
     fileprivate var latesState: AppState! {
-        didSet {            
+        didSet {
             lines =
             latesState.mapSceneState
                 .allCurrent
@@ -92,15 +92,15 @@ extension FilterLinesCVC {
 // MARK: - UICollectionViewDelegate
 extension FilterLinesCVC {
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        // TODO: dispatch action
-        collectionView.reloadData()
+        let selectedLine = lines[indexPath.row]
+        store.dispatch(SelectedLineRemoveAction(line: selectedLine))
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        // TODO: dispatch action
-        collectionView.reloadData()
+        let selectedLine = lines[indexPath.row]
+        store.dispatch(SelectedLineAddAction(line: selectedLine))
     }
 }
 
@@ -117,8 +117,7 @@ extension FilterLinesCVC {
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            // TODO: fire CLEAR_ALL_ACTION and let tehe reducer do the work :D
-            collectionView?.reloadData()
+            store.dispatch(SelectedLineRemoveAllAction())
         }
     }
 }
