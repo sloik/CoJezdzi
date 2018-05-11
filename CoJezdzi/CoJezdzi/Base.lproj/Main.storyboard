@@ -170,31 +170,8 @@ http://api.um.warszawa.pl</string>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsButtonCell" id="2TD-GB-02p" userLabel="ButtonCell" customClass="ButtonTableViewCell" customModule="CoJezdzi" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2TD-GB-02p" id="I72-II-mqR">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46N-0Z-oLm">
-                                            <rect key="frame" x="24" y="7" width="98" height="30"/>
-                                            <state key="normal" title="Usuń Reklamy"/>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="46N-0Z-oLm" firstAttribute="leading" secondItem="I72-II-mqR" secondAttribute="leadingMargin" constant="8" id="Htx-vS-uAa"/>
-                                        <constraint firstItem="46N-0Z-oLm" firstAttribute="centerY" secondItem="I72-II-mqR" secondAttribute="centerY" id="OcS-Eq-oAq"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="46N-0Z-oLm" secondAttribute="trailingMargin" id="XQN-8o-sM8"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="46N-0Z-oLm" secondAttribute="trailingMargin" id="pDn-DB-ZrF"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="button" destination="46N-0Z-oLm" id="pcj-YP-bMF"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsAboutAppCell" textLabel="mwW-4l-Nk0" style="IBUITableViewCellStyleDefault" id="Eu0-v4-tbk">
-                                <rect key="frame" x="0.0" y="160" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eu0-v4-tbk" id="C0S-xC-wxV">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
@@ -347,6 +324,6 @@ http://api.um.warszawa.pl</string>
         <image name="UserSettings" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aHu-Gl-GDO"/>
+        <segue reference="m6l-cO-Ehv"/>
     </inferredMetricsTieBreakers>
 </document>

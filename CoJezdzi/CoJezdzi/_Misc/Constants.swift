@@ -33,7 +33,6 @@ struct C {
         struct CellReuseId {
             static let SettingsSwitchCell      = "SettingsSwitchCell"
             static let SettingsGoingDeeperCell = "SettingsGoingDeeperCell"
-            static let SettingsButtonCell      = "SettingsButtonCell"
             static let SettingsAboutAppCell    = "SettingsAboutAppCell"
 
             static let FilterLinesCell         = "FilterLinesCell"

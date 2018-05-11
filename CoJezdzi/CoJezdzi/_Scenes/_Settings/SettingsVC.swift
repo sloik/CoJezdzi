@@ -93,9 +93,6 @@ extension SettingsVC {
                 print("Unhandled action for cell with title \(viewModel.title)")
             }
             
-        case C.Storyboard.CellReuseId.SettingsButtonCell:
-            break
-            
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
              performSegue(withIdentifier: R.segue.settingsVC.aboutApplication.identifier, sender: nil)
             
@@ -147,9 +144,6 @@ extension CellConfiguration {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             configureDeeper(cell: cell, with: viewModel)
             
-        case C.Storyboard.CellReuseId.SettingsButtonCell:
-            configureButton(cell: (cell as! ButtonTableViewCell), viewModel: viewModel)
-            
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
             configureAboutApplicationCell(cell: cell, viewModel: viewModel)
             
@@ -176,10 +170,6 @@ extension CellConfiguration {
         default:
             print("Unhandled title for deeper cell with title \(viewModel.title)")
         }
-    }
-    
-    private func configureButton(cell: ButtonTableViewCell, viewModel: ViewModel) {
-        cell.button.setTitle(viewModel.title, for: UIControlState())
     }
     
     private func configureAboutApplicationCell(cell: UITableViewCell, viewModel: ViewModel) {

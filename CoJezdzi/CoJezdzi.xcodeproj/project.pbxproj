@@ -20,7 +20,6 @@
 		EF4266CF209266560076238D /* WarsawVehicleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266CE209266560076238D /* WarsawVehicleDto.swift */; };
 		EF4266D2209267DC0076238D /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266D1209267DC0076238D /* VehicleType.swift */; };
 		EF4266D52092733A0076238D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266D42092733A0076238D /* R.generated.swift */; };
-		EF4266EC209273C80076238D /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A4209262340076238D /* ButtonTableViewCell.swift */; };
 		EF4266ED209273C80076238D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
 		EF4266EE209273C80076238D /* DataPuller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426697209262340076238D /* DataPuller.swift */; };
 		EF4266EF209273C80076238D /* DataPullerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A3209262340076238D /* DataPullerDataProvider.swift */; };
@@ -279,7 +278,6 @@
 				EF42669D209262340076238D /* PeristanceModel.swift */,
 				EF42669F209262340076238D /* TData.swift */,
 				EF4266A8209262350076238D /* TDataAnnotation.swift */,
-				EF4266A0209262340076238D /* WebScene.swift */,
 			);
 			path = __Old;
 			sourceTree = "<group>";
@@ -343,6 +341,7 @@
 		EF42670E2097A16A0076238D /* _Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EF61151320A6444C00E05E02 /* _AboutApp */,
 				EF61150620A4BD9E00E05E02 /* _LinesFilter */,
 				EFC25B69209E4260002897A0 /* _Map */,
 				EFC25B6A209E4270002897A0 /* _Settings */,
@@ -391,6 +390,14 @@
 				EF4266AA209262350076238D /* FilterLinesCVC.swift */,
 			);
 			path = _LinesFilter;
+			sourceTree = "<group>";
+		};
+		EF61151320A6444C00E05E02 /* _AboutApp */ = {
+			isa = PBXGroup;
+			children = (
+				EF4266A0209262340076238D /* WebScene.swift */,
+			);
+			path = _AboutApp;
 			sourceTree = "<group>";
 		};
 		EFB5C2A4209C710200BB5855 /* _Misc */ = {
@@ -665,7 +672,6 @@
 				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
 				EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,
-				EF4266EC209273C80076238D /* ButtonTableViewCell.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
 				EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */,
 				EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */,
