@@ -2,13 +2,28 @@ import UIKit
 
 import ReSwift
 
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+    switch (lhs, rhs) {
+    case let (l?, r?):
+        return l < r
+    case (nil, _?):
+        return true
+    default:
+        return false
+    }
+}
+
 class FilterLinesCVC: UICollectionViewController {
     
     fileprivate var latesState: AppState! {
-        didSet {
-            lines = latesState.mapSceneState.allCurrent
-                .map { $0.lines.trimmingCharacters(in: .whitespaces) }
-                .sorted()
+        didSet {            
+            lines =
+            latesState.mapSceneState
+                .allCurrent
+                .reduce(into: Set<String>()) { accu, dto in accu.insert(dto.lines) }
+                .sorted { Int($0) < Int($1) }
             
             refreshVisibleRows()
         }
