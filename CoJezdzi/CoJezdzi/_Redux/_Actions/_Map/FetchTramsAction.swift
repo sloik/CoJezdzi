@@ -9,7 +9,9 @@ struct FetchTramsAction: Action {
         WarsawApi.getTrams { result in
             switch result {
             case .succes(let data):
-                let dto = try! JSONDecoder().decode(WarsawApiResultDto.self, from: data as! Data)
+                guard let dto = try? JSONDecoder().decode(WarsawApiResultDto.self, from: data as! Data) else {
+                    return
+                }
                 
                 let withVehicleType =
                     dto.result.map{ WarsawVehicleDto(latitude: $0.latitude,
