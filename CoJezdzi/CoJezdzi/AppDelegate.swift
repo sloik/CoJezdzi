@@ -4,7 +4,11 @@ import Colours
 import ReSwift
 
 // Global <3 app state ;)
-var store = Store<AppState>(reducer: appReducer, state: nil)
+var store = Store<AppState>(reducer: appReducer,
+                            state: nil,
+                            middleware:[
+                                M.BS.dontGetTrams,
+                                M.logging])
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

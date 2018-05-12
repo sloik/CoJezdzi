@@ -49,6 +49,7 @@
 		EF61151020A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */; };
 		EF61151220A6380D00E05E02 /* GlobalUtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */; };
 		EF61151420A645A800E05E02 /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
+		EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151620A7083400E05E02 /* AppMiddleware.swift */; };
 		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
 		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
@@ -132,6 +133,7 @@
 		EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineRemoveAction.swift; sourceTree = "<group>"; };
 		EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineRemoveAllAction.swift; sourceTree = "<group>"; };
 		EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUtilFunctions.swift; sourceTree = "<group>"; };
+		EF61151620A7083400E05E02 /* AppMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMiddleware.swift; sourceTree = "<group>"; };
 		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
 		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -296,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				EF4266C4209263550076238D /* _Actions */,
+				EF61151520A7079E00E05E02 /* _Middleware */,
 				EF4266C52092638D0076238D /* _Reducers */,
 				EF4266C1209262FC0076238D /* _State */,
 			);
@@ -372,6 +375,14 @@
 				EF4266A0209262340076238D /* WebScene.swift */,
 			);
 			path = _AboutApp;
+			sourceTree = "<group>";
+		};
+		EF61151520A7079E00E05E02 /* _Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				EF61151620A7083400E05E02 /* AppMiddleware.swift */,
+			);
+			path = _Middleware;
 			sourceTree = "<group>";
 		};
 		EFB5C2A4209C710200BB5855 /* _Misc */ = {
@@ -646,6 +657,7 @@
 				EFEE79002097D40D00F95E77 /* MapState.swift in Sources */,
 				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
 				EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */,
+				EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
 				EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */,
