@@ -8,3 +8,4 @@ func appReducer(action: Action, state: AppState?) -> AppState {
                     mapState: mapSceneReducer(action: action, state: state?.mapState),
                     settingsState: settingsReducer(action: action, state: state?.settingsState))
 }
+
