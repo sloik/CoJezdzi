@@ -87,14 +87,14 @@ extension SettingsVC {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
-                performSegue(withIdentifier: R.segue.settingsVC.settingsFilterLines.identifier , sender: nil)
+                debugPrint("Show filter selections screen")
                 
             default:
                 print("Unhandled action for cell with title \(viewModel.title)")
             }
             
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
-             performSegue(withIdentifier: R.segue.settingsVC.aboutApplication.identifier, sender: nil)
+            debugPrint("Shou about app screen...")
             
         case C.Storyboard.CellReuseId.SettingsSwitchCell:
             

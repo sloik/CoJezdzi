@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UPP-Ft-hI7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,11 +47,6 @@ http://api.um.warszawa.pl</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXk-At-R5Q">
                                 <rect key="frame" x="323" y="521" width="42" height="42"/>
                                 <state key="normal" backgroundImage="UserSettings"/>
-                                <connections>
-                                    <segue destination="0dN-YF-zbQ" kind="popoverPresentation" identifier="ShowSettings" popoverAnchorView="mXk-At-R5Q" id="Lbp-Vv-Qfd">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iob-TS-gtL" userLabel="RefresMapData">
                                 <rect key="frame" x="323" y="467" width="42" height="42"/>
@@ -96,7 +91,6 @@ http://api.um.warszawa.pl</string>
                         <outlet property="timeIndycatorRight" destination="FsM-Cg-Vhm" id="mUQ-D3-bzy"/>
                         <outlet property="timeIndycatorView" destination="W8T-Lq-e8b" id="iQx-PN-OBf"/>
                         <outlet property="userSettingsButton" destination="mXk-At-R5Q" id="pLt-ZE-99N"/>
-                        <segue destination="ys3-Wv-ume" kind="presentation" identifier="ShowWebAPIForm" id="aHu-Gl-GDO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybd-8B-oxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,10 +195,6 @@ http://api.um.warszawa.pl</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="oN4-1b-1B2" kind="show" identifier="SettingsFilterLines" id="zFn-Dj-JaT"/>
-                        <segue destination="ys3-Wv-ume" kind="show" identifier="AboutApplication" id="m6l-cO-Ehv"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpU-B6-fSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,7 +313,4 @@ http://api.um.warszawa.pl</string>
         <image name="RefreshData" width="42" height="42"/>
         <image name="UserSettings" width="42" height="42"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="m6l-cO-Ehv"/>
-    </inferredMetricsTieBreakers>
 </document>
