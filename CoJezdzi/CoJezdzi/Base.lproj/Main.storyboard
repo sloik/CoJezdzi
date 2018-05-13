@@ -47,6 +47,9 @@ http://api.um.warszawa.pl</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXk-At-R5Q">
                                 <rect key="frame" x="323" y="521" width="42" height="42"/>
                                 <state key="normal" backgroundImage="UserSettings"/>
+                                <connections>
+                                    <action selector="userDidTapSettingsButton" destination="UPP-Ft-hI7" eventType="touchUpInside" id="gIa-ch-cA4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iob-TS-gtL" userLabel="RefresMapData">
                                 <rect key="frame" x="323" y="467" width="42" height="42"/>
@@ -100,7 +103,7 @@ http://api.um.warszawa.pl</string>
         <!--Ustawienia-->
         <scene sceneID="x0w-fW-Yss">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsScene" title="Ustawienia" id="vJe-ia-FV0" customClass="SettingsVC" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Ustawienia" id="vJe-ia-FV0" customClass="SettingsVC" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xHu-5D-RGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,7 +295,7 @@ http://api.um.warszawa.pl</string>
         <!--Navigation Controller-->
         <scene sceneID="Nkl-sQ-478">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0dN-YF-zbQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingsScene" automaticallyAdjustsScrollViewInsets="NO" id="0dN-YF-zbQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Le9-RO-sNU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
