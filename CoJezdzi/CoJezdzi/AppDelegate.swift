@@ -8,7 +8,8 @@ var store = Store<AppState>(reducer: appReducer,
                             state: nil,
                             middleware:[
                                 M.BS.dontGetTrams,
-                                M.logging])
+//                                M.logging
+    ])
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
