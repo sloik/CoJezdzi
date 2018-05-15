@@ -70,7 +70,7 @@ class MapScene: UIViewController {
         
         store.subscribe(self)
         
-        store.dispatch(RoutingAction(destination: .map))
+        store.dispatch(RoutingSceneAppearsAction(scene: .map, viewController: self))
     }
 
     override func viewWillDisappear(_ animated: Bool) {

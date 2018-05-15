@@ -49,7 +49,7 @@ class SettingsVC: UITableViewController {
             }
         }
         
-        store.dispatch(RoutingAction(destination: .settings))
+        store.dispatch(RoutingSceneAppearsAction(scene: .settings, viewController: self))
 
         tableView.reloadData()
     }
@@ -87,14 +87,14 @@ extension SettingsVC {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
-                debugPrint("Show filter selections screen")
+                store.dispatch(RoutingAction(destination: .linesFilter))
                 
             default:
                 print("Unhandled action for cell with title \(viewModel.title)")
             }
             
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
-            debugPrint("Shou about app screen...")
+            store.dispatch(RoutingAction(destination: .aboutApp))
             
         case C.Storyboard.CellReuseId.SettingsSwitchCell:
             

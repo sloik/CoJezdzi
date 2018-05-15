@@ -25,7 +25,6 @@ class WebScene: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        store.dispatch(RoutingAction(destination: .aboutApp))
+        store.dispatch(RoutingSceneAppearsAction(scene:.aboutApp, viewController: self))
     }
 }

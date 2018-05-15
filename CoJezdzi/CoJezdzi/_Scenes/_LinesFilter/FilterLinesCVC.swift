@@ -23,7 +23,7 @@ class FilterLinesCVC: UICollectionViewController {
     
         store.subscribe(self)
         
-        store.dispatch(RoutingAction(destination: .linesFilter))
+        store.dispatch(RoutingSceneAppearsAction(scene: .linesFilter, viewController: self))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
