@@ -10,15 +10,24 @@ enum RoutingDestination: String {
 }
 
 struct RoutingState: StateType {
-    let navigationState: RoutingDestination
+    let scene: RoutingDestination
+    let destination: RoutingDestination?
     
-    init(navigationState: RoutingDestination = .map ) {
-        self.navigationState = navigationState
+    weak var sceneVC: UIViewController?
+    
+    init(scene: RoutingDestination = .map, destitnation: RoutingDestination?, sceneVC: UIViewController? ) {
+        self.scene = scene
+        self.destination = destitnation
+        self.sceneVC = sceneVC
     }
 }
 
 extension RoutingState {
-    func navigationState(_ ns: RoutingDestination) -> RoutingState {
-        return RoutingState(navigationState: ns)
+    func destitnation(_ inDestination: RoutingDestination?) -> RoutingState {
+        return RoutingState(scene: scene, destitnation: inDestination, sceneVC: sceneVC)
+    }
+    
+    func scene(_ inScene: RoutingDestination, _ sceneVC: UIViewController?) -> RoutingState {
+        return RoutingState(scene: inScene, destitnation: destination, sceneVC: sceneVC)
     }
 }
