@@ -56,6 +56,8 @@
 		EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */; };
 		EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */; };
 		EFB5C2AA209CE14C00BB5855 /* SettingsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */; };
+		EFD085A420AB4EBD00DE3F55 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD085A320AB4EBD00DE3F55 /* Nodes.swift */; };
+		EFD085A620AB68DE00DE3F55 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD085A520AB68DE00DE3F55 /* Routable.swift */; };
 		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
 		EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */; };
 		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
@@ -142,6 +144,8 @@
 		EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
 		EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
 		EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsReducer.swift; sourceTree = "<group>"; };
+		EFD085A320AB4EBD00DE3F55 /* Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
+		EFD085A520AB68DE00DE3F55 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
 		EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
@@ -341,8 +345,8 @@
 		EF47764F20A8DA57006D7107 /* _App */ = {
 			isa = PBXGroup;
 			children = (
+				EFD085A220AB4EA400DE3F55 /* _Routing */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
-				EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */,
 			);
 			path = _App;
 			sourceTree = "<group>";
@@ -423,6 +427,16 @@
 				EF426699209262340076238D /* SwitchTableViewCell.swift */,
 			);
 			path = _Settings;
+			sourceTree = "<group>";
+		};
+		EFD085A220AB4EA400DE3F55 /* _Routing */ = {
+			isa = PBXGroup;
+			children = (
+				EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */,
+				EFD085A320AB4EBD00DE3F55 /* Nodes.swift */,
+				EFD085A520AB68DE00DE3F55 /* Routable.swift */,
+			);
+			path = _Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -668,6 +682,7 @@
 				EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
+				EFD085A620AB68DE00DE3F55 /* Routable.swift in Sources */,
 				EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */,
 				EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */,
 				EF42671B2097CB1D0076238D /* Result.swift in Sources */,
@@ -686,6 +701,7 @@
 				EF47764E20A8DA4E006D7107 /* GamePlayAppRouter.swift in Sources */,
 				EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */,
 				EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */,
+				EFD085A420AB4EBD00DE3F55 /* Nodes.swift in Sources */,
 				EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */,
 				EFB5C2AA209CE14C00BB5855 /* SettingsReducer.swift in Sources */,
 				EF61151420A645A800E05E02 /* TDataAnnotation.swift in Sources */,
