@@ -7,7 +7,7 @@ import ReSwift
 var store = Store<AppState>(reducer: appReducer,
                             state: nil,
                             middleware:[
-                                M.BS.dontGetTrams,
+//                                M.BS.dontGetTrams,
 //                                M.logging
     ])
 
@@ -15,9 +15,7 @@ var store = Store<AppState>(reducer: appReducer,
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var appRouter: AppRouter?
     var grouter: GamePlayAppRouter?
-
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -25,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        grouter = GamePlayAppRouter(window: window!) // just to have an instace that will recieve envents
-        appRouter = AppRouter(window: window!)
+        grouter = GamePlayAppRouter(window: window!) 
         
         window?.makeKeyAndVisible()
 
