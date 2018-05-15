@@ -41,7 +41,6 @@
 		EF4267192097C2090076238D /* RoutingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267182097C2090076238D /* RoutingAction.swift */; };
 		EF42671B2097CB1D0076238D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42671A2097CB1D0076238D /* Result.swift */; };
 		EF47764E20A8DA4E006D7107 /* GamePlayAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */; };
-		EF47765020A8DF72006D7107 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670C2097924A0076238D /* AppRouter.swift */; };
 		EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */; };
 		EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */; };
 		EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */; };
@@ -120,7 +119,6 @@
 		EF426706209754DC0076238D /* TramsBussesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramsBussesReducer.swift; sourceTree = "<group>"; };
 		EF42670820978E940076238D /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
 		EF42670A2097918A0076238D /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
-		EF42670C2097924A0076238D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		EF4267102097B9290076238D /* WarsawApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstants.swift; sourceTree = "<group>"; };
 		EF4267122097B9760076238D /* WarsawApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApi.swift; sourceTree = "<group>"; };
 		EF4267142097BD030076238D /* C.Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.Networking.swift; sourceTree = "<group>"; };
@@ -344,7 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
-				EF42670C2097924A0076238D /* AppRouter.swift */,
 				EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */,
 			);
 			path = _App;
@@ -707,7 +704,6 @@
 				EF61151220A6380D00E05E02 /* GlobalUtilFunctions.swift in Sources */,
 				EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */,
 				EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */,
-				EF47765020A8DF72006D7107 /* AppRouter.swift in Sources */,
 				EF426707209754DC0076238D /* TramsBussesReducer.swift in Sources */,
 				EF4266D2209267DC0076238D /* VehicleType.swift in Sources */,
 				EF4267112097B9290076238D /* WarsawApiConstants.swift in Sources */,
