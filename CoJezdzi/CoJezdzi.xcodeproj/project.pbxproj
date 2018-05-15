@@ -38,7 +38,7 @@
 		EF4267132097B9760076238D /* WarsawApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267122097B9760076238D /* WarsawApi.swift */; };
 		EF4267152097BD030076238D /* C.Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267142097BD030076238D /* C.Networking.swift */; };
 		EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */; };
-		EF4267192097C2090076238D /* RoutingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267182097C2090076238D /* RoutingAction.swift */; };
+		EF4267192097C2090076238D /* RoutingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267182097C2090076238D /* RoutingActions.swift */; };
 		EF42671B2097CB1D0076238D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42671A2097CB1D0076238D /* Result.swift */; };
 		EF47764E20A8DA4E006D7107 /* GamePlayAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */; };
 		EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */; };
@@ -123,7 +123,7 @@
 		EF4267122097B9760076238D /* WarsawApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApi.swift; sourceTree = "<group>"; };
 		EF4267142097BD030076238D /* C.Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.Networking.swift; sourceTree = "<group>"; };
 		EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift; sourceTree = "<group>"; };
-		EF4267182097C2090076238D /* RoutingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAction.swift; sourceTree = "<group>"; };
+		EF4267182097C2090076238D /* RoutingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingActions.swift; sourceTree = "<group>"; };
 		EF42671A2097CB1D0076238D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayAppRouter.swift; sourceTree = "<group>"; };
 		EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchAction.swift; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 			children = (
 				EF611504209EE60C00E05E02 /* _Map */,
 				EF611501209E537300E05E02 /* _Settings */,
-				EF4267182097C2090076238D /* RoutingAction.swift */,
+				EF4267182097C2090076238D /* RoutingActions.swift */,
 			);
 			path = _Actions;
 			sourceTree = "<group>";
@@ -700,7 +700,7 @@
 				EF4267132097B9760076238D /* WarsawApi.swift in Sources */,
 				EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */,
 				EF4266CF209266560076238D /* WarsawVehicleDto.swift in Sources */,
-				EF4267192097C2090076238D /* RoutingAction.swift in Sources */,
+				EF4267192097C2090076238D /* RoutingActions.swift in Sources */,
 				EF61151220A6380D00E05E02 /* GlobalUtilFunctions.swift in Sources */,
 				EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */,
 				EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */,
