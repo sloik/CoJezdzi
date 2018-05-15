@@ -161,8 +161,8 @@ extension MapScene {
 
 private extension MapScene {
     func triggerDataRefresh() {
-//        store.dispatch(FetchTramsAction.fetch)
-//        store.dispatch(FetchBussesAction.fetch)
+        store.dispatch(FetchTramsAction.fetch)
+        store.dispatch(FetchBussesAction.fetch)
     }
 }
 
