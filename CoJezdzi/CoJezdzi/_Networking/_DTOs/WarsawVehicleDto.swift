@@ -66,3 +66,9 @@ extension WarsawVehicleDto {
         return CLLocationCoordinate2D.init(latitude: latitude, longitude: longitude)
     }
 }
+
+extension WarsawVehicleDto: Equatable {
+    static func == (lhs: WarsawVehicleDto, rhs: WarsawVehicleDto) -> Bool {
+        return lhs.fullKeyID == rhs.fullKeyID
+    }
+}
