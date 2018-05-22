@@ -1,6 +1,6 @@
 
 import Foundation
 
-struct WarsawApiResultDto: Codable {
+struct WarsawApiResultDto: Codable, Equatable {
     let result: [WarsawVehicleDto]
 }
