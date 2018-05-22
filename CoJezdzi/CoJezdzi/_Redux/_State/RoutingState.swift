@@ -2,14 +2,20 @@
 import ReSwift
 import Rswift
 
-enum RoutingDestination: String {
+enum RoutingDestination: String, Equatable {
     case map         = "MapScene"
     case settings    = "SettingsScene"
     case linesFilter = "LinesFilter"
     case aboutApp    = "AboutApp"
 }
 
-struct RoutingState: StateType {
+struct RoutingState: StateType, Equatable {
+    static func == (lhs: RoutingState, rhs: RoutingState) -> Bool {
+        return lhs.scene   == rhs.scene
+        && lhs.destination == rhs.destination
+        && lhs.sceneVC     === rhs.sceneVC
+    }
+    
     let scene: RoutingDestination
     let destination: RoutingDestination?
     

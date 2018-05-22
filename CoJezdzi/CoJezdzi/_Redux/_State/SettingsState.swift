@@ -1,9 +1,13 @@
 
 import ReSwift
 
-struct SettingsState: StateType {
+struct SettingsState: StateType, Equatable {
+    static func == (lhs: SettingsState, rhs: SettingsState) -> Bool {
+        return lhs.switches == rhs.switches
+        && lhs.selectedLines == rhs.selectedLines
+    }
     
-    enum Filter {
+    enum Filter: Equatable {
         case tram(on: Bool)
         case bus(on: Bool)
         case previousLocation(on: Bool)
@@ -25,7 +29,7 @@ struct SettingsState: StateType {
         }
     }
     
-    struct FilterState: StateType {
+    struct FilterState: StateType, Equatable {
         let tramOnly: Filter
         let busOnly: Filter
         let previousLocations: Filter

@@ -11,7 +11,7 @@
 import Foundation
 import CoreLocation
 
-struct WarsawVehicleDto: Codable {
+struct WarsawVehicleDto: Codable, Equatable {
     let latitude : Double //CLLocationCoordinate2D
     let longitude: Double //CLLocationCoordinate2D
     
@@ -64,11 +64,5 @@ extension WarsawVehicleDto {
     
     var coordinate2D: CLLocationCoordinate2D {
         return CLLocationCoordinate2D.init(latitude: latitude, longitude: longitude)
-    }
-}
-
-extension WarsawVehicleDto: Equatable {
-    static func == (lhs: WarsawVehicleDto, rhs: WarsawVehicleDto) -> Bool {
-        return lhs.fullKeyID == rhs.fullKeyID
     }
 }
