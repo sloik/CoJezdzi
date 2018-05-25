@@ -217,6 +217,8 @@ extension SettingsVC: SwitchCellInteraction {
 private typealias UserInteraction = SettingsVC
 extension UserInteraction {
     @IBAction func uderDidTapCancelButton(_ sender: UIBarButtonItem) {
+        
+        // TODO: is this can be an action?
         dismiss(animated: true, completion:nil)
     }
 }
