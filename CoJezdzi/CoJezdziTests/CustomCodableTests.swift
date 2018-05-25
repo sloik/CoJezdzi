@@ -10,6 +10,11 @@ class CustomCodableTests: XCTestCase {
     
     func test_SettingsState_FilterExample() {
         func test(_ f: SettingsState.Filter , file: StaticString = #file, line: UInt = #line) {
+            
+            func encodeDecode<TestedType: Codable>(_ object: TestedType) throws -> TestedType {
+                return try decoder.decode(TestedType.self, from: try encoder.encode(object))
+            }
+            
             do {
                 let result = try encodeDecode(f)
                 XCTAssert(f == result, "\(f) != \(result)", file: file, line: line)
@@ -26,11 +31,5 @@ class CustomCodableTests: XCTestCase {
             test(SettingsState.Filter.previousLocation(on: false)),
             test(SettingsState.Filter.previousLocation(on: true))
         )
-    }
-}
-
-extension CustomCodableTests {
-    func encodeDecode<TestedType: Codable>(_ object: TestedType) throws -> TestedType {
-        return try decoder.decode(TestedType.self, from: try encoder.encode(object))
     }
 }
