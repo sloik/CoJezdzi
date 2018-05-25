@@ -9,20 +9,28 @@ class CustomCodableTests: XCTestCase {
     let decoder = JSONDecoder()
     
     func test_SettingsState_FilterExample() {
-        let values =
-        [SettingsState.Filter.tram(on: false),             SettingsState.Filter.tram(on: true),
-         SettingsState.Filter.bus(on: false),              SettingsState.Filter.bus(on: true),
-         SettingsState.Filter.previousLocation(on: false), SettingsState.Filter.previousLocation(on: true)]
-        
-        values.forEach {
-            XCTAssert($0 == self.encodeDecode($0), "\($0) != \(self.encodeDecode($0))")
+        func test(_ f: SettingsState.Filter , file: StaticString = #file, line: UInt = #line) {
+            do {
+                let result = try encodeDecode(f)
+                XCTAssert(f == result, "\(f) != \(result)", file: file, line: line)
+            } catch {
+                XCTFail("Could not encode/decode: \(f)", file: file, line: line)
+            }
         }
+        
+        Runner.run(tests:
+            test(SettingsState.Filter.tram(on: false)),
+            test(SettingsState.Filter.tram(on: true)),
+            test(SettingsState.Filter.bus(on: false)),
+            test(SettingsState.Filter.bus(on: true)),
+            test(SettingsState.Filter.previousLocation(on: false)),
+            test(SettingsState.Filter.previousLocation(on: true))
+        )
     }
-    
 }
 
 extension CustomCodableTests {
-    func encodeDecode<TestedType: Codable>(_ object: TestedType) -> TestedType {
-        return try! decoder.decode(TestedType.self, from: try! encoder.encode(object))
+    func encodeDecode<TestedType: Codable>(_ object: TestedType) throws -> TestedType {
+        return try decoder.decode(TestedType.self, from: try encoder.encode(object))
     }
 }
