@@ -1,7 +1,7 @@
 
 import ReSwift
 
-class Persistance {
+class Persistence {
     init() {
         store.subscribe(self) {
             $0.select {
@@ -21,7 +21,7 @@ class Persistance {
 
 // MARK: - ReSwift
 
-extension Persistance: StoreSubscriber {
+extension Persistence: StoreSubscriber {
     func newState(state: SettingsState) {
         persist(state: state)
     }

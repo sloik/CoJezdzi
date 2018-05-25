@@ -13,7 +13,7 @@
 		BA56854D1C763EA600D3B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA56854C1C763EA600D3B5FE /* Assets.xcassets */; };
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
-		EF0DC0E320B88528000BF4DB /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E220B88528000BF4DB /* Persistance.swift */; };
+		EF0DC0E320B88528000BF4DB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E220B88528000BF4DB /* Persistence.swift */; };
 		EF4266C3209263250076238D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C2209263250076238D /* AppState.swift */; };
 		EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C62092641C0076238D /* FetchTramsAction.swift */; };
 		EF4266C9209264640076238D /* FetchBussesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C8209264640076238D /* FetchBussesAction.swift */; };
@@ -100,7 +100,7 @@
 		BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoJezdziUITests.swift; sourceTree = "<group>"; };
 		BA5685671C763EA600D3B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABDD4BA1C78CDD500152EBD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		EF0DC0E220B88528000BF4DB /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		EF0DC0E220B88528000BF4DB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		EF42669A209262340076238D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
 		EF42669E209262340076238D /* URL_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Extensions.swift; sourceTree = "<group>"; };
@@ -262,12 +262,12 @@
 			path = CoJezdziUITests;
 			sourceTree = "<group>";
 		};
-		EF0DC0E120B884EC000BF4DB /* _Persistance */ = {
+		EF0DC0E120B884EC000BF4DB /* _Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				EF0DC0E220B88528000BF4DB /* Persistance.swift */,
+				EF0DC0E220B88528000BF4DB /* Persistence.swift */,
 			);
-			path = _Persistance;
+			path = _Persistence;
 			sourceTree = "<group>";
 		};
 		EF4266C1209262FC0076238D /* _State */ = {
@@ -355,7 +355,7 @@
 		EF47764F20A8DA57006D7107 /* _App */ = {
 			isa = PBXGroup;
 			children = (
-				EF0DC0E120B884EC000BF4DB /* _Persistance */,
+				EF0DC0E120B884EC000BF4DB /* _Persistence */,
 				EFD085A220AB4EA400DE3F55 /* _Routing */,
 				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
 			);
@@ -707,7 +707,7 @@
 				EF4267152097BD030076238D /* C.Networking.swift in Sources */,
 				EF4266C3209263250076238D /* AppState.swift in Sources */,
 				EF4267052097543A0076238D /* VehicleState.swift in Sources */,
-				EF0DC0E320B88528000BF4DB /* Persistance.swift in Sources */,
+				EF0DC0E320B88528000BF4DB /* Persistence.swift in Sources */,
 				EF4266F7209273C80076238D /* SettingsVC.swift in Sources */,
 				EF61150C20A4C05500E05E02 /* SelectedLineAddAction.swift in Sources */,
 				EF47764E20A8DA4E006D7107 /* GamePlayAppRouter.swift in Sources */,

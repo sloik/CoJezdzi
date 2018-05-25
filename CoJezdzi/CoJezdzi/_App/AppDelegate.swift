@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var grouter: GamePlayAppRouter?
+    var persistance = Persistence()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -23,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        grouter = GamePlayAppRouter(window: window!) 
-        
+        grouter = GamePlayAppRouter(window: window!)
+                
         window?.makeKeyAndVisible()
 
         return true
