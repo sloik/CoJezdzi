@@ -8,26 +8,15 @@ class CustomCodableTests: XCTestCase {
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_SettingsState_FilterExample() {
+        let values =
+        [SettingsState.Filter.tram(on: false),             SettingsState.Filter.tram(on: true),
+         SettingsState.Filter.bus(on: false),              SettingsState.Filter.bus(on: true),
+         SettingsState.Filter.previousLocation(on: false), SettingsState.Filter.previousLocation(on: true)]
         
-        
-        let initial = SettingsState.Filter.tram(on: true)
-        
-        let result = encodeDecode(initial)
-        
-        XCTAssert(initial == result, "")
+        values.forEach {
+            XCTAssert($0 == self.encodeDecode($0), "\($0) != \(self.encodeDecode($0))")
+        }
     }
     
 }
