@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         grouter = GamePlayAppRouter(window: window!)
+        
+        persistance.load()
                 
         window?.makeKeyAndVisible()
 
