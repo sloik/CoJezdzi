@@ -5,16 +5,16 @@ import XCTest
 
 class CustomCodableTests: XCTestCase {
     
-    func test_SettingsState_Filter() {
-        func test(_ f: SettingsState.Filter , file: StaticString = #file, line: UInt = #line) {
-            do {
-                let result = try encodeDecode(f)
-                XCTAssert(f == result, "\(f) != \(result)", file: file, line: line)
-            } catch {
-                XCTFail("Could not encode/decode: \(f)", file: file, line: line)
-            }
+    func test<T: Codable & Equatable>(_ f: T, file: StaticString = #file, line: UInt = #line) {
+        do {
+            let r = try encodeDecode(f)
+            XCTAssert(f == r, "\(f) != \(r)", file: file, line: line)
+        } catch {
+            XCTFail("Could not encode/decode: \(f)", file: file, line: line)
         }
-        
+    }
+    
+    func test_SettingsState_Filter() {
         Runner.run(tests:
             test(SettingsState.Filter.tram(on: false)),
             test(SettingsState.Filter.tram(on: true)),
