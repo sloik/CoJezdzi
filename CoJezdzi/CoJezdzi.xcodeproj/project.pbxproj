@@ -16,6 +16,7 @@
 		EF0DC0E320B88528000BF4DB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E220B88528000BF4DB /* Persistence.swift */; };
 		EF0DC0E520B8A59C000BF4DB /* CustomCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */; };
 		EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E620B8C102000BF4DB /* THC.swift */; };
+		EF0DC0E920B95989000BF4DB /* SettingsDidRestoreAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */; };
 		EF4266C3209263250076238D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C2209263250076238D /* AppState.swift */; };
 		EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C62092641C0076238D /* FetchTramsAction.swift */; };
 		EF4266C9209264640076238D /* FetchBussesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C8209264640076238D /* FetchBussesAction.swift */; };
@@ -102,6 +103,7 @@
 		EF0DC0E220B88528000BF4DB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCodableTests.swift; sourceTree = "<group>"; };
 		EF0DC0E620B8C102000BF4DB /* THC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THC.swift; sourceTree = "<group>"; };
+		EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDidRestoreAction.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		EF42669A209262340076238D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
 		EF42669E209262340076238D /* URL_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Extensions.swift; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 				EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */,
 				EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */,
 				EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */,
+				EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */,
 				EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */,
 			);
 			path = _Settings;
@@ -687,6 +690,7 @@
 				EFEE79002097D40D00F95E77 /* MapState.swift in Sources */,
 				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
 				EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */,
+				EF0DC0E920B95989000BF4DB /* SettingsDidRestoreAction.swift in Sources */,
 				EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
