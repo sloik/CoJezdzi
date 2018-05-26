@@ -47,7 +47,6 @@
 		EF47764E20A8DA4E006D7107 /* GamePlayAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */; };
 		EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */; };
 		EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */; };
-		EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */; };
 		EF61150C20A4C05500E05E02 /* SelectedLineAddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */; };
 		EF61150E20A4C08C00E05E02 /* SelectedLineRemoveAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */; };
 		EF61151020A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */; };
@@ -135,7 +134,6 @@
 		EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayAppRouter.swift; sourceTree = "<group>"; };
 		EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchAction.swift; sourceTree = "<group>"; };
 		EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLinesState.swift; sourceTree = "<group>"; };
-		EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLinesReducer.swift; sourceTree = "<group>"; };
 		EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineAddAction.swift; sourceTree = "<group>"; };
 		EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineRemoveAction.swift; sourceTree = "<group>"; };
 		EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineRemoveAllAction.swift; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 				EF4266CA209264DC0076238D /* AppReducer.swift */,
 				EFEE79012097D46800F95E77 /* MapSceneReducer.swift */,
 				EF42670A2097918A0076238D /* RoutingReducer.swift */,
-				EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */,
 				EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */,
 				EF426706209754DC0076238D /* TramsBussesReducer.swift */,
 			);
@@ -689,7 +686,6 @@
 				EF61151020A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift in Sources */,
 				EFEE79002097D40D00F95E77 /* MapState.swift in Sources */,
 				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
-				EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */,
 				EF0DC0E920B95989000BF4DB /* SettingsDidRestoreAction.swift in Sources */,
 				EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,
