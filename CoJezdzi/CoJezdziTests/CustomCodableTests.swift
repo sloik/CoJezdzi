@@ -8,7 +8,7 @@ class CustomCodableTests: XCTestCase {
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
     
-    func test_SettingsState_FilterExample() {
+    func test_SettingsState_Filter() {
         func test(_ f: SettingsState.Filter , file: StaticString = #file, line: UInt = #line) {
             
             func encodeDecode<TestedType: Codable>(_ object: TestedType) throws -> TestedType {
