@@ -21,7 +21,7 @@ class Persistence {
     }
     
     func load() {
-        let data = UserDefaults.standard.data(forKey: Keys.persistance)!
+        guard let data = UserDefaults.standard.data(forKey: Keys.persistance) else { return }
         let state = try! JSONDecoder().decode(SettingsState.self, from: data)
         
         store.dispatch(SettingsDidRestoreAction(restoredState: state))
