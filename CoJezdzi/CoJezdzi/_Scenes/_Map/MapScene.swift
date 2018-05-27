@@ -59,10 +59,10 @@ class MapScene: UIViewController {
         
         triggerDataRefresh()
 
-//        Timer.scheduledTimer(withTimeInterval: WarsawApiConstants.RefreshRate,
-//                             repeats: true) { _ in
-//                                self.triggerDataRefresh()
-//        }
+        Timer.scheduledTimer(withTimeInterval: WarsawApiConstants.RefreshRate,
+                             repeats: true) { _ in
+                                self.triggerDataRefresh()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
