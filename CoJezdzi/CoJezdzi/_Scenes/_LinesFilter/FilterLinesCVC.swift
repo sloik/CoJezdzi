@@ -20,16 +20,17 @@ class FilterLinesCVC: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        reduxStore.subscribe(self)
+    }
     
-        store.subscribe(self)
-        
-        store.dispatch(RoutingSceneAppearsAction(scene: .linesFilter, viewController: self))
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        reduxStore.dispatch(RoutingSceneAppearsAction(scene: .linesFilter, viewController: self))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        // 3
-        store.unsubscribe(self)
+        reduxStore.unsubscribe(self)
     }
 }
 
@@ -83,9 +84,9 @@ extension FilterLinesCVC {
         
         let selectedLine = lines[indexPath.row]
         if latesState.settingsState.selectedLines.lines.contains(LineInfo(name: selectedLine)) {
-            store.dispatch(SelectedLineRemoveAction(line: selectedLine))
+            reduxStore.dispatch(SelectedLineRemoveAction(line: selectedLine))
         } else {
-            store.dispatch(SelectedLineAddAction(line: selectedLine))
+            reduxStore.dispatch(SelectedLineAddAction(line: selectedLine))
         }
     }
 }
@@ -103,7 +104,7 @@ extension FilterLinesCVC {
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            store.dispatch(SelectedLineRemoveAllAction())
+            reduxStore.dispatch(SelectedLineRemoveAllAction())
         }
     }
 }

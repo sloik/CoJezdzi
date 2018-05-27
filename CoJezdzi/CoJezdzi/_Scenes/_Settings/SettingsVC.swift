@@ -43,21 +43,24 @@ class SettingsVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        store.subscribe(self) {
+        reduxStore.subscribe(self) {
             $0.select {
                 $0.settingsState
             }
         }
-        
-        store.dispatch(RoutingSceneAppearsAction(scene: .settings, viewController: self))
 
         tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        reduxStore.dispatch(RoutingSceneAppearsAction(scene: .settings, viewController: self))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        store.unsubscribe(self)
+        reduxStore.unsubscribe(self)
     }
 }
 
@@ -87,21 +90,21 @@ extension SettingsVC {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
-                store.dispatch(RoutingAction(destination: .linesFilter))
+                reduxStore.dispatch(RoutingAction(destination: .linesFilter))
                 
             default:
                 print("Unhandled action for cell with title \(viewModel.title)")
             }
             
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
-            store.dispatch(RoutingAction(destination: .aboutApp))
+            reduxStore.dispatch(RoutingAction(destination: .aboutApp))
             
         case C.Storyboard.CellReuseId.SettingsSwitchCell:
             
             let viewModel = cellOrdering[indexPath.row]
             let currentState = titleToState[viewModel.title]!
             
-            store.dispatch(SettingsSwitchAction(whitchSwitch: currentState.reversed))
+            reduxStore.dispatch(SettingsSwitchAction(whitchSwitch: currentState.reversed))
  
         default:
             return
@@ -200,13 +203,13 @@ extension SettingsVC: SwitchCellInteraction {
 
         switch cellTitle {
         case C.UI.Settings.MenuLabels.TramMarks:
-            store.dispatch(SettingsSwitchAction(whitchSwitch: .previousLocation(on: isOn)))
+            reduxStore.dispatch(SettingsSwitchAction(whitchSwitch: .previousLocation(on: isOn)))
 
         case C.UI.Settings.MenuLabels.TramsOnly:
-            store.dispatch(SettingsSwitchAction(whitchSwitch: .tram(on: isOn)))
+            reduxStore.dispatch(SettingsSwitchAction(whitchSwitch: .tram(on: isOn)))
             
         case C.UI.Settings.MenuLabels.BussesOnly:
-            store.dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))
+            reduxStore.dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))
 
         default: print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
         }

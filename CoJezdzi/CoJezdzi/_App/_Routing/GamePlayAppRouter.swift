@@ -4,11 +4,11 @@ import GameplayKit
 import ReSwift
 
 final class GamePlayAppRouter {
+    
     let graph: GKGraph = {
-        
         // defines nodes
         let map =         NF.n(.map)
-        let settings =    NF.n(.settings) // this one is emebed in UINavigationController
+        let settings =    NF.n(.settings)
         let lineFilters = NF.n(.linesFilter)
         let about =       NF.n(.aboutApp)
         
@@ -33,7 +33,7 @@ final class GamePlayAppRouter {
     init(window: UIWindow) {
         window.rootViewController = R.storyboard.main.mapScene()!
         
-        store.subscribe(self) {
+        reduxStore.subscribe(self) {
             $0.select {
                 $0.routingState
             }
@@ -42,42 +42,62 @@ final class GamePlayAppRouter {
 }
 
 extension GamePlayAppRouter: StoreSubscriber {
+    func navigationSteps(from: Node, to: Node) -> [(RoutingDestination, RoutingDestination)] {
+        // This creates steps that are required to navigate to certain parts of application
+        // Finds a paths and creaits pairs of steps that are reqired to navigate.
+        guard let path = graph.findPath(from: from, to: to) as? [Node] else { fatalError("woot!") }
+        
+        return stride(from: 0, to: path.count - 1, by: 1)
+            .map { (path[$0], path[$0+1]) }
+            .map { ($0.0.id, $0.1.id) }
+    }
     
     func newState(state: RoutingState) {
         currentViewController = state.sceneVC
         
-        // navigation is required...
-        guard let destitnation = state.destination else { return }
-        
-        
-        // TODO:
-        // This creates steps that are required to navigate to certain parts of application
-        // Finds a paths and creaits pairs of steps that are reqired to navigate.
-        // Will have to
-//        guard let path = graph.findPath(from: state.scene.node, to: destitnation.node) as? [Node] else { fatalError("woot!") }
-//        let navigationSteps = stride(from: 0, to: path.count - 1, by: 1)
-//            .map { (path[$0], path[$0+1]) }
-        
+        if let destitnation = state.destination {
+            move(steps: navigationSteps(from: state.scene.node, to: destitnation.node))
+        }
+    }
+}
 
-        switch (state.scene, state.destination) {
-
-        case (_, nil):
-            debugPrint("No routing required...")
+extension GamePlayAppRouter {
+    func move(steps: [(RoutingDestination, RoutingDestination)]) {
+        guard let (from, to) = steps.first else { return }
+        
+        switch (from, to) {
+        case (.map, .settings):
+            currentViewController?
+                .present(viewController(for: .settings), animated: true)
             
-        case (.map, .settings?):
-            currentViewController?.present(viewController(for: .settings), animated: true, completion: nil)
+        case (.settings, .map):
+            currentViewController?
+                .dismiss(animated: true)
             
+        case (.settings, .linesFilter):
+            currentViewController?
+                .navigationController?
+                .pushViewController(viewController(for: .linesFilter),
+                                    animated: true)
             
-        case (.settings, .linesFilter?):
-            currentViewController?.navigationController?.pushViewController(viewController(for: .linesFilter),
-                                                                            animated: true)
+        case (.linesFilter, .settings):
+            currentViewController?
+                .navigationController?
+                .popViewController(animated: true)
             
-        case (.settings, .aboutApp?):
-            currentViewController?.navigationController?.pushViewController(viewController(for: .aboutApp),
-                                                                            animated: true)
+        case (.settings, .aboutApp):
+            currentViewController?
+                .navigationController?
+                .pushViewController(viewController(for: .aboutApp),
+                                    animated: true)
+            
+        case (.aboutApp, .settings):
+            currentViewController?
+                .navigationController?
+                .popViewController(animated: true)
             
         case (_, _):
-            fatalError("Unhandeled case: \((state.scene, state.destination))")
+            fatalError("Unhandeled case: \((from, to))")
         }
     }
 }

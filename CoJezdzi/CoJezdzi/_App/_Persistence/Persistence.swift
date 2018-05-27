@@ -14,7 +14,7 @@ class Persistence {
     
     func load() {
         defer {
-            store.subscribe(self) {
+            reduxStore.subscribe(self) {
                 $0.select {
                     $0.settingsState
                 }
@@ -24,7 +24,7 @@ class Persistence {
         guard let data = UserDefaults.standard.data(forKey: Keys.persistance) else { return }
         let state = try! JSONDecoder().decode(SettingsState.self, from: data)
         
-        store.dispatch(SettingsDidRestoreAction(restoredState: state))
+        reduxStore.dispatch(SettingsDidRestoreAction(restoredState: state))
     }
 }
 

@@ -67,16 +67,17 @@ class MapScene: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        store.subscribe(self)
-        
-        store.dispatch(RoutingSceneAppearsAction(scene: .map, viewController: self))
+        reduxStore.subscribe(self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        reduxStore.dispatch(RoutingSceneAppearsAction(scene: .map, viewController: self))
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        store.unsubscribe(self)
+        reduxStore.unsubscribe(self)
     }
 }
 
@@ -147,7 +148,7 @@ extension MapScene {
     }
     
     @IBAction func userDidTapSettingsButton() {
-        store.dispatch(RoutingAction(destination: .settings))
+        reduxStore.dispatch(RoutingAction(destination: .settings))
     }
 
     @IBAction func userDidTapShowCurrentLocation(_ sender: UIButton) {
@@ -161,8 +162,8 @@ extension MapScene {
 
 private extension MapScene {
     func triggerDataRefresh() {
-        store.dispatch(FetchTramsAction.fetch)
-        store.dispatch(FetchBussesAction.fetch)
+        reduxStore.dispatch(FetchTramsAction.fetch)
+        reduxStore.dispatch(FetchBussesAction.fetch)
     }
 }
 

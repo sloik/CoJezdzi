@@ -4,7 +4,7 @@ import Colours
 import ReSwift
 
 // Global <3 app state ;)
-var store = Store<AppState>(reducer: appReducer,
+var reduxStore = Store<AppState>(reducer: appReducer,
                             state: nil,
                             middleware:[
 //                                M.BS.dontGetTrams,
