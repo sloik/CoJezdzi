@@ -24,7 +24,7 @@ struct RoutingState: StateType {
 
 extension RoutingState: Equatable {
     static func == (lhs: RoutingState, rhs: RoutingState) -> Bool {
-        return lhs.scene   == rhs.scene
+        return lhs.scene       == rhs.scene
             && lhs.destination == rhs.destination
             && lhs.sceneVC     === rhs.sceneVC
     }
