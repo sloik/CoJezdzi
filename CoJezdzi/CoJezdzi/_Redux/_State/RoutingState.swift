@@ -9,13 +9,7 @@ enum RoutingDestination: String, Equatable {
     case aboutApp    = "AboutApp"
 }
 
-struct RoutingState: StateType, Equatable {
-    static func == (lhs: RoutingState, rhs: RoutingState) -> Bool {
-        return lhs.scene   == rhs.scene
-        && lhs.destination == rhs.destination
-        && lhs.sceneVC     === rhs.sceneVC
-    }
-    
+struct RoutingState: StateType {
     let scene: RoutingDestination
     let destination: RoutingDestination?
     
@@ -25,6 +19,14 @@ struct RoutingState: StateType, Equatable {
         self.scene = scene
         self.destination = destitnation
         self.sceneVC = sceneVC
+    }
+}
+
+extension RoutingState: Equatable {
+    static func == (lhs: RoutingState, rhs: RoutingState) -> Bool {
+        return lhs.scene   == rhs.scene
+            && lhs.destination == rhs.destination
+            && lhs.sceneVC     === rhs.sceneVC
     }
 }
 
