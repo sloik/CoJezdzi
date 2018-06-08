@@ -6,10 +6,7 @@ import ReSwift
 // Global <3 app state ;)
 var reduxStore = Store<AppState>(reducer: appReducer,
                             state: nil,
-                            middleware:[
-//                                M.BS.dontGetTrams,
-//                                M.logging
-    ])
+                            middleware:[])
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
