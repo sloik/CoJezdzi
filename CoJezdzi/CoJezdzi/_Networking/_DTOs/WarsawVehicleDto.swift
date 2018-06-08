@@ -11,7 +11,7 @@
 import Foundation
 import CoreLocation
 
-struct WarsawVehicleDto: Codable {
+struct WarsawVehicleDto: Codable, Equatable {
     let latitude : Double //CLLocationCoordinate2D
     let longitude: Double //CLLocationCoordinate2D
     

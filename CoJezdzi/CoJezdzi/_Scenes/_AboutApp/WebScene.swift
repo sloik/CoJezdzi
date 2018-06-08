@@ -19,13 +19,11 @@ class WebScene: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         webVC.view.frame = spacer.frame
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        store.dispatch(RoutingAction(destination: .aboutApp))
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        reduxStore.dispatch(RoutingSceneAppearsAction(scene: .aboutApp, viewController: self))
     }
 }

@@ -1,7 +1,7 @@
 
 import ReSwift
 
-struct LineInfo: Hashable {
+struct LineInfo: Hashable, Equatable, Codable {
     let name: String
     
     var hashValue: Int {
@@ -9,7 +9,7 @@ struct LineInfo: Hashable {
     }
 }
 
-struct SelectedLinesState: StateType {
+struct SelectedLinesState: StateType, Equatable, Codable {
     let lines: Set<LineInfo>
 }
 

@@ -1,7 +1,7 @@
 
 import ReSwift
 
-struct MapState: StateType {
+struct MapState: StateType, Equatable {
     let currentTrams:  VehicleState
     let currentBusses: VehicleState
 }

@@ -13,6 +13,10 @@
 		BA56854D1C763EA600D3B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA56854C1C763EA600D3B5FE /* Assets.xcassets */; };
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
+		EF0DC0E320B88528000BF4DB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E220B88528000BF4DB /* Persistence.swift */; };
+		EF0DC0E520B8A59C000BF4DB /* CustomCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */; };
+		EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E620B8C102000BF4DB /* THC.swift */; };
+		EF0DC0E920B95989000BF4DB /* SettingsDidRestoreAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */; };
 		EF4266C3209263250076238D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C2209263250076238D /* AppState.swift */; };
 		EF4266C72092641C0076238D /* FetchTramsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C62092641C0076238D /* FetchTramsAction.swift */; };
 		EF4266C9209264640076238D /* FetchBussesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266C8209264640076238D /* FetchBussesAction.swift */; };
@@ -31,32 +35,29 @@
 		EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
 		EF426700209273C80076238D /* WebScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A0209262340076238D /* WebScene.swift */; };
 		EF4267052097543A0076238D /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267042097543A0076238D /* VehicleState.swift */; };
-		EF426707209754DC0076238D /* TramsBussesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF426706209754DC0076238D /* TramsBussesReducer.swift */; };
 		EF42670920978E940076238D /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670820978E940076238D /* RoutingState.swift */; };
 		EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670A2097918A0076238D /* RoutingReducer.swift */; };
-		EF42670D2097924A0076238D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42670C2097924A0076238D /* AppRouter.swift */; };
 		EF4267112097B9290076238D /* WarsawApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267102097B9290076238D /* WarsawApiConstants.swift */; };
 		EF4267132097B9760076238D /* WarsawApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267122097B9760076238D /* WarsawApi.swift */; };
 		EF4267152097BD030076238D /* C.Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267142097BD030076238D /* C.Networking.swift */; };
 		EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */; };
-		EF4267192097C2090076238D /* RoutingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267182097C2090076238D /* RoutingAction.swift */; };
+		EF4267192097C2090076238D /* RoutingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267182097C2090076238D /* RoutingActions.swift */; };
 		EF42671B2097CB1D0076238D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42671A2097CB1D0076238D /* Result.swift */; };
+		EF47764E20A8DA4E006D7107 /* GamePlayAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */; };
 		EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */; };
 		EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */; };
-		EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */; };
 		EF61150C20A4C05500E05E02 /* SelectedLineAddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */; };
 		EF61150E20A4C08C00E05E02 /* SelectedLineRemoveAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */; };
 		EF61151020A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */; };
 		EF61151220A6380D00E05E02 /* GlobalUtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */; };
 		EF61151420A645A800E05E02 /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
 		EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151620A7083400E05E02 /* AppMiddleware.swift */; };
-		EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */; };
-		EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
 		EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */; };
 		EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */; };
 		EFB5C2AA209CE14C00BB5855 /* SettingsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */; };
-		EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */; };
+		EFD085A420AB4EBD00DE3F55 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD085A320AB4EBD00DE3F55 /* Nodes.swift */; };
+		EFD085A620AB68DE00DE3F55 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD085A520AB68DE00DE3F55 /* Routable.swift */; };
 		EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */; };
 		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
 		EFEE79002097D40D00F95E77 /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FF2097D40D00F95E77 /* MapState.swift */; };
@@ -97,6 +98,10 @@
 		BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoJezdziUITests.swift; sourceTree = "<group>"; };
 		BA5685671C763EA600D3B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABDD4BA1C78CDD500152EBD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		EF0DC0E220B88528000BF4DB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCodableTests.swift; sourceTree = "<group>"; };
+		EF0DC0E620B8C102000BF4DB /* THC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THC.swift; sourceTree = "<group>"; };
+		EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDidRestoreAction.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		EF42669A209262340076238D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
 		EF42669E209262340076238D /* URL_Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL_Extensions.swift; sourceTree = "<group>"; };
@@ -114,35 +119,32 @@
 		EF4266CA209264DC0076238D /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		EF4266CE209266560076238D /* WarsawVehicleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawVehicleDto.swift; sourceTree = "<group>"; };
 		EF4266D1209267DC0076238D /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
-		EF4266D42092733A0076238D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		EF4266D42092733A0076238D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = CoJezdzi/_Misc/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		EF4267042097543A0076238D /* VehicleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleState.swift; sourceTree = "<group>"; };
-		EF426706209754DC0076238D /* TramsBussesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramsBussesReducer.swift; sourceTree = "<group>"; };
 		EF42670820978E940076238D /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
 		EF42670A2097918A0076238D /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
-		EF42670C2097924A0076238D /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		EF4267102097B9290076238D /* WarsawApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstants.swift; sourceTree = "<group>"; };
 		EF4267122097B9760076238D /* WarsawApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApi.swift; sourceTree = "<group>"; };
 		EF4267142097BD030076238D /* C.Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.Networking.swift; sourceTree = "<group>"; };
 		EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift; sourceTree = "<group>"; };
-		EF4267182097C2090076238D /* RoutingAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingAction.swift; sourceTree = "<group>"; };
+		EF4267182097C2090076238D /* RoutingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingActions.swift; sourceTree = "<group>"; };
 		EF42671A2097CB1D0076238D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayAppRouter.swift; sourceTree = "<group>"; };
 		EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchAction.swift; sourceTree = "<group>"; };
 		EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLinesState.swift; sourceTree = "<group>"; };
-		EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLinesReducer.swift; sourceTree = "<group>"; };
 		EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineAddAction.swift; sourceTree = "<group>"; };
 		EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineRemoveAction.swift; sourceTree = "<group>"; };
 		EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineRemoveAllAction.swift; sourceTree = "<group>"; };
 		EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUtilFunctions.swift; sourceTree = "<group>"; };
 		EF61151620A7083400E05E02 /* AppMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMiddleware.swift; sourceTree = "<group>"; };
-		EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeristanceModelTests.swift; sourceTree = "<group>"; };
-		EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPersistanceTests.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		EF7657411EAB3AED007C4E3D /* CoJezdziTests copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy2-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy2-Info.plist"; sourceTree = "<absolute>"; };
 		EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiResultDto.swift; sourceTree = "<group>"; };
 		EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
 		EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
 		EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsReducer.swift; sourceTree = "<group>"; };
-		EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPullerTests.swift; sourceTree = "<group>"; };
+		EFD085A320AB4EBD00DE3F55 /* Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
+		EFD085A520AB68DE00DE3F55 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FF2097D40D00F95E77 /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
@@ -223,17 +225,15 @@
 		BA5685441C763EA600D3B5FE /* CoJezdzi */ = {
 			isa = PBXGroup;
 			children = (
+				EF47764F20A8DA57006D7107 /* _App */,
 				EFB5C2A4209C710200BB5855 /* _Misc */,
 				EF42670F2097B9020076238D /* _Networking */,
 				EF4266CC209265870076238D /* _Redux */,
 				EF42670E2097A16A0076238D /* _Scenes */,
-				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
-				EF42670C2097924A0076238D /* AppRouter.swift */,
 				BA56854C1C763EA600D3B5FE /* Assets.xcassets */,
 				BA5685511C763EA600D3B5FE /* Info.plist */,
 				BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */,
 				BA5685491C763EA600D3B5FE /* Main.storyboard */,
-				EF4266D42092733A0076238D /* R.generated.swift */,
 			);
 			path = CoJezdzi;
 			sourceTree = "<group>";
@@ -241,10 +241,9 @@
 		BA5685591C763EA600D3B5FE /* CoJezdziTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */,
 				BA56855C1C763EA600D3B5FE /* Info.plist */,
-				EFE05BDB1EACE7B1004D7AFA /* DataPullerTests.swift */,
-				EF6392981EA7E3E000AF6055 /* PeristanceModelTests.swift */,
-				EF63929B1EA7FEBB00AF6055 /* SettingsPersistanceTests.swift */,
+				EF0DC0E620B8C102000BF4DB /* THC.swift */,
 			);
 			path = CoJezdziTests;
 			sourceTree = "<group>";
@@ -256,6 +255,14 @@
 				BA5685671C763EA600D3B5FE /* Info.plist */,
 			);
 			path = CoJezdziUITests;
+			sourceTree = "<group>";
+		};
+		EF0DC0E120B884EC000BF4DB /* _Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				EF0DC0E220B88528000BF4DB /* Persistence.swift */,
+			);
+			path = _Persistence;
 			sourceTree = "<group>";
 		};
 		EF4266C1209262FC0076238D /* _State */ = {
@@ -276,7 +283,7 @@
 			children = (
 				EF611504209EE60C00E05E02 /* _Map */,
 				EF611501209E537300E05E02 /* _Settings */,
-				EF4267182097C2090076238D /* RoutingAction.swift */,
+				EF4267182097C2090076238D /* RoutingActions.swift */,
 			);
 			path = _Actions;
 			sourceTree = "<group>";
@@ -287,9 +294,7 @@
 				EF4266CA209264DC0076238D /* AppReducer.swift */,
 				EFEE79012097D46800F95E77 /* MapSceneReducer.swift */,
 				EF42670A2097918A0076238D /* RoutingReducer.swift */,
-				EF61150920A4BF8100E05E02 /* SelectedLinesReducer.swift */,
 				EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */,
-				EF426706209754DC0076238D /* TramsBussesReducer.swift */,
 			);
 			path = _Reducers;
 			sourceTree = "<group>";
@@ -340,12 +345,23 @@
 			path = _Networking;
 			sourceTree = "<group>";
 		};
+		EF47764F20A8DA57006D7107 /* _App */ = {
+			isa = PBXGroup;
+			children = (
+				EF0DC0E120B884EC000BF4DB /* _Persistence */,
+				EFD085A220AB4EA400DE3F55 /* _Routing */,
+				BA5685451C763EA600D3B5FE /* AppDelegate.swift */,
+			);
+			path = _App;
+			sourceTree = "<group>";
+		};
 		EF611501209E537300E05E02 /* _Settings */ = {
 			isa = PBXGroup;
 			children = (
 				EF61150B20A4C05500E05E02 /* SelectedLineAddAction.swift */,
 				EF61150D20A4C08C00E05E02 /* SelectedLineRemoveAction.swift */,
 				EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */,
+				EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */,
 				EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */,
 			);
 			path = _Settings;
@@ -391,6 +407,7 @@
 				EF4266AB209262350076238D /* Constants.swift */,
 				EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */,
 				EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */,
+				EF4266D42092733A0076238D /* R.generated.swift */,
 				EF4266A6209262350076238D /* TAnnotation.swift */,
 				EF4266A9209262350076238D /* TAnnotationView.swift */,
 				EF4266A8209262350076238D /* TDataAnnotation.swift */,
@@ -402,8 +419,8 @@
 			isa = PBXGroup;
 			children = (
 				EF42669A209262340076238D /* MapScene.swift */,
-				EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */,
 				EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */,
+				EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */,
 			);
 			path = _Map;
 			sourceTree = "<group>";
@@ -415,6 +432,16 @@
 				EF426699209262340076238D /* SwitchTableViewCell.swift */,
 			);
 			path = _Settings;
+			sourceTree = "<group>";
+		};
+		EFD085A220AB4EA400DE3F55 /* _Routing */ = {
+			isa = PBXGroup;
+			children = (
+				EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */,
+				EFD085A320AB4EBD00DE3F55 /* Nodes.swift */,
+				EFD085A520AB68DE00DE3F55 /* Routable.swift */,
+			);
+			path = _Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,7 +531,7 @@
 					};
 					BA5685551C763EA600D3B5FE = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0930;
 						TestTargetID = BA5685411C763EA600D3B5FE;
 					};
 					BA5685601C763EA600D3B5FE = {
@@ -644,7 +671,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/CoJezdzi/_Misc/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -656,10 +683,11 @@
 				EF61151020A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift in Sources */,
 				EFEE79002097D40D00F95E77 /* MapState.swift in Sources */,
 				EF42670B2097918A0076238D /* RoutingReducer.swift in Sources */,
-				EF61150A20A4BF8100E05E02 /* SelectedLinesReducer.swift in Sources */,
+				EF0DC0E920B95989000BF4DB /* SettingsDidRestoreAction.swift in Sources */,
 				EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */,
 				EF4267172097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF4266FA209273C80076238D /* TAnnotationView.swift in Sources */,
+				EFD085A620AB68DE00DE3F55 /* Routable.swift in Sources */,
 				EF61150820A4BE1200E05E02 /* SelectedLinesState.swift in Sources */,
 				EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */,
 				EF42671B2097CB1D0076238D /* Result.swift in Sources */,
@@ -673,10 +701,13 @@
 				EF4267152097BD030076238D /* C.Networking.swift in Sources */,
 				EF4266C3209263250076238D /* AppState.swift in Sources */,
 				EF4267052097543A0076238D /* VehicleState.swift in Sources */,
+				EF0DC0E320B88528000BF4DB /* Persistence.swift in Sources */,
 				EF4266F7209273C80076238D /* SettingsVC.swift in Sources */,
 				EF61150C20A4C05500E05E02 /* SelectedLineAddAction.swift in Sources */,
+				EF47764E20A8DA4E006D7107 /* GamePlayAppRouter.swift in Sources */,
 				EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */,
 				EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */,
+				EFD085A420AB4EBD00DE3F55 /* Nodes.swift in Sources */,
 				EF4266F2209273C80076238D /* FilterLinesCVC.swift in Sources */,
 				EFB5C2AA209CE14C00BB5855 /* SettingsReducer.swift in Sources */,
 				EF61151420A645A800E05E02 /* TDataAnnotation.swift in Sources */,
@@ -691,12 +722,10 @@
 				EF4267132097B9760076238D /* WarsawApi.swift in Sources */,
 				EF611503209E53BB00E05E02 /* SettingsSwitchAction.swift in Sources */,
 				EF4266CF209266560076238D /* WarsawVehicleDto.swift in Sources */,
-				EF4267192097C2090076238D /* RoutingAction.swift in Sources */,
+				EF4267192097C2090076238D /* RoutingActions.swift in Sources */,
 				EF61151220A6380D00E05E02 /* GlobalUtilFunctions.swift in Sources */,
 				EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */,
 				EF4266FD209273C80076238D /* URL_Extensions.swift in Sources */,
-				EF426707209754DC0076238D /* TramsBussesReducer.swift in Sources */,
-				EF42670D2097924A0076238D /* AppRouter.swift in Sources */,
 				EF4266D2209267DC0076238D /* VehicleType.swift in Sources */,
 				EF4267112097B9290076238D /* WarsawApiConstants.swift in Sources */,
 			);
@@ -706,9 +735,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFE05BDC1EACE7B1004D7AFA /* DataPullerTests.swift in Sources */,
-				EF7657441EAB3C20007C4E3D /* SettingsPersistanceTests.swift in Sources */,
-				EF7657451EAB3C24007C4E3D /* PeristanceModelTests.swift in Sources */,
+				EF0DC0E520B8A59C000BF4DB /* CustomCodableTests.swift in Sources */,
+				EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,10 +940,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoJezdziTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.lukasz.stocki.CoJezdziTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoJezdzi.app/CoJezdzi";
@@ -926,6 +956,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoJezdziTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.lukasz.stocki.CoJezdziTests;

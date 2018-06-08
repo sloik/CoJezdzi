@@ -12,3 +12,29 @@ extension  WarsawApiConstants.ParamValue {
 anywhere in the project.
 
 [About app](https://avantapp.wordpress.com/co-jezdzi/)
+
+# Plans
+
+## Desired Architecture
+
+```
+                            +----------------+
+                          8 |                |
+            +-------------+ |     Store      | <-------------+
+            |               |                |               |
+            |               +----------------+               |
+            v                                                + 7
+    +----------------+       +----------------+       +----------------+ 5     +----------------+
+    |                | 1     |      View      | 4     |                | +---> |                |
+    |   Observable   | +---> |   Controller   | +---> |    Use Case    |       |   Side Effect  |
+    |                |       |                |       |                | <---+ |                |
+    +----------------+       +----------------+       +----------------+     6 +----------------+
+                                   2+     ^
+                                    |     |
+                                    v     +3
+                            +----------------+
+                            |                |
+                            |      View      |
+                            |                |
+                            +----------------+
+```
