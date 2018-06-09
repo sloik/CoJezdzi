@@ -4,7 +4,8 @@ import UIKit
 
 import ReSwift
 
-class MapScene: UIViewController {
+class MapScene: UIViewController, Dependable {
+    var dependencyContainer: DependencyStore?
 
     // MARK: - UI
     @IBOutlet weak var copyrightLable: UILabel!
@@ -67,17 +68,23 @@ class MapScene: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        reduxStore.subscribe(self)
+        dependencyContainer?
+            .reduxStore
+            .subscribe(self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        reduxStore.dispatch(RoutingSceneAppearsAction(scene: .map, viewController: self))
+        dependencyContainer?
+            .reduxStore
+            .dispatch(RoutingSceneAppearsAction(scene: .map, viewController: self))
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        reduxStore.unsubscribe(self)
+        dependencyContainer?
+            .reduxStore
+            .unsubscribe(self)
     }
 }
 
@@ -148,7 +155,9 @@ extension MapScene {
     }
     
     @IBAction func userDidTapSettingsButton() {
-        reduxStore.dispatch(RoutingAction(destination: .settings))
+        dependencyContainer?
+            .reduxStore
+            .dispatch(RoutingAction(destination: .settings))
     }
 
     @IBAction func userDidTapShowCurrentLocation(_ sender: UIButton) {
@@ -162,8 +171,13 @@ extension MapScene {
 
 private extension MapScene {
     func triggerDataRefresh() {
-        reduxStore.dispatch(FetchTramsAction.fetch)
-        reduxStore.dispatch(FetchBussesAction.fetch)
+        dependencyContainer?
+            .reduxStore
+            .dispatch(FetchTramsAction.fetch)
+        
+        dependencyContainer?
+            .reduxStore
+            .dispatch(FetchBussesAction.fetch)
     }
 }
 

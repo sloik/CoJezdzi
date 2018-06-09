@@ -2,7 +2,8 @@ import UIKit
 
 import ReSwift
 
-class FilterLinesCVC: UICollectionViewController {
+class FilterLinesCVC: UICollectionViewController, Dependable {
+    var dependencyContainer: DependencyStore?
     
     fileprivate var latesState: AppState! {
         didSet {
@@ -20,17 +21,23 @@ class FilterLinesCVC: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        reduxStore.subscribe(self)
+        dependencyContainer?
+            .reduxStore
+            .subscribe(self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        reduxStore.dispatch(RoutingSceneAppearsAction(scene: .linesFilter, viewController: self))
+        dependencyContainer?
+            .reduxStore
+            .dispatch(RoutingSceneAppearsAction(scene: .linesFilter, viewController: self))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        reduxStore.unsubscribe(self)
+        dependencyContainer?
+            .reduxStore
+            .unsubscribe(self)
     }
 }
 
@@ -84,9 +91,13 @@ extension FilterLinesCVC {
         
         let selectedLine = lines[indexPath.row]
         if latesState.settingsState.selectedLines.lines.contains(LineInfo(name: selectedLine)) {
-            reduxStore.dispatch(SelectedLineRemoveAction(line: selectedLine))
+            dependencyContainer?
+                .reduxStore
+                .dispatch(SelectedLineRemoveAction(line: selectedLine))
         } else {
-            reduxStore.dispatch(SelectedLineAddAction(line: selectedLine))
+            dependencyContainer?
+                .reduxStore
+                .dispatch(SelectedLineAddAction(line: selectedLine))
         }
     }
 }
@@ -104,7 +115,9 @@ extension FilterLinesCVC {
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            reduxStore.dispatch(SelectedLineRemoveAllAction())
+            dependencyContainer?
+                .reduxStore
+                .dispatch(SelectedLineRemoveAllAction())
         }
     }
 }

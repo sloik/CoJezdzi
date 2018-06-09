@@ -13,7 +13,8 @@ private struct ViewModel {
     }
 }
 
-class SettingsVC: UITableViewController {
+class SettingsVC: UITableViewController, Dependable {
+    var dependencyContainer: DependencyStore?
 
     fileprivate var cellOrdering: [ViewModel]  {
 
@@ -43,24 +44,30 @@ class SettingsVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        reduxStore.subscribe(self) {
-            $0.select {
-                $0.settingsState
-            }
+        dependencyContainer?
+            .reduxStore.subscribe(self) {
+                $0.select {
+                    $0.settingsState
+                }
         }
-
+        
         tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        reduxStore.dispatch(RoutingSceneAppearsAction(scene: .settings, viewController: self))
+        
+        dependencyContainer?
+            .reduxStore
+            .dispatch(RoutingSceneAppearsAction(scene: .settings, viewController: self))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        reduxStore.unsubscribe(self)
+        dependencyContainer?
+            .reduxStore
+            .unsubscribe(self)
     }
 }
 
@@ -90,21 +97,27 @@ extension SettingsVC {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
-                reduxStore.dispatch(RoutingAction(destination: .linesFilter))
+                dependencyContainer?
+                    .reduxStore
+                    .dispatch(RoutingAction(destination: .linesFilter))
                 
             default:
                 print("Unhandled action for cell with title \(viewModel.title)")
             }
             
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
-            reduxStore.dispatch(RoutingAction(destination: .aboutApp))
+            dependencyContainer?
+                .reduxStore
+                .dispatch(RoutingAction(destination: .aboutApp))
             
         case C.Storyboard.CellReuseId.SettingsSwitchCell:
             
             let viewModel = cellOrdering[indexPath.row]
             let currentState = titleToState[viewModel.title]!
             
-            reduxStore.dispatch(SettingsSwitchAction(whitchSwitch: currentState.reversed))
+            dependencyContainer?
+                .reduxStore
+                .dispatch(SettingsSwitchAction(whitchSwitch: currentState.reversed))
  
         default:
             return
@@ -203,13 +216,19 @@ extension SettingsVC: SwitchCellInteraction {
 
         switch cellTitle {
         case C.UI.Settings.MenuLabels.TramMarks:
-            reduxStore.dispatch(SettingsSwitchAction(whitchSwitch: .previousLocation(on: isOn)))
+            dependencyContainer?
+                .reduxStore
+                .dispatch(SettingsSwitchAction(whitchSwitch: .previousLocation(on: isOn)))
 
         case C.UI.Settings.MenuLabels.TramsOnly:
-            reduxStore.dispatch(SettingsSwitchAction(whitchSwitch: .tram(on: isOn)))
+            dependencyContainer?
+                .reduxStore
+                .dispatch(SettingsSwitchAction(whitchSwitch: .tram(on: isOn)))
             
         case C.UI.Settings.MenuLabels.BussesOnly:
-            reduxStore.dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))
+            dependencyContainer?
+                .reduxStore
+                .dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))
 
         default: print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
         }

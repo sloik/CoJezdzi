@@ -1,7 +1,16 @@
 
 import ReSwift
 
-class Persistence {
+protocol PersistanceProtocol {
+    func load()
+}
+
+class Persistence: Dependable, PersistanceProtocol {
+    var dependencyContainer: DependencyStore
+    
+    init(container: DependencyStore) {
+        dependencyContainer = container
+    }
     
     enum Keys {
         static let persistance = "Persistance.SettingsState"
@@ -14,17 +23,19 @@ class Persistence {
     
     func load() {
         defer {
-            reduxStore.subscribe(self) {
+            dependencyContainer.reduxStore.subscribe(self) {
                 $0.select {
                     $0.settingsState
                 }
             }
         }
         
+        // TODO: move to bg queue
+        
         guard let data = UserDefaults.standard.data(forKey: Keys.persistance) else { return }
         let state = try! JSONDecoder().decode(SettingsState.self, from: data)
         
-        reduxStore.dispatch(SettingsDidRestoreAction(restoredState: state))
+        dependencyContainer.reduxStore.dispatch(SettingsDidRestoreAction(restoredState: state))
     }
 }
 

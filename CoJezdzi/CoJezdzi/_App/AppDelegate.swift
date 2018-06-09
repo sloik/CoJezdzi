@@ -3,29 +3,26 @@ import UIKit
 import Colours
 import ReSwift
 
-// Global <3 app state ;)
-var reduxStore = Store<AppState>(reducer: appReducer,
-                            state: nil,
-                            middleware:[])
-
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, Dependable {
+    var dependencyContainer: DependencyProvider = DependencyContainer()
+    
     var window: UIWindow?
-    var grouter: GamePlayAppRouter?
-    var persistance = Persistence()
+    var grouter: RouterProtocol?
+    var persistance: PersistanceProtocol?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        guard let window = self.window else { fatalError("Did not create instance of UIWindow!") }
 
         UINavigationBar.appearance().tintColor = UIColor.eggplant()
         
-        window = UIWindow(frame: UIScreen.main.bounds)
+        grouter = dependencyContainer.makeAppRouter(for: window)
         
-        grouter = GamePlayAppRouter(window: window!)
-        
-        persistance.load()
+        persistance = dependencyContainer.makePersistance()
+        persistance?.load()
                 
-        window?.makeKeyAndVisible()
+        window.makeKeyAndVisible()
 
         return true
     }
