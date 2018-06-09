@@ -97,7 +97,7 @@ private extension MapScene {
             constraint.constant = 0
             UIView.animate(withDuration: 0.25,
                                        delay: 0,
-                                       options: .curveEaseOut,
+                                       options: UIView.AnimationOptions.curveEaseOut,
                                        animations:
                 {
                     self.view.layoutIfNeeded()
@@ -111,7 +111,7 @@ private extension MapScene {
 
                     UIView.animate(withDuration: time,
                         delay: 0,
-                        options: .curveLinear,
+                        options: UIView.AnimationOptions.curveLinear,
                         animations: {
                             self.view.layoutIfNeeded()
                         },
@@ -129,9 +129,9 @@ private extension MapScene {
             if userLocation.horizontalAccuracy > 0 && userLocation.verticalAccuracy > 0 {
 
                 let scaleFactor = 0.35
-                mapView.region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate,
-                                                                    C.Coordinate.DefaultSpreadDistance * scaleFactor,
-                                                                    C.Coordinate.DefaultSpreadDistance * scaleFactor)
+                mapView.region = MKCoordinateRegion.init(center: userLocation.coordinate,
+                                                                    latitudinalMeters: C.Coordinate.DefaultSpreadDistance * scaleFactor,
+                                                                    longitudinalMeters: C.Coordinate.DefaultSpreadDistance * scaleFactor)
             }
         }
     }
@@ -291,7 +291,7 @@ private extension MapScene {
         // add overlays
         PolylineMaker.generetePolylines(previousPosytions: previous, currentPosytions: current)
             .values
-            .forEach{ mapView.add($0) }
+            .forEach{ mapView.addOverlay($0) }
     }
 }
 

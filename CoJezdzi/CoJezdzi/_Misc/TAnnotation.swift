@@ -58,7 +58,7 @@ extension TAnnotation: MKAnnotation {
 
     var subtitle: String? {
         if let userLocation = locationProvider?.currentUserLocation {
-            let distance = MKMetersBetweenMapPoints(MKMapPointForCoordinate(coordinate), MKMapPointForCoordinate(userLocation.coordinate))
+            let distance = MKMapPoint.init(coordinate).distance(to: MKMapPoint.init(userLocation.coordinate))
             let rounded = floor(distance)
 
             let baseMessage = "Odległość: "

@@ -64,6 +64,6 @@ struct C {
     struct Coordinate {
         static let WarsawCenter = CLLocationCoordinate2D(latitude: 52.2429341157752, longitude: 21.0083538438228)
         static let DefaultSpreadDistance: CLLocationDistance = 14000
-        static let WarsawRegion = MKCoordinateRegionMakeWithDistance(WarsawCenter, DefaultSpreadDistance, DefaultSpreadDistance)
+        static let WarsawRegion = MKCoordinateRegion.init(center: WarsawCenter, latitudinalMeters: DefaultSpreadDistance, longitudinalMeters: DefaultSpreadDistance)
     }
 }

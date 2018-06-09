@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, Dependable {
     var grouter: RouterProtocol?
     var persistance: PersistanceProtocol?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = self.window else { fatalError("Did not create instance of UIWindow!") }
 

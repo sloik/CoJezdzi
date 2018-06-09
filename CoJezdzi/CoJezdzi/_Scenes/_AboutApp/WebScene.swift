@@ -14,7 +14,7 @@ class WebScene: UIViewController, Dependable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addChildViewController(webVC)
+        addChild(webVC)
         view.addSubview(webVC.view)
     }
     

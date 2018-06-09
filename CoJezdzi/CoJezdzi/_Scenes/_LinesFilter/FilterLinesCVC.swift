@@ -113,7 +113,7 @@ extension FilterLinesCVC {
         return true
     }
 
-    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             dependencyContainer?
                 .reduxStore
