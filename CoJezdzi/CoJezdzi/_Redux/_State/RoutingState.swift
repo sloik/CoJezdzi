@@ -2,7 +2,7 @@
 import ReSwift
 import Rswift
 
-enum RoutingDestination: String, Equatable {
+enum RoutingDestination: String, Equatable, CaseIterable {
     case map         = "MapScene"
     case settings    = "SettingsScene"
     case linesFilter = "LinesFilter"

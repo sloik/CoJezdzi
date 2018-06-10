@@ -469,7 +469,6 @@
 				BA5685401C763EA600D3B5FE /* Resources */,
 				BA724EEC1CB62CB300ACC84E /* Bup Build Number */,
 				6860C709354CD82E0145D889 /* [CP] Embed Pods Frameworks */,
-				7331AC2194BFF9BDCCD8C685 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -641,21 +640,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7331AC2194BFF9BDCCD8C685 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BA724EEC1CB62CB300ACC84E /* Bup Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,7 +666,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/CoJezdzi/_Misc/\"";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/CoJezdzi/_Misc/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

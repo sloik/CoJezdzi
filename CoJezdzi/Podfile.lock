@@ -14,6 +14,14 @@ DEPENDENCIES:
   - R.swift
   - ReSwift
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Colours
+    - HTTPStatusCodes
+    - R.swift
+    - R.swift.Library
+    - ReSwift
+
 SPEC CHECKSUMS:
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   HTTPStatusCodes: 69f50d229c4b5d6dcb48fad9c86e32ded975bcd3
@@ -23,4 +31,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 0c5c29b081b7a7ca380021e59c7d14092f4c76de
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
