@@ -59,6 +59,7 @@
 		EFB5C2AA209CE14C00BB5855 /* SettingsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */; };
 		EFD085A420AB4EBD00DE3F55 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD085A320AB4EBD00DE3F55 /* Nodes.swift */; };
 		EFD085A620AB68DE00DE3F55 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD085A520AB68DE00DE3F55 /* Routable.swift */; };
+		EFD700FA20DE54C30088249E /* FetchVehiclesPosytionsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD700F920DE54C30088249E /* FetchVehiclesPosytionsAction.swift */; };
 		EFEE78FC2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */; };
 		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
 		EFEE79002097D40D00F95E77 /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FF2097D40D00F95E77 /* MapState.swift */; };
@@ -147,6 +148,7 @@
 		EFB5C2A9209CE14C00BB5855 /* SettingsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsReducer.swift; sourceTree = "<group>"; };
 		EFD085A320AB4EBD00DE3F55 /* Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
 		EFD085A520AB68DE00DE3F55 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		EFD700F920DE54C30088249E /* FetchVehiclesPosytionsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchVehiclesPosytionsAction.swift; sourceTree = "<group>"; };
 		EFEE78FB2097D21800F95E77 /* MapScene+CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+CLLocationManagerDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FF2097D40D00F95E77 /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			children = (
 				EF4266C8209264640076238D /* FetchBussesAction.swift */,
 				EF4266C62092641C0076238D /* FetchTramsAction.swift */,
+				EFD700F920DE54C30088249E /* FetchVehiclesPosytionsAction.swift */,
 			);
 			path = _Map;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				EF4266F7209273C80076238D /* SettingsVC.swift in Sources */,
 				EF61150C20A4C05500E05E02 /* SelectedLineAddAction.swift in Sources */,
 				EF47764E20A8DA4E006D7107 /* GamePlayAppRouter.swift in Sources */,
+				EFD700FA20DE54C30088249E /* FetchVehiclesPosytionsAction.swift in Sources */,
 				EF4266F1209273C80076238D /* FilterCollectionViewCell.swift in Sources */,
 				EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */,
 				EFD085A420AB4EBD00DE3F55 /* Nodes.swift in Sources */,

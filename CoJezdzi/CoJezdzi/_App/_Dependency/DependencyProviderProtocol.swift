@@ -42,7 +42,7 @@ typealias DependencyProvider = DependencyStore
 struct DependencyContainer: DependencyStore {
     var reduxStore: Store<AppState> {
         struct S {
-            static let store = Store<AppState>(reducer: appReducer, state: nil)
+            static let store = Store<AppState>(reducer: appReducer, state: nil, middleware: [M.Api])
         }
         
         return S.store

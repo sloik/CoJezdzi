@@ -172,12 +172,8 @@ extension MapScene {
 private extension MapScene {
     func triggerDataRefresh() {
         dependencyContainer?
-            .reduxStore
-            .dispatch(FetchTramsAction.fetch)
-        
-        dependencyContainer?
-            .reduxStore
-            .dispatch(FetchBussesAction.fetch)
+        .reduxStore
+        .dispatch(FetchVehiclesPosytionsAction())
     }
 }
 
