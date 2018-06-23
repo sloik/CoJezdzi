@@ -19,15 +19,21 @@ struct WarsawVehicleDto: Codable, Equatable {
     
     let brigade: String
     let time: String
-    var type: WarsawVehicleType = .unknown
+    var type: WarsawVehicleType {
+        switch lines.count {
+        case 2: return .tram
+        case 3: return .bus
+            
+        default: return .unknown
+        }
+    }
     
-    init(latitude: Double, longitude: Double, lines: String, brigade: String, time: String, type: WarsawVehicleType) {
+    init(latitude: Double, longitude: Double, lines: String, brigade: String, time: String) {
         self.latitude = latitude
         self.longitude = longitude
         self.lines = lines.trimmingCharacters(in: .whitespacesAndNewlines)
         self.brigade = brigade.trimmingCharacters(in: .whitespacesAndNewlines)
         self.time = time
-        self.type = type
     }
     
     enum CodingKeys: String, CodingKey, CaseIterable {
