@@ -10,6 +10,7 @@ target 'CoJezdzi' do
     pod 'HTTPStatusCodes'
     pod 'ReSwift'
     pod 'R.swift'
+    pod 'Overture'
 
 end
 

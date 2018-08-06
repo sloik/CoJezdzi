@@ -12,7 +12,7 @@ class TAnnotationView: MKAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
 
         lineLabel = label
-        if lineLabel != nil { addSubview(lineLabel!) }
+        if lineLabel != nil { lineLabel! |> addSubview }
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -51,7 +51,7 @@ extension TAnnotationView {
 
         lineLabel?.text = annotation.lines
         
-        configureColors(annotation)
+        annotation |> configureColors
     }
 
     fileprivate func configureColors(_ annotation: TAnnotation) {

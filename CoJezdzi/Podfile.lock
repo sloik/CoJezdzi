@@ -3,6 +3,7 @@ PODS:
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
   - HTTPStatusCodes (3.2.0)
+  - Overture (0.2.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Colours
   - HTTPStatusCodes
+  - Overture
   - R.swift
   - ReSwift
 
@@ -18,6 +20,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Colours
     - HTTPStatusCodes
+    - Overture
     - R.swift
     - R.swift.Library
     - ReSwift
@@ -25,10 +28,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   HTTPStatusCodes: 69f50d229c4b5d6dcb48fad9c86e32ded975bcd3
+  Overture: d1c61764d0bf32897934382dc46e131ee31cc094
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
 
-PODFILE CHECKSUM: 0c5c29b081b7a7ca380021e59c7d14092f4c76de
+PODFILE CHECKSUM: 6dbefd3c410ea691f02494df8fd52829d2b2384c
 
 COCOAPODS: 1.5.3

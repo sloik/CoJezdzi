@@ -1,6 +1,6 @@
 import Foundation
 
-struct WarsawApiConstants {
+enum WarsawApiConstants {
     static let BaseURL     = "https://api.um.warszawa.pl/api/action/busestrams_get"
     static let RefreshRate: TimeInterval = 18.0
     
@@ -21,6 +21,12 @@ struct WarsawApiConstants {
         static let ResourceID = "c7238cfe-8b1f-4c38-bb4a-de386db7e776"
         static let TypeTram   = "2"
         static let TypeBus    = "1"
+    }
+    
+    enum EnParamValue: String {
+        case ResourceID = "c7238cfe-8b1f-4c38-bb4a-de386db7e776"
+        case TypeTram   = "2"
+        case TypeBus    = "1"
     }
     
     struct Response {
