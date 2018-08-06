@@ -11,13 +11,13 @@ enum WarsawApiConstants {
         return formatter
     }()
     
-    struct ParamKey {
+    enum ParamKey {
         static let APIKey     = "apikey"
         static let ResourceID = "resource_id"
         static let TypeKey    = "type"
     }
     
-    struct ParamValue {
+    enum ParamValue {
         static let ResourceID = "c7238cfe-8b1f-4c38-bb4a-de386db7e776"
         static let TypeTram   = "2"
         static let TypeBus    = "1"
@@ -29,7 +29,7 @@ enum WarsawApiConstants {
         case TypeBus    = "1"
     }
     
-    struct Response {
+    enum Response {
         struct Key {
             static let Result = "result"
         }
