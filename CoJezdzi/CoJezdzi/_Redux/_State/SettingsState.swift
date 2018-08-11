@@ -79,32 +79,13 @@ struct SettingsState: StateType, Equatable, Codable {
     
     // MARK: -
     struct FilterState: StateType, Equatable, Codable {
-        let tramOnly: Filter
-        let busOnly: Filter
-        let previousLocations: Filter
+        private(set) var tramOnly         : Filter
+        private(set) var busOnly          : Filter
+        private(set) var previousLocations: Filter
     }
     
     // MARK: -
-    let selectedLines: SelectedLinesState
-    let switches: FilterState
+    private(set) var selectedLines: SelectedLinesState
+    private(set) var switches: FilterState
     let aboutApp: String = "https://avantapp.wordpress.com/co-jezdzi/"
-}
-
-// MARK: -
-extension SettingsState.FilterState {
-    func update(_ inFilter:SettingsState.Filter) -> SettingsState.FilterState {
-        switch inFilter {
-
-        case .tram(let isOn):
-            return SettingsState.FilterState(tramOnly: inFilter,
-                                             busOnly: isOn ? .bus(on: false) : busOnly,
-                                             previousLocations: previousLocations)
-        case .bus(let isOn):
-            return SettingsState.FilterState(tramOnly: isOn ? .tram(on: false) : tramOnly,
-                                             busOnly: inFilter,
-                                             previousLocations: previousLocations)
-        case .previousLocation:
-            return SettingsState.FilterState(tramOnly: tramOnly, busOnly: busOnly,  previousLocations: inFilter)
-        }
-    }
 }

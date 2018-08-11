@@ -1,6 +1,7 @@
 
 import Foundation
 
+import Overture
 import ReSwift
 
 func settingsReducer(action: Action, state: SettingsState?) -> SettingsState {
@@ -33,16 +34,48 @@ func selectedLinesReducer(action: Action, state: SelectedLinesState?) -> Selecte
 }
 
 func settingsSwitchReducer(action: Action, state: SettingsState.FilterState?) -> SettingsState.FilterState {
-    let state =
-        state ?? SettingsState.FilterState(tramOnly: .tram(on: false),
-                                           busOnly: .bus(on: false),
-                                           previousLocations: .previousLocation(on: true))
+    let state = filterState(state)
     
     switch action {
-    case let action as SettingsSwitchAction:
-        return state.update(action.whitchSwitch)
+    case let action as SettingsSwitchAction: return updateSwitches(state, action.whitchSwitch)
         
-    default:
-        return state
+    default: return state
     }
 }
+
+func filterState(_ fs: SettingsState.FilterState?) -> SettingsState.FilterState {
+    return fs ?? SettingsState.FilterState(tramOnly: .tram(on: false),
+                                              busOnly: .bus(on: false),
+                                              previousLocations: .previousLocation(on: true))
+}
+
+func updateSwitches(_ state : SettingsState.FilterState,
+                    _ filter: SettingsState.Filter) -> SettingsState.FilterState {
+    
+    switch filter {
+    case .tram(let on):
+        return with(
+            state,
+            concat(
+                set(\.tramOnly, .tram(on: on)),
+                set(\.busOnly,  .bus(on: on ? false : state.busOnly.isOn))
+            )
+        )
+        
+    case .bus(let on):
+        return with(
+            state,
+            concat(
+                set(\.busOnly, .bus(on: on)),
+                set(\.tramOnly,.bus(on: on ? false : state.tramOnly.isOn))
+            )
+        )
+        
+    case .previousLocation(let on):
+        return with(
+            state,
+            set(\.previousLocations, .previousLocation(on: on))
+        )
+    }
+}
+
