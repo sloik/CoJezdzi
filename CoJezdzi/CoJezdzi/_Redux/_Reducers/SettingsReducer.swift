@@ -20,10 +20,16 @@ func selectedLinesReducer(action: Action, state: SelectedLinesState?) -> Selecte
     
     switch action {
     case let action as SelectedLineAddAction:
-        return state.add(LineInfo(name: action.line))
+        return with(
+            state,
+            set(\.lines, state.lines.union([LineInfo(name: action.line)]))
+        )
         
     case let action as SelectedLineRemoveAction:
-        return state.remove(LineInfo(name: action.line))
+        return with(
+            state,
+            set(\.lines, state.lines.subtracting([LineInfo(name: action.line)]))
+        )
         
     case _ as SelectedLineRemoveAllAction:
         return SelectedLinesState(lines: [])
