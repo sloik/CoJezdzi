@@ -13,7 +13,7 @@ struct RoutingState: StateType {
     private(set) var scene: RoutingDestination
     private(set) var destination: RoutingDestination?
     
-    weak var sceneVC: UIViewController?
+    weak private(set) var sceneVC: UIViewController?
     
     init(scene: RoutingDestination = .map, destitnation: RoutingDestination?, sceneVC: UIViewController? ) {
         self.scene = scene
@@ -29,4 +29,3 @@ extension RoutingState: Equatable {
             && lhs.sceneVC     === rhs.sceneVC
     }
 }
-
