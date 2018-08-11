@@ -10,8 +10,8 @@ enum RoutingDestination: String, Equatable, CaseIterable {
 }
 
 struct RoutingState: StateType {
-    let scene: RoutingDestination
-    let destination: RoutingDestination?
+    private(set) var scene: RoutingDestination
+    private(set) var destination: RoutingDestination?
     
     weak var sceneVC: UIViewController?
     
@@ -30,12 +30,3 @@ extension RoutingState: Equatable {
     }
 }
 
-extension RoutingState {
-    func destitnation(_ inDestination: RoutingDestination?) -> RoutingState {
-        return RoutingState(scene: scene, destitnation: inDestination, sceneVC: sceneVC)
-    }
-    
-    func scene(_ inScene: RoutingDestination, _ sceneVC: UIViewController?) -> RoutingState {
-        return RoutingState(scene: inScene, destitnation: destination, sceneVC: sceneVC)
-    }
-}

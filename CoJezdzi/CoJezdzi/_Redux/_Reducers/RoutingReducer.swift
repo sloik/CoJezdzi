@@ -1,4 +1,5 @@
 
+import Overture
 import ReSwift
 
 func routingReducer(action: Action, state: RoutingState?) -> RoutingState {
@@ -7,15 +8,21 @@ func routingReducer(action: Action, state: RoutingState?) -> RoutingState {
     switch action {
         
     case let routing as RoutingAction:
-        state = RoutingState(scene: state.scene, destitnation: routing.destination, sceneVC: state.sceneVC)
+        with(&state, mut(\.destination, routing.destination))
         
     case let routing as RoutingSceneAppearsAction:
         // we are here no more routing required...
         if let dest = state.destination, dest == routing.scene {
-            state = state.destitnation(nil)
+            with(&state, mut(\.destination, nil))
         }
         
-        state = state.scene(routing.scene, routing.viewController)
+        with(
+            &state,
+            concat(
+                mut(\.scene, routing.scene),
+                mut(\.sceneVC, routing.viewController)
+            )
+        )
         
     default: break
     }
