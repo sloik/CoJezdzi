@@ -52,9 +52,19 @@ extension GamePlayAppRouter: StoreSubscriber {
         // Finds a paths and creaits pairs of steps that are reqired to navigate.
         guard let path = graph.findPath(from: from, to: to) as? [Node] else { fatalError("woot!") }
         
-        return stride(from: 0, to: path.count - 1, by: 1)
-            .map { (path[$0], path[$0+1]) }
-            .map { ($0.0.id, $0.1.id) }
+        func extractIds(_ pair:(Node, Node)) -> (RoutingDestination, RoutingDestination) {
+            return (pair.0.id, pair.1.id)
+        }
+        
+        func generateNodePairs(_ index: Int) -> (Node, Node) {
+            return (path[index], path[index + 1])
+        }
+        
+        func generateSequence<C: Collection>(_ collection: C) -> StrideTo<Int> {
+            return stride(from: 0, to: collection.count - 1, by: 1)
+        }
+        
+        return generateSequence(path).map(generateNodePairs >>> extractIds)
     }
     
     func newState(state: RoutingState) {

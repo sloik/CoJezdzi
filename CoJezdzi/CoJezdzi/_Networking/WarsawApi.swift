@@ -11,16 +11,14 @@ struct WarsawApi {
     static func getTrams(completion: @escaping ResultBlock) {
         URLSession
             .shared
-            .dataTask(             with: .TypeTram  |> urlRequest(for:),
-                      completionHandler: completion |> handler(with:))
+            .dataTask(with: urlRequest(for: .TypeTram), completionHandler: handler(with: completion))
             .resume()
     }
     
     static func getBusses(completion: @escaping ResultBlock) {
         URLSession
             .shared
-            .dataTask(             with: .TypeBus   |> urlRequest(for:),
-                      completionHandler: completion |> handler(with:))
+            .dataTask(with: urlRequest(for: .TypeBus), completionHandler:  handler(with: completion))
             .resume()
     }
 }
