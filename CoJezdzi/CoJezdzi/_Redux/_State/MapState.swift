@@ -2,18 +2,8 @@
 import ReSwift
 
 struct MapState: StateType, Equatable {
-    let currentTrams:  VehicleState
-    let currentBusses: VehicleState
-}
-
-extension MapState {
-    func currentTrams(_ ct:VehicleState) -> MapState {
-        return MapState(currentTrams: ct, currentBusses: currentBusses)
-    }
-    
-    func currentBusses(_ cb:VehicleState) -> MapState {
-        return MapState(currentTrams: currentTrams, currentBusses: cb)
-    }
+    private(set) var currentTrams:  VehicleState
+    private(set) var currentBusses: VehicleState
 }
 
 extension MapState {
