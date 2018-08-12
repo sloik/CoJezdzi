@@ -9,7 +9,7 @@ extension  WarsawApiConstants.ParamValue {
 }
 ```
 
-anywhere in the project.
+anywhere in the project. Also delete any references to missing files (those are where I keep my API key).
 
 [About app](https://avantapp.wordpress.com/co-jezdzi/)
 
