@@ -46,11 +46,15 @@ struct M {
                 let tramsFactory =  { return FetchTramsAction(fetched: $0) }
                 
                 if fetchTrams {
-                    WarsawApi.getTrams { handleResult(result: $0, actionFactory: tramsFactory, dispatch: dispatch) }
+                    Current
+                        .dataProvider
+                        .getTrams{ handleResult(result: $0, actionFactory: tramsFactory, dispatch: dispatch) }
                 }
                 
                 if fetchBusses {
-                    WarsawApi.getBusses { handleResult(result: $0, actionFactory: bussesFactory, dispatch: dispatch) }
+                    Current
+                        .dataProvider
+                        .getBusses { handleResult(result: $0, actionFactory: bussesFactory, dispatch: dispatch) }
                 }
                 
             }

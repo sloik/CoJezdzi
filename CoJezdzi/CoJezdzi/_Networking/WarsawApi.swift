@@ -1,21 +1,24 @@
 
-import Foundation
-
 import Overture
+
+protocol DataProviderProtocol {
+    func  getTrams(completion: @escaping ResultBlock)
+    func getBusses(completion: @escaping ResultBlock)
+}
 
 // MARK: - Public
 
 typealias ResultBlock = (Result<Any>) -> Void
 
-struct WarsawApi {
-    static func getTrams(completion: @escaping ResultBlock) {
+struct WarsawApi: DataProviderProtocol {
+    func getTrams(completion: @escaping ResultBlock) {
         URLSession
             .shared
             .dataTask(with: urlRequest(for: .TypeTram), completionHandler: handler(with: completion))
             .resume()
     }
     
-    static func getBusses(completion: @escaping ResultBlock) {
+    func getBusses(completion: @escaping ResultBlock) {
         URLSession
             .shared
             .dataTask(with: urlRequest(for: .TypeBus), completionHandler:  handler(with: completion))

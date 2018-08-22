@@ -65,6 +65,9 @@
 		EFEE78FE2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
 		EFEE79002097D40D00F95E77 /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FF2097D40D00F95E77 /* MapState.swift */; };
 		EFEE79022097D46800F95E77 /* MapSceneReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE79012097D46800F95E77 /* MapSceneReducer.swift */; };
+		EFF3669B212DE257008ED5DC /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3669A212DE257008ED5DC /* Environment.swift */; };
+		EFF3669F212DEB38008ED5DC /* EnvironmentTHC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3669E212DEB38008ED5DC /* EnvironmentTHC.swift */; };
+		EFF366A3212DF130008ED5DC /* WarsawApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF366A2212DF130008ED5DC /* WarsawApiTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +158,9 @@
 		EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapScene+MKMapViewDelegate.swift"; sourceTree = "<group>"; };
 		EFEE78FF2097D40D00F95E77 /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
 		EFEE79012097D46800F95E77 /* MapSceneReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSceneReducer.swift; sourceTree = "<group>"; };
+		EFF3669A212DE257008ED5DC /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		EFF3669E212DEB38008ED5DC /* EnvironmentTHC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentTHC.swift; sourceTree = "<group>"; };
+		EFF366A2212DF130008ED5DC /* WarsawApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiTests.swift; sourceTree = "<group>"; };
 		F0BFC42A0906562B0FEAA840 /* Pods-CoJezdzi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				EF47764F20A8DA57006D7107 /* _App */,
+				EFF36699212DE21B008ED5DC /* _Environment */,
 				EFDF56EE20F00CF1009E419C /* _Functional */,
 				EFB5C2A4209C710200BB5855 /* _Misc */,
 				EF42670F2097B9020076238D /* _Networking */,
@@ -248,7 +255,9 @@
 		BA5685591C763EA600D3B5FE /* CoJezdziTests */ = {
 			isa = PBXGroup;
 			children = (
+				EFF366A0212DF0DA008ED5DC /* _Networking */,
 				EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */,
+				EFF3669E212DEB38008ED5DC /* EnvironmentTHC.swift */,
 				BA56855C1C763EA600D3B5FE /* Info.plist */,
 				EF0DC0E620B8C102000BF4DB /* THC.swift */,
 			);
@@ -467,6 +476,22 @@
 				EFDF56EF20F00D15009E419C /* Operators.swift */,
 			);
 			path = _Functional;
+			sourceTree = "<group>";
+		};
+		EFF36699212DE21B008ED5DC /* _Environment */ = {
+			isa = PBXGroup;
+			children = (
+				EFF3669A212DE257008ED5DC /* Environment.swift */,
+			);
+			path = _Environment;
+			sourceTree = "<group>";
+		};
+		EFF366A0212DF0DA008ED5DC /* _Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EFF366A2212DF130008ED5DC /* WarsawApiTests.swift */,
+			);
+			path = _Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -712,6 +737,7 @@
 				EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */,
 				EF4266D52092733A0076238D /* R.generated.swift in Sources */,
 				EF4267152097BD030076238D /* C.Networking.swift in Sources */,
+				EFF3669B212DE257008ED5DC /* Environment.swift in Sources */,
 				EF4266C3209263250076238D /* AppState.swift in Sources */,
 				EF4267052097543A0076238D /* VehicleState.swift in Sources */,
 				EF0DC0E320B88528000BF4DB /* Persistence.swift in Sources */,
@@ -750,7 +776,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0DC0E520B8A59C000BF4DB /* CustomCodableTests.swift in Sources */,
+				EFF366A3212DF130008ED5DC /* WarsawApiTests.swift in Sources */,
 				EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */,
+				EFF3669F212DEB38008ED5DC /* EnvironmentTHC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
