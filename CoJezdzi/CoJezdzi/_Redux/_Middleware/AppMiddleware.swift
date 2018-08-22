@@ -48,7 +48,7 @@ struct M {
                 if fetchTrams {
                     Current
                         .dataProvider
-                        .getTrams{ handleResult(result: $0, actionFactory: tramsFactory, dispatch: dispatch) }
+                        .getTrams { handleResult(result: $0, actionFactory: tramsFactory, dispatch: dispatch) }
                 }
                 
                 if fetchBusses {
@@ -56,7 +56,6 @@ struct M {
                         .dataProvider
                         .getBusses { handleResult(result: $0, actionFactory: bussesFactory, dispatch: dispatch) }
                 }
-                
             }
         }
     }

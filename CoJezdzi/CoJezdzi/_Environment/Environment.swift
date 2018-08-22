@@ -2,7 +2,7 @@
 import Foundation
 
 struct Environment {
-    var dataProvider: DataProviderProtocol = WarsawApi()
+    var dataProvider = WarsawApi()
 }
 
 var Current = Environment()
