@@ -14,13 +14,11 @@ extension Environment {
 
 struct SuccesDataProviderMock: DataProviderProtocol {
     func getTrams(completion: @escaping ResultBlock) {
-        let error = NSError(domain: "mock.error", code: 69, userInfo: nil)
-        completion(Result.error(error))
+        completion(Result.succes(Data()))
     }
     
     func getBusses(completion: @escaping ResultBlock) {
-        let error = NSError(domain: "mock.error", code: 69, userInfo: nil)
-        completion(Result.error(error))
+        completion(Result.succes(Data()))
     }
 }
 
