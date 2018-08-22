@@ -27,11 +27,11 @@ struct WarsawApi {
 
 fileprivate func urlRequest(for resource: WarsawApiConstants.EnParamValue) -> URLRequest {
     let request = WarsawApiConstants.BaseURL
-        |> urlComponents
-        >>> (prop(\NSURLComponents.queryItems)) { _ in queryItems(resource) }
+         |> urlComponents
+        >>> set(\NSURLComponents.queryItems, queryItems(resource))
         >>> get(\NSURLComponents.url!)
         >>> NSMutableURLRequest.init(url:)
-        >>> (prop(\NSMutableURLRequest.httpMethod)) { _ in C.Networking.HTTPMethod.POST }
+        >>> set(\NSMutableURLRequest.httpMethod, C.Networking.HTTPMethod.POST)
     
     return request as URLRequest
 }
