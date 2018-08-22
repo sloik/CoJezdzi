@@ -4,16 +4,16 @@ import Foundation
 
 extension Environment {
     static let mock = Environment(
-        dataProvider: WarsawApi.succesMock
+        dataProvider: .mock
     )
 
     static let errorMock = Environment(
-        dataProvider: WarsawApi.errorMock
+        dataProvider: .errorMock
     )
 }
 
 extension WarsawApi {
-    static let succesMock = WarsawApi(
+    static let mock = WarsawApi(
         getTrams: { completion in completion(Result.succes(Data())) },
         getBusses:{ completion in completion(Result.succes(Data()))})
     
