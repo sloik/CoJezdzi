@@ -53,6 +53,7 @@
 		EF61151220A6380D00E05E02 /* GlobalUtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */; };
 		EF61151420A645A800E05E02 /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
 		EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151620A7083400E05E02 /* AppMiddleware.swift */; };
+		EF8C76E3212F355700C5BE5C /* AppMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E2212F355700C5BE5C /* AppMiddlewareTests.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
 		EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */; };
 		EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */; };
@@ -146,6 +147,7 @@
 		EF61151620A7083400E05E02 /* AppMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMiddleware.swift; sourceTree = "<group>"; };
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		EF7657411EAB3AED007C4E3D /* CoJezdziTests copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy2-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy2-Info.plist"; sourceTree = "<absolute>"; };
+		EF8C76E2212F355700C5BE5C /* AppMiddlewareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMiddlewareTests.swift; sourceTree = "<group>"; };
 		EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiResultDto.swift; sourceTree = "<group>"; };
 		EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
 		EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				EFF366A0212DF0DA008ED5DC /* _Networking */,
+				EFF366BC212F2EA9008ED5DC /* _Redux */,
 				EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */,
 				EFF3669E212DEB38008ED5DC /* EnvironmentTHC.swift */,
 				BA56855C1C763EA600D3B5FE /* Info.plist */,
@@ -492,6 +495,22 @@
 				EFF366A2212DF130008ED5DC /* WarsawApiTests.swift */,
 			);
 			path = _Networking;
+			sourceTree = "<group>";
+		};
+		EFF366BC212F2EA9008ED5DC /* _Redux */ = {
+			isa = PBXGroup;
+			children = (
+				EFF366BD212F2EB6008ED5DC /* _Middleware */,
+			);
+			path = _Redux;
+			sourceTree = "<group>";
+		};
+		EFF366BD212F2EB6008ED5DC /* _Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C76E2212F355700C5BE5C /* AppMiddlewareTests.swift */,
+			);
+			path = _Middleware;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -776,6 +795,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0DC0E520B8A59C000BF4DB /* CustomCodableTests.swift in Sources */,
+				EF8C76E3212F355700C5BE5C /* AppMiddlewareTests.swift in Sources */,
 				EFF366A3212DF130008ED5DC /* WarsawApiTests.swift in Sources */,
 				EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */,
 				EFF3669F212DEB38008ED5DC /* EnvironmentTHC.swift in Sources */,
