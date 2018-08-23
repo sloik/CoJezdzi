@@ -59,6 +59,7 @@
 		EF8C76EA212F54A700C5BE5C /* WarsawVehicleDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */; };
 		EF8C76EC212F54D700C5BE5C /* WarsawApiResultDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */; };
 		EF8C76EE212F55D800C5BE5C /* PersistenceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76ED212F55D800C5BE5C /* PersistenceMock.swift */; };
+		EF8C76F2212F5A7200C5BE5C /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F1212F5A7200C5BE5C /* AppDelegateTests.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
 		EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */; };
 		EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */; };
@@ -159,6 +160,7 @@
 		EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawVehicleDtoMock.swift; sourceTree = "<group>"; };
 		EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiResultDtoMock.swift; sourceTree = "<group>"; };
 		EF8C76ED212F55D800C5BE5C /* PersistenceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceMock.swift; sourceTree = "<group>"; };
+		EF8C76F1212F5A7200C5BE5C /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiResultDto.swift; sourceTree = "<group>"; };
 		EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
 		EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 			children = (
 				EF8C76EF212F57C500C5BE5C /* _Dependency */,
 				EF8C76E5212F524200C5BE5C /* _Persistence */,
+				EF8C76F1212F5A7200C5BE5C /* AppDelegateTests.swift */,
 			);
 			path = _App;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */,
 				EFF3669F212DEB38008ED5DC /* EnvironmentMock.swift in Sources */,
 				EF8C76E7212F53E900C5BE5C /* WarsawApiMock.swift in Sources */,
+				EF8C76F2212F5A7200C5BE5C /* AppDelegateTests.swift in Sources */,
 				EF8C76EC212F54D700C5BE5C /* WarsawApiResultDtoMock.swift in Sources */,
 				EF8C76EE212F55D800C5BE5C /* PersistenceMock.swift in Sources */,
 				EF8C76EA212F54A700C5BE5C /* WarsawVehicleDtoMock.swift in Sources */,
