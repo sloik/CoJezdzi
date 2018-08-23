@@ -3,9 +3,7 @@ import GameplayKit
 
 import ReSwift
 
-protocol RouterProtocol {}
-
-final class GamePlayAppRouter: Dependable, RouterProtocol {
+final class GamePlayAppRouter {
     let graph: GKGraph = {
         // defines nodes
         let map =         NF.n(.map)
@@ -31,12 +29,8 @@ final class GamePlayAppRouter: Dependable, RouterProtocol {
     
     private(set) var currentViewController: UIViewController?
     
-    var dependencyContainer: DependencyViewControllers
-    
-    init(container: DependencyViewControllers, window: UIWindow) {
-        dependencyContainer = container
-        
-        window.rootViewController = dependencyContainer.makeMapSceneViewController()
+    func takeOff(_ window: UIWindow) {
+        window.rootViewController = Current.scenes.map
         
         Current
             .reduxStore
@@ -125,16 +119,16 @@ extension GamePlayAppRouter {
         
         switch destination {
         case .map:
-            vc = dependencyContainer.makeMapSceneViewController()
+            vc = Current.scenes.map
             
         case .settings:
-            vc = dependencyContainer.makeSettingsViewController()
+            vc = Current.scenes.settings
             
         case .linesFilter:
-            vc = dependencyContainer.makeLinesFilterViewController()
+            vc = Current.scenes.linesFilter
             
         case .aboutApp:
-            vc = dependencyContainer.makeAboutAppViewController()
+            vc = Current.scenes.aboutApp
         }
         
         return vc!
