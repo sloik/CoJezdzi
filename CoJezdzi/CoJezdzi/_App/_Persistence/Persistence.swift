@@ -6,8 +6,8 @@ class Persistence {
         static let persistance = "Persistance.SettingsState"
     }
     
-    var persist = persist(state:)
-    var load = loadSaved
+    private(set) var persist = persist(state:)
+    private(set) var load = loadSaved
     
     init(){}
     init(persist: @escaping ((SettingsState) -> Void), load: @escaping () -> ()) {
