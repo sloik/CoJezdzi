@@ -3,7 +3,7 @@ import XCTest
 
 @testable import CoJezdzi
 
-class CustomCodableTests: XCTestCase {
+class SettingsStateTests: XCTestCase {
     
     func test<T: Codable & Equatable>(_ f: T, file: StaticString = #file, line: UInt = #line) {
         do {

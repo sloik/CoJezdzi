@@ -21,7 +21,3 @@ extension Environment {
         router: Current.router,
         userDefaults: UserDefaults())
 }
-
-func coda<C: Codable>(_ c: C) -> Data {
-    return try! JSONEncoder().encode(c)
-}

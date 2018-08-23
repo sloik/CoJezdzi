@@ -15,7 +15,7 @@
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
 		EF0DC0E320B88528000BF4DB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E220B88528000BF4DB /* Persistence.swift */; };
-		EF0DC0E520B8A59C000BF4DB /* CustomCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */; };
+		EF0DC0E520B8A59C000BF4DB /* SettingsStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E420B8A59C000BF4DB /* SettingsStateTests.swift */; };
 		EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E620B8C102000BF4DB /* THC.swift */; };
 		EF0DC0E920B95989000BF4DB /* SettingsDidRestoreAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */; };
 		EF3BB72620CC042A004BD9C3 /* Scenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BB72520CC042A004BD9C3 /* Scenes.swift */; };
@@ -113,7 +113,7 @@
 		BA5685671C763EA600D3B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BABDD4BA1C78CDD500152EBD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		EF0DC0E220B88528000BF4DB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCodableTests.swift; sourceTree = "<group>"; };
+		EF0DC0E420B8A59C000BF4DB /* SettingsStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStateTests.swift; sourceTree = "<group>"; };
 		EF0DC0E620B8C102000BF4DB /* THC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THC.swift; sourceTree = "<group>"; };
 		EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDidRestoreAction.swift; sourceTree = "<group>"; };
 		EF3BB72520CC042A004BD9C3 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
@@ -273,7 +273,6 @@
 				EF8C76E4212F523500C5BE5C /* _App */,
 				EFF366A0212DF0DA008ED5DC /* _Networking */,
 				EFF366BC212F2EA9008ED5DC /* _Redux */,
-				EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */,
 				BA56855C1C763EA600D3B5FE /* Info.plist */,
 				EF0DC0E620B8C102000BF4DB /* THC.swift */,
 			);
@@ -479,6 +478,14 @@
 			path = _Dependency;
 			sourceTree = "<group>";
 		};
+		EF8C76F0212F598D00C5BE5C /* _State */ = {
+			isa = PBXGroup;
+			children = (
+				EF0DC0E420B8A59C000BF4DB /* SettingsStateTests.swift */,
+			);
+			path = _State;
+			sourceTree = "<group>";
+		};
 		EFB5C2A4209C710200BB5855 /* _Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,6 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				EFF366BD212F2EB6008ED5DC /* _Middleware */,
+				EF8C76F0212F598D00C5BE5C /* _State */,
 			);
 			path = _Redux;
 			sourceTree = "<group>";
@@ -874,7 +882,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0DC0E520B8A59C000BF4DB /* CustomCodableTests.swift in Sources */,
+				EF0DC0E520B8A59C000BF4DB /* SettingsStateTests.swift in Sources */,
 				EF8C76E3212F355700C5BE5C /* AppMiddlewareTests.swift in Sources */,
 				EFF366A3212DF130008ED5DC /* WarsawApiTests.swift in Sources */,
 				EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */,
