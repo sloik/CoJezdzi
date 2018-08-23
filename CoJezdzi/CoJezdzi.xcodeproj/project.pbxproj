@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7EAF57B028A0F8C9F6E1D4F6 /* Pods_CoJezdzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231A542086605390FBD456C7 /* Pods_CoJezdzi.framework */; };
+		910DFA15E82E0EBD2C0E9C5A /* Pods_CoJezdziTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 678B1693528683BABBC3CBB9 /* Pods_CoJezdziTests.framework */; };
 		BA5685461C763EA600D3B5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685451C763EA600D3B5FE /* AppDelegate.swift */; };
 		BA56854B1C763EA600D3B5FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5685491C763EA600D3B5FE /* Main.storyboard */; };
 		BA56854D1C763EA600D3B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA56854C1C763EA600D3B5FE /* Assets.xcassets */; };
@@ -97,6 +98,8 @@
 		231A542086605390FBD456C7 /* Pods_CoJezdzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7C59AC0D760AAD5A1347B4 /* Pods-CoJezdzi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.debug.xcconfig"; sourceTree = "<group>"; };
 		678B1693528683BABBC3CBB9 /* Pods_CoJezdziTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdziTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E5DD49E2878C5679F9B4E92 /* Pods-CoJezdziTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdziTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdziTests/Pods-CoJezdziTests.release.xcconfig"; sourceTree = "<group>"; };
+		83C7670C78FEEC6DA237BF21 /* Pods-CoJezdziTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdziTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdziTests/Pods-CoJezdziTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA5685421C763EA600D3B5FE /* CoJezdzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoJezdzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5685451C763EA600D3B5FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA56854A1C763EA600D3B5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910DFA15E82E0EBD2C0E9C5A /* Pods_CoJezdziTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +209,8 @@
 			children = (
 				2F7C59AC0D760AAD5A1347B4 /* Pods-CoJezdzi.debug.xcconfig */,
 				F0BFC42A0906562B0FEAA840 /* Pods-CoJezdzi.release.xcconfig */,
+				83C7670C78FEEC6DA237BF21 /* Pods-CoJezdziTests.debug.xcconfig */,
+				6E5DD49E2878C5679F9B4E92 /* Pods-CoJezdziTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -577,9 +583,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA56856D1C763EA600D3B5FE /* Build configuration list for PBXNativeTarget "CoJezdziTests" */;
 			buildPhases = (
+				AF3D895CD49D94713455B931 /* [CP] Check Pods Manifest.lock */,
 				BA5685521C763EA600D3B5FE /* Sources */,
 				BA5685531C763EA600D3B5FE /* Frameworks */,
 				BA5685541C763EA600D3B5FE /* Resources */,
+				A30851E9348284D942410899 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -730,6 +738,42 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CoJezdzi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A30851E9348284D942410899 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdziTests/Pods-CoJezdziTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdziTests/Pods-CoJezdziTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF3D895CD49D94713455B931 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoJezdziTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1038,6 +1082,7 @@
 		};
 		BA56856E1C763EA600D3B5FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83C7670C78FEEC6DA237BF21 /* Pods-CoJezdziTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1053,6 +1098,7 @@
 		};
 		BA56856F1C763EA600D3B5FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E5DD49E2878C5679F9B4E92 /* Pods-CoJezdziTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
