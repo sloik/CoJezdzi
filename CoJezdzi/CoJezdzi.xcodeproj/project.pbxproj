@@ -54,6 +54,9 @@
 		EF61151420A645A800E05E02 /* TDataAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266A8209262350076238D /* TDataAnnotation.swift */; };
 		EF61151720A7083400E05E02 /* AppMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151620A7083400E05E02 /* AppMiddleware.swift */; };
 		EF8C76E3212F355700C5BE5C /* AppMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E2212F355700C5BE5C /* AppMiddlewareTests.swift */; };
+		EF8C76E7212F53E900C5BE5C /* WarsawApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E6212F53E900C5BE5C /* WarsawApiMock.swift */; };
+		EF8C76EA212F54A700C5BE5C /* WarsawVehicleDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */; };
+		EF8C76EC212F54D700C5BE5C /* WarsawApiResultDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */; };
 		EFB5C2A3209A35B500BB5855 /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
 		EFB5C2A6209C712E00BB5855 /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */; };
 		EFB5C2A8209CE04C00BB5855 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */; };
@@ -148,6 +151,9 @@
 		EF7657361EAB393B007C4E3D /* CoJezdziTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		EF7657411EAB3AED007C4E3D /* CoJezdziTests copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CoJezdziTests copy2-Info.plist"; path = "/Users/sloik/Dropbox/DeveloperAppStore/CoJezdzi/SourceCode/CoJezdzi/CoJezdziTests copy2-Info.plist"; sourceTree = "<absolute>"; };
 		EF8C76E2212F355700C5BE5C /* AppMiddlewareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMiddlewareTests.swift; sourceTree = "<group>"; };
+		EF8C76E6212F53E900C5BE5C /* WarsawApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiMock.swift; sourceTree = "<group>"; };
+		EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawVehicleDtoMock.swift; sourceTree = "<group>"; };
+		EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiResultDtoMock.swift; sourceTree = "<group>"; };
 		EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiResultDto.swift; sourceTree = "<group>"; };
 		EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolylineMaker.swift; sourceTree = "<group>"; };
 		EFB5C2A7209CE04C00BB5855 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
@@ -256,6 +262,7 @@
 		BA5685591C763EA600D3B5FE /* CoJezdziTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C76E4212F523500C5BE5C /* _App */,
 				EFF366A0212DF0DA008ED5DC /* _Networking */,
 				EFF366BC212F2EA9008ED5DC /* _Redux */,
 				EF0DC0E420B8A59C000BF4DB /* CustomCodableTests.swift */,
@@ -430,6 +437,31 @@
 			path = _Middleware;
 			sourceTree = "<group>";
 		};
+		EF8C76E4212F523500C5BE5C /* _App */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C76E5212F524200C5BE5C /* _Persistence */,
+			);
+			path = _App;
+			sourceTree = "<group>";
+		};
+		EF8C76E5212F524200C5BE5C /* _Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = _Persistence;
+			sourceTree = "<group>";
+		};
+		EF8C76E8212F53F600C5BE5C /* _Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C76E6212F53E900C5BE5C /* WarsawApiMock.swift */,
+				EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */,
+				EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */,
+			);
+			path = _Mocks;
+			sourceTree = "<group>";
+		};
 		EFB5C2A4209C710200BB5855 /* _Misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +516,7 @@
 		EFF366A0212DF0DA008ED5DC /* _Networking */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C76E8212F53F600C5BE5C /* _Mocks */,
 				EFF366A2212DF130008ED5DC /* WarsawApiTests.swift */,
 			);
 			path = _Networking;
@@ -791,6 +824,9 @@
 				EFF366A3212DF130008ED5DC /* WarsawApiTests.swift in Sources */,
 				EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */,
 				EFF3669F212DEB38008ED5DC /* EnvironmentTHC.swift in Sources */,
+				EF8C76E7212F53E900C5BE5C /* WarsawApiMock.swift in Sources */,
+				EF8C76EC212F54D700C5BE5C /* WarsawApiResultDtoMock.swift in Sources */,
+				EF8C76EA212F54A700C5BE5C /* WarsawVehicleDtoMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

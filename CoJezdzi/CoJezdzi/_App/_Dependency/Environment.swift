@@ -9,6 +9,7 @@ struct Environment {
     var persistance = Persistence()
     var scenes = Scenes()
     var router = GamePlayAppRouter()
+    var userDefaults = UserDefaults.standard
 }
 
 var Current = Environment()
