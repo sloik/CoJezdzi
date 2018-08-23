@@ -13,8 +13,7 @@ private struct ViewModel {
     }
 }
 
-class SettingsVC: UITableViewController, Dependable {
-    var dependencyContainer: DependencyStore?
+class SettingsVC: UITableViewController {
 
     fileprivate var cellOrdering: [ViewModel]  {
 
@@ -44,8 +43,9 @@ class SettingsVC: UITableViewController, Dependable {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        dependencyContainer?
-            .reduxStore.subscribe(self) {
+        Current
+            .reduxStore
+            .subscribe(self) {
                 $0.select {
                     $0.settingsState
                 }
@@ -57,7 +57,7 @@ class SettingsVC: UITableViewController, Dependable {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        dependencyContainer?
+        Current
             .reduxStore
             .dispatch(RoutingSceneAppearsAction(scene: .settings, viewController: self))
     }
@@ -65,7 +65,7 @@ class SettingsVC: UITableViewController, Dependable {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        dependencyContainer?
+        Current
             .reduxStore
             .unsubscribe(self)
     }
@@ -97,7 +97,7 @@ extension SettingsVC {
         case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
             switch viewModel.title {
             case C.UI.Settings.MenuLabels.Filters:
-                dependencyContainer?
+                Current
                     .reduxStore
                     .dispatch(RoutingAction(destination: .linesFilter))
                 
@@ -106,16 +106,15 @@ extension SettingsVC {
             }
             
         case C.Storyboard.CellReuseId.SettingsAboutAppCell:
-            dependencyContainer?
+            Current
                 .reduxStore
                 .dispatch(RoutingAction(destination: .aboutApp))
             
         case C.Storyboard.CellReuseId.SettingsSwitchCell:
-            
             let viewModel = cellOrdering[indexPath.row]
             let currentState = titleToState[viewModel.title]!
             
-            dependencyContainer?
+            Current
                 .reduxStore
                 .dispatch(SettingsSwitchAction(whitchSwitch: currentState.reversed))
  
@@ -216,17 +215,17 @@ extension SettingsVC: SwitchCellInteraction {
 
         switch cellTitle {
         case C.UI.Settings.MenuLabels.TramMarks:
-            dependencyContainer?
+            Current
                 .reduxStore
                 .dispatch(SettingsSwitchAction(whitchSwitch: .previousLocation(on: isOn)))
 
         case C.UI.Settings.MenuLabels.TramsOnly:
-            dependencyContainer?
+            Current
                 .reduxStore
                 .dispatch(SettingsSwitchAction(whitchSwitch: .tram(on: isOn)))
             
         case C.UI.Settings.MenuLabels.BussesOnly:
-            dependencyContainer?
+            Current
                 .reduxStore
                 .dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))
 

@@ -2,16 +2,15 @@ import UIKit
 
 import ReSwift
 
-class FilterLinesCVC: UICollectionViewController, Dependable {
-    var dependencyContainer: DependencyStore?
+class FilterLinesCVC: UICollectionViewController {
     
     fileprivate var latesState: AppState! {
         didSet {
             lines =
-            latesState.mapState
-                .allCurrent
-                .reduce(into: Set<String>()) { accu, dto in accu.insert(dto.lines) }
-                .sorted { Int($0) < Int($1) }
+                latesState.mapState
+                    .allCurrent
+                    .reduce(into: Set<String>()) { accu, dto in accu.insert(dto.lines) }
+                    .sorted { Int($0) < Int($1) }
             
             refreshVisibleRows()
         }
@@ -21,21 +20,21 @@ class FilterLinesCVC: UICollectionViewController, Dependable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dependencyContainer?
+        Current
             .reduxStore
             .subscribe(self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        dependencyContainer?
+        Current
             .reduxStore
             .dispatch(RoutingSceneAppearsAction(scene: .linesFilter, viewController: self))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        dependencyContainer?
+        Current
             .reduxStore
             .unsubscribe(self)
     }
@@ -91,11 +90,11 @@ extension FilterLinesCVC {
         
         let selectedLine = lines[indexPath.row]
         if latesState.settingsState.selectedLines.lines.contains(LineInfo(name: selectedLine)) {
-            dependencyContainer?
+            Current
                 .reduxStore
                 .dispatch(SelectedLineRemoveAction(line: selectedLine))
         } else {
-            dependencyContainer?
+            Current
                 .reduxStore
                 .dispatch(SelectedLineAddAction(line: selectedLine))
         }
@@ -104,18 +103,18 @@ extension FilterLinesCVC {
 
 // MARK: - User Interaction
 extension FilterLinesCVC {
-
+    
     @IBAction func userDidTapDoneButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-
+    
     override var canBecomeFirstResponder : Bool {
         return true
     }
-
+    
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            dependencyContainer?
+            Current
                 .reduxStore
                 .dispatch(SelectedLineRemoveAllAction())
         }

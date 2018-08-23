@@ -15,10 +15,6 @@ extension Dependable {
     }
 }
 
-protocol DependencyStore {
-    var reduxStore: Store<AppState> { get }
-}
-
 protocol DependencyViewControllers {
     func makeMapSceneViewController() -> UIViewController
     func makeSettingsViewController() -> UIViewController
@@ -34,24 +30,17 @@ protocol DependencyPersistance {
     func makePersistance() -> PersistanceProtocol
 }
 
-typealias DependencyProvider = DependencyStore
-    & DependencyViewControllers
+typealias DependencyProvider =
+    DependencyViewControllers
     & DependencyRouter
     & DependencyPersistance
 
-struct DependencyContainer: DependencyStore {
-    var reduxStore: Store<AppState> {
-        struct S {
-            static let store = Store<AppState>(reducer: appReducer, state: nil, middleware: [M.Api])
-        }
-        
-        return S.store
-    }
-}
+struct DependencyContainer {}
+
 
 extension DependencyContainer: DependencyPersistance {
     func makePersistance() -> PersistanceProtocol {
-        return Persistence(container: self)
+        return Persistence()
     }
 }
 
@@ -63,27 +52,19 @@ extension DependencyContainer: DependencyRouter {
 
 extension DependencyContainer: DependencyViewControllers {
     func makeMapSceneViewController() -> UIViewController {        
-        var vc = R.storyboard.main.mapScene()!
-        return vc.setContainer(self)
+        return R.storyboard.main.mapScene()!
     }
     
     func makeSettingsViewController() -> UIViewController {
-        let vc = R.storyboard.main.settingsScene()!
-        
-        let topVC = vc.topViewController as! SettingsVC
-        topVC.dependencyContainer = self
-        
-        return vc
+        return R.storyboard.main.settingsScene()!
     }
     
     func makeLinesFilterViewController() -> UIViewController {
-        var vc = R.storyboard.main.linesFilter()!
-        return vc.setContainer(self)
+        return R.storyboard.main.linesFilter()!
     }
     
     func makeAboutAppViewController() -> UIViewController {
-        var vc = R.storyboard.main.aboutApp()!
-        return vc.setContainer(self)
+        return R.storyboard.main.aboutApp()!
     }
 }
 

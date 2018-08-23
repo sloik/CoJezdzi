@@ -5,12 +5,7 @@ protocol PersistanceProtocol {
     func load()
 }
 
-class Persistence: Dependable, PersistanceProtocol {
-    var dependencyContainer: DependencyStore
-    
-    init(container: DependencyStore) {
-        dependencyContainer = container
-    }
+class Persistence: PersistanceProtocol {
     
     enum Keys {
         static let persistance = "Persistance.SettingsState"
@@ -23,10 +18,12 @@ class Persistence: Dependable, PersistanceProtocol {
     
     func load() {
         defer {
-            dependencyContainer.reduxStore.subscribe(self) {
-                $0.select {
-                    $0.settingsState
-                }
+            Current
+                .reduxStore
+                .subscribe(self) {
+                    $0.select {
+                        $0.settingsState
+                    }
             }
         }
         
@@ -35,7 +32,9 @@ class Persistence: Dependable, PersistanceProtocol {
         guard let data = UserDefaults.standard.data(forKey: Keys.persistance) else { return }
         let state = try! JSONDecoder().decode(SettingsState.self, from: data)
         
-        dependencyContainer.reduxStore.dispatch(SettingsDidRestoreAction(restoredState: state))
+        Current
+            .reduxStore
+            .dispatch(SettingsDidRestoreAction(restoredState: state))
     }
 }
 

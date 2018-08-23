@@ -31,17 +31,19 @@ final class GamePlayAppRouter: Dependable, RouterProtocol {
     
     private(set) var currentViewController: UIViewController?
     
-    var dependencyContainer: (DependencyStore & DependencyViewControllers)
+    var dependencyContainer: DependencyViewControllers
     
-    init(container: (DependencyStore & DependencyViewControllers), window: UIWindow) {
+    init(container: DependencyViewControllers, window: UIWindow) {
         dependencyContainer = container
         
         window.rootViewController = dependencyContainer.makeMapSceneViewController()
         
-        dependencyContainer.reduxStore.subscribe(self) {
-            $0.select {
-                $0.routingState
-            }
+        Current
+            .reduxStore
+            .subscribe(self) {
+                $0.select {
+                    $0.routingState
+                }
         }
     }
 }

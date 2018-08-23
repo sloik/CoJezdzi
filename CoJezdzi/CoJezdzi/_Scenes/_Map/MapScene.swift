@@ -4,8 +4,7 @@ import UIKit
 
 import ReSwift
 
-class MapScene: UIViewController, Dependable {
-    var dependencyContainer: DependencyStore?
+class MapScene: UIViewController {
 
     // MARK: - UI
     @IBOutlet weak var copyrightLable: UILabel!
@@ -68,21 +67,21 @@ class MapScene: UIViewController, Dependable {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dependencyContainer?
+        Current
             .reduxStore
             .subscribe(self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        dependencyContainer?
+        Current
             .reduxStore
             .dispatch(RoutingSceneAppearsAction(scene: .map, viewController: self))
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        dependencyContainer?
+        Current
             .reduxStore
             .unsubscribe(self)
     }
@@ -155,7 +154,7 @@ extension MapScene {
     }
     
     @IBAction func userDidTapSettingsButton() {
-        dependencyContainer?
+        Current
             .reduxStore
             .dispatch(RoutingAction(destination: .settings))
     }
@@ -171,9 +170,9 @@ extension MapScene {
 
 private extension MapScene {
     func triggerDataRefresh() {
-        dependencyContainer?
-        .reduxStore
-        .dispatch(FetchVehiclesPosytionsAction())
+        Current
+            .reduxStore
+            .dispatch(FetchVehiclesPosytionsAction())
     }
 }
 

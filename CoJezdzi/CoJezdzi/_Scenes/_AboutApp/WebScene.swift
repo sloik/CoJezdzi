@@ -2,8 +2,7 @@
 import SafariServices
 import UIKit
 
-class WebScene: UIViewController, Dependable {
-    var dependencyContainer: DependencyStore?
+class WebScene: UIViewController {
 
     @IBOutlet weak var spacer: UIView!
 
@@ -25,7 +24,7 @@ class WebScene: UIViewController, Dependable {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        dependencyContainer?
+        Current
             .reduxStore
             .dispatch(RoutingSceneAppearsAction(scene: .aboutApp, viewController: self))
     }
