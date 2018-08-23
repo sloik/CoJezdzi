@@ -7,7 +7,7 @@ extension Environment {
     static let mock = Environment(
         dataProvider: .mock,
         reduxStore: Current.reduxStore,
-        persistance: Current.persistance,
+        persistance: .mock,
         scenes: Current.scenes,
         router: Current.router,
         userDefaults: UserDefaults())
@@ -16,7 +16,7 @@ extension Environment {
     static let errorMock = Environment(
         dataProvider: .errorMock,
         reduxStore: Current.reduxStore,
-        persistance: Current.persistance,
+        persistance: .mock,
         scenes: Current.scenes,
         router: Current.router,
         userDefaults: UserDefaults())

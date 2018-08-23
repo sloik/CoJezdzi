@@ -8,6 +8,12 @@ class Persistence {
     
     var persist = persist(state:)
     var load = loadSaved
+    
+    init(){}
+    init(persist: @escaping ((SettingsState) -> Void), load: @escaping () -> ()) {
+        self.persist = persist
+        self.load = load
+    }
 }
 
 // MARK: - Implementation Details
