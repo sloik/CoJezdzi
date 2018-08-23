@@ -9,7 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, Dependable {
     
     var window: UIWindow?
     var grouter: RouterProtocol?
-    var persistance: PersistanceProtocol?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -19,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, Dependable {
         
         grouter = dependencyContainer.makeAppRouter(for: window)
         
-        persistance = dependencyContainer.makePersistance()
-        persistance?.load()
-                
+        Current
+            .persistance
+            .load()
+        
         window.makeKeyAndVisible()
 
         return true

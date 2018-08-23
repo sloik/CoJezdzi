@@ -1,17 +1,13 @@
 
 import ReSwift
 
-protocol PersistanceProtocol {
-    func load()
-}
-
-class Persistence: PersistanceProtocol {
+class Persistence {
     
     enum Keys {
         static let persistance = "Persistance.SettingsState"
     }
     
-    func persist(state: SettingsState) {
+    fileprivate func persist(state: SettingsState) {
         let data = try! JSONEncoder().encode(state)
         UserDefaults.standard.set(data, forKey: Keys.persistance)
     }

@@ -26,23 +26,11 @@ protocol DependencyRouter {
     func makeAppRouter(for: UIWindow) -> RouterProtocol
 }
 
-protocol DependencyPersistance {
-    func makePersistance() -> PersistanceProtocol
-}
-
 typealias DependencyProvider =
     DependencyViewControllers
     & DependencyRouter
-    & DependencyPersistance
 
 struct DependencyContainer {}
-
-
-extension DependencyContainer: DependencyPersistance {
-    func makePersistance() -> PersistanceProtocol {
-        return Persistence()
-    }
-}
 
 extension DependencyContainer: DependencyRouter {
     func makeAppRouter(for window: UIWindow) -> RouterProtocol {
