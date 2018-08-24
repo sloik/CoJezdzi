@@ -19,6 +19,6 @@ let mockActionHandler = { (action: Action) in
 }
 
 func test(action: Action,  middleware: Middleware<AppState>) {
-    // ReSwift Middleware has a lot of curried functions. So to hel
+    // ReSwift Middleware has a lot of curried functions. So to help a bit with tests ;)
     middleware(mockDispatch, mockGetState)(mockActionHandler)(action)
 }
