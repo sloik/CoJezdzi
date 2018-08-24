@@ -15,8 +15,9 @@ target 'CoJezdzi' do
 end
 
 target 'CoJezdziTests' do
-
+    
     pod 'Overture'
+    pod 'ReSwift'
     
 end
 
