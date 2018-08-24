@@ -1,0 +1,24 @@
+import ReSwift
+import Overture
+
+@testable import CoJezdzi
+
+let mockDispatch: (Action) -> Void = { action in
+    debugPrint("💎: \(#function): \(action) ")
+    return
+}
+
+func mockGetState() -> AppState? {
+    debugPrint("☕️: \(#function)")
+    return .mock
+}
+
+let mockActionHandler = { (action: Action) in
+    debugPrint("💩 \(#function) \(action)")
+    return
+}
+
+func test(action: Action,  middleware: Middleware<AppState>) {
+    // ReSwift Middleware has a lot of curried functions. So to hel
+    middleware(mockDispatch, mockGetState)(mockActionHandler)(action)
+}
