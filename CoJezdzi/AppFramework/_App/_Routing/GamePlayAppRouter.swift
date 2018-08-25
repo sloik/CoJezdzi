@@ -29,9 +29,7 @@ final class GamePlayAppRouter {
     
     private(set) var currentViewController: UIViewController?
     
-    func takeOff(_ window: UIWindow) {
-        window.rootViewController = Current.scenes.map
-        
+    func rootVC() -> UIViewController {
         Current
             .reduxStore
             .subscribe(self) {
@@ -39,6 +37,8 @@ final class GamePlayAppRouter {
                     $0.routingState
                 }
         }
+        
+        return Current.scenes.map
     }
 }
 
