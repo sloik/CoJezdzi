@@ -23,9 +23,6 @@ end
 target 'CoJezdzi' do
 end
 
-target 'CoJezdziTests' do
-end
-
 # dsymys for all installed pods
 post_install do |installer|
     installer.pods_project.targets.each do |target|
