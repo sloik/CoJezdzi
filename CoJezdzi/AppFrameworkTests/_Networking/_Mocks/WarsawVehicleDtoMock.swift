@@ -1,7 +1,7 @@
 
 import Foundation
 
-@testable import CoJezdzi
+@testable import AppFramework
 
 extension WarsawVehicleDto {
     static let mock = WarsawVehicleDto(

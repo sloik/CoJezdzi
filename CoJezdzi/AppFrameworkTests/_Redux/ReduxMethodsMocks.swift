@@ -1,7 +1,8 @@
+@testable import AppFramework
+
 import ReSwift
 import Overture
 
-@testable import CoJezdzi
 
 let mockDispatch: (Action) -> Void = { action in
     debugPrint("💎: \(#function): \(action) ")

@@ -1,6 +1,6 @@
 import Foundation
 
-@testable import CoJezdzi
+@testable import AppFramework
 
 extension Persistence {
     static let mock = Persistence(

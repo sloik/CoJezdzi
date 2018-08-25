@@ -14,18 +14,7 @@
 		BA56854D1C763EA600D3B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA56854C1C763EA600D3B5FE /* Assets.xcassets */; };
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
-		EF0DC0E520B8A59C000BF4DB /* SettingsStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E420B8A59C000BF4DB /* SettingsStateTests.swift */; };
-		EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E620B8C102000BF4DB /* THC.swift */; };
-		EF8C76E3212F355700C5BE5C /* AppMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E2212F355700C5BE5C /* AppMiddlewareTests.swift */; };
-		EF8C76E7212F53E900C5BE5C /* WarsawApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E6212F53E900C5BE5C /* WarsawApiMock.swift */; };
-		EF8C76EA212F54A700C5BE5C /* WarsawVehicleDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */; };
-		EF8C76EC212F54D700C5BE5C /* WarsawApiResultDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */; };
-		EF8C76EE212F55D800C5BE5C /* PersistenceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76ED212F55D800C5BE5C /* PersistenceMock.swift */; };
-		EF8C76F2212F5A7200C5BE5C /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F1212F5A7200C5BE5C /* AppDelegateTests.swift */; };
-		EF8C76F42130955C00C5BE5C /* AppStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F32130955C00C5BE5C /* AppStateMock.swift */; };
-		EF8C76F721309CD200C5BE5C /* ReduxMethodsMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F621309CD200C5BE5C /* ReduxMethodsMocks.swift */; };
 		EF8C77062131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
-		EF8C770D2131989100C5BE5C /* AppFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C770C2131989100C5BE5C /* AppFrameworkTests.swift */; };
 		EF8C770F2131989100C5BE5C /* AppFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8C76FF2131989100C5BE5C /* AppFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF8C77122131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
 		EF8C77132131989100C5BE5C /* AppFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -84,8 +73,17 @@
 		EF8C779E2131B21A00C5BE5C /* MapScene+MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEE78FD2097D28200F95E77 /* MapScene+MKMapViewDelegate.swift */; };
 		EF8C779F2131B2C500C5BE5C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C775B21319D6300C5BE5C /* App.swift */; };
 		EF8C77A12131B43200C5BE5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8C77A02131B31D00C5BE5C /* Assets.xcassets */; };
-		EFF3669F212DEB38008ED5DC /* EnvironmentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3669E212DEB38008ED5DC /* EnvironmentMock.swift */; };
-		EFF366A3212DF130008ED5DC /* WarsawApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF366A2212DF130008ED5DC /* WarsawApiTests.swift */; };
+		EF8C77A32131B70200C5BE5C /* PersistenceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76ED212F55D800C5BE5C /* PersistenceMock.swift */; };
+		EF8C77A92131B71300C5BE5C /* AppStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F32130955C00C5BE5C /* AppStateMock.swift */; };
+		EF8C77AA2131B71A00C5BE5C /* WarsawApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E6212F53E900C5BE5C /* WarsawApiMock.swift */; };
+		EF8C77AB2131B71A00C5BE5C /* WarsawApiResultDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */; };
+		EF8C77AC2131B71A00C5BE5C /* WarsawVehicleDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */; };
+		EF8C77AD2131B71A00C5BE5C /* WarsawApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF366A2212DF130008ED5DC /* WarsawApiTests.swift */; };
+		EF8C77AE2131B72200C5BE5C /* AppMiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E2212F355700C5BE5C /* AppMiddlewareTests.swift */; };
+		EF8C77AF2131B72900C5BE5C /* SettingsStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E420B8A59C000BF4DB /* SettingsStateTests.swift */; };
+		EF8C77B02131B73200C5BE5C /* ReduxMethodsMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F621309CD200C5BE5C /* ReduxMethodsMocks.swift */; };
+		EF8C77B12131B79000C5BE5C /* EnvironmentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3669E212DEB38008ED5DC /* EnvironmentMock.swift */; };
+		EF8C77B22131B7E900C5BE5C /* THC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E620B8C102000BF4DB /* THC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,14 +208,12 @@
 		EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawVehicleDtoMock.swift; sourceTree = "<group>"; };
 		EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiResultDtoMock.swift; sourceTree = "<group>"; };
 		EF8C76ED212F55D800C5BE5C /* PersistenceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceMock.swift; sourceTree = "<group>"; };
-		EF8C76F1212F5A7200C5BE5C /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		EF8C76F32130955C00C5BE5C /* AppStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateMock.swift; sourceTree = "<group>"; };
 		EF8C76F621309CD200C5BE5C /* ReduxMethodsMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxMethodsMocks.swift; sourceTree = "<group>"; };
 		EF8C76FD2131989100C5BE5C /* AppFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8C76FF2131989100C5BE5C /* AppFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppFramework.h; sourceTree = "<group>"; };
 		EF8C77002131989100C5BE5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8C77052131989100C5BE5C /* AppFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF8C770C2131989100C5BE5C /* AppFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFrameworkTests.swift; sourceTree = "<group>"; };
 		EF8C770E2131989100C5BE5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8C771B213199A200C5BE5C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8C771E21319A9000C5BE5C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -356,11 +352,7 @@
 		BA5685591C763EA600D3B5FE /* CoJezdziTests */ = {
 			isa = PBXGroup;
 			children = (
-				EF8C76E4212F523500C5BE5C /* _App */,
-				EFF366A0212DF0DA008ED5DC /* _Networking */,
-				EFF366BC212F2EA9008ED5DC /* _Redux */,
 				BA56855C1C763EA600D3B5FE /* Info.plist */,
-				EF0DC0E620B8C102000BF4DB /* THC.swift */,
 			);
 			path = CoJezdziTests;
 			sourceTree = "<group>";
@@ -536,7 +528,6 @@
 			children = (
 				EF8C76EF212F57C500C5BE5C /* _Dependency */,
 				EF8C76E5212F524200C5BE5C /* _Persistence */,
-				EF8C76F1212F5A7200C5BE5C /* AppDelegateTests.swift */,
 			);
 			path = _App;
 			sourceTree = "<group>";
@@ -602,8 +593,11 @@
 		EF8C770B2131989100C5BE5C /* AppFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				EF8C770C2131989100C5BE5C /* AppFrameworkTests.swift */,
+				EF8C76E4212F523500C5BE5C /* _App */,
+				EFF366A0212DF0DA008ED5DC /* _Networking */,
+				EFF366BC212F2EA9008ED5DC /* _Redux */,
 				EF8C770E2131989100C5BE5C /* Info.plist */,
+				EF0DC0E620B8C102000BF4DB /* THC.swift */,
 			);
 			path = AppFrameworkTests;
 			sourceTree = "<group>";
@@ -1120,18 +1114,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0DC0E520B8A59C000BF4DB /* SettingsStateTests.swift in Sources */,
-				EF8C76E3212F355700C5BE5C /* AppMiddlewareTests.swift in Sources */,
-				EFF366A3212DF130008ED5DC /* WarsawApiTests.swift in Sources */,
-				EF8C76F721309CD200C5BE5C /* ReduxMethodsMocks.swift in Sources */,
-				EF8C76F42130955C00C5BE5C /* AppStateMock.swift in Sources */,
-				EF0DC0E720B8C102000BF4DB /* THC.swift in Sources */,
-				EFF3669F212DEB38008ED5DC /* EnvironmentMock.swift in Sources */,
-				EF8C76E7212F53E900C5BE5C /* WarsawApiMock.swift in Sources */,
-				EF8C76F2212F5A7200C5BE5C /* AppDelegateTests.swift in Sources */,
-				EF8C76EC212F54D700C5BE5C /* WarsawApiResultDtoMock.swift in Sources */,
-				EF8C76EE212F55D800C5BE5C /* PersistenceMock.swift in Sources */,
-				EF8C76EA212F54A700C5BE5C /* WarsawVehicleDtoMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1206,7 +1188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF8C770D2131989100C5BE5C /* AppFrameworkTests.swift in Sources */,
+				EF8C77AD2131B71A00C5BE5C /* WarsawApiTests.swift in Sources */,
+				EF8C77AB2131B71A00C5BE5C /* WarsawApiResultDtoMock.swift in Sources */,
+				EF8C77A92131B71300C5BE5C /* AppStateMock.swift in Sources */,
+				EF8C77A32131B70200C5BE5C /* PersistenceMock.swift in Sources */,
+				EF8C77B02131B73200C5BE5C /* ReduxMethodsMocks.swift in Sources */,
+				EF8C77B12131B79000C5BE5C /* EnvironmentMock.swift in Sources */,
+				EF8C77AE2131B72200C5BE5C /* AppMiddlewareTests.swift in Sources */,
+				EF8C77AF2131B72900C5BE5C /* SettingsStateTests.swift in Sources */,
+				EF8C77B22131B7E900C5BE5C /* THC.swift in Sources */,
+				EF8C77AA2131B71A00C5BE5C /* WarsawApiMock.swift in Sources */,
+				EF8C77AC2131B71A00C5BE5C /* WarsawVehicleDtoMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

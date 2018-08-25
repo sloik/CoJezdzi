@@ -1,6 +1,6 @@
-import Foundation
+@testable import AppFramework
 
-@testable import CoJezdzi
+import Foundation
 
 extension WarsawApiResultDto {
     static let mock = WarsawApiResultDto(

@@ -1,4 +1,4 @@
-@testable import CoJezdzi
+@testable import AppFramework
 
 import XCTest
 import Overture

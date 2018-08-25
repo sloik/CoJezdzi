@@ -1,7 +1,6 @@
+@testable import AppFramework
 
 import XCTest
-
-@testable import CoJezdzi
 
 class SettingsStateTests: XCTestCase {
     

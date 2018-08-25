@@ -1,7 +1,7 @@
 
 import Foundation
 
-@testable import CoJezdzi
+@testable import AppFramework
 
 extension RoutingState {
     static let mock = RoutingState(scene: .map, destitnation: nil, sceneVC: nil)
