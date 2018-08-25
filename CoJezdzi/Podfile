@@ -17,12 +17,13 @@ target 'AppFrameworkTests' do
     pod 'ReSwift'
 end
 
-target 'CoJezdzi' do
+target 'EmptyTestApp' do
+end
 
+target 'CoJezdzi' do
 end
 
 target 'CoJezdziTests' do
-    pod 'Overture'
 end
 
 # dsymys for all installed pods
