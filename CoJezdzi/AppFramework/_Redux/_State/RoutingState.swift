@@ -29,3 +29,9 @@ extension RoutingState: Equatable {
             && lhs.sceneVC     === rhs.sceneVC
     }
 }
+
+extension RoutingState: CustomDebugStringConvertible {
+    var debugDescription: String {
+        return "[RoutingState]: scene: \(scene), destination: \(String(describing: destination)), vc: \(String(describing: sceneVC))"
+    }
+}
