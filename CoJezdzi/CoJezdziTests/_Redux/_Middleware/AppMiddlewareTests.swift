@@ -25,5 +25,4 @@ class AppMiddlewareTests: XCTestCase {
         XCTAssertTrue(didGetTrams,  "Did not call API method for getting trams!")
         XCTAssertTrue(didGetBusses, "Did not call API method for getting busses!")
     }
-
 }

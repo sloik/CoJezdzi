@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +12,7 @@
         <!--Map Scene-->
         <scene sceneID="9DY-eu-WIk">
             <objects>
-                <viewController storyboardIdentifier="MapScene" title="Mapa" id="UPP-Ft-hI7" userLabel="Map Scene" customClass="MapScene" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapScene" title="Mapa" id="UPP-Ft-hI7" userLabel="Map Scene" customClass="MapScene" customModule="AppFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qdX-Xj-456">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UI-hL-SXh">
-                                <rect key="frame" x="323" y="575" width="42" height="42"/>
+                                <rect key="frame" x="237" y="489" width="128" height="128"/>
                                 <state key="normal" backgroundImage="MyCurrentLocation"/>
                                 <connections>
                                     <action selector="userDidTapShowCurrentLocation:" destination="UPP-Ft-hI7" eventType="touchUpInside" id="OeC-k8-Lfk"/>
@@ -45,14 +43,14 @@ http://api.um.warszawa.pl</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXk-At-R5Q">
-                                <rect key="frame" x="323" y="521" width="42" height="42"/>
+                                <rect key="frame" x="263" y="375" width="102" height="102"/>
                                 <state key="normal" backgroundImage="UserSettings"/>
                                 <connections>
                                     <action selector="userDidTapSettingsButton" destination="UPP-Ft-hI7" eventType="touchUpInside" id="gIa-ch-cA4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iob-TS-gtL" userLabel="RefresMapData">
-                                <rect key="frame" x="323" y="467" width="42" height="42"/>
+                                <rect key="frame" x="-35" y="-37" width="400" height="400"/>
                                 <state key="normal" backgroundImage="RefreshData"/>
                                 <connections>
                                     <action selector="userDidTapRefreshMapData:" destination="UPP-Ft-hI7" eventType="touchUpInside" id="qL4-Mm-NMv"/>
@@ -103,13 +101,13 @@ http://api.um.warszawa.pl</string>
         <!--Ustawienia-->
         <scene sceneID="x0w-fW-Yss">
             <objects>
-                <tableViewController title="Ustawienia" id="vJe-ia-FV0" customClass="SettingsVC" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Ustawienia" id="vJe-ia-FV0" customClass="SettingsVC" customModule="AppFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xHu-5D-RGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsSwitchCell" id="qDV-p0-qVF" userLabel="SwitchCell" customClass="SwitchTableViewCell" customModule="CoJezdzi" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsSwitchCell" id="qDV-p0-qVF" userLabel="SwitchCell" customClass="SwitchTableViewCell" customModule="AppFramework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qDV-p0-qVF" id="FFv-Op-5Er">
@@ -117,13 +115,13 @@ http://api.um.warszawa.pl</string>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tylko Niskopodłogowe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YV-MO-Pik">
-                                            <rect key="frame" x="24" y="12.5" width="162.5" height="19.5"/>
+                                            <rect key="frame" x="24" y="12" width="162.5" height="19.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="czQ-AD-gao">
-                                            <rect key="frame" x="302" y="6" width="51" height="31"/>
+                                            <rect key="frame" x="302" y="6.5" width="51" height="31"/>
                                             <connections>
                                                 <action selector="userDidInteractWithSwitch:" destination="qDV-p0-qVF" eventType="valueChanged" id="Tx3-Az-l2n"/>
                                             </connections>
@@ -206,7 +204,7 @@ http://api.um.warszawa.pl</string>
         <!--Wybrane Linie-->
         <scene sceneID="7pG-H6-p4P">
             <objects>
-                <collectionViewController storyboardIdentifier="LinesFilter" id="oN4-1b-1B2" customClass="FilterLinesCVC" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="LinesFilter" id="oN4-1b-1B2" customClass="FilterLinesCVC" customModule="AppFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="fIX-g0-bxB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +216,7 @@ http://api.um.warszawa.pl</string>
                             <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterLinesCell" id="wRM-ql-40Q" customClass="FilterCollectionViewCell" customModule="CoJezdzi" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterLinesCell" id="wRM-ql-40Q" customClass="FilterCollectionViewCell" customModule="AppFramework" customModuleProvider="target">
                                 <rect key="frame" x="5" y="5" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -265,7 +263,7 @@ http://api.um.warszawa.pl</string>
         <!--O Aplikacji-->
         <scene sceneID="O3a-TK-Ajx">
             <objects>
-                <viewController storyboardIdentifier="AboutApp" title="O Aplikacji" id="ys3-Wv-ume" customClass="WebScene" customModule="CoJezdzi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutApp" title="O Aplikacji" id="ys3-Wv-ume" customClass="WebScene" customModule="AppFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WxG-hA-Rd4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,8 +310,8 @@ http://api.um.warszawa.pl</string>
         </scene>
     </scenes>
     <resources>
-        <image name="MyCurrentLocation" width="42" height="42"/>
-        <image name="RefreshData" width="42" height="42"/>
-        <image name="UserSettings" width="42" height="42"/>
+        <image name="MyCurrentLocation" width="128" height="128"/>
+        <image name="RefreshData" width="400.69564819335938" height="400.69564819335938"/>
+        <image name="UserSettings" width="102.40000152587891" height="102.40000152587891"/>
     </resources>
 </document>

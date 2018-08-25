@@ -58,6 +58,16 @@
                ReferencedContainer = "container:CoJezdzi.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EF8C77042131989100C5BE5C"
+               BuildableName = "AppFrameworkTests.xctest"
+               BlueprintName = "AppFrameworkTests"
+               ReferencedContainer = "container:CoJezdzi.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

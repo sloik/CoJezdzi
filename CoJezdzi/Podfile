@@ -4,21 +4,25 @@ use_frameworks!
 
 #swift_version = '3.0'
 
-target 'CoJezdzi' do
-
+target 'AppFramework' do
     pod 'Colours'
     pod 'HTTPStatusCodes'
     pod 'ReSwift'
     pod 'R.swift'
     pod 'Overture'
+end
+
+target 'AppFrameworkTests' do
+    pod 'Overture'
+    pod 'ReSwift'
+end
+
+target 'CoJezdzi' do
 
 end
 
 target 'CoJezdziTests' do
-    
     pod 'Overture'
-    pod 'ReSwift'
-    
 end
 
 # dsymys for all installed pods
