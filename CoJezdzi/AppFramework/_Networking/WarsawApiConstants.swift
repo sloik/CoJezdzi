@@ -1,5 +1,9 @@
 import Foundation
 
+struct WarsawApiURL {
+    static let host = "https://api.um.warszawa.pl/"
+}
+
 enum WarsawApiConstants {
     static let BaseURL     = "https://api.um.warszawa.pl/api/action/busestrams_get"
     static let RefreshRate: TimeInterval = 18.0

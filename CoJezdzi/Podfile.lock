@@ -1,4 +1,6 @@
 PODS:
+  - APIKit (3.2.1):
+    - Result (~> 3.0)
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
@@ -7,32 +9,47 @@ PODS:
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
+  - Result (3.2.4)
   - ReSwift (4.0.1)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
 
 DEPENDENCIES:
+  - APIKit (~> 3.1)
   - Colours
-  - HTTPStatusCodes
+  - HTTPStatusCodes (~> 3.2.0)
   - Overture
   - R.swift
   - ReSwift
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - APIKit
     - Colours
     - HTTPStatusCodes
     - Overture
     - R.swift
     - R.swift.Library
+    - Result
     - ReSwift
+    - RxCocoa
+    - RxSwift
 
 SPEC CHECKSUMS:
+  APIKit: a39ff72ac44efc15513fd1b98800f63c525be61b
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   HTTPStatusCodes: 69f50d229c4b5d6dcb48fad9c86e32ded975bcd3
   Overture: 05dd0bcf2c9c63f1cf4555cd321baaef76d58784
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: 6cc0cea191f3615b1833f4a3b2e9d2fd77a84d40
+PODFILE CHECKSUM: c208769e248f03abb55f6753d9ff11874aad9348
 
 COCOAPODS: 1.5.3

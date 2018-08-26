@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265494402133409700DBFEAC /* Session+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2654943F2133409700DBFEAC /* Session+Rx.swift */; };
+		26549443213341B900DBFEAC /* UMWarsawApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26549442213341B900DBFEAC /* UMWarsawApi.swift */; };
+		265494452133439000DBFEAC /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265494442133439000DBFEAC /* NetworkLogger.swift */; };
+		265494492133442E00DBFEAC /* UMWarsawTransportApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265494482133442E00DBFEAC /* UMWarsawTransportApi.swift */; };
+		2654944B2133479900DBFEAC /* WarsawApiConstantsDoNotTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2654944A2133479900DBFEAC /* WarsawApiConstantsDoNotTrack.swift */; };
+		2654944D2133482A00DBFEAC /* UMWarsawTransportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2654944C2133482A00DBFEAC /* UMWarsawTransportResponse.swift */; };
 		45C58D98F7CB02394720880E /* Pods_EmptyTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72BB7FC8517AA6F66B392D3 /* Pods_EmptyTestApp.framework */; };
 		7EAF57B028A0F8C9F6E1D4F6 /* Pods_CoJezdzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231A542086605390FBD456C7 /* Pods_CoJezdzi.framework */; };
 		825277A4BBCFF779B336D2FC /* Pods_AppFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426D4E978E637DA380C85D20 /* Pods_AppFrameworkTests.framework */; };
@@ -25,10 +31,8 @@
 		EF8C77612131A03D00C5BE5C /* WarsawApiResultDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A2209A35B500BB5855 /* WarsawApiResultDto.swift */; };
 		EF8C77622131A04800C5BE5C /* C.Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267142097BD030076238D /* C.Networking.swift */; };
 		EF8C77632131A07E00C5BE5C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
-		EF8C77642131A08F00C5BE5C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42671A2097CB1D0076238D /* Result.swift */; };
 		EF8C77652131A09400C5BE5C /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
 		EF8C77662131A09D00C5BE5C /* WarsawApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267102097B9290076238D /* WarsawApiConstants.swift */; };
-		EF8C77672131A0A400C5BE5C /* WarsawApiConstantsDoNotTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */; };
 		EF8C77682131A0AA00C5BE5C /* WarsawApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267122097B9760076238D /* WarsawApi.swift */; };
 		EF8C77692131A0B500C5BE5C /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF56EF20F00D15009E419C /* Operators.swift */; };
 		EF8C776A2131A0D700C5BE5C /* GlobalUtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */; };
@@ -147,6 +151,12 @@
 		0E1F337FA36D67C883104983 /* Pods_AppFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A27662A69C252904D23A433 /* Pods_CoJezdziUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdziUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		231A542086605390FBD456C7 /* Pods_CoJezdzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2654943F2133409700DBFEAC /* Session+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+Rx.swift"; sourceTree = "<group>"; };
+		26549442213341B900DBFEAC /* UMWarsawApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMWarsawApi.swift; sourceTree = "<group>"; };
+		265494442133439000DBFEAC /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		265494482133442E00DBFEAC /* UMWarsawTransportApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMWarsawTransportApi.swift; sourceTree = "<group>"; };
+		2654944A2133479900DBFEAC /* WarsawApiConstantsDoNotTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift; sourceTree = "<group>"; };
+		2654944C2133482A00DBFEAC /* UMWarsawTransportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMWarsawTransportResponse.swift; sourceTree = "<group>"; };
 		2F7C59AC0D760AAD5A1347B4 /* Pods-CoJezdzi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.debug.xcconfig"; sourceTree = "<group>"; };
 		363A3415BE71C451129CA089 /* Pods-AppFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppFramework/Pods-AppFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		378F318546492117A3EAD915 /* Pods-AppFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,9 +205,7 @@
 		EF4267102097B9290076238D /* WarsawApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstants.swift; sourceTree = "<group>"; };
 		EF4267122097B9760076238D /* WarsawApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApi.swift; sourceTree = "<group>"; };
 		EF4267142097BD030076238D /* C.Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.Networking.swift; sourceTree = "<group>"; };
-		EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift; sourceTree = "<group>"; };
 		EF4267182097C2090076238D /* RoutingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingActions.swift; sourceTree = "<group>"; };
-		EF42671A2097CB1D0076238D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayAppRouter.swift; sourceTree = "<group>"; };
 		EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchAction.swift; sourceTree = "<group>"; };
 		EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLinesState.swift; sourceTree = "<group>"; };
@@ -294,6 +302,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2654943E2133400700DBFEAC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2654943F2133409700DBFEAC /* Session+Rx.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		26549446213343DA00DBFEAC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				265494482133442E00DBFEAC /* UMWarsawTransportApi.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		26549447213343E300DBFEAC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2654944C2133482A00DBFEAC /* UMWarsawTransportResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		5976FDC1E010EB3E0CB35DE9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,13 +492,17 @@
 		EF42670F2097B9020076238D /* _Networking */ = {
 			isa = PBXGroup;
 			children = (
+				26549447213343E300DBFEAC /* Response */,
+				26549446213343DA00DBFEAC /* Request */,
+				2654943E2133400700DBFEAC /* Extension */,
 				EF4266CD209265AB0076238D /* _DTOs */,
 				EF4267142097BD030076238D /* C.Networking.swift */,
-				EF42671A2097CB1D0076238D /* Result.swift */,
 				EF42669E209262340076238D /* URL_Extensions.swift */,
 				EF4267122097B9760076238D /* WarsawApi.swift */,
 				EF4267102097B9290076238D /* WarsawApiConstants.swift */,
-				EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */,
+				26549442213341B900DBFEAC /* UMWarsawApi.swift */,
+				265494442133439000DBFEAC /* NetworkLogger.swift */,
+				2654944A2133479900DBFEAC /* WarsawApiConstantsDoNotTrack.swift */,
 			);
 			path = _Networking;
 			sourceTree = "<group>";
@@ -827,9 +863,8 @@
 				TargetAttributes = {
 					BA5685411C763EA600D3B5FE = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = Q79FTA4VEX;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -936,19 +971,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1000,17 +1043,25 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/APIKit/APIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1079,7 +1130,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 		EF8C771D21319A2D00C5BE5C /* Rswift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1134,6 +1186,7 @@
 				EF8C779F2131B2C500C5BE5C /* App.swift in Sources */,
 				EF8C77982131A3D900C5BE5C /* FilterCollectionViewCell.swift in Sources */,
 				EF8C77712131A14800C5BE5C /* FetchTramsAction.swift in Sources */,
+				265494492133442E00DBFEAC /* UMWarsawTransportApi.swift in Sources */,
 				EF8C777A2131A16E00C5BE5C /* SelectedLineRemoveAllAction.swift in Sources */,
 				EF8C776C2131A0E700C5BE5C /* R.generated.swift in Sources */,
 				EF8C77942131A38700C5BE5C /* SwitchTableViewCell.swift in Sources */,
@@ -1143,28 +1196,31 @@
 				EF8C778B2131A2BA00C5BE5C /* Persistence.swift in Sources */,
 				EF8C77612131A03D00C5BE5C /* WarsawApiResultDto.swift in Sources */,
 				EF8C77652131A09400C5BE5C /* URL_Extensions.swift in Sources */,
+				2654944B2133479900DBFEAC /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF8C779B2131B20200C5BE5C /* WebScene.swift in Sources */,
 				EF8C779A2131B1F100C5BE5C /* Scenes.swift in Sources */,
+				2654944D2133482A00DBFEAC /* UMWarsawTransportResponse.swift in Sources */,
 				EF8C778F2131A30B00C5BE5C /* Nodes.swift in Sources */,
 				EF8C77842131A1F000C5BE5C /* RoutingReducer.swift in Sources */,
 				EF8C77622131A04800C5BE5C /* C.Networking.swift in Sources */,
 				EF8C778D2131A2F700C5BE5C /* AppMiddleware.swift in Sources */,
+				265494402133409700DBFEAC /* Session+Rx.swift in Sources */,
+				26549443213341B900DBFEAC /* UMWarsawApi.swift in Sources */,
 				EF8C775E21319FFB00C5BE5C /* VehicleState.swift in Sources */,
 				EF8C77692131A0B500C5BE5C /* Operators.swift in Sources */,
 				EF8C775F2131A00D00C5BE5C /* WarsawVehicleDto.swift in Sources */,
 				EF8C77992131A3E700C5BE5C /* FilterLinesCVC.swift in Sources */,
-				EF8C77642131A08F00C5BE5C /* Result.swift in Sources */,
 				EF8C77802131A1AE00C5BE5C /* RoutingState.swift in Sources */,
 				EF8C77602131A02700C5BE5C /* VehicleType.swift in Sources */,
 				EF8C77852131A1F700C5BE5C /* MapSceneReducer.swift in Sources */,
 				EF8C776D2131A0F000C5BE5C /* TAnnotation.swift in Sources */,
 				EF8C77812131A1DB00C5BE5C /* MapState.swift in Sources */,
+				265494452133439000DBFEAC /* NetworkLogger.swift in Sources */,
 				EF8C77972131A3C300C5BE5C /* SettingsVC.swift in Sources */,
 				EF8C776B2131A0E000C5BE5C /* PolylineMaker.swift in Sources */,
 				EF8C776F2131A10700C5BE5C /* TAnnotationView.swift in Sources */,
 				EF8C77632131A07E00C5BE5C /* Constants.swift in Sources */,
 				EF8C777E2131A19500C5BE5C /* SettingsSwitchAction.swift in Sources */,
-				EF8C77672131A0A400C5BE5C /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF8C77722131A14800C5BE5C /* FetchVehiclesPosytionsAction.swift in Sources */,
 				EF8C777D2131A18800C5BE5C /* SelectedLinesState.swift in Sources */,
 				EF8C77792131A16900C5BE5C /* SelectedLineRemoveAction.swift in Sources */,
@@ -1318,6 +1374,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1367,6 +1424,7 @@
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1381,9 +1439,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = Q79FTA4VEX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoJezdzi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1405,9 +1463,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = Q79FTA4VEX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoJezdzi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

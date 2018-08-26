@@ -2,14 +2,21 @@ platform :ios, '11.3'
 
 use_frameworks!
 
-#swift_version = '3.0'
+# swift_version = '4.0'
 
 target 'AppFramework' do
     pod 'Colours'
-    pod 'HTTPStatusCodes'
     pod 'ReSwift'
     pod 'R.swift'
     pod 'Overture'
+    
+    # Reactive
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
+
+    # Network layer
+    pod 'APIKit',    '~> 3.1'
+    pod 'HTTPStatusCodes',    '~> 3.2.0'
 end
 
 target 'AppFrameworkTests' do
