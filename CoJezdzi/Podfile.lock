@@ -3,7 +3,7 @@ PODS:
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
   - HTTPStatusCodes (3.2.0)
-  - Overture (0.2.0)
+  - Overture (0.3.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
@@ -28,7 +28,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   HTTPStatusCodes: 69f50d229c4b5d6dcb48fad9c86e32ded975bcd3
-  Overture: d1c61764d0bf32897934382dc46e131ee31cc094
+  Overture: 05dd0bcf2c9c63f1cf4555cd321baaef76d58784
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
