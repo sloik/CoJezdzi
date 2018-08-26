@@ -1,3 +1,5 @@
+//:[ToC](ToC) | [Previous](@previous) | [Next](@next)
+
 import UIKit
 import PlaygroundSupport
 
