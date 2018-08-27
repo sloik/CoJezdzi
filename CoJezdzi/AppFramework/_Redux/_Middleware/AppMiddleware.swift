@@ -1,5 +1,66 @@
-
 import ReSwift
+import APIKit
+import RxSwift
+import RxCocoa
+
+struct FetchAction: Action {
+    let request: UMWarsawTransportApi.GetRealtimeDataRequest
+    let resultFactory: ([WarsawVehicleDto]) -> Action
+}
+
+struct AppMiddleware {
+    
+    static let Api: Middleware<AppState> = { dispatch, getState in
+        return { next in
+            return { action in
+                guard action is FetchVehiclesPosytionsAction, let state = getState() else {
+                    next(action)
+                    return
+                }
+                
+                fetchActions(for: state.settingsState)
+                    .compactMap { action in
+                        let request = action.request
+                        networkSession.rx.response(request).compactMap { result in
+                            action.resultFactory(result)
+                        }
+                    }
+                    .observeOn(MainScheduler.instance)
+                    .subscribe(onNext: { action in
+                        dispatch(action)
+                    })
+            }
+        }
+    }
+    
+    fileprivate static var networkSession: Session {
+        return Session.shared
+    }
+    
+    fileprivate static func fetchActions(for settingsState: SettingsState) -> [FetchAction] {
+        let busOnly  = settingsState.switches.busOnly.isOn
+        let tramOnly = settingsState.switches.tramOnly.isOn
+        var actions = [FetchAction]()
+        
+        if busOnly  || tramOnly == false {
+            let request = UMWarsawTransportApi.GetRealtimeDataRequest(vehicleType: .bus)
+            let resultAction = { return FetchBussesAction(fetched: $0) }
+            let action = FetchAction(request: request, resultFactory: resultAction)
+            actions.append(action)
+        }
+        
+        if tramOnly || busOnly  == false {
+            let request = UMWarsawTransportApi.GetRealtimeDataRequest(vehicleType: .tram)
+            let resultAction = { return FetchBussesAction(fetched: $0) }
+            let action = FetchAction(request: request, resultFactory: resultAction)
+            actions.append(action)
+        }
+        
+        return actions
+    }
+}
+
+/// old version
 
 struct M {
     

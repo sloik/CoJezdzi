@@ -7,7 +7,7 @@ extension Session: ReactiveCompatible {
 }
 
 extension Reactive where Base: Session {
-    func response<T: Request>(_ request: T) -> Observable<T.Response> {
+    func response<T: APIKit.Request>(_ request: T) -> Observable<T.Response> {
         return Observable.create { [weak base] observer in
             let task = base?.send(request) { result in
                 switch result {

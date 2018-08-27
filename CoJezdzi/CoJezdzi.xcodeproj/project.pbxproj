@@ -33,7 +33,6 @@
 		EF8C77632131A07E00C5BE5C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266AB209262350076238D /* Constants.swift */; };
 		EF8C77652131A09400C5BE5C /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
 		EF8C77662131A09D00C5BE5C /* WarsawApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267102097B9290076238D /* WarsawApiConstants.swift */; };
-		EF8C77682131A0AA00C5BE5C /* WarsawApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267122097B9760076238D /* WarsawApi.swift */; };
 		EF8C77692131A0B500C5BE5C /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF56EF20F00D15009E419C /* Operators.swift */; };
 		EF8C776A2131A0D700C5BE5C /* GlobalUtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */; };
 		EF8C776B2131A0E000C5BE5C /* PolylineMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */; };
@@ -203,7 +202,6 @@
 		EF42670820978E940076238D /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
 		EF42670A2097918A0076238D /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
 		EF4267102097B9290076238D /* WarsawApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstants.swift; sourceTree = "<group>"; };
-		EF4267122097B9760076238D /* WarsawApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApi.swift; sourceTree = "<group>"; };
 		EF4267142097BD030076238D /* C.Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.Networking.swift; sourceTree = "<group>"; };
 		EF4267182097C2090076238D /* RoutingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingActions.swift; sourceTree = "<group>"; };
 		EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayAppRouter.swift; sourceTree = "<group>"; };
@@ -498,7 +496,6 @@
 				EF4266CD209265AB0076238D /* _DTOs */,
 				EF4267142097BD030076238D /* C.Networking.swift */,
 				EF42669E209262340076238D /* URL_Extensions.swift */,
-				EF4267122097B9760076238D /* WarsawApi.swift */,
 				EF4267102097B9290076238D /* WarsawApiConstants.swift */,
 				26549442213341B900DBFEAC /* UMWarsawApi.swift */,
 				265494442133439000DBFEAC /* NetworkLogger.swift */,
@@ -1174,7 +1171,6 @@
 				EF8C779E2131B21A00C5BE5C /* MapScene+MKMapViewDelegate.swift in Sources */,
 				EF8C77902131A30E00C5BE5C /* Routable.swift in Sources */,
 				EF8C776A2131A0D700C5BE5C /* GlobalUtilFunctions.swift in Sources */,
-				EF8C77682131A0AA00C5BE5C /* WarsawApi.swift in Sources */,
 				EF8C77782131A16300C5BE5C /* SelectedLineAddAction.swift in Sources */,
 				EF8C778E2131A30700C5BE5C /* GamePlayAppRouter.swift in Sources */,
 				EF8C779C2131B20A00C5BE5C /* MapScene.swift in Sources */,

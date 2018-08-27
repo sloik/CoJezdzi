@@ -5,7 +5,7 @@ final class UMWarsawTransportApi {
     private init() {
     }
     
-    struct GetTransportMeanRequest: UMWarsawRequest {
+    struct GetRealtimeDataRequest: UMWarsawRequest {
         
         let vehicleType: WarsawVehicleType
 
@@ -20,7 +20,7 @@ final class UMWarsawTransportApi {
             return "/action/busestrams_get"
         }
         
-        var parameters: Any? {
+        var queryParameters: [String: Any] {
             return [
                 "apikey": WarsawApiConstants.ParamValue.APIKey,
                 "resource_id": "c7238cfe-8b1f-4c38-bb4a-de386db7e776",
