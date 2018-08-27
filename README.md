@@ -27,6 +27,8 @@ This file is not track by the reposytory and is missing in this one when you clo
 
 # Plans
 
+[Trello Board](https://trello.com/b/g9Kqy56c)
+
 ## Desired Architecture
 
 ```
