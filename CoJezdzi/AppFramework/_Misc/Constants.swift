@@ -2,11 +2,6 @@ import MapKit
 import UIKit
 
 struct C {
-    
-    struct API {
-        static let FakeAPI = "YOUR_WARSAW_API_API_KEY"
-    }
-    
     struct Error {
         static let Domain = "Co.Jezdzi.Error"
         
@@ -25,11 +20,6 @@ struct C {
         }
     }
     struct Storyboard {
-        struct ViewControllerID {
-            static let Map      = "MapScene"
-            static let Settings = "SettingsScene"
-        }
-
         struct CellReuseId {
             static let SettingsSwitchCell      = "SettingsSwitchCell"
             static let SettingsGoingDeeperCell = "SettingsGoingDeeperCell"
@@ -40,10 +30,6 @@ struct C {
     }
 
     struct UI {
-        struct PageMenu {
-            static let Height: CGFloat = 60.0
-        }
-
         struct Map {
             struct Dimonsion {
                 static let AnnotationViewSize = CGSize(width: 25, height: 25)
