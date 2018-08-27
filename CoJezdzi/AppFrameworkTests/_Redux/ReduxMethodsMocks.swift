@@ -1,4 +1,5 @@
 @testable import AppFramework
+@testable import TestsHelpper
 
 import ReSwift
 import Overture

@@ -3,8 +3,7 @@
 import Foundation
 
 extension Environment {
-    
-    static let mock = Environment(
+    public static let mock = Environment(
         dataProvider: .mock,
         reduxStore: Current.reduxStore,
         persistance: .mock,
@@ -14,7 +13,7 @@ extension Environment {
         constants: Constants())
     
 
-    static let errorMock = Environment(
+    public static let errorMock = Environment(
         dataProvider: .errorMock,
         reduxStore: Current.reduxStore,
         persistance: .mock,

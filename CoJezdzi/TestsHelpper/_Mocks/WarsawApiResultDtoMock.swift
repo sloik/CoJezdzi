@@ -3,7 +3,7 @@
 import Foundation
 
 extension WarsawApiResultDto {
-    static let mock = WarsawApiResultDto(
+    public static let mock = WarsawApiResultDto(
         result: [.mock]
     )
 }

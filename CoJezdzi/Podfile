@@ -1,8 +1,14 @@
-platform :ios, '11.3'
+platform :ios, '12.0'
 
 use_frameworks!
 
 #swift_version = '3.0'
+
+target 'EmptyTestApp' do
+end
+
+target 'CoJezdzi' do
+end
 
 target 'AppFramework' do
     pod 'Colours'
@@ -17,10 +23,9 @@ target 'AppFrameworkTests' do
     pod 'ReSwift'
 end
 
-target 'EmptyTestApp' do
-end
-
-target 'CoJezdzi' do
+target 'TestsHelpper' do
+    pod 'Overture'
+    pod 'ReSwift'
 end
 
 # dsymys for all installed pods

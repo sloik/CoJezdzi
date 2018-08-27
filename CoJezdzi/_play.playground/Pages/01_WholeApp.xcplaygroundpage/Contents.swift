@@ -12,3 +12,5 @@ let (parent, _) = playgroundControllers(device: .phone5_5inch,
                                         orientation: .portrait,
                                         child: window.rootViewController!)
 PlaygroundPage.current.liveView = parent
+
+//:[ToC](ToC) | [Previous](@previous) | [Next](@next)
