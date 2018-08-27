@@ -120,7 +120,7 @@ private extension MapScene {
     }
 
     func zoomMapOnTheCity() {
-        mapView.region = C.Coordinate.WarsawRegion
+        mapView.region =  Current.constants.coordinate.warsawRegion
     }
 
     func zoomOnUserLocationIfNotShity() {
@@ -128,9 +128,10 @@ private extension MapScene {
             if userLocation.horizontalAccuracy > 0 && userLocation.verticalAccuracy > 0 {
 
                 let scaleFactor = 0.35
-                mapView.region = MKCoordinateRegion.init(center: userLocation.coordinate,
-                                                                    latitudinalMeters: C.Coordinate.DefaultSpreadDistance * scaleFactor,
-                                                                    longitudinalMeters: C.Coordinate.DefaultSpreadDistance * scaleFactor)
+                let spreadDistance = Current.constants.coordinate.spread * scaleFactor
+                mapView.region = MKCoordinateRegion(center: userLocation.coordinate,
+                                                                    latitudinalMeters: spreadDistance,
+                                                                    longitudinalMeters: spreadDistance)
             }
         }
     }

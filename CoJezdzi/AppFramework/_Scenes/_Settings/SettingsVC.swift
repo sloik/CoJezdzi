@@ -14,24 +14,27 @@ private struct ViewModel {
 }
 
 class SettingsVC: UITableViewController {
-
     fileprivate var cellOrdering: [ViewModel]  {
-
+        let cellReuseIds = Current.constants.storyboard.cellreuseIds
+        let menuLabels = Current.constants.ui.settings.menuLabels
+        
         let cells = [
-            ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsGoingDeeperCell, title: C.UI.Settings.MenuLabels.Filters),
-            ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsSwitchCell,      title: C.UI.Settings.MenuLabels.BussesOnly),
-            ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsSwitchCell,      title: C.UI.Settings.MenuLabels.TramsOnly),
-            ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsSwitchCell,      title: C.UI.Settings.MenuLabels.TramMarks),
-            ViewModel(reuseID: C.Storyboard.CellReuseId.SettingsAboutAppCell,    title: C.UI.Settings.MenuLabels.AboutApp)]
+            ViewModel(reuseID: cellReuseIds.settingsGoingDeeper, title: menuLabels.filters),
+            ViewModel(reuseID: cellReuseIds.settingsSwitch,      title: menuLabels.bussesOnly),
+            ViewModel(reuseID: cellReuseIds.settingsSwitch,      title: menuLabels.tramsOnly),
+            ViewModel(reuseID: cellReuseIds.settingsSwitch,      title: menuLabels.tramMarks),
+            ViewModel(reuseID: cellReuseIds.settingsAboutApp,    title: menuLabels.aboutApp)]
 
         return cells
     }
     
     var titleToState: [String: SettingsState.Filter] {
+        let menuLabels = Current.constants.ui.settings.menuLabels
+        
         return
-            [C.UI.Settings.MenuLabels.TramMarks : latesState.switches.previousLocations,
-             C.UI.Settings.MenuLabels.TramsOnly : latesState.switches.tramOnly,
-             C.UI.Settings.MenuLabels.BussesOnly: latesState.switches.busOnly]
+            [menuLabels.tramMarks : latesState.switches.previousLocations,
+             menuLabels.tramsOnly : latesState.switches.tramOnly,
+             menuLabels.bussesOnly: latesState.switches.busOnly]
     }
     
     fileprivate var latesState: SettingsState! {
@@ -93,10 +96,13 @@ extension SettingsVC {
         let viewModel = cellOrdering[indexPath.row]
         let reuseID = viewModel.reuseID
 
+        let cellReuseIds = Current.constants.storyboard.cellreuseIds
+        let menuLabels   = Current.constants.ui.settings.menuLabels
+        
         switch reuseID {
-        case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
+        case cellReuseIds.settingsGoingDeeper:
             switch viewModel.title {
-            case C.UI.Settings.MenuLabels.Filters:
+            case menuLabels.filters:
                 Current
                     .reduxStore
                     .dispatch(RoutingAction(destination: .linesFilter))
@@ -105,12 +111,12 @@ extension SettingsVC {
                 print("Unhandled action for cell with title \(viewModel.title)")
             }
             
-        case C.Storyboard.CellReuseId.SettingsAboutAppCell:
+        case cellReuseIds.settingsAboutApp:
             Current
                 .reduxStore
                 .dispatch(RoutingAction(destination: .aboutApp))
             
-        case C.Storyboard.CellReuseId.SettingsSwitchCell:
+        case cellReuseIds.settingsSwitch:
             let viewModel = cellOrdering[indexPath.row]
             let currentState = titleToState[viewModel.title]!
             
@@ -151,15 +157,15 @@ extension CellConfiguration {
         let viewModel = cellOrdering[indexPath.row]
         
         switch viewModel.reuseID {
-        case C.Storyboard.CellReuseId.SettingsSwitchCell:
+        case Current.constants.storyboard.cellreuseIds.settingsSwitch:
             let switchCell = cell as! SwitchTableViewCell
             switchCell.delegate = self
             configureSwitchCell(cell: switchCell, atIndexPath: indexPath)
             
-        case C.Storyboard.CellReuseId.SettingsGoingDeeperCell:
+        case Current.constants.storyboard.cellreuseIds.settingsGoingDeeper:
             configureDeeper(cell: cell, with: viewModel)
             
-        case C.Storyboard.CellReuseId.SettingsAboutAppCell:
+        case Current.constants.storyboard.cellreuseIds.settingsAboutApp:
             configureAboutApplicationCell(cell: cell, viewModel: viewModel)
             
         default:
@@ -170,7 +176,7 @@ extension CellConfiguration {
     private func configureDeeper(cell: UITableViewCell, with viewModel: ViewModel) {
         
         switch viewModel.title {
-        case C.UI.Settings.MenuLabels.Filters:
+        case Current.constants.ui.settings.menuLabels.filters:
             cell.textLabel?.text = "Wybierz Linie"
             cell.detailTextLabel?.text = "Wszystkie"
             
@@ -214,17 +220,17 @@ extension SettingsVC: SwitchCellInteraction {
         guard let cellTitle = cell.switchNameLabel.text else { return }
 
         switch cellTitle {
-        case C.UI.Settings.MenuLabels.TramMarks:
+        case Current.constants.ui.settings.menuLabels.tramMarks:
             Current
                 .reduxStore
                 .dispatch(SettingsSwitchAction(whitchSwitch: .previousLocation(on: isOn)))
 
-        case C.UI.Settings.MenuLabels.TramsOnly:
+        case Current.constants.ui.settings.menuLabels.tramsOnly:
             Current
                 .reduxStore
                 .dispatch(SettingsSwitchAction(whitchSwitch: .tram(on: isOn)))
             
-        case C.UI.Settings.MenuLabels.BussesOnly:
+        case Current.constants.ui.settings.menuLabels.bussesOnly:
             Current
                 .reduxStore
                 .dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))

@@ -12,8 +12,9 @@ extension MapScene: MKMapViewDelegate {
         if view == nil {
             view = TAnnotationView.init(annotation: annotation, reuseIdentifier: TAnnotationView.ReuseID)
         }
+
         
-        view?.frame.size = C.UI.Map.Dimonsion.AnnotationViewSize
+        view?.frame.size = Current.constants.ui.map.dimention.annotationSize
         view?.configure(annotation as! TAnnotation)
         view?.canShowCallout = true
         

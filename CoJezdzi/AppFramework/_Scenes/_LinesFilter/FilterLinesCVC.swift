@@ -74,8 +74,9 @@ extension FilterLinesCVC {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: C.Storyboard.CellReuseId.FilterLinesCell,
-                                                      for: indexPath)
+        let cell = collectionView
+            .dequeueReusableCell(withReuseIdentifier: Current.constants.storyboard.cellreuseIds.filterLines,
+                                 for: indexPath)
         
         configure(cell: cell, at: indexPath)
         
