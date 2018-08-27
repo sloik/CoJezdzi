@@ -1,7 +1,7 @@
 import MapKit
 import UIKit
 
-struct C {
+struct Constants {
     struct Error {
         private(set) var Domain = "Co.Jezdzi.Error"
         

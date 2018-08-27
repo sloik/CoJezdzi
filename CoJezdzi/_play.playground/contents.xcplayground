@@ -3,5 +3,6 @@
     <pages>
         <page name='ToC'/>
         <page name='01_WholeApp'/>
+        <page name='02_SettingsScene'/>
     </pages>
 </playground>

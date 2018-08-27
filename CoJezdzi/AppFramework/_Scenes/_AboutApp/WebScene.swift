@@ -7,7 +7,7 @@ class WebScene: UIViewController {
     @IBOutlet weak var spacer: UIView!
 
     lazy var webVC: SFSafariViewController = { [unowned self] in
-        return  SFSafariViewController(url: URL(string:C.Networking.GoToURL.AboutApp)!)
+        return  SFSafariViewController(url: URL(string:Constants.Networking.GoToURL.AboutApp)!)
     }()
 
     override func viewDidLoad() {

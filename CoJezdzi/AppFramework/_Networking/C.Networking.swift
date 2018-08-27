@@ -1,7 +1,7 @@
 
 import Foundation
 
-extension C {
+extension Constants {
     struct Networking {
         struct GoToURL {
             static let AboutApp      = "https://avantapp.wordpress.com/co-jezdzi/"

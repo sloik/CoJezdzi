@@ -36,7 +36,7 @@ fileprivate func urlRequest(for resource: WarsawApiConstants.EnParamValue) -> UR
         >>> set(\.queryItems, queryItems(resource))
         >>> get(\NSURLComponents.url!)
         >>> NSMutableURLRequest.init(url:)
-        >>> set(\.httpMethod, C.Networking.HTTPMethod.POST)
+        >>> set(\.httpMethod, Constants.Networking.HTTPMethod.POST)
     
     return request as URLRequest
 }
