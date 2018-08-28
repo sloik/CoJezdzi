@@ -144,7 +144,7 @@ private extension MapScene {
 
         button?.tintColor = UIColor.eggplant()
         button?.isAccessibilityElement = true
-        button?.accessibilityIdentifier = AccessibilityConstants.mapScene.styleButton.rawValue
+//        button?.accessibilityIdentifier = AccessibilityConstants.mapScene.styleButton.rawValue
     }
 }
 

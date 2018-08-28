@@ -10,6 +10,14 @@ end
 target 'CoJezdzi' do
 end
 
+target 'CoJezdziUITests' do
+    pod 'Colours'
+    pod 'HTTPStatusCodes'
+    pod 'ReSwift'
+    pod 'R.swift'
+    pod 'Overture'
+end
+
 target 'AppFramework' do
     pod 'Colours'
     pod 'HTTPStatusCodes'
