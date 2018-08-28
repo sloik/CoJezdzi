@@ -1,8 +1,8 @@
 
 import MapKit
 import UIKit
-
 import ReSwift
+
 
 class MapScene: UIViewController {
 
@@ -143,6 +143,8 @@ private extension MapScene {
         button?.layer.shadowOffset = CGSize(width: 3, height: 5)
 
         button?.tintColor = UIColor.eggplant()
+        button?.isAccessibilityElement = true
+        button?.accessibilityIdentifier = AccessibilityConstants.mapScene.styleButton.rawValue
     }
 }
 
