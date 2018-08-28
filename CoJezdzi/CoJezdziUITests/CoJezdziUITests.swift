@@ -25,8 +25,6 @@ class CoJezdziUITests: XCTestCase {
         XCUIApplication().launch()
         
 
-        
-      
     }
     
     override func tearDown() {
@@ -42,14 +40,7 @@ class CoJezdziUITests: XCTestCase {
         button.waitForExistence(timeout: 10)
         button.tap()
         
-        done.tap()
-        
-        XCUIApplication().alerts["Allow “Co Jeździ” to access your location while you are using the app?"].buttons["Allow"].tap()
-        
-        let app = XCUIApplication()
-        app.links["Legal"].tap()
-        app.children(matching: .window).element(boundBy: 6).children(matching: .other).element.tap()
-
+       
         
         
     }
