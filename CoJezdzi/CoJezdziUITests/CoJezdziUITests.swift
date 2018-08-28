@@ -1,14 +1,8 @@
 //
-//  CoJezdziUITests.swift
-//  CoJezdziUITests
-//
-//  Created by Lukasz Stocki on 18/02/16.
-//  Copyright © 2016 A.C.M.E. All rights reserved.
-//
 
 import XCTest
-import TestsHelpper
-import AppFramework
+@testable import TestsHelpper
+@testable import AppFramework
 import ReSwift
 import Overture
 
@@ -20,6 +14,7 @@ class CoJezdziUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         
+        Current = .mock
        
         continueAfterFailure = false
         XCUIApplication().launch()
