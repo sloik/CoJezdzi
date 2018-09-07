@@ -15,6 +15,7 @@
 		BA56854D1C763EA600D3B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA56854C1C763EA600D3B5FE /* Assets.xcassets */; };
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
+		EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */; };
 		EF1E162C21431E2A00A8E967 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162921431A4300A8E967 /* UseCase.swift */; };
 		EF8C77062131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
 		EF8C770F2131989100C5BE5C /* AppFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8C76FF2131989100C5BE5C /* AppFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -195,6 +196,7 @@
 		EF0DC0E620B8C102000BF4DB /* THC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THC.swift; sourceTree = "<group>"; };
 		EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDidRestoreAction.swift; sourceTree = "<group>"; };
 		EF1E162921431A4300A8E967 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		EF3BB72520CC042A004BD9C3 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		EF42669A209262340076238D /* MapScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				EF1E162921431A4300A8E967 /* UseCase.swift */,
+				EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */,
 			);
 			path = _UseCases;
 			sourceTree = "<group>";
@@ -1240,6 +1243,7 @@
 				EF8C779D2131B21400C5BE5C /* MapScene+CLLocationManagerDelegate.swift in Sources */,
 				EF8C77702131A14800C5BE5C /* FetchBussesAction.swift in Sources */,
 				EF8C779F2131B2C500C5BE5C /* App.swift in Sources */,
+				EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */,
 				EF8C77982131A3D900C5BE5C /* FilterCollectionViewCell.swift in Sources */,
 				EF8C77712131A14800C5BE5C /* FetchTramsAction.swift in Sources */,
 				EF8C777A2131A16E00C5BE5C /* SelectedLineRemoveAllAction.swift in Sources */,
