@@ -5,5 +5,5 @@ import Foundation
 extension Persistence {
     public static let mock = Persistence(
         persist: { (settingsState) in debugPrint(settingsState) },
-           load: {debugPrint("Loading state from persistance!")})
+           load: { return .mock })
 }
