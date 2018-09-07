@@ -10,7 +10,8 @@ extension Environment {
         scenes: Current.scenes,
         router: Current.router,
         userDefaults: UserDefaults(),
-        constants: Constants())
+        constants: Constants(),
+        useCaseFactory: UseCaseFactory())
     
 
     public static let errorMock = Environment(
@@ -20,5 +21,6 @@ extension Environment {
         scenes: Current.scenes,
         router: Current.router,
         userDefaults: UserDefaults(),
-        constants: Constants())
+        constants: Constants(),
+        useCaseFactory: UseCaseFactory())
 }

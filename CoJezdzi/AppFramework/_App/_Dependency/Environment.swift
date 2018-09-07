@@ -12,6 +12,8 @@ struct Environment {
     private(set) var userDefaults = UserDefaults.standard
     
     private(set) var constants = Constants()
+    
+    private(set) var useCaseFactory = UseCaseFactory()
 }
 
 var Current = Environment()
