@@ -10,7 +10,7 @@ class Persistence {
     private(set) var load = loadSaved
     
     init(){}
-    init(persist: @escaping ((SettingsState) -> Void), load: @escaping () -> ()) {
+    init(persist: @escaping ((SettingsState) -> Void), load: @escaping () -> SettingsState?) {
         self.persist = persist
         self.load = load
     }
@@ -23,7 +23,7 @@ fileprivate func persist(state: SettingsState) {
     UserDefaults.standard.set(data, forKey: Persistence.Keys.persistance)
 }
 
-func loadSaved() {
+func loadSaved() -> SettingsState? {
     defer {
         Current
             .reduxStore
@@ -35,12 +35,10 @@ func loadSaved() {
     }
     
     // TODO: move to bg queue
-    guard let data = Current.userDefaults.data(forKey: Persistence.Keys.persistance) else { return }
+    guard let data = Current.userDefaults.data(forKey: Persistence.Keys.persistance) else { return nil }
     let state = try! JSONDecoder().decode(SettingsState.self, from: data)
     
-    Current
-        .reduxStore
-        .dispatch(SettingsDidRestoreAction(restoredState: state))
+    return state
 }
 
 // MARK: - ReSwift

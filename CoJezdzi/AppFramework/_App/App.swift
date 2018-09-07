@@ -8,6 +8,10 @@ public enum App {
         UINavigationBar.appearance().tintColor = UIColor.eggplant()
         
         window.rootViewController = Current.router.rootVC()
-        Current.persistance.load()
+        
+        Current
+            .useCaseFactory
+            .loadPersistenState
+            .start()        
     }
 }
