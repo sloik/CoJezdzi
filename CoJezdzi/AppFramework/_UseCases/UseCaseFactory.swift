@@ -8,6 +8,8 @@ struct UseCaseFactory {
     private(set) var filterSelectLine   = selectLine(_:)
     private(set) var filterDeselectLine = deselect(line:)
     private(set) var filterClear        = clearSelection
+    
+    private(set) var navigateTo = goto(destination:)
 }
 
 // MARK: - Implementation Detail
@@ -49,5 +51,11 @@ fileprivate func clearSelection() {
     Current
         .reduxStore
         .dispatch(SelectedLineRemoveAllAction())
+}
+
+fileprivate func goto(destination: RoutingDestination) {
+    Current
+        .reduxStore
+        .dispatch(RoutingAction(destination: destination))
 }
 
