@@ -156,8 +156,8 @@ extension MapScene {
     
     @IBAction func userDidTapSettingsButton() {
         Current
-            .reduxStore
-            .dispatch(RoutingAction(destination: .settings))
+            .useCaseFactory
+            .navigateToSettings()
     }
 
     @IBAction func userDidTapShowCurrentLocation(_ sender: UIButton) {

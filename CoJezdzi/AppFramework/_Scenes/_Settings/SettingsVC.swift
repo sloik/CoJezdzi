@@ -104,8 +104,8 @@ extension SettingsVC {
             switch viewModel.title {
             case menuLabels.filters:
                 Current
-                    .reduxStore
-                    .dispatch(RoutingAction(destination: .linesFilter))
+                    .useCaseFactory
+                    .navigateTo(.linesFilter)
                 
             default:
                 print("Unhandled action for cell with title \(viewModel.title)")
@@ -113,8 +113,8 @@ extension SettingsVC {
             
         case cellReuseIds.settingsAboutApp:
             Current
-                .reduxStore
-                .dispatch(RoutingAction(destination: .aboutApp))
+                .useCaseFactory
+                .navigateTo(.aboutApp)
             
         case cellReuseIds.settingsSwitch:
             let viewModel = cellOrdering[indexPath.row]
