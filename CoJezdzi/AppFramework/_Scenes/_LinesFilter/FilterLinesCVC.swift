@@ -92,12 +92,12 @@ extension FilterLinesCVC {
         let selectedLine = lines[indexPath.row]
         if latesState.settingsState.selectedLines.lines.contains(LineInfo(name: selectedLine)) {
             Current
-                .reduxStore
-                .dispatch(SelectedLineRemoveAction(line: selectedLine))
+                .useCaseFactory
+                .filterSelectLine(selectedLine)
         } else {
             Current
-                .reduxStore
-                .dispatch(SelectedLineAddAction(line: selectedLine))
+                .useCaseFactory
+                .filterDeselectLine(selectedLine)
         }
     }
 }
@@ -116,8 +116,8 @@ extension FilterLinesCVC {
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             Current
-                .reduxStore
-                .dispatch(SelectedLineRemoveAllAction())
+                .useCaseFactory
+                .filterClear()
         }
     }
 }

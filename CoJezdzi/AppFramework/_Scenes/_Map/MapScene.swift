@@ -172,8 +172,9 @@ extension MapScene {
 private extension MapScene {
     func triggerDataRefresh() {
         Current
-            .reduxStore
-            .dispatch(FetchVehiclesPosytionsAction())
+            .useCaseFactory
+            .fetchVehiclesData
+            .start()
     }
 }
 
