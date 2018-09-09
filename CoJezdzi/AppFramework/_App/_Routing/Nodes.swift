@@ -29,6 +29,6 @@ class Node: GKGraphNode {
     }
     
     override var description: String {
-        return "Node: \"\(id)\""
+        return "[Node:\(super.description)]: \"\(id)\""
     }
 }
