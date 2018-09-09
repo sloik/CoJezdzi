@@ -10,6 +10,7 @@ struct UseCaseFactory {
     private(set) var filterClear        = clearSelection
     
     private(set) var navigateTo = goto(destination:)
+    private(set) var changeFilter = changeSwitch(_:)
 }
 
 // MARK: - Implementation Detail
@@ -57,5 +58,11 @@ fileprivate func goto(destination: RoutingDestination) {
     Current
         .reduxStore
         .dispatch(RoutingAction(destination: destination))
+}
+
+fileprivate func changeSwitch(_ filter: SettingsState.Filter) {
+    Current
+        .reduxStore
+        .dispatch(SettingsSwitchAction(whitchSwitch: filter))
 }
 
