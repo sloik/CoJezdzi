@@ -6,7 +6,7 @@ import ReSwift
 private struct ViewModel {
     let reuseID: String
     let title  : String
-
+    
     init(reuseID: String, title: String) {
         self.reuseID = reuseID
         self.title   = title
@@ -24,7 +24,7 @@ class SettingsVC: UITableViewController {
             ViewModel(reuseID: cellReuseIds.settingsSwitch,      title: menuLabels.tramsOnly),
             ViewModel(reuseID: cellReuseIds.settingsSwitch,      title: menuLabels.tramMarks),
             ViewModel(reuseID: cellReuseIds.settingsAboutApp,    title: menuLabels.aboutApp)]
-
+        
         return cells
     }
     
@@ -78,7 +78,7 @@ class SettingsVC: UITableViewController {
 extension SettingsVC {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
+        
         actionForCell(at: indexPath)
     }
     
@@ -95,7 +95,7 @@ extension SettingsVC {
     fileprivate func actionForCell(at indexPath: IndexPath) {
         let viewModel = cellOrdering[indexPath.row]
         let reuseID = viewModel.reuseID
-
+        
         let cellReuseIds = Current.constants.storyboard.cellreuseIds
         let menuLabels   = Current.constants.ui.settings.menuLabels
         
@@ -121,9 +121,9 @@ extension SettingsVC {
             let currentState = titleToState[viewModel.title]!
             
             Current
-                .reduxStore
-                .dispatch(SettingsSwitchAction(whitchSwitch: currentState.reversed))
- 
+                .useCaseFactory
+                .changeFilter(currentState.reversed)
+            
         default:
             return
         }
@@ -133,11 +133,11 @@ extension SettingsVC {
 // MARK: -
 private typealias CellConfiguration = SettingsVC
 extension CellConfiguration {
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellOrdering.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return configureCell(at: indexPath)
     }
@@ -145,7 +145,7 @@ extension CellConfiguration {
     // MARK: Helpers
     func configureCell(at indexPath: IndexPath) -> UITableViewCell {
         let viewModel = cellOrdering[indexPath.row]
-
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.reuseID, for: indexPath)
         
         configure(cell: cell, at: indexPath)
@@ -209,7 +209,7 @@ extension CellConfiguration {
     
     func refreshVisibleRows() {
         guard let visibleIndexes = tableView.indexPathsForVisibleRows else { return }
-
+        
         visibleIndexes.forEach { configure(cell: tableView.cellForRow(at: $0)!, at: $0) }
     }
 }
@@ -218,23 +218,23 @@ extension CellConfiguration {
 extension SettingsVC: SwitchCellInteraction {
     func cellSwichValueDidChange(cell: SwitchTableViewCell, isOn: Bool) {
         guard let cellTitle = cell.switchNameLabel.text else { return }
-
+        
         switch cellTitle {
         case Current.constants.ui.settings.menuLabels.tramMarks:
             Current
-                .reduxStore
-                .dispatch(SettingsSwitchAction(whitchSwitch: .previousLocation(on: isOn)))
-
+                .useCaseFactory
+                .changeFilter(.previousLocation(on: isOn))
+            
         case Current.constants.ui.settings.menuLabels.tramsOnly:
             Current
-                .reduxStore
-                .dispatch(SettingsSwitchAction(whitchSwitch: .tram(on: isOn)))
+                .useCaseFactory
+                .changeFilter(.tram(on: isOn))
             
         case Current.constants.ui.settings.menuLabels.bussesOnly:
             Current
-                .reduxStore
-                .dispatch(SettingsSwitchAction(whitchSwitch: .bus(on: isOn)))
-
+                .useCaseFactory
+                .changeFilter(.bus(on: isOn))
+            
         default: print("\(#file) \(#line) -> No valid action for cell with title: \(String(describing: cell.switchNameLabel.text))")
         }
     }
