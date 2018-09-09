@@ -157,7 +157,7 @@ extension MapScene {
     @IBAction func userDidTapSettingsButton() {
         Current
             .useCaseFactory
-            .navigateToSettings()
+            .navigateTo(.settings)
     }
 
     @IBAction func userDidTapShowCurrentLocation(_ sender: UIButton) {
