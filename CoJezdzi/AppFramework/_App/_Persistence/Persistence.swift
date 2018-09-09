@@ -20,7 +20,9 @@ class Persistence {
 
 fileprivate func persist(state: SettingsState) {
     let data = try! JSONEncoder().encode(state)
-    UserDefaults.standard.set(data, forKey: Persistence.Keys.persistance)
+    Current
+        .userDefaults
+        .set(data, forKey: Persistence.Keys.persistance)
 }
 
 func loadSaved() -> SettingsState? {
