@@ -73,7 +73,7 @@ func updateSwitches(_ state : SettingsState.FilterState,
             state,
             concat(
                 set(\.busOnly, .bus(on: on)),
-                set(\.tramOnly,.bus(on: on ? false : state.tramOnly.isOn))
+                set(\.tramOnly,.tram(on: on ? false : state.tramOnly.isOn))
             )
         )
         
