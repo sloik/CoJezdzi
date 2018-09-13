@@ -17,6 +17,7 @@
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
 		EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */; };
 		EF1E162C21431E2A00A8E967 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162921431A4300A8E967 /* UseCase.swift */; };
+		EF44A2D52149AB4200E9866E /* SettingsSwitchReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */; };
 		EF8C77062131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
 		EF8C770F2131989100C5BE5C /* AppFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8C76FF2131989100C5BE5C /* AppFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF8C77122131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
@@ -224,6 +225,7 @@
 		EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift; sourceTree = "<group>"; };
 		EF4267182097C2090076238D /* RoutingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingActions.swift; sourceTree = "<group>"; };
 		EF42671A2097CB1D0076238D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchReducerTests.swift; sourceTree = "<group>"; };
 		EF47764D20A8DA4E006D7107 /* GamePlayAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayAppRouter.swift; sourceTree = "<group>"; };
 		EF611502209E53BB00E05E02 /* SettingsSwitchAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchAction.swift; sourceTree = "<group>"; };
 		EF61150720A4BE1200E05E02 /* SelectedLinesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLinesState.swift; sourceTree = "<group>"; };
@@ -523,6 +525,14 @@
 			path = _Networking;
 			sourceTree = "<group>";
 		};
+		EF44A2D32149AA9800E9866E /* _Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */,
+			);
+			path = _Reducers;
+			sourceTree = "<group>";
+		};
 		EF47764F20A8DA57006D7107 /* _App */ = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +733,7 @@
 			isa = PBXGroup;
 			children = (
 				EFF366BD212F2EB6008ED5DC /* _Middleware */,
+				EF44A2D32149AA9800E9866E /* _Reducers */,
 				EF8C76F0212F598D00C5BE5C /* _State */,
 				EF8C76F621309CD200C5BE5C /* ReduxMethodsMocks.swift */,
 			);
@@ -1290,6 +1301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF44A2D52149AB4200E9866E /* SettingsSwitchReducerTests.swift in Sources */,
 				EF8C77AD2131B71A00C5BE5C /* WarsawApiTests.swift in Sources */,
 				EF8C77B02131B73200C5BE5C /* ReduxMethodsMocks.swift in Sources */,
 				EF8C77AE2131B72200C5BE5C /* AppMiddlewareTests.swift in Sources */,
