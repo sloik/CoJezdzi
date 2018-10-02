@@ -2,7 +2,7 @@ platform :ios, '11.3'
 
 use_frameworks!
 
-# swift_version = '4.0'
+swift_version = '4.2'
 
 target 'AppFramework' do
     pod 'Colours'

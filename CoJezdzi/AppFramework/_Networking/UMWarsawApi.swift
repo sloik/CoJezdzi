@@ -1,4 +1,6 @@
 import APIKit
+import HTTPStatusCodes
+
 
 protocol UMWarsawRequest: Request {
     
@@ -14,14 +16,15 @@ extension UMWarsawRequest {
     }
 
     func intercept(urlRequest: URLRequest) throws -> URLRequest {
-        NetworkLogger.logRequest(urlRequest)
+        Current.networkLogger.logRequest(urlRequest)
         return urlRequest
     }
     
     func intercept(object: Any, urlResponse: HTTPURLResponse) throws -> Any {
-        NetworkLogger.logResponse(urlResponse, object: object)
+        Current.networkLogger.logResponse(urlResponse, object: object)
         
-        guard urlResponse.status?.responseType == .success else {
+        guard let statusCode = HTTPStatusCode(HTTPResponse: urlResponse),
+                statusCode.isSuccess else {
             throw ResponseError.unacceptableStatusCode(urlResponse.statusCode)
         }
         
@@ -30,8 +33,9 @@ extension UMWarsawRequest {
 }
 
 extension UMWarsawRequest where Response: Decodable {
+    
     func response(from object: Any, urlResponse: HTTPURLResponse) throws -> Response {
-        if object is [String: String] {
+        if object is [String: Any] {
             let jsonData = try JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
             return try JSONDecoder().decode(Response.self, from: jsonData)
         }

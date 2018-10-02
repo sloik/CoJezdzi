@@ -1,8 +1,17 @@
 import Foundation
 
-class NetworkLogger {
-    class func logRequest(_ request: URLRequest, enabled: Bool = true) {
-        guard enabled else {
+protocol SessionLogger {
+    var isEnabled: Bool { get }
+    
+    func logRequest(_ request: URLRequest)
+    func logResponse(_ response: HTTPURLResponse, object: Any)
+}
+
+class NetworkLogger: SessionLogger {
+    let isEnabled: Bool = true
+    
+    func logRequest(_ request: URLRequest) {
+        guard isEnabled else {
             return
         }
         
@@ -19,8 +28,8 @@ class NetworkLogger {
             """)
     }
     
-    class func logResponse(_ response: HTTPURLResponse, object: Any, enabled: Bool = true) {
-        guard enabled else {
+    func logResponse(_ response: HTTPURLResponse, object: Any) {
+        guard isEnabled else {
             return
         }
         

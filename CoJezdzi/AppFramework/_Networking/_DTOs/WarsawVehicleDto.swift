@@ -39,9 +39,7 @@ struct WarsawVehicleDto: Codable, Equatable {
     enum CodingKeys: String, CodingKey, CaseIterable {
         case latitude = "Lat"
         case longitude = "Lon"
-        
         case lines = "Lines"
-        
         case brigade = "Brigade"
         case time = "Time"
     }

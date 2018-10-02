@@ -1,7 +1,7 @@
 import Foundation
 
 struct WarsawApiURL {
-    static let host = "https://api.um.warszawa.pl/"
+    static let host = "https://api.um.warszawa.pl"
 }
 
 enum WarsawApiConstants {
