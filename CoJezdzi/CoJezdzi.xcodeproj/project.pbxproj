@@ -18,6 +18,7 @@
 		EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */; };
 		EF1E162C21431E2A00A8E967 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162921431A4300A8E967 /* UseCase.swift */; };
 		EF44A2D52149AB4200E9866E /* SettingsSwitchReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */; };
+		EF7C7490218123700055AA2E /* Applicatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C748F218123700055AA2E /* Applicatives.swift */; };
 		EF8C77062131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
 		EF8C770F2131989100C5BE5C /* AppFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8C76FF2131989100C5BE5C /* AppFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF8C77122131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
@@ -234,6 +235,7 @@
 		EF61150F20A4DB3C00E05E02 /* SelectedLineRemoveAllAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedLineRemoveAllAction.swift; sourceTree = "<group>"; };
 		EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUtilFunctions.swift; sourceTree = "<group>"; };
 		EF61151620A7083400E05E02 /* AppMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMiddleware.swift; sourceTree = "<group>"; };
+		EF7C748F218123700055AA2E /* Applicatives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applicatives.swift; sourceTree = "<group>"; };
 		EF8C76E2212F355700C5BE5C /* AppMiddlewareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMiddlewareTests.swift; sourceTree = "<group>"; };
 		EF8C76E6212F53E900C5BE5C /* WarsawApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiMock.swift; sourceTree = "<group>"; };
 		EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawVehicleDtoMock.swift; sourceTree = "<group>"; };
@@ -716,6 +718,7 @@
 		EFDF56EE20F00CF1009E419C /* _Functional */ = {
 			isa = PBXGroup;
 			children = (
+				EF7C748F218123700055AA2E /* Applicatives.swift */,
 				EFDF56EF20F00D15009E419C /* Operators.swift */,
 			);
 			path = _Functional;
@@ -1267,6 +1270,7 @@
 				EF8C77612131A03D00C5BE5C /* WarsawApiResultDto.swift in Sources */,
 				EF8C77652131A09400C5BE5C /* URL_Extensions.swift in Sources */,
 				EF8C779B2131B20200C5BE5C /* WebScene.swift in Sources */,
+				EF7C7490218123700055AA2E /* Applicatives.swift in Sources */,
 				EF8C779A2131B1F100C5BE5C /* Scenes.swift in Sources */,
 				EF8C778F2131A30B00C5BE5C /* Nodes.swift in Sources */,
 				EF8C77842131A1F000C5BE5C /* RoutingReducer.swift in Sources */,
