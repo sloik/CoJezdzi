@@ -5,7 +5,7 @@ import Foundation
 // http://www.mokacoding.com/blog/functor-applicative-monads-in-pictures/
 
 extension Optional {
-    func apply<U>(_ f: ((Wrapped) -> U)?) -> U? {
-        return f.flatMap { f in return self.map(f) }
+    func apply<U>(_ f: ((Wrapped) -> U?)?) -> U? {
+        return f.flatMap { f in return self.flatMap(f) }
     }
 }
