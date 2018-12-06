@@ -114,13 +114,6 @@
 			remoteGlobalIDString = EF8C76FC2131989100C5BE5C;
 			remoteInfo = AppFramework;
 		};
-		EF8C77092131989100C5BE5C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BA56853A1C763EA600D3B5FE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BA5685411C763EA600D3B5FE;
-			remoteInfo = CoJezdzi;
-		};
 		EF8C77102131989100C5BE5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BA56853A1C763EA600D3B5FE /* Project object */;
@@ -611,7 +604,6 @@
 				EF4266CC209265870076238D /* _Redux */,
 				EF42670E2097A16A0076238D /* _Scenes */,
 				EF1E162821431A1700A8E967 /* _UseCases */,
-				EF8C76FF2131989100C5BE5C /* AppFramework.h */,
 				EF8C77002131989100C5BE5C /* Info.plist */,
 			);
 			path = AppFramework;
@@ -620,6 +612,7 @@
 		EF8C770B2131989100C5BE5C /* AppFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF8C76FF2131989100C5BE5C /* AppFramework.h */,
 				EFF366A0212DF0DA008ED5DC /* _Networking */,
 				EFF366BC212F2EA9008ED5DC /* _Redux */,
 				EF8C770E2131989100C5BE5C /* Info.plist */,
@@ -849,7 +842,6 @@
 			dependencies = (
 				EF8C78062134837500C5BE5C /* PBXTargetDependency */,
 				EF8C77082131989100C5BE5C /* PBXTargetDependency */,
-				EF8C770A2131989100C5BE5C /* PBXTargetDependency */,
 				EF8C77CD2131B9AC00C5BE5C /* PBXTargetDependency */,
 			);
 			name = AppFrameworkTests;
@@ -1348,11 +1340,6 @@
 			isa = PBXTargetDependency;
 			target = EF8C76FC2131989100C5BE5C /* AppFramework */;
 			targetProxy = EF8C77072131989100C5BE5C /* PBXContainerItemProxy */;
-		};
-		EF8C770A2131989100C5BE5C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BA5685411C763EA600D3B5FE /* CoJezdzi */;
-			targetProxy = EF8C77092131989100C5BE5C /* PBXContainerItemProxy */;
 		};
 		EF8C77112131989100C5BE5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
