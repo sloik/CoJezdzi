@@ -51,6 +51,7 @@ class MapScene: UIViewController {
         edgesForExtendedLayout = UIRectEdge()
 
         mapView.delegate = self as MKMapViewDelegate
+        mapView.showsTraffic = true
 
         zoomMapOnTheCity()
         zoomOnUserLocationIfNotShity()
