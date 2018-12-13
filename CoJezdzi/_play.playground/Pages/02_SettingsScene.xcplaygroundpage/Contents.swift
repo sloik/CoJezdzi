@@ -25,17 +25,19 @@ Current = with(.mock, concat(
 
 
 // do this after some time
-DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-    // modify current env
-    with(&Current,
-         mut(\Environment.constants.ui.settings.menuLabels,
-                       Constants.UI.Settings.MenuLabels()))
-    
-    // dispatch action
-    let onTram = SettingsState.Filter.tram(on: true)
-    let swithAction = SettingsSwitchAction(whitchSwitch: onTram)
-    
-    Current.reduxStore.dispatch(swithAction)
+run {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        // modify current env
+        with(&Current,
+             mut(\Environment.constants.ui.settings.menuLabels,
+                 Constants.UI.Settings.MenuLabels()))
+
+        // dispatch action
+        let onTram = SettingsState.Filter.tram(on: true)
+        let swithAction = SettingsSwitchAction(whitchSwitch: onTram)
+
+        Current.reduxStore.dispatch(swithAction)
+    }
 }
 
 //: # Display in LiveView
