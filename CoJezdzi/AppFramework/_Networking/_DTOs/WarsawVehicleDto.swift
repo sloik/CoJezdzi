@@ -15,14 +15,14 @@ struct WarsawVehicleDto: Codable, Equatable {
     let latitude : Double //CLLocationCoordinate2D
     let longitude: Double //CLLocationCoordinate2D
     
-    let lines: String
+    private(set) var lines: String
     
     let brigade: String
     let time: String
     var type: WarsawVehicleType {
         switch lines.count {
-        case 2: return .tram
-        case 3: return .bus
+        case 1...2: return .tram // trams are from X to XX
+        case     3: return .bus  // busses are XXX
             
         default: return .unknown
         }
