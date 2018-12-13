@@ -9,7 +9,7 @@ extension Environment {
         persistance: .mock,
         scenes: Current.scenes,
         router: Current.router,
-        userDefaults: UserDefaults(),
+        userDefaults: .mock,
         constants: Constants(),
         useCaseFactory: UseCaseFactory())
     
@@ -23,4 +23,8 @@ extension Environment {
         userDefaults: UserDefaults(),
         constants: Constants(),
         useCaseFactory: UseCaseFactory())
+}
+
+extension UserDefaults {
+    static let mock = UserDefaults()
 }
