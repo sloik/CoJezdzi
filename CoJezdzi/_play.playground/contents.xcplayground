@@ -4,5 +4,6 @@
         <page name='ToC'/>
         <page name='01_WholeApp'/>
         <page name='02_SettingsScene'/>
+        <page name='03_NavigationDemo'/>
     </pages>
 </playground>
