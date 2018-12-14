@@ -2,8 +2,8 @@
 import Foundation
 
 struct UseCaseFactory {
-    private(set) var loadPersistenState: UseCase = LoadPersistetState()
-    private(set) var fetchVehiclesData: UseCase  = FetchVehiclesData()
+    private(set) var loadPersistenState = loadPersistetState
+    private(set) var fetchVehiclesData  = prodFetchVehiclesData
     
     private(set) var filterSelectLine   = selectLine(_:)
     private(set) var filterDeselectLine = deselect(line:)
@@ -16,22 +16,18 @@ struct UseCaseFactory {
 // MARK: - Implementation Detail
 
 
-fileprivate struct LoadPersistetState: UseCase {
-    func start() {
+fileprivate func loadPersistetState() {
         guard let storedSettingsState = Current.persistance.load() else { return }
         
         Current
             .reduxStore
             .dispatch(SettingsDidRestoreAction(restoredState: storedSettingsState))
-    }
 }
 
-fileprivate struct FetchVehiclesData: UseCase {
-    func start() {
+fileprivate func prodFetchVehiclesData() {
         Current
             .reduxStore
             .dispatch(FetchVehiclesPosytionsAction())
-    }
 }
 
 // MARK: - Free Functions

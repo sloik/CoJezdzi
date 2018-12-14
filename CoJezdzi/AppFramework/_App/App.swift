@@ -11,7 +11,6 @@ public enum App {
         
         Current
             .useCaseFactory
-            .loadPersistenState
-            .start()        
+            .loadPersistenState()
     }
 }

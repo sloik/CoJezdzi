@@ -16,7 +16,6 @@
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
 		EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */; };
-		EF1E162C21431E2A00A8E967 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162921431A4300A8E967 /* UseCase.swift */; };
 		EF44A2D52149AB4200E9866E /* SettingsSwitchReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */; };
 		EF7C7490218123700055AA2E /* Applicatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C748F218123700055AA2E /* Applicatives.swift */; };
 		EF8C77062131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
@@ -190,7 +189,6 @@
 		EF0DC0E420B8A59C000BF4DB /* SettingsStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStateTests.swift; sourceTree = "<group>"; };
 		EF0DC0E620B8C102000BF4DB /* THC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THC.swift; sourceTree = "<group>"; };
 		EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDidRestoreAction.swift; sourceTree = "<group>"; };
-		EF1E162921431A4300A8E967 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		EF3BB72520CC042A004BD9C3 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -423,7 +421,6 @@
 		EF1E162821431A1700A8E967 /* _UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				EF1E162921431A4300A8E967 /* UseCase.swift */,
 				EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */,
 			);
 			path = _UseCases;
@@ -1287,7 +1284,6 @@
 				EF8C77722131A14800C5BE5C /* FetchVehiclesPosytionsAction.swift in Sources */,
 				EF8C777D2131A18800C5BE5C /* SelectedLinesState.swift in Sources */,
 				EF8C77792131A16900C5BE5C /* SelectedLineRemoveAction.swift in Sources */,
-				EF1E162C21431E2A00A8E967 /* UseCase.swift in Sources */,
 				EF8C778C2131A2D800C5BE5C /* AppReducer.swift in Sources */,
 				EF8C77662131A09D00C5BE5C /* WarsawApiConstants.swift in Sources */,
 			);

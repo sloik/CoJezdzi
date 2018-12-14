@@ -174,8 +174,7 @@ private extension MapScene {
     func triggerDataRefresh() {
         Current
             .useCaseFactory
-            .fetchVehiclesData
-            .start()
+            .fetchVehiclesData()
     }
 }
 

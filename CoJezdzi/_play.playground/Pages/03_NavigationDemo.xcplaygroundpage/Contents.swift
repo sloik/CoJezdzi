@@ -68,8 +68,4 @@ let (parent, _) = playgroundControllers(device: .phone5_5inch,
                                         child: window.rootViewController!)
 PlaygroundPage.current.liveView = parent
 
-runRandomNavigation()
-
-
-
 //:[ToC](ToC) | [Previous](@previous) | [Next](@next)
