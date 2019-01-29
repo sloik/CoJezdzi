@@ -30,7 +30,10 @@ class CoJezdziUITests: XCTestCase {
         let line = app.otherElements["DUPAKI"]
         wait(forElement: line, timeout: 10)
         
+        let lines = app.descendants(matching: .other).matching(identifier: "DUPAKI").allElementsBoundByIndex
+        
         XCTAssert(line.exists == true)
+        XCTAssert(lines.count == 1)
     }
 }
 
