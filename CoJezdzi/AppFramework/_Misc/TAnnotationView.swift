@@ -50,7 +50,6 @@ extension TAnnotationView {
     func configure(_ annotation: TAnnotation) {
 
         lineLabel?.text = annotation.lines
-        
         annotation |> configureColors
     }
 

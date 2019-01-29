@@ -16,6 +16,7 @@ extension MapScene: MKMapViewDelegate {
         
         view?.frame.size = Current.constants.ui.map.dimention.annotationSize
         view?.configure(annotation as! TAnnotation)
+        view?.accessibilityIdentifier = "DUPAKI"
         view?.canShowCallout = true
         
         return view

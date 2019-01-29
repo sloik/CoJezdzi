@@ -1,5 +1,6 @@
 
 import UIKit
+import SBTUITestTunnel
 
 import Colours
 
@@ -13,4 +14,9 @@ public enum App {
             .useCaseFactory
             .loadPersistenState()
     }
+    
+    static public func startServer(){
+        SBTUITestTunnelServer.takeOff()
+    }
+    
 }

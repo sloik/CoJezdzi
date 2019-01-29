@@ -1,36 +1,35 @@
-//
-//  CoJezdziUITests.swift
-//  CoJezdziUITests
-//
-//  Created by Lukasz Stocki on 18/02/16.
-//  Copyright © 2016 A.C.M.E. All rights reserved.
-//
 
 import XCTest
+import SBTUITestTunnel
 
 class CoJezdziUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        continueAfterFailure = false
+        
+        app.launchTunnel()
+
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+     
         super.tearDown()
     }
     
-    func xtestExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testExample() {
+        
+        let request2 = SBTRequestMatch(url: "https://api.um.warszawa.pl/api/action/busestrams_get?resource_id=c7238cfe-8b1f-4c38-bb4a-de386db7e776&a    pikey=cffa0471-5750-4e90-861b-fd499ad30ec6&type=2")
+        let request = SBTRequestMatch(url: "https://api.um.warszawa.pl/api/action/busestrams_get")
+        let response = SBTStubResponse(fileNamed: "line213.json")
+        let stub = app.stubRequests(matching: request2, response: response)
+        let line = app.otherElements["DUPAKI"]
+        
+        
+        XCTAssert(line.exists == true)
+        
     }
     
 }

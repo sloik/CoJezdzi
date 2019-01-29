@@ -8,6 +8,12 @@ target 'EmptyTestApp' do
 end
 
 target 'CoJezdzi' do
+    pod 'SBTUITestTunnel/Server'
+    pod 'GCDWebServer', :inhibit_warnings => true
+end
+
+target 'CoJezdziUITests' do
+    pod 'SBTUITestTunnel/Client'
 end
 
 target 'AppFramework' do
@@ -16,6 +22,8 @@ target 'AppFramework' do
     pod 'ReSwift'
     pod 'R.swift'
     pod 'Overture'
+    pod 'SBTUITestTunnel/Server'
+    pod 'GCDWebServer', :inhibit_warnings => true
 end
 
 target 'AppFrameworkTests' do
