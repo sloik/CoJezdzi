@@ -21,7 +21,7 @@ class CoJezdziUITests: XCTestCase {
     
     func testExample() {
         
-        let request2 = SBTRequestMatch(url: "https://api.um.warszawa.pl/api/action/busestrams_get?resource_id=c7238cfe-8b1f-4c38-bb4a-de386db7e776&apikey=cffa0471-5750-4e90-861b-fd499ad30ec6&line=6&type=2")
+        let request2 = SBTRequestMatch(url: "https://api.um.warszawa.pl/api/action/busestrams_get?resource_id=c7238cfe-8b1f-4c38-bb4a-de386db7e776&apikey=cffa0471-5750-4e90-861b-fd499ad30ec6")
         
         let response = SBTStubResponse(fileNamed:"line213.json", responseTime: 10)
         
@@ -31,7 +31,7 @@ class CoJezdziUITests: XCTestCase {
         wait(forElement: line, timeout: 10)
         
         let lines = app.descendants(matching: .other).matching(identifier: "DUPAKI").allElementsBoundByIndex
-        
+       
         XCTAssert(line.exists == true)
         XCTAssert(lines.count == 1)
     }
