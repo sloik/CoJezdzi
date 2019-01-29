@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19D71E162200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D71E152200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift */; };
+		19D71E182200B660008063F3 /* line213.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D71E172200B660008063F3 /* line213.json */; };
+		20BB1E5811B2413AF4E6295A /* Pods_CoJezdziUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A27662A69C252904D23A433 /* Pods_CoJezdziUITests.framework */; };
 		7EAF57B028A0F8C9F6E1D4F6 /* Pods_CoJezdzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231A542086605390FBD456C7 /* Pods_CoJezdzi.framework */; };
 		825277A4BBCFF779B336D2FC /* Pods_AppFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426D4E978E637DA380C85D20 /* Pods_AppFrameworkTests.framework */; };
 		8517D029F7B668A1F31D476B /* Pods_EmptyTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A69049555FA4033324052E /* Pods_EmptyTestApp.framework */; };
@@ -32,7 +35,6 @@
 		EF8C77642131A08F00C5BE5C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42671A2097CB1D0076238D /* Result.swift */; };
 		EF8C77652131A09400C5BE5C /* URL_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF42669E209262340076238D /* URL_Extensions.swift */; };
 		EF8C77662131A09D00C5BE5C /* WarsawApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267102097B9290076238D /* WarsawApiConstants.swift */; };
-		EF8C77672131A0A400C5BE5C /* WarsawApiConstantsDoNotTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */; };
 		EF8C77682131A0AA00C5BE5C /* WarsawApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267122097B9760076238D /* WarsawApi.swift */; };
 		EF8C77692131A0B500C5BE5C /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF56EF20F00D15009E419C /* Operators.swift */; };
 		EF8C776A2131A0D700C5BE5C /* GlobalUtilFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */; };
@@ -159,12 +161,15 @@
 
 /* Begin PBXFileReference section */
 		0E1F337FA36D67C883104983 /* Pods_AppFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D71E152200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift.swift; sourceTree = "<group>"; };
+		19D71E172200B660008063F3 /* line213.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = line213.json; path = ../../../../line213.json; sourceTree = "<group>"; };
 		1A27662A69C252904D23A433 /* Pods_CoJezdziUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdziUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		231A542086605390FBD456C7 /* Pods_CoJezdzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7C59AC0D760AAD5A1347B4 /* Pods-CoJezdzi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdzi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi.debug.xcconfig"; sourceTree = "<group>"; };
 		363A3415BE71C451129CA089 /* Pods-AppFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppFramework/Pods-AppFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		378F318546492117A3EAD915 /* Pods-AppFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		426D4E978E637DA380C85D20 /* Pods_AppFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppFrameworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2FA92950FF617F13AF2E97 /* Pods-CoJezdziUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdziUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B94FF5C0FD23489B8AEF612 /* Pods-TestsHelpper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsHelpper.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestsHelpper/Pods-TestsHelpper.release.xcconfig"; sourceTree = "<group>"; };
 		4E6495002726D324C9534415 /* Pods-TestsHelpper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsHelpper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestsHelpper/Pods-TestsHelpper.debug.xcconfig"; sourceTree = "<group>"; };
 		678B1693528683BABBC3CBB9 /* Pods_CoJezdziTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdziTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +178,7 @@
 		7D80544A7169D3021B3C09DD /* Pods-AppFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		83C7670C78FEEC6DA237BF21 /* Pods-CoJezdziTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdziTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdziTests/Pods-CoJezdziTests.debug.xcconfig"; sourceTree = "<group>"; };
 		976FDDE800E0D64CCF401860 /* Pods-AppFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppFramework/Pods-AppFramework.release.xcconfig"; sourceTree = "<group>"; };
+		9DA9A7403238B6F9BB04B412 /* Pods-CoJezdziUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdziUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA5685421C763EA600D3B5FE /* CoJezdzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoJezdzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA56854A1C763EA600D3B5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA56854C1C763EA600D3B5FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,7 +220,6 @@
 		EF4267102097B9290076238D /* WarsawApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstants.swift; sourceTree = "<group>"; };
 		EF4267122097B9760076238D /* WarsawApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApi.swift; sourceTree = "<group>"; };
 		EF4267142097BD030076238D /* C.Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.Networking.swift; sourceTree = "<group>"; };
-		EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift; sourceTree = "<group>"; };
 		EF4267182097C2090076238D /* RoutingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingActions.swift; sourceTree = "<group>"; };
 		EF42671A2097CB1D0076238D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchReducerTests.swift; sourceTree = "<group>"; };
@@ -286,6 +291,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BB1E5811B2413AF4E6295A /* Pods_CoJezdziUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +348,8 @@
 				DECE8618EE0D7637AF02B299 /* Pods-EmptyTestApp.release.xcconfig */,
 				4E6495002726D324C9534415 /* Pods-TestsHelpper.debug.xcconfig */,
 				4B94FF5C0FD23489B8AEF612 /* Pods-TestsHelpper.release.xcconfig */,
+				4A2FA92950FF617F13AF2E97 /* Pods-CoJezdziUITests.debug.xcconfig */,
+				9DA9A7403238B6F9BB04B412 /* Pods-CoJezdziUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -404,6 +412,7 @@
 		BA5685641C763EA600D3B5FE /* CoJezdziUITests */ = {
 			isa = PBXGroup;
 			children = (
+				19D71E172200B660008063F3 /* line213.json */,
 				BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */,
 				BA5685671C763EA600D3B5FE /* Info.plist */,
 			);
@@ -512,7 +521,7 @@
 				EF42669E209262340076238D /* URL_Extensions.swift */,
 				EF4267122097B9760076238D /* WarsawApi.swift */,
 				EF4267102097B9290076238D /* WarsawApiConstants.swift */,
-				EF4267162097BF3F0076238D /* WarsawApiConstantsDoNotTrack.swift */,
+				19D71E152200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift */,
 			);
 			path = _Networking;
 			sourceTree = "<group>";
@@ -790,6 +799,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA5685701C763EA600D3B5FE /* Build configuration list for PBXNativeTarget "CoJezdziUITests" */;
 			buildPhases = (
+				7220707BC4AAEA7999B8E502 /* [CP] Check Pods Manifest.lock */,
 				BA56855D1C763EA600D3B5FE /* Sources */,
 				BA56855E1C763EA600D3B5FE /* Frameworks */,
 				BA56855F1C763EA600D3B5FE /* Resources */,
@@ -973,6 +983,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D71E182200B660008063F3 /* line213.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,6 +1052,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
@@ -1049,6 +1061,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
@@ -1072,6 +1085,28 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CoJezdzi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7220707BC4AAEA7999B8E502 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoJezdziUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1127,6 +1162,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
@@ -1135,6 +1171,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
@@ -1276,11 +1313,11 @@
 				EF8C776D2131A0F000C5BE5C /* TAnnotation.swift in Sources */,
 				EF8C77812131A1DB00C5BE5C /* MapState.swift in Sources */,
 				EF8C77972131A3C300C5BE5C /* SettingsVC.swift in Sources */,
+				19D71E162200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift in Sources */,
 				EF8C776B2131A0E000C5BE5C /* PolylineMaker.swift in Sources */,
 				EF8C776F2131A10700C5BE5C /* TAnnotationView.swift in Sources */,
 				EF8C77632131A07E00C5BE5C /* Constants.swift in Sources */,
 				EF8C777E2131A19500C5BE5C /* SettingsSwitchAction.swift in Sources */,
-				EF8C77672131A0A400C5BE5C /* WarsawApiConstantsDoNotTrack.swift in Sources */,
 				EF8C77722131A14800C5BE5C /* FetchVehiclesPosytionsAction.swift in Sources */,
 				EF8C777D2131A18800C5BE5C /* SelectedLinesState.swift in Sources */,
 				EF8C77792131A16900C5BE5C /* SelectedLineRemoveAction.swift in Sources */,
@@ -1550,6 +1587,7 @@
 		};
 		BA5685711C763EA600D3B5FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A2FA92950FF617F13AF2E97 /* Pods-CoJezdziUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CoJezdziUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1563,6 +1601,7 @@
 		};
 		BA5685721C763EA600D3B5FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA9A7403238B6F9BB04B412 /* Pods-CoJezdziUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CoJezdziUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
