@@ -8,8 +8,7 @@ target 'EmptyTestApp' do
 end
 
 target 'CoJezdzi' do
-    pod 'SBTUITestTunnel/Server'
-    pod 'GCDWebServer', :inhibit_warnings => true
+  
 end
 
 target 'CoJezdziUITests' do
@@ -44,4 +43,3 @@ post_install do |installer|
         end
     end
 end
-

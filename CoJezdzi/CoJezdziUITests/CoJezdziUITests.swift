@@ -32,8 +32,8 @@ class CoJezdziUITests: XCTestCase {
         
         let lines = app.descendants(matching: .other).matching(identifier: "DUPAKI").allElementsBoundByIndex
        
-        XCTAssert(line.exists == true)
-        XCTAssert(lines.count == 1)
+        XCTAssert(line.exists == true, "DUPA DUPA")
+        XCTAssert(lines.count == 1, "ZLE ZLE")
     }
 }
 
