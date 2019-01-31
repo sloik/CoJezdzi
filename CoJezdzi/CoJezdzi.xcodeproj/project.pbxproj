@@ -8,7 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		192924052201B5AB00D43D9B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192924032201B5AB00D43D9B /* R.generated.swift */; };
-		192924062201B5AB00D43D9B /* Rswift.helper in Resources */ = {isa = PBXBuildFile; fileRef = 192924042201B5AB00D43D9B /* Rswift.helper */; };
+		19885AFF22037B1E00B89DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C771B213199A200C5BE5C /* AppDelegate.swift */; };
+		19885B0022037B2000B89DF3 /* THC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E620B8C102000BF4DB /* THC.swift */; };
+		19885B0122037B2500B89DF3 /* WarsawVehicleDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */; };
+		19885B0222037B2800B89DF3 /* WarsawApiResultDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */; };
+		19885B0322037B2E00B89DF3 /* WarsawApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E6212F53E900C5BE5C /* WarsawApiMock.swift */; };
+		19885B0422037B3200B89DF3 /* PersistenceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76ED212F55D800C5BE5C /* PersistenceMock.swift */; };
+		19885B0522037B3400B89DF3 /* EnvironmentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3669E212DEB38008ED5DC /* EnvironmentMock.swift */; };
+		19885B0622037B3700B89DF3 /* AppStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F32130955C00C5BE5C /* AppStateMock.swift */; };
+		19885B0922037E0300B89DF3 /* TestsMiddleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19885B0822037E0300B89DF3 /* TestsMiddleLayer.swift */; };
 		19D71E162200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D71E152200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift */; };
 		19D71E182200B660008063F3 /* line213.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D71E172200B660008063F3 /* line213.json */; };
 		20BB1E5811B2413AF4E6295A /* Pods_CoJezdziUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A27662A69C252904D23A433 /* Pods_CoJezdziUITests.framework */; };
@@ -27,7 +35,6 @@
 		EF8C770F2131989100C5BE5C /* AppFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8C76FF2131989100C5BE5C /* AppFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF8C77122131989100C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
 		EF8C77132131989100C5BE5C /* AppFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF8C771C213199A200C5BE5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C771B213199A200C5BE5C /* AppDelegate.swift */; };
 		EF8C775E21319FFB00C5BE5C /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4267042097543A0076238D /* VehicleState.swift */; };
 		EF8C775F2131A00D00C5BE5C /* WarsawVehicleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266CE209266560076238D /* WarsawVehicleDto.swift */; };
 		EF8C77602131A02700C5BE5C /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4266D1209267DC0076238D /* VehicleType.swift */; };
@@ -92,13 +99,8 @@
 		EF8C77FA2134811400C5BE5C /* TestsHelpper.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8C77F82134811400C5BE5C /* TestsHelpper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF8C78032134829100C5BE5C /* TestsHelpper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C77F62134811300C5BE5C /* TestsHelpper.framework */; };
 		EF8C7807213483D000C5BE5C /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
-		EF8C780D2134850A00C5BE5C /* AppStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F32130955C00C5BE5C /* AppStateMock.swift */; };
-		EF8C780E2134850A00C5BE5C /* WarsawApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E6212F53E900C5BE5C /* WarsawApiMock.swift */; };
 		EF8C780F2134850A00C5BE5C /* WarsawApiResultDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76EB212F54D700C5BE5C /* WarsawApiResultDtoMock.swift */; };
 		EF8C78102134850A00C5BE5C /* WarsawVehicleDtoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76E9212F54A700C5BE5C /* WarsawVehicleDtoMock.swift */; };
-		EF8C78112134850A00C5BE5C /* PersistenceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76ED212F55D800C5BE5C /* PersistenceMock.swift */; };
-		EF8C78122134850A00C5BE5C /* THC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DC0E620B8C102000BF4DB /* THC.swift */; };
-		EF8C781521348AC400C5BE5C /* EnvironmentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF3669E212DEB38008ED5DC /* EnvironmentMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,7 +166,7 @@
 		09B56D1889793C420339D328 /* Pods-EmptyTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmptyTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmptyTestApp/Pods-EmptyTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		0E1F337FA36D67C883104983 /* Pods_AppFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		192924032201B5AB00D43D9B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		192924042201B5AB00D43D9B /* Rswift.helper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rswift.helper; sourceTree = "<group>"; };
+		19885B0822037E0300B89DF3 /* TestsMiddleLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsMiddleLayer.swift; sourceTree = "<group>"; };
 		19D71E152200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift.swift; sourceTree = "<group>"; };
 		19D71E172200B660008063F3 /* line213.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = line213.json; path = ../../../../line213.json; sourceTree = "<group>"; };
 		1A27662A69C252904D23A433 /* Pods_CoJezdziUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdziUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -333,6 +335,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19885B0722037DC700B89DF3 /* AllNeededToPerformTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF8C781621348BDE00C5BE5C /* _Mocks */,
+				EF8C781721348BE900C5BE5C /* _Functions */,
+				19885B0822037E0300B89DF3 /* TestsMiddleLayer.swift */,
+			);
+			path = AllNeededToPerformTests;
+			sourceTree = "<group>";
+		};
 		3D43D71D5790A8F11EC752A2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +613,7 @@
 		EF8C76FE2131989100C5BE5C /* AppFramework */ = {
 			isa = PBXGroup;
 			children = (
+				19885B0722037DC700B89DF3 /* AllNeededToPerformTests */,
 				EF47764F20A8DA57006D7107 /* _App */,
 				EFDF56EE20F00CF1009E419C /* _Functional */,
 				EFB5C2A4209C710200BB5855 /* _Misc */,
@@ -640,8 +653,6 @@
 		EF8C77F72134811400C5BE5C /* TestsHelpper */ = {
 			isa = PBXGroup;
 			children = (
-				EF8C781721348BE900C5BE5C /* _Functions */,
-				EF8C781621348BDE00C5BE5C /* _Mocks */,
 				EF8C77F92134811400C5BE5C /* Info.plist */,
 				EF8C77F82134811400C5BE5C /* TestsHelpper.h */,
 			);
@@ -676,7 +687,6 @@
 				EF61151120A6380D00E05E02 /* GlobalUtilFunctions.swift */,
 				EFB5C2A5209C712E00BB5855 /* PolylineMaker.swift */,
 				192924032201B5AB00D43D9B /* R.generated.swift */,
-				192924042201B5AB00D43D9B /* Rswift.helper */,
 				EF4266A6209262350076238D /* TAnnotation.swift */,
 				EF4266A9209262350076238D /* TAnnotationView.swift */,
 				EF4266A8209262350076238D /* TDataAnnotation.swift */,
@@ -992,7 +1002,6 @@
 			files = (
 				EF8C77A12131B43200C5BE5C /* Assets.xcassets in Resources */,
 				EF8C77962131A3B600C5BE5C /* Main.storyboard in Resources */,
-				192924062201B5AB00D43D9B /* Rswift.helper in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1225,7 +1234,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 		EF8C771D21319A2D00C5BE5C /* Rswift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1254,7 +1264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF8C771C213199A200C5BE5C /* AppDelegate.swift in Sources */,
+				19885AFF22037B1E00B89DF3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1271,6 +1281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8C77832131A1EA00C5BE5C /* SettingsReducer.swift in Sources */,
+				19885B0322037B2E00B89DF3 /* WarsawApiMock.swift in Sources */,
 				EF8C779E2131B21A00C5BE5C /* MapScene+MKMapViewDelegate.swift in Sources */,
 				EF8C77902131A30E00C5BE5C /* Routable.swift in Sources */,
 				EF8C776A2131A0D700C5BE5C /* GlobalUtilFunctions.swift in Sources */,
@@ -1278,14 +1289,18 @@
 				EF8C77782131A16300C5BE5C /* SelectedLineAddAction.swift in Sources */,
 				EF8C778E2131A30700C5BE5C /* GamePlayAppRouter.swift in Sources */,
 				EF8C779C2131B20A00C5BE5C /* MapScene.swift in Sources */,
+				19885B0022037B2000B89DF3 /* THC.swift in Sources */,
 				EF8C777B2131A17300C5BE5C /* SettingsDidRestoreAction.swift in Sources */,
 				EF8C777C2131A18000C5BE5C /* SettingsState.swift in Sources */,
 				EF8C776E2131A0FC00C5BE5C /* TDataAnnotation.swift in Sources */,
 				EF8C779D2131B21400C5BE5C /* MapScene+CLLocationManagerDelegate.swift in Sources */,
 				EF8C77702131A14800C5BE5C /* FetchBussesAction.swift in Sources */,
+				19885B0522037B3400B89DF3 /* EnvironmentMock.swift in Sources */,
+				19885B0922037E0300B89DF3 /* TestsMiddleLayer.swift in Sources */,
 				EF8C779F2131B2C500C5BE5C /* App.swift in Sources */,
 				EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */,
 				EF8C77982131A3D900C5BE5C /* FilterCollectionViewCell.swift in Sources */,
+				19885B0422037B3200B89DF3 /* PersistenceMock.swift in Sources */,
 				EF8C77712131A14800C5BE5C /* FetchTramsAction.swift in Sources */,
 				EF8C777A2131A16E00C5BE5C /* SelectedLineRemoveAllAction.swift in Sources */,
 				EF8C77942131A38700C5BE5C /* SwitchTableViewCell.swift in Sources */,
@@ -1296,11 +1311,13 @@
 				EF8C77612131A03D00C5BE5C /* WarsawApiResultDto.swift in Sources */,
 				EF8C77652131A09400C5BE5C /* URL_Extensions.swift in Sources */,
 				EF8C779B2131B20200C5BE5C /* WebScene.swift in Sources */,
+				19885B0122037B2500B89DF3 /* WarsawVehicleDtoMock.swift in Sources */,
 				EF7C7490218123700055AA2E /* Applicatives.swift in Sources */,
 				EF8C779A2131B1F100C5BE5C /* Scenes.swift in Sources */,
 				EF8C778F2131A30B00C5BE5C /* Nodes.swift in Sources */,
 				EF8C77842131A1F000C5BE5C /* RoutingReducer.swift in Sources */,
 				EF8C77622131A04800C5BE5C /* C.Networking.swift in Sources */,
+				19885B0222037B2800B89DF3 /* WarsawApiResultDtoMock.swift in Sources */,
 				EF8C778D2131A2F700C5BE5C /* AppMiddleware.swift in Sources */,
 				EF8C775E21319FFB00C5BE5C /* VehicleState.swift in Sources */,
 				EF8C77692131A0B500C5BE5C /* Operators.swift in Sources */,
@@ -1321,6 +1338,7 @@
 				EF8C777E2131A19500C5BE5C /* SettingsSwitchAction.swift in Sources */,
 				EF8C77722131A14800C5BE5C /* FetchVehiclesPosytionsAction.swift in Sources */,
 				EF8C777D2131A18800C5BE5C /* SelectedLinesState.swift in Sources */,
+				19885B0622037B3700B89DF3 /* AppStateMock.swift in Sources */,
 				EF8C77792131A16900C5BE5C /* SelectedLineRemoveAction.swift in Sources */,
 				EF8C778C2131A2D800C5BE5C /* AppReducer.swift in Sources */,
 				EF8C77662131A09D00C5BE5C /* WarsawApiConstants.swift in Sources */,
@@ -1352,13 +1370,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF8C78112134850A00C5BE5C /* PersistenceMock.swift in Sources */,
-				EF8C78122134850A00C5BE5C /* THC.swift in Sources */,
 				EF8C780F2134850A00C5BE5C /* WarsawApiResultDtoMock.swift in Sources */,
-				EF8C780D2134850A00C5BE5C /* AppStateMock.swift in Sources */,
-				EF8C780E2134850A00C5BE5C /* WarsawApiMock.swift in Sources */,
 				EF8C78102134850A00C5BE5C /* WarsawVehicleDtoMock.swift in Sources */,
-				EF8C781521348AC400C5BE5C /* EnvironmentMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1590,6 +1603,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39B84990EA8BA6E3E3D665CD /* Pods-CoJezdziUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CoJezdziUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.lukasz.stocki.CoJezdziUITests;
@@ -1604,6 +1618,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39B3868A6727FF570BA0B52F /* Pods-CoJezdziUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CoJezdziUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.lukasz.stocki.CoJezdziUITests;
