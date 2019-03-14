@@ -52,6 +52,21 @@ class TunelPoCTests: XCTestCase {
             as: .image
         )
     }
+
+    func test_inifinity() {
+        let command = "gotoSceneCommand"
+        repeat {
+            let randomDestination = RoutingDestination.allCases.randomElement()!.rawValue
+
+            _ = app.performCustomCommandNamed(command,
+                                              object:  randomDestination)
+
+
+            sleep(5)
+
+
+        } while true
+    }
 }
 
 extension UIImage {

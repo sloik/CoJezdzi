@@ -32,6 +32,8 @@ public extension App {
 
         dupakCommand()
 
+        gotoSceneCommand()
+
         SBTUITestTunnelServer.registerCustomCommandNamed("print") {
             arg in
             print("------------------------------------------------------------------")
@@ -68,6 +70,23 @@ func dupakCommand() {
             Current
                 .reduxStore
                 .dispatch(RoutingAction(destination: .settings))
+        }
+
+        return injectedObject
+    }
+}
+
+func gotoSceneCommand() {
+    SBTUITestTunnelServer
+        .registerCustomCommandNamed("gotoSceneCommand") { injectedObject in
+
+        let destination = injectedObject as! String
+        let rd = RoutingDestination(rawValue: destination)!
+
+        DispatchQueue.main.async {
+            Current
+                .reduxStore
+                .dispatch(RoutingAction(destination: rd))
         }
 
         return injectedObject
