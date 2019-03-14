@@ -27,6 +27,7 @@
 		BA56854D1C763EA600D3B5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA56854C1C763EA600D3B5FE /* Assets.xcassets */; };
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
+		BA764A41223A5087004D6B16 /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
 		EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */; };
 		EF44A2D52149AB4200E9866E /* SettingsSwitchReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */; };
 		EF7C7490218123700055AA2E /* Applicatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C748F218123700055AA2E /* Applicatives.swift */; };
@@ -109,6 +110,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = BA5685411C763EA600D3B5FE;
 			remoteInfo = CoJezdzi;
+		};
+		BA764A42223A50CC004D6B16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA56853A1C763EA600D3B5FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF8C76FC2131989100C5BE5C;
+			remoteInfo = AppFramework;
 		};
 		EF8C77072131989100C5BE5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -291,6 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA764A41223A5087004D6B16 /* AppFramework.framework in Frameworks */,
 				20BB1E5811B2413AF4E6295A /* Pods_CoJezdziUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,10 +818,12 @@
 				BA56855D1C763EA600D3B5FE /* Sources */,
 				BA56855E1C763EA600D3B5FE /* Frameworks */,
 				BA56855F1C763EA600D3B5FE /* Resources */,
+				97C69EC753512902E7B9AB12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BA764A43223A50CC004D6B16 /* PBXTargetDependency */,
 				BA5685631C763EA600D3B5FE /* PBXTargetDependency */,
 			);
 			name = CoJezdziUITests;
@@ -927,6 +938,7 @@
 					};
 					BA5685601C763EA600D3B5FE = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 922J9E2T69;
 						LastSwiftMigration = 1000;
 						TestTargetID = BA5685411C763EA600D3B5FE;
 					};
@@ -1057,19 +1069,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
-				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 			);
@@ -1186,6 +1198,38 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		97C69EC753512902E7B9AB12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
+				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
+				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
+				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BA724EEC1CB62CB300ACC84E /* Bup Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1230,8 +1274,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		EF8C771D21319A2D00C5BE5C /* Rswift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1378,6 +1421,11 @@
 			isa = PBXTargetDependency;
 			target = BA5685411C763EA600D3B5FE /* CoJezdzi */;
 			targetProxy = BA5685621C763EA600D3B5FE /* PBXContainerItemProxy */;
+		};
+		BA764A43223A50CC004D6B16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF8C76FC2131989100C5BE5C /* AppFramework */;
+			targetProxy = BA764A42223A50CC004D6B16 /* PBXContainerItemProxy */;
 		};
 		EF8C77082131989100C5BE5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1600,6 +1648,7 @@
 			baseConfigurationReference = 39B84990EA8BA6E3E3D665CD /* Pods-CoJezdziUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 922J9E2T69;
 				INFOPLIST_FILE = CoJezdziUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.lukasz.stocki.CoJezdziUITests;
@@ -1615,6 +1664,7 @@
 			baseConfigurationReference = 39B3868A6727FF570BA0B52F /* Pods-CoJezdziUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 922J9E2T69;
 				INFOPLIST_FILE = CoJezdziUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.lukasz.stocki.CoJezdziUITests;

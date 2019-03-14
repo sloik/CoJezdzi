@@ -1,5 +1,8 @@
 import XCTest
 import SBTUITestTunnel
+import Overture
+
+@testable import AppFramework
 
 class CoJezdziUITests: XCTestCase {
     
@@ -21,9 +24,11 @@ class CoJezdziUITests: XCTestCase {
     }
     
     func testExample() {
-        
 
-//            let objReturnedByBlock = app.performCustomCommandNamed("dupak", object: "setCurrent")
+        let env = Environment.mock
+//        with
+
+            let objReturnedByBlock = app.performCustomCommandNamed("dupak", object: "setCurrent")
 //        dupak = app.performCustomCommandNamed("print", object: nil)
         
 //            app.wait(for: .unknown, timeout: 20)
