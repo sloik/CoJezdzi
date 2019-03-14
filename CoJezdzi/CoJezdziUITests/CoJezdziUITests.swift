@@ -44,6 +44,16 @@ class CoJezdziUITests: XCTestCase {
         debugPrint("ddasda")
 
     }
+
+
+    func testExample3(){
+
+        let actions = 
+
+
+        let returnedObj = app.performCustomCommandNamed("getRandomRoute", object: actions)
+
+    }
 }
 extension XCTestCase {
     func wait(forElement element: XCUIElement, timeout: TimeInterval) {

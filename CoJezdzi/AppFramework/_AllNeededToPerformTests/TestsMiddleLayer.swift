@@ -8,6 +8,33 @@ import Overture
 //
 //
 
+func getRoutes(){
+    let routingActions = RoutingDestination.allCases.randomElement()
+
+    DispatchQueue.main.async {
+
+        Current
+        .reduxStore
+            .dispatch(RoutingAction(destination: routingActions!))
+    }
+
+
+
+}
+
+func getRandomRoute(){
+
+    SBTUITestTunnelServer.registerCustomCommandNamed("getRandomRoute") {
+
+        injectedObject in
+
+        DispatchQueue.main.async {
+            getRoutes()
+        }
+        return injectedObject
+    }
+}
+
 
 func setMocks(){
     SBTUITestTunnelServer.registerCustomCommandNamed("setMocks") {
