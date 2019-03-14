@@ -1,12 +1,14 @@
 
 import Foundation
 
-@testable import AppFramework
-
 extension WarsawApi {
     public static let mock = WarsawApi(
-        getTrams: { completion in completion(.succes(WarsawApiResultDto.mock |> coda))},
-        getBusses:{ completion in completion(.succes(WarsawApiResultDto.mock |> coda))})
+        getTrams: { completion in
+            completion(.succes(WarsawApiResultDto.mock |> coda))
+    },
+        getBusses:{ completion in
+            completion(.succes(WarsawApiResultDto.mock |> coda))}
+    )
     
     
     public static let errorMock = WarsawApi(

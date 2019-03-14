@@ -1,6 +1,7 @@
 import XCTest
 import SBTUITestTunnel
 import Overture
+import SnapshotTesting
 
 @testable import AppFramework
 
@@ -13,8 +14,10 @@ class TunelPoCTests: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
-        app.launchTunnel()
         app.performCustomCommandNamed("setMocks", object: nil)
+
+        app.launchTunnel(withOptions: ["mocks"],
+                         startupBlock: nil)
         
     }
     
@@ -36,25 +39,78 @@ class TunelPoCTests: XCTestCase {
 
         let labelsData = try! JSONEncoder().encode(labels)
 
-            let objReturnedByBlock = app
+            _ = app
                 .performCustomCommandNamed("dupak",
                                            object: labelsData)
 
 
         let box = app.staticTexts["LineId"].firstMatch
-        wait(forElement: box,timeout: 20)
+        wait(forElement: box,timeout: 200)
 
-        XCTAssertEqual(box.label, "FFFF")
+        assertSnapshot(
+            matching: app.windows.firstMatch.screenshot().image.removingStatusBar!,
+            as: .image
+        )
+    }
 
-        debugPrint("ddasda")
+    func test_inifinity() {
+        let gotoSceneCommand = "gotoSceneCommand"
+        let getCurrentScene = "getCurrentScene"
 
+
+        repeat {
+            // wiem dokad
+            let randomDestination = RoutingDestination.allCases.randomElement()!
+
+
+            // ustawic stan dla destynacji
+
+
+
+            // id tam!
+            _ = app.performCustomCommandNamed(gotoSceneCommand,
+                                              object:  randomDestination.rawValue)
+
+            sleep(5)
+
+            // funcRandomActionForDestiantion(randomDestination)
+            let currrentScene = app.performCustomCommandNamed(getCurrentScene,
+                                                              object: nil)
+            debugPrint(currrentScene)
+
+
+        } while true
     }
 }
 
-//extension XCTestCase {
-//    func wait(forElement element: XCUIElement, timeout: TimeInterval) {
-//        let predicate = NSPredicate(format: "exists == 1")
-//        expectation(for: predicate, evaluatedWith: element)
-//        waitForExpectations(timeout: timeout)
-//    }
-//}
+extension UIImage {
+
+    var removingStatusBar: UIImage? {
+        guard let cgImage = cgImage else {
+            return nil
+        }
+
+        let statusBarHeight = XCUIApplication()
+            .statusBars
+            .firstMatch
+            .screenshot()
+            .image
+            .size
+            .height
+
+        let yOffset = statusBarHeight * scale
+        let rect = CGRect(
+            x: 0,
+            y: Int(yOffset),
+            width: cgImage.width,
+            height: cgImage.height - Int(yOffset)
+        )
+
+        if let croppedCGImage = cgImage.cropping(to: rect) {
+            return UIImage(cgImage: croppedCGImage, scale: scale, orientation: imageOrientation)
+        }
+
+        return nil
+    }
+}
+

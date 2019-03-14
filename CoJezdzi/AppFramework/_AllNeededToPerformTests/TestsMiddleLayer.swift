@@ -8,57 +8,35 @@ import Overture
 //
 //
 
-func getRoutes(){
-    let routingActions = RoutingDestination.allCases.randomElement()
-
-    DispatchQueue.main.async {
-
-        Current
-        .reduxStore
-            .dispatch(RoutingAction(destination: routingActions!))
-    }
-
-
-
-}
-
-func getRandomRoute(){
-
-    SBTUITestTunnelServer.registerCustomCommandNamed("getRandomRoute") {
-
-        injectedObject in
-
-        DispatchQueue.main.async {
-            getRoutes()
-        }
-        return injectedObject
-    }
-}
-
 
 func setMocks(){
-    SBTUITestTunnelServer.registerCustomCommandNamed("setMocks") {
-        injectedObject in
+    #if DEBUG
+    #else
+    return
+    #endif
 
+    if ProcessInfo.processInfo.arguments.contains("mocks") {
+        Current = .mock
+    }
 
-        let labelsData = injectedObject as! Data
+    SBTUITestTunnelServer
+        .registerCustomCommandNamed("setMocks") { arg in
 
-        let labels = try! JSONDecoder()
-            .decode(Constants.UI.Settings.MenuLabels.self,
-                    from: labelsData)
+        let about   = \Environment.constants.ui.settings.menuLabels.aboutApp
+        let marks   = \Environment.constants.ui.settings.menuLabels.tramMarks
+        let aOnly   = \Environment.constants.ui.settings.menuLabels.bussesOnly
+        let tOnly   = \Environment.constants.ui.settings.menuLabels.tramsOnly
+        let filters = \Environment.constants.ui.settings.menuLabels.filters
 
-        DispatchQueue.main.async {
-            with(
-                &Current,
-                mut(\Environment.constants.ui.settings.menuLabels, labels)
-            )
+        // new instance modified based on .mock template
+        Current = with(.mock, concat(
+            set(about, "ciastko"),
+            set(marks, "pizza"),
+            set(aOnly, "AWTOBUS"),
+            set(tOnly, "TRAMŁAJNO"),
+            set(filters, "FILTRYS")))
 
-            Current
-                .reduxStore
-                .dispatch(RoutingAction(destination: .settings))
-        }
-
-        return injectedObject
+        return arg
     }
 }
 

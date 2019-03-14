@@ -48,7 +48,7 @@ class CoJezdziUITests: XCTestCase {
 
     func testExample3(){
 
-        let actions = 
+//        let actions = 
 
 
         let returnedObj = app.performCustomCommandNamed("getRandomRoute", object: actions)
