@@ -51,7 +51,7 @@ class MapScene: UIViewController {
         edgesForExtendedLayout = UIRectEdge()
 
         mapView.delegate = self as MKMapViewDelegate
-        mapView.showsTraffic = true
+        mapView.showsTraffic = Current.reduxStore.state.mapState.showTrafic
 
         zoomMapOnTheCity()
         zoomOnUserLocationIfNotShity()

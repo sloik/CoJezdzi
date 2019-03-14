@@ -1,10 +1,10 @@
 
-import Foundation
+import ReSwift
 
 extension Environment {
     public static let mock = Environment(
         dataProvider: .mock,
-        reduxStore: Current.reduxStore,
+        reduxStore:   Store<AppState>(reducer: appReducer, state: .mock, middleware: [M.Api]),
         persistance: .mock,
         scenes: Current.scenes,
         router: Current.router,
@@ -15,7 +15,7 @@ extension Environment {
 
     public static let errorMock = Environment(
         dataProvider: .errorMock,
-        reduxStore: Current.reduxStore,
+        reduxStore: Store<AppState>(reducer: appReducer, state: .mock, middleware: [M.Api]),
         persistance: .mock,
         scenes: Current.scenes,
         router: Current.router,

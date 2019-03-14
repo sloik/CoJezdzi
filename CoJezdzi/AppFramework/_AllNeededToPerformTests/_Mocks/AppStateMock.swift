@@ -12,8 +12,10 @@ extension VehicleState {
 }
 
 extension MapState {
-    public static let mock = MapState(currentTrams: .mock,
-                               currentBusses: .mock)
+    public static let mock = MapState(
+        showTrafic: false,
+        currentTrams: .mock,
+        currentBusses: .mock)
 }
 
 extension SelectedLinesState {

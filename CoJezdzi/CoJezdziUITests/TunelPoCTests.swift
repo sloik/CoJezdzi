@@ -112,5 +112,34 @@ extension UIImage {
 
         return nil
     }
+
+    var removingStatusBarAndTimerIndycator: UIImage? {
+        guard let cgImage = cgImage else {
+            return nil
+        }
+
+        let statusBarHeight = XCUIApplication()
+            .statusBars
+            .firstMatch
+            .screenshot()
+            .image
+            .size
+            .height
+
+        let yOffset = (statusBarHeight + 3) * scale
+        let rect = CGRect(
+            x: 0,
+            y: Int(yOffset),
+            width: cgImage.width,
+            height: cgImage.height - Int(yOffset)
+        )
+
+        if let croppedCGImage = cgImage.cropping(to: rect) {
+            return UIImage(cgImage: croppedCGImage, scale: scale, orientation: imageOrientation)
+        }
+
+        return nil
+    }
+
 }
 

@@ -1,7 +1,7 @@
 import XCTest
 import SBTUITestTunnel
 import Overture
-
+import SnapshotTesting
 
 @testable import AppFramework
 
@@ -11,7 +11,9 @@ class CoJezdziUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
-        app.launchTunnel()
+        app.performCustomCommandNamed("setMocks", object: nil)
+        app.launchTunnel(withOptions: ["mocks"],
+                         startupBlock: nil)
     }
     
     override func tearDown() {
@@ -45,14 +47,46 @@ class CoJezdziUITests: XCTestCase {
 
     }
 
+    func test_inifinity() {
+        let gotoSceneCommand = "gotoSceneCommand"
+        let getCurrentScene = "getCurrentScene"
 
-    func testExample3(){
 
-//        let actions = 
+        repeat {
+            // wiem dokad
+            let randomDestination = RoutingDestination.allCases.randomElement()!
 
 
-        let returnedObj = app.performCustomCommandNamed("getRandomRoute", object: actions)
+            // ustawic stan dla destynacji
 
+
+
+            // id tam!
+            _ = app.performCustomCommandNamed(gotoSceneCommand,
+                                              object:  randomDestination.rawValue)
+
+            sleep(5)
+
+            // funcRandomActionForDestiantion(randomDestination)
+            let currrentScene = app.performCustomCommandNamed(getCurrentScene,
+                                                              object: nil) as! String
+
+            let crd = RoutingDestination(rawValue: currrentScene)!
+
+            switch crd {
+            case .map:
+                assertSnapshot(matching: app.windows.firstMatch.screenshot().image.removingStatusBarAndTimerIndycator!, as: .image(precision: 0.975), named: "map")
+            case .settings:
+                assertSnapshot(matching: app.windows.firstMatch.screenshot().image.removingStatusBar!, as: .image, named: "settings")
+            case .linesFilter:
+               assertSnapshot(matching: app.windows.firstMatch.screenshot().image.removingStatusBar!, as: .image, named: "linesFilter")
+            case .aboutApp:
+                sleep(5)
+                assertSnapshot(matching: app.windows.firstMatch.screenshot().image.removingStatusBar!, as: .image(precision: 0.9), named: "aboutApp")
+            }
+
+
+        } while true
     }
 }
 extension XCTestCase {

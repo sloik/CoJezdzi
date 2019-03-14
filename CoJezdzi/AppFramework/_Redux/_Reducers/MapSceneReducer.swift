@@ -15,7 +15,8 @@ func mapSceneReducer(action: Action, state: MapState?) -> MapState {
 }
 
 func mapState(_ action: Action, _ ms: MapState?) -> MapState {
-    return ms ?? MapState(currentTrams : tramsReducer (action: action, state: ms?.currentTrams ),
+    return ms ?? MapState(showTrafic: ms?.showTrafic ?? true,
+                          currentTrams : tramsReducer (action: action, state: ms?.currentTrams ),
                           currentBusses: bussesReducer(action: action, state: ms?.currentBusses))
 }
 
