@@ -59,6 +59,7 @@ class MapScene: UIViewController {
         timeIndycatorView?.backgroundColor = UIColor.grape()
         
         triggerDataRefresh()
+        userSettingsButton.accessibilityIdentifier = "settings"
 
         Timer.scheduledTimer(withTimeInterval: WarsawApiConstants.RefreshRate,
                              repeats: true) { _ in
