@@ -15,49 +15,62 @@ public enum App {
             .useCaseFactory
             .loadPersistenState()
         
-        //:MARK ---------------------
         Current
             .useCaseFactory
             .loadPersistenState()
+    }
+}
+
+public extension App {
+    static public func registerTunel() {
+        #if DEBUG
+        #else
+        return
+        #endif
 
         setMocks()
-        
-        SBTUITestTunnelServer.registerCustomCommandNamed("dupak") {
-            injectedObject in
 
+        dupakCommand()
 
-            let labelsData = injectedObject as! Data
-
-            let labels = try! JSONDecoder()
-                .decode(Constants.UI.Settings.MenuLabels.self,
-                        from: labelsData)
-
-            DispatchQueue.main.async {
-                with(
-                    &Current,
-                    mut(\Environment.constants.ui.settings.menuLabels, labels)
-                )
-
-                Current
-                    .reduxStore
-                    .dispatch(RoutingAction(destination: .settings))
-            }
-
-
-            
-            return injectedObject
-        }
-        //=---------============================================
-        
         SBTUITestTunnelServer.registerCustomCommandNamed("print") {
             arg in
             print("------------------------------------------------------------------")
             return arg
         }
     }
-        
-        
-        static public func startServer(){
-            SBTUITestTunnelServer.takeOff()
-        }
+
+    static public func startServer(){
+        #if DEBUG
+        #else
+        return
+        #endif
+        SBTUITestTunnelServer.takeOff()
     }
+}
+
+func dupakCommand() {
+    SBTUITestTunnelServer.registerCustomCommandNamed("dupak") {
+        injectedObject in
+
+
+        let labelsData = injectedObject as! Data
+
+        let labels = try! JSONDecoder()
+            .decode(Constants.UI.Settings.MenuLabels.self,
+                    from: labelsData)
+
+        DispatchQueue.main.async {
+            with(
+                &Current,
+                mut(\Environment.constants.ui.settings.menuLabels, labels)
+            )
+
+            Current
+                .reduxStore
+                .dispatch(RoutingAction(destination: .settings))
+        }
+
+        return injectedObject
+    }
+}
+
