@@ -10,6 +10,15 @@ import Overture
 
 
 func setMocks(){
+    #if DEBUG
+    #else
+    return
+    #endif
+
+    if ProcessInfo.processInfo.arguments.contains("mocks") {
+        Current = .mock
+    }
+
     SBTUITestTunnelServer
         .registerCustomCommandNamed("setMocks") { arg in
 

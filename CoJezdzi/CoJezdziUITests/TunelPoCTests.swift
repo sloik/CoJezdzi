@@ -14,8 +14,10 @@ class TunelPoCTests: XCTestCase {
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
-        app.launchTunnel()
         app.performCustomCommandNamed("setMocks", object: nil)
+
+        app.launchTunnel(withOptions: ["mocks"],
+                         startupBlock: nil)
         
     }
     
@@ -43,7 +45,7 @@ class TunelPoCTests: XCTestCase {
 
 
         let box = app.staticTexts["LineId"].firstMatch
-        wait(forElement: box,timeout: 20)
+        wait(forElement: box,timeout: 200)
 
         assertSnapshot(
             matching: app.windows.firstMatch.screenshot().image.removingStatusBar!,
