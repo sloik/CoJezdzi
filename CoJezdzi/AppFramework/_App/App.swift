@@ -34,6 +34,13 @@ public enum App {
                     Current
                         .reduxStore
                         .dispatch(RoutingAction(destination: .aboutApp ))
+
+                case "dupak":
+                    Current
+                        .reduxStore
+                        .dispatch(RoutingAction(destination: .settings )
+
+
                 default:
                     break
                 }

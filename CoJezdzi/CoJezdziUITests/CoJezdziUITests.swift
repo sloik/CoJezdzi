@@ -25,20 +25,38 @@ class CoJezdziUITests: XCTestCase {
     
     func testExample() {
 
-        let env = Environment.mock
-//        with
+        let about   = \Environment.constants.ui.settings.menuLabels.aboutApp
+        let marks   = \Environment.constants.ui.settings.menuLabels.tramMarks
+        let aOnly   = \Environment.constants.ui.settings.menuLabels.bussesOnly
+        let tOnly   = \Environment.constants.ui.settings.menuLabels.tramsOnly
+        let filters = \Environment.constants.ui.settings.menuLabels.filters
 
-            let objReturnedByBlock = app.performCustomCommandNamed("dupak", object: "setCurrent")
-//        dupak = app.performCustomCommandNamed("print", object: nil)
-        
-//            app.wait(for: .unknown, timeout: 20)
-        
-        
-        //        App.stubGetTrams(to: [WarsawVehicleDto])
-        //        // Current.dataPrivider.getTrams(completion: @escaping ResultBlock)
-        //        // do "completion" wchodzi przekazyna arejka "to" [WarsawVehicleDto]
-        //
-        //
+        // new instance modified based on .mock template
+        Current = with(.mock, concat(
+            set(about, "about"),
+            set(marks, "marks"),
+            set(aOnly, "A"),
+            set(tOnly, "T"),
+            set(filters, "F")))
+
+        let env: Constants.UI.Settings.MenuLabels = with(
+            Constants.UI.Settings.MenuLabels(),
+            concat(
+                set(\Constants.UI.Settings.MenuLabels.aboutApp, "about about"),
+                set(\Constants.UI.Settings.MenuLabels.tramMarks, "marks marks"),
+                set(\Constants.UI.Settings.MenuLabels.bussesOnly, "AAA"),
+                set(\Constants.UI.Settings.MenuLabels.tramsOnly, "TTTT"),
+                set(\Constants.UI.Settings.MenuLabels.filters, "FFFF"))
+        )
+
+            let objReturnedByBlock = app
+                .performCustomCommandNamed("dupak",
+                                           object: env)
+
+
+//        wait(forElement: <#T##XCUIElement#>,
+//             timeout: <#T##TimeInterval#>)
+
     }
 }
 
