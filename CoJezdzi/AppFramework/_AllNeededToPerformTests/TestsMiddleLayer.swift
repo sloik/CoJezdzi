@@ -11,26 +11,27 @@ import Overture
 
 func setMocks(){
     SBTUITestTunnelServer.registerCustomCommandNamed("setMocks") {
-//        arg in
-//        Current = .mock
-//        return arg
-        arg in
+        injectedObject in
 
-        let about   = \Environment.constants.ui.settings.menuLabels.aboutApp
-        let marks   = \Environment.constants.ui.settings.menuLabels.tramMarks
-        let aOnly   = \Environment.constants.ui.settings.menuLabels.bussesOnly
-        let tOnly   = \Environment.constants.ui.settings.menuLabels.tramsOnly
-        let filters = \Environment.constants.ui.settings.menuLabels.filters
 
-        // new instance modified based on .mock template
-        Current = with(.mock, concat(
-            set(about, "ciastko"),
-            set(marks, "pizza"),
-            set(aOnly, "AWTOBUS"),
-            set(tOnly, "TRAMŁAJNO"),
-            set(filters, "FILTRYS")))
+        let labelsData = injectedObject as! Data
 
-        return arg
+        let labels = try! JSONDecoder()
+            .decode(Constants.UI.Settings.MenuLabels.self,
+                    from: labelsData)
+
+        DispatchQueue.main.async {
+            with(
+                &Current,
+                mut(\Environment.constants.ui.settings.menuLabels, labels)
+            )
+
+            Current
+                .reduxStore
+                .dispatch(RoutingAction(destination: .settings))
+        }
+
+        return injectedObject
     }
 }
 

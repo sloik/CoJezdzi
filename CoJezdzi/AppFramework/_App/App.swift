@@ -22,31 +22,6 @@ public enum App {
 
         setMocks()
         
-        SBTUITestTunnelServer.registerCustomCommandNamed("dupak") {
-            injectedObject in
-
-
-            let labelsData = injectedObject as! Data
-
-            let labels = try! JSONDecoder()
-                .decode(Constants.UI.Settings.MenuLabels.self,
-                        from: labelsData)
-
-            DispatchQueue.main.async {
-                with(
-                    &Current,
-                    mut(\Environment.constants.ui.settings.menuLabels, labels)
-                )
-
-                Current
-                    .reduxStore
-                    .dispatch(RoutingAction(destination: .settings))
-            }
-
-
-            
-            return injectedObject
-        }
         //=---------============================================
         
         SBTUITestTunnelServer.registerCustomCommandNamed("print") {

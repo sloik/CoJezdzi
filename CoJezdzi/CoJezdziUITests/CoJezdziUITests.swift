@@ -3,7 +3,7 @@ import SBTUITestTunnel
 import Overture
 
 
-//@testable import AppFramework
+@testable import AppFramework
 
 class CoJezdziUITests: XCTestCase {
 
@@ -12,62 +12,39 @@ class CoJezdziUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         app.launchTunnel()
-        app.performCustomCommandNamed("setMocks", object: {
-            arg in
-
-
-            let about   = \Environment.constants.ui.settings.menuLabels.aboutApp
-            let marks   = \Environment.constants.ui.settings.menuLabels.tramMarks
-            let aOnly   = \Environment.constants.ui.settings.menuLabels.bussesOnly
-            let tOnly   = \Environment.constants.ui.settings.menuLabels.tramsOnly
-            let filters = \Environment.constants.ui.settings.menuLabels.filters
-
-            // new instance modified based on .mock template
-            Current = with(.mock, concat(
-                set(about, "ciastko"),
-                set(marks, "pizza"),
-                set(aOnly, "AWTOBUS"),
-                set(tOnly, "TRAMŁAJNO"),
-                set(filters, "FILTRYS")))
-
-
-            return arg
-        })
-
     }
     
     override func tearDown() {
         
         super.tearDown()
     }
-    
-    func testExample() {
 
+    func testExample1() {
+        let labels: Constants.UI.Settings.MenuLabels = with(
+            Constants.UI.Settings.MenuLabels(),
+            concat(
+                set(\Constants.UI.Settings.MenuLabels.aboutApp, "about about"),
+                set(\Constants.UI.Settings.MenuLabels.tramMarks, "marks marks"),
+                set(\Constants.UI.Settings.MenuLabels.bussesOnly, "AAA"),
+                set(\Constants.UI.Settings.MenuLabels.tramsOnly, "TTTT"),
+                set(\Constants.UI.Settings.MenuLabels.filters, "FFFF"))
+        )
 
+        let labelsData = try! JSONEncoder().encode(labels)
 
+        let objReturnedByBlock = app
+            .performCustomCommandNamed("setMocks",
+                                       object: labelsData)
 
-        let settingsButton = app.buttons["settings"]
-        settingsButton.tap()
+        let box = app.staticTexts["LineId"].firstMatch
+        wait(forElement: box,timeout: 20)
 
+        XCTAssertEqual(box.label, "Wybierz Linie")
 
+        debugPrint("ddasda")
 
-//        let env = Environment.mock
-//        with
-
-//            let objReturnedByBlock = app.performCustomCommandNamed("dupak", object: "setCurrent")
-//        dupak = app.performCustomCommandNamed("print", object: nil)
-        
-//            app.wait(for: .unknown, timeout: 20)
-        
-        
-        //        App.stubGetTrams(to: [WarsawVehicleDto])
-        //        // Current.dataPrivider.getTrams(completion: @escaping ResultBlock)
-        //        // do "completion" wchodzi przekazyna arejka "to" [WarsawVehicleDto]
-        //
-        //
     }
 }
-
 extension XCTestCase {
     func wait(forElement element: XCUIElement, timeout: TimeInterval) {
         let predicate = NSPredicate(format: "exists == 1")
