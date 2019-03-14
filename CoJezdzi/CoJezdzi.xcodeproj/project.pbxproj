@@ -333,14 +333,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19885B0722037DC700B89DF3 /* AllNeededToPerformTests */ = {
+		19885B0722037DC700B89DF3 /* _AllNeededToPerformTests */ = {
 			isa = PBXGroup;
 			children = (
 				EF8C781621348BDE00C5BE5C /* _Mocks */,
 				EF8C781721348BE900C5BE5C /* _Functions */,
 				19885B0822037E0300B89DF3 /* TestsMiddleLayer.swift */,
 			);
-			path = AllNeededToPerformTests;
+			path = _AllNeededToPerformTests;
 			sourceTree = "<group>";
 		};
 		3D43D71D5790A8F11EC752A2 /* Pods */ = {
@@ -610,7 +610,7 @@
 		EF8C76FE2131989100C5BE5C /* AppFramework */ = {
 			isa = PBXGroup;
 			children = (
-				19885B0722037DC700B89DF3 /* AllNeededToPerformTests */,
+				19885B0722037DC700B89DF3 /* _AllNeededToPerformTests */,
 				EF47764F20A8DA57006D7107 /* _App */,
 				EFDF56EE20F00CF1009E419C /* _Functional */,
 				EFB5C2A4209C710200BB5855 /* _Misc */,
