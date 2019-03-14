@@ -10,11 +10,8 @@ import Overture
 
 
 func setMocks(){
-    SBTUITestTunnelServer.registerCustomCommandNamed("setMocks") {
-//        arg in
-//        Current = .mock
-//        return arg
-        arg in
+    SBTUITestTunnelServer
+        .registerCustomCommandNamed("setMocks") { arg in
 
         let about   = \Environment.constants.ui.settings.menuLabels.aboutApp
         let marks   = \Environment.constants.ui.settings.menuLabels.tramMarks
