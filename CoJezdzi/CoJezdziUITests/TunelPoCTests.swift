@@ -49,19 +49,8 @@ class TunelPoCTests: XCTestCase {
             matching: app.windows.firstMatch.screenshot().image.removingStatusBar!,
             as: .image
         )
-
-        debugPrint("ddasda")
-
     }
 }
-
-//extension XCTestCase {
-//    func wait(forElement element: XCUIElement, timeout: TimeInterval) {
-//        let predicate = NSPredicate(format: "exists == 1")
-//        expectation(for: predicate, evaluatedWith: element)
-//        waitForExpectations(timeout: timeout)
-//    }
-//}
 
 extension UIImage {
 
