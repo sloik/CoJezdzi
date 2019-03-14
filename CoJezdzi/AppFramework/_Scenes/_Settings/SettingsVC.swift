@@ -178,6 +178,7 @@ extension CellConfiguration {
         switch viewModel.title {
         case Current.constants.ui.settings.menuLabels.filters:
             cell.textLabel?.text = "Wybierz Linie"
+            cell.textLabel?.accessibilityIdentifier = "LineId"
             cell.detailTextLabel?.text = "Wszystkie"
             
             if latesState.selectedLines.lines.isEmpty == false {
