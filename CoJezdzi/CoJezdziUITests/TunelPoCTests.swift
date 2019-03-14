@@ -1,6 +1,7 @@
 import XCTest
 import SBTUITestTunnel
 import Overture
+import SnapshotTesting
 
 @testable import AppFramework
 
@@ -36,7 +37,7 @@ class TunelPoCTests: XCTestCase {
 
         let labelsData = try! JSONEncoder().encode(labels)
 
-            let objReturnedByBlock = app
+            _ = app
                 .performCustomCommandNamed("dupak",
                                            object: labelsData)
 
@@ -44,7 +45,10 @@ class TunelPoCTests: XCTestCase {
         let box = app.staticTexts["LineId"].firstMatch
         wait(forElement: box,timeout: 20)
 
-        XCTAssertEqual(box.label, "FFFF")
+        assertSnapshot(
+            matching: app.windows.firstMatch.screenshot().image.removingStatusBar!,
+            as: .image
+        )
 
         debugPrint("ddasda")
 
@@ -58,3 +62,35 @@ class TunelPoCTests: XCTestCase {
 //        waitForExpectations(timeout: timeout)
 //    }
 //}
+
+extension UIImage {
+
+    var removingStatusBar: UIImage? {
+        guard let cgImage = cgImage else {
+            return nil
+        }
+
+        let statusBarHeight = XCUIApplication()
+            .statusBars
+            .firstMatch
+            .screenshot()
+            .image
+            .size
+            .height
+
+        let yOffset = statusBarHeight * scale
+        let rect = CGRect(
+            x: 0,
+            y: Int(yOffset),
+            width: cgImage.width,
+            height: cgImage.height - Int(yOffset)
+        )
+
+        if let croppedCGImage = cgImage.cropping(to: rect) {
+            return UIImage(cgImage: croppedCGImage, scale: scale, orientation: imageOrientation)
+        }
+
+        return nil
+    }
+}
+

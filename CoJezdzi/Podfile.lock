@@ -14,6 +14,7 @@ PODS:
   - SBTUITestTunnel/Client (3.1.4)
   - SBTUITestTunnel/Server (3.1.4):
     - GCDWebServer (~> 3.0)
+  - SnapshotTesting (1.2.0)
 
 DEPENDENCIES:
   - Colours
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - ReSwift
   - SBTUITestTunnel/Client
   - SBTUITestTunnel/Server
+  - SnapshotTesting
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -35,6 +37,7 @@ SPEC REPOS:
     - R.swift.Library
     - ReSwift
     - SBTUITestTunnel
+    - SnapshotTesting
 
 SPEC CHECKSUMS:
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
@@ -45,7 +48,8 @@ SPEC CHECKSUMS:
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   SBTUITestTunnel: fd1c56bb3bad8f7dcbe4370e718ec397921a2137
+  SnapshotTesting: bd92e40aaef4a735f7950d42cb0b8ea7c3716b00
 
-PODFILE CHECKSUM: f7bfba079c6179917fa0c0a7db28afd8120d39b9
+PODFILE CHECKSUM: 7eed7e53a464e7c70bd6013f87cca8de4b4c4be0
 
 COCOAPODS: 1.5.3

@@ -2,6 +2,10 @@ platform :ios, '12.0'
 
 use_frameworks!
 
+def snapshot_pod
+    pod 'SnapshotTesting'
+end
+
 target 'EmptyTestApp' do
 end
 
@@ -14,6 +18,8 @@ target 'CoJezdziUITests' do
 
     pod 'SBTUITestTunnel/Client'
     pod 'Overture'
+
+    snapshot_pod
 end
 
 target 'AppFramework' do
