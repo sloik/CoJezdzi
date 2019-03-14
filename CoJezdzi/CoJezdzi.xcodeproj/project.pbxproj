@@ -28,6 +28,7 @@
 		BA5685501C763EA600D3B5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA56854E1C763EA600D3B5FE /* LaunchScreen.storyboard */; };
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
 		BA764A41223A5087004D6B16 /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
+		BA764A45223A79A6004D6B16 /* TunelPoCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA764A44223A79A6004D6B16 /* TunelPoCTests.swift */; };
 		EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */; };
 		EF44A2D52149AB4200E9866E /* SettingsSwitchReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */; };
 		EF7C7490218123700055AA2E /* Applicatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C748F218123700055AA2E /* Applicatives.swift */; };
@@ -194,6 +195,7 @@
 		BA5685611C763EA600D3B5FE /* CoJezdziUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoJezdziUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoJezdziUITests.swift; sourceTree = "<group>"; };
 		BA5685671C763EA600D3B5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA764A44223A79A6004D6B16 /* TunelPoCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TunelPoCTests.swift; sourceTree = "<group>"; };
 		BABDD4BA1C78CDD500152EBD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		CD42ECCB5B187F4E3A18FD53 /* Pods_TestsHelpper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestsHelpper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA228B8FE0B896B39BA5316 /* Pods-TestsHelpper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestsHelpper.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestsHelpper/Pods-TestsHelpper.release.xcconfig"; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 		BA5685641C763EA600D3B5FE /* CoJezdziUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BA764A44223A79A6004D6B16 /* TunelPoCTests.swift */,
 				BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */,
 				BA5685671C763EA600D3B5FE /* Info.plist */,
 			);
@@ -1313,6 +1316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */,
+				BA764A45223A79A6004D6B16 /* TunelPoCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
