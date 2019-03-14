@@ -58,7 +58,7 @@ class CoJezdziUITests: XCTestCase {
 
 
             // ustawic stan dla destynacji
-
+            
 
 
             // id tam!
