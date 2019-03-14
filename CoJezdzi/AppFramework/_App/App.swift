@@ -19,37 +19,39 @@ public enum App {
         Current
             .useCaseFactory
             .loadPersistenState()
-        
-        SBTUITestTunnelServer.registerCustomCommandNamed("dupak") {
-            injectedObject in
-            // this block will be invoked from app.performCustomCommandNamed()
-            
-            guard let command = injectedObject as? String else { return nil }
-            
-            DispatchQueue.main.async {
-                switch command {
-                case "setCurrent":
-                    Current = .mock
-                    
-                    Current
-                        .reduxStore
-                        .dispatch(RoutingAction(destination: .aboutApp ))
-                default:
-                    break
-                }
-            }
-            
-            return injectedObject
-        }
+
+        setMocks()
+
+//        SBTUITestTunnelServer.registerCustomCommandNamed("dupak") {
+//            injectedObject in
+//            // this block will be invoked from app.performCustomCommandNamed()
+//
+//            guard let command = injectedObject as? String else { return nil }
+//
+//            DispatchQueue.main.async {
+//                switch command {
+//                case "setCurrent":
+//                    Current = .mock
+//
+//                    Current
+//                        .reduxStore
+//                        .dispatch(RoutingAction(destination: .aboutApp ))
+//                default:
+//                    break
+//                }
+//            }
+//
+//            return injectedObject
+//        }
         //=---------============================================
         
-        SBTUITestTunnelServer.registerCustomCommandNamed("print") {
-            arg in
-            print("------------------------------------------------------------------")
-            return arg
-        }
+//        SBTUITestTunnelServer.registerCustomCommandNamed("print") {
+//            arg in
+//            print("------------------------------------------------------------------")
+//            return arg
+//        }
     }
-        
+
         
         static public func startServer(){
             SBTUITestTunnelServer.takeOff()
