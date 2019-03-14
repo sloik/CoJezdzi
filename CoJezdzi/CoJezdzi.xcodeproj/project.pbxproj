@@ -18,7 +18,6 @@
 		19885B0622037B3700B89DF3 /* AppStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8C76F32130955C00C5BE5C /* AppStateMock.swift */; };
 		19885B0922037E0300B89DF3 /* TestsMiddleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19885B0822037E0300B89DF3 /* TestsMiddleLayer.swift */; };
 		19D71E162200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D71E152200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift */; };
-		19D71E182200B660008063F3 /* line213.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D71E172200B660008063F3 /* line213.json */; };
 		20BB1E5811B2413AF4E6295A /* Pods_CoJezdziUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A27662A69C252904D23A433 /* Pods_CoJezdziUITests.framework */; };
 		7EAF57B028A0F8C9F6E1D4F6 /* Pods_CoJezdzi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 231A542086605390FBD456C7 /* Pods_CoJezdzi.framework */; };
 		825277A4BBCFF779B336D2FC /* Pods_AppFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426D4E978E637DA380C85D20 /* Pods_AppFrameworkTests.framework */; };
@@ -168,7 +167,6 @@
 		192924032201B5AB00D43D9B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		19885B0822037E0300B89DF3 /* TestsMiddleLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsMiddleLayer.swift; sourceTree = "<group>"; };
 		19D71E152200B5B7008063F3 /* WarsawApiConstantsDoNotTrack.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarsawApiConstantsDoNotTrack.swift.swift; sourceTree = "<group>"; };
-		19D71E172200B660008063F3 /* line213.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = line213.json; path = ../../../../line213.json; sourceTree = "<group>"; };
 		1A27662A69C252904D23A433 /* Pods_CoJezdziUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdziUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		231A542086605390FBD456C7 /* Pods_CoJezdzi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoJezdzi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B3868A6727FF570BA0B52F /* Pods-CoJezdziUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoJezdziUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -422,7 +420,6 @@
 		BA5685641C763EA600D3B5FE /* CoJezdziUITests */ = {
 			isa = PBXGroup;
 			children = (
-				19D71E172200B660008063F3 /* line213.json */,
 				BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */,
 				BA5685671C763EA600D3B5FE /* Info.plist */,
 			);
@@ -992,7 +989,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D71E182200B660008063F3 /* line213.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
