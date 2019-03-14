@@ -16,12 +16,15 @@ let tOnly   = \Environment.constants.ui.settings.menuLabels.tramsOnly
 let filters = \Environment.constants.ui.settings.menuLabels.filters
 
 // new instance modified based on .mock template
-Current = with(.mock, concat(
-                set(about, "about"),
-                set(marks, "marks"),
-                set(aOnly, "A"),
-                set(tOnly, "T"),
-                set(filters, "F")))
+Current = with(
+    .mock,
+    concat(
+        set(about, "about"),
+        set(marks, "marks"),
+        set(aOnly, "A"),
+        set(tOnly, "T"),
+        set(filters, "F"))
+)
 
 
 // do this after some time

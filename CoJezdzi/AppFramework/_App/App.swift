@@ -1,7 +1,7 @@
 
 import UIKit
 import SBTUITestTunnel
-
+import Overture
 
 import Colours
 
@@ -19,32 +19,31 @@ public enum App {
         Current
             .useCaseFactory
             .loadPersistenState()
+
+        setMocks()
         
         SBTUITestTunnelServer.registerCustomCommandNamed("dupak") {
             injectedObject in
-            // this block will be invoked from app.performCustomCommandNamed()
-            
-            guard let command = injectedObject as? String else { return nil }
-            
+
+
+            let labelsData = injectedObject as! Data
+
+            let labels = try! JSONDecoder()
+                .decode(Constants.UI.Settings.MenuLabels.self,
+                        from: labelsData)
+
             DispatchQueue.main.async {
-                switch command {
-                case "setCurrent":
-                    Current = .mock
-                    
-                    Current
-                        .reduxStore
-                        .dispatch(RoutingAction(destination: .aboutApp ))
+                with(
+                    &Current,
+                    mut(\Environment.constants.ui.settings.menuLabels, labels)
+                )
 
-                case "dupak":
-                    Current
-                        .reduxStore
-                        .dispatch(RoutingAction(destination: .settings )
-
-
-                default:
-                    break
-                }
+                Current
+                    .reduxStore
+                    .dispatch(RoutingAction(destination: .settings))
             }
+
+
             
             return injectedObject
         }

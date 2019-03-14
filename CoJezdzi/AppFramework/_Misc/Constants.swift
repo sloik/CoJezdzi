@@ -45,7 +45,7 @@ struct Constants {
         private(set) var map = Map()
 
         struct Settings {
-            struct MenuLabels { // at the moment only switch cells are connected to this ;)
+            struct MenuLabels: Codable { // at the moment only switch cells are connected to this ;)
                 private(set) var filters    = "Filtry"
                 private(set) var tramMarks  = "Poprzednie położenia"
                 private(set) var aboutApp   = "O Aplikacji"

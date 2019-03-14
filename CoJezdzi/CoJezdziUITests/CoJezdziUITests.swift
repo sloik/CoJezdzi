@@ -14,7 +14,7 @@ class CoJezdziUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         app.launchTunnel()
-        app.performCustomCommandNamed("setMock", object: nil)
+        app.performCustomCommandNamed("setMocks", object: nil)
         
     }
     
@@ -24,22 +24,7 @@ class CoJezdziUITests: XCTestCase {
     }
     
     func testExample() {
-
-        let about   = \Environment.constants.ui.settings.menuLabels.aboutApp
-        let marks   = \Environment.constants.ui.settings.menuLabels.tramMarks
-        let aOnly   = \Environment.constants.ui.settings.menuLabels.bussesOnly
-        let tOnly   = \Environment.constants.ui.settings.menuLabels.tramsOnly
-        let filters = \Environment.constants.ui.settings.menuLabels.filters
-
-        // new instance modified based on .mock template
-        Current = with(.mock, concat(
-            set(about, "about"),
-            set(marks, "marks"),
-            set(aOnly, "A"),
-            set(tOnly, "T"),
-            set(filters, "F")))
-
-        let env: Constants.UI.Settings.MenuLabels = with(
+        let labels: Constants.UI.Settings.MenuLabels = with(
             Constants.UI.Settings.MenuLabels(),
             concat(
                 set(\Constants.UI.Settings.MenuLabels.aboutApp, "about about"),
@@ -49,13 +34,19 @@ class CoJezdziUITests: XCTestCase {
                 set(\Constants.UI.Settings.MenuLabels.filters, "FFFF"))
         )
 
+        let labelsData = try! JSONEncoder().encode(labels)
+
             let objReturnedByBlock = app
                 .performCustomCommandNamed("dupak",
-                                           object: env)
+                                           object: labelsData)
 
 
-//        wait(forElement: <#T##XCUIElement#>,
-//             timeout: <#T##TimeInterval#>)
+        let box = app.staticTexts["LineId"].firstMatch
+        wait(forElement: box,timeout: 20)
+
+        XCTAssertEqual(box.label, "FFFF")
+
+        debugPrint("ddasda")
 
     }
 }
