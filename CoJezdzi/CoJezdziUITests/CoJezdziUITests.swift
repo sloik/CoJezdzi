@@ -6,7 +6,6 @@ class CoJezdziUITests: XCTestCase {
     var application: Void
     
 
-    
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
@@ -21,19 +20,24 @@ class CoJezdziUITests: XCTestCase {
     }
     
     func testExample() {
-        
 
+
+        XCUIApplication().children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .table).element.tap()
+                
+
+        
+//
 //            let objReturnedByBlock = app.performCustomCommandNamed("dupak", object: "setCurrent")
 //        dupak = app.performCustomCommandNamed("print", object: nil)
-        
+//
 //            app.wait(for: .unknown, timeout: 20)
-        
-        
-        //        App.stubGetTrams(to: [WarsawVehicleDto])
-        //        // Current.dataPrivider.getTrams(completion: @escaping ResultBlock)
-        //        // do "completion" wchodzi przekazyna arejka "to" [WarsawVehicleDto]
-        //
-        //
+//
+//
+//                App.stubGetTrams(to: [WarsawVehicleDto])
+//                 Current.dataPrivider.getTrams(completion: @escaping ResultBlock)
+//                 do "completion" wchodzi przekazyna arejka "to" [WarsawVehicleDto]
+
+
     }
 }
 
