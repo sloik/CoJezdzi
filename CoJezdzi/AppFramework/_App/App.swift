@@ -33,6 +33,7 @@ public extension App {
         dupakCommand()
 
         gotoSceneCommand()
+        getCurrentScene()
 
         SBTUITestTunnelServer.registerCustomCommandNamed("print") {
             arg in
@@ -90,6 +91,13 @@ func gotoSceneCommand() {
         }
 
         return injectedObject
+    }
+}
+
+func getCurrentScene() {
+    SBTUITestTunnelServer
+        .registerCustomCommandNamed("getCurrentScene") { _ in
+            return Current.reduxStore.state.routingState.scene.rawValue as NSString
     }
 }
 

@@ -54,15 +54,29 @@ class TunelPoCTests: XCTestCase {
     }
 
     func test_inifinity() {
-        let command = "gotoSceneCommand"
+        let gotoSceneCommand = "gotoSceneCommand"
+        let getCurrentScene = "getCurrentScene"
+
+
         repeat {
-            let randomDestination = RoutingDestination.allCases.randomElement()!.rawValue
+            // wiem dokad
+            let randomDestination = RoutingDestination.allCases.randomElement()!
 
-            _ = app.performCustomCommandNamed(command,
-                                              object:  randomDestination)
 
+            // ustawic stan dla destynacji
+
+
+
+            // id tam!
+            _ = app.performCustomCommandNamed(gotoSceneCommand,
+                                              object:  randomDestination.rawValue)
 
             sleep(5)
+
+            // funcRandomActionForDestiantion(randomDestination)
+            let currrentScene = app.performCustomCommandNamed(getCurrentScene,
+                                                              object: nil)
+            debugPrint(currrentScene)
 
 
         } while true
