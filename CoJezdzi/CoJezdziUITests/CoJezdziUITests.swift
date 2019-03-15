@@ -24,20 +24,13 @@ class CoJezdziUITests: XCTestCase {
 
 
     func test_inifinity() {
-        var count = 0
         repeat {
-            count += 1
-
-
             randomDestination
                 .map(navigateTo)
                 .flatMap { sleep(5) }
                 .flatMap {_ in currentScene }
                 .map{ snapshot($0) }
 
-
-
-            debugPrint("😎 \(count)")
         } while true
     }
 }
