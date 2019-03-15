@@ -24,7 +24,6 @@ class CoJezdziUITests: XCTestCase {
 
 
     func test_inifinity() {
-        record = true
         var count = 0
         repeat {
             count += 1
