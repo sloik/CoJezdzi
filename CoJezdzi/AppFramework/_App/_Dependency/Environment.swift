@@ -11,7 +11,7 @@ struct Environment {
     private(set) var router = GamePlayAppRouter()
     private(set) var userDefaults = UserDefaults.standard
     
-    private(set) var constants = Constants()
+    var constants = Constants()
     
     private(set) var useCaseFactory = UseCaseFactory()
 }

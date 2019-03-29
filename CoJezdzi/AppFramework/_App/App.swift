@@ -63,7 +63,7 @@ func dupakCommand() {
                     from: labelsData)
 
         DispatchQueue.main.async {
-            with(
+            update(
                 &Current,
                 mut(\Environment.constants.ui.settings.menuLabels, labels)
             )

@@ -29,6 +29,8 @@
 		BA5685661C763EA600D3B5FE /* CoJezdziUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5685651C763EA600D3B5FE /* CoJezdziUITests.swift */; };
 		BA764A41223A5087004D6B16 /* AppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8C76FD2131989100C5BE5C /* AppFramework.framework */; };
 		BA764A45223A79A6004D6B16 /* TunelPoCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA764A44223A79A6004D6B16 /* TunelPoCTests.swift */; };
+		EF1600C4224EB18700269327 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1600C3224EB18700269327 /* HTTPStatusCodes.swift */; };
+		EF1600C6224EB18D00269327 /* HTTPStatusCodes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1600C5224EB18D00269327 /* HTTPStatusCodes+Extensions.swift */; };
 		EF1E162B21431B9000A8E967 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */; };
 		EF44A2D52149AB4200E9866E /* SettingsSwitchReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44A2D42149AB4200E9866E /* SettingsSwitchReducerTests.swift */; };
 		EF7C7490218123700055AA2E /* Applicatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7C748F218123700055AA2E /* Applicatives.swift */; };
@@ -207,6 +209,8 @@
 		EF0DC0E420B8A59C000BF4DB /* SettingsStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStateTests.swift; sourceTree = "<group>"; };
 		EF0DC0E620B8C102000BF4DB /* THC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THC.swift; sourceTree = "<group>"; };
 		EF0DC0E820B95989000BF4DB /* SettingsDidRestoreAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDidRestoreAction.swift; sourceTree = "<group>"; };
+		EF1600C3224EB18700269327 /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodes.swift; sourceTree = "<group>"; };
+		EF1600C5224EB18D00269327 /* HTTPStatusCodes+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPStatusCodes+Extensions.swift"; sourceTree = "<group>"; };
 		EF1E162A21431B9000A8E967 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		EF3BB72520CC042A004BD9C3 /* Scenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenes.swift; sourceTree = "<group>"; };
 		EF426699209262340076238D /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -446,6 +450,15 @@
 			path = _Persistence;
 			sourceTree = "<group>";
 		};
+		EF1600C2224EB16800269327 /* _Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				EF1600C3224EB18700269327 /* HTTPStatusCodes.swift */,
+				EF1600C5224EB18D00269327 /* HTTPStatusCodes+Extensions.swift */,
+			);
+			path = _Dependencies;
+			sourceTree = "<group>";
+		};
 		EF1E162821431A1700A8E967 /* _UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -624,6 +637,7 @@
 			children = (
 				19885B0722037DC700B89DF3 /* _AllNeededToPerformTests */,
 				EF47764F20A8DA57006D7107 /* _App */,
+				EF1600C2224EB16800269327 /* _Dependencies */,
 				EFDF56EE20F00CF1009E419C /* _Functional */,
 				EFB5C2A4209C710200BB5855 /* _Misc */,
 				EF42670F2097B9020076238D /* _Networking */,
@@ -927,7 +941,6 @@
 				TargetAttributes = {
 					BA5685411C763EA600D3B5FE = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = KF62RW5R42;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -973,6 +986,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				Base,
 			);
 			mainGroup = BA5685391C763EA600D3B5FE;
@@ -1071,11 +1085,10 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
-				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
@@ -1084,13 +1097,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoJezdzi/Pods-CoJezdzi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6A16703F009F8ADF718EF658 /* [CP] Check Pods Manifest.lock */ = {
@@ -1179,26 +1191,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
-				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
-				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppFrameworkTests/Pods-AppFrameworkTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97C69EC753512902E7B9AB12 /* [CP] Embed Pods Frameworks */ = {
@@ -1209,12 +1213,11 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapshotTesting/SnapshotTesting.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
-				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 			);
@@ -1226,13 +1229,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapshotTesting.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoJezdziUITests/Pods-CoJezdziUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BA724EEC1CB62CB300ACC84E /* Bup Build Number */ = {
@@ -1332,6 +1334,7 @@
 				EF8C776A2131A0D700C5BE5C /* GlobalUtilFunctions.swift in Sources */,
 				EF8C77682131A0AA00C5BE5C /* WarsawApi.swift in Sources */,
 				EF8C77782131A16300C5BE5C /* SelectedLineAddAction.swift in Sources */,
+				EF1600C4224EB18700269327 /* HTTPStatusCodes.swift in Sources */,
 				EF8C778E2131A30700C5BE5C /* GamePlayAppRouter.swift in Sources */,
 				EF8C779C2131B20A00C5BE5C /* MapScene.swift in Sources */,
 				19885B0022037B2000B89DF3 /* THC.swift in Sources */,
@@ -1340,6 +1343,7 @@
 				EF8C776E2131A0FC00C5BE5C /* TDataAnnotation.swift in Sources */,
 				EF8C779D2131B21400C5BE5C /* MapScene+CLLocationManagerDelegate.swift in Sources */,
 				EF8C77702131A14800C5BE5C /* FetchBussesAction.swift in Sources */,
+				EF1600C6224EB18D00269327 /* HTTPStatusCodes+Extensions.swift in Sources */,
 				19885B0522037B3400B89DF3 /* EnvironmentMock.swift in Sources */,
 				19885B0922037E0300B89DF3 /* TestsMiddleLayer.swift in Sources */,
 				EF8C779F2131B2C500C5BE5C /* App.swift in Sources */,
@@ -1606,14 +1610,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ED4434B8AD38B9CBA9863A10 /* Pods-CoJezdzi.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = KF62RW5R42;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoJezdzi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(FRAMEWORK_SEARCH_PATHS";
@@ -1622,7 +1625,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1630,14 +1633,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D66D0B1FD17CF79FF08D2473 /* Pods-CoJezdzi.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = KF62RW5R42;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CoJezdzi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(FRAMEWORK_SEARCH_PATHS";
@@ -1645,7 +1647,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1653,13 +1655,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39B84990EA8BA6E3E3D665CD /* Pods-CoJezdziUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 922J9E2T69;
 				INFOPLIST_FILE = CoJezdziUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.lukasz.stocki.CoJezdziUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = CoJezdzi;
 				USES_XCTRUNNER = YES;
 			};
@@ -1669,13 +1670,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39B3868A6727FF570BA0B52F /* Pods-CoJezdziUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 922J9E2T69;
 				INFOPLIST_FILE = CoJezdziUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(FRAMEWORK_SEARCH_PATHS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.lukasz.stocki.CoJezdziUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = CoJezdzi;
 				USES_XCTRUNNER = YES;
 			};
@@ -1713,7 +1713,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1749,7 +1749,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.edward.AppFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1760,7 +1760,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E996DF87DB9C65FF4F1EF448 /* Pods-AppFrameworkTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1780,7 +1779,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.edward.AppFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmptyTestApp.app/EmptyTestApp";
 			};
@@ -1790,7 +1789,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8CC16180D6C76EA33E0538EE /* Pods-AppFrameworkTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1808,7 +1806,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.edward.AppFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmptyTestApp.app/EmptyTestApp";
 			};
@@ -1837,7 +1835,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.edward.EmptyTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1863,7 +1861,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.edward.EmptyTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1896,7 +1894,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1929,7 +1927,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.edward.TestsHelpper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

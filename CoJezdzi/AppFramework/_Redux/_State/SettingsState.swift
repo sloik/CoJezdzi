@@ -79,13 +79,13 @@ struct SettingsState: StateType, Equatable, Codable {
     
     // MARK: -
     struct FilterState: StateType, Equatable, Codable {
-        private(set) var tramOnly         : Filter
-        private(set) var busOnly          : Filter
-        private(set) var previousLocations: Filter
+        var tramOnly         : Filter
+        var busOnly          : Filter
+        var previousLocations: Filter
     }
     
     // MARK: -
     private(set) var selectedLines: SelectedLinesState
-    private(set) var switches: FilterState
+    var switches: FilterState
     let aboutApp: String = "https://avantapp.wordpress.com/co-jezdzi/"
 }

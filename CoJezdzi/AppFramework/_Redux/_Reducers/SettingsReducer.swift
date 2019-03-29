@@ -16,13 +16,13 @@ func settingsReducer(action: Action, state: SettingsState?) -> SettingsState {
 }
 
 func selectedLinesReducer(action: Action, state: SelectedLinesState?) -> SelectedLinesState {
-    let state = state ?? SelectedLinesState(lines: [])
+    let state: SelectedLinesState = state ?? SelectedLinesState(lines: [])
     
     switch action {
     case let action as SelectedLineAddAction:
         return with(
             state,
-            set(\.lines, state.lines.union([LineInfo(name: action.line)]))
+            set(\SelectedLinesState.lines, state.lines.union([LineInfo(name: action.line)]))
         )
         
     case let action as SelectedLineRemoveAction:
@@ -63,7 +63,7 @@ func updateSwitches(_ state : SettingsState.FilterState,
         return with(
             state,
             concat(
-                set(\.tramOnly, .tram(on: on)),
+                set(\SettingsState.FilterState.tramOnly, .tram(on: on)),
                 set(\.busOnly,  .bus(on: on ? false : state.busOnly.isOn))
             )
         )

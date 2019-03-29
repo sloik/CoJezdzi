@@ -10,11 +10,13 @@ enum RoutingDestination: String, Equatable, CaseIterable {
 }
 
 struct RoutingState: StateType {
-    private(set) var scene: RoutingDestination
-    private(set) var destination: RoutingDestination?
+    var scene: RoutingDestination
+    var destination: RoutingDestination?
     
-    weak private(set) var sceneVC: UIViewController?
-    
+    var sceneVC: UIViewController?
+}
+
+extension RoutingState {
     init(scene: RoutingDestination = .map, destitnation: RoutingDestination?, sceneVC: UIViewController? ) {
         self.scene = scene
         self.destination = destitnation

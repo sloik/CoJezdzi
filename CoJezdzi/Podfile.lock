@@ -2,24 +2,22 @@ PODS:
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
-  - GCDWebServer (3.5.0):
-    - GCDWebServer/Core (= 3.5.0)
-  - GCDWebServer/Core (3.5.0)
-  - HTTPStatusCodes (3.2.0)
-  - Overture (0.3.1)
-  - R.swift (5.0.0):
+  - GCDWebServer (3.5.2):
+    - GCDWebServer/Core (= 3.5.2)
+  - GCDWebServer/Core (3.5.2)
+  - Overture (0.5.0)
+  - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.0)
-  - ReSwift (4.0.1)
-  - SBTUITestTunnel/Client (3.1.4)
-  - SBTUITestTunnel/Server (3.1.4):
+  - ReSwift (4.1.1)
+  - SBTUITestTunnel/Client (3.2.1)
+  - SBTUITestTunnel/Server (3.2.1):
     - GCDWebServer (~> 3.0)
-  - SnapshotTesting (1.2.0)
+  - SnapshotTesting (1.4.0)
 
 DEPENDENCIES:
   - Colours
   - GCDWebServer
-  - HTTPStatusCodes
   - Overture
   - R.swift
   - ReSwift
@@ -31,7 +29,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Colours
     - GCDWebServer
-    - HTTPStatusCodes
     - Overture
     - R.swift
     - R.swift.Library
@@ -41,15 +38,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
-  GCDWebServer: 613cda7b8545b6a7168f22167c683470f4f31beb
-  HTTPStatusCodes: 69f50d229c4b5d6dcb48fad9c86e32ded975bcd3
-  Overture: f7b76b2c43a49bd48f7e116313dd99e91d11dd83
-  R.swift: f88c7d7d48a2be4dffa132dde1b3d389620310eb
+  GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
+  Overture: 2e6252ead5da6d3347f758047f27a31cb469d59d
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
-  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
-  SBTUITestTunnel: fd1c56bb3bad8f7dcbe4370e718ec397921a2137
-  SnapshotTesting: bd92e40aaef4a735f7950d42cb0b8ea7c3716b00
+  ReSwift: d925be0033558f55bd73d92869961230dfe19d52
+  SBTUITestTunnel: 96a9a45b8a0b00cbf99e076888d16e26850ce6e2
+  SnapshotTesting: f50ca26f5f9dd8b26e158289ea1c2a89e2e54742
 
-PODFILE CHECKSUM: 7eed7e53a464e7c70bd6013f87cca8de4b4c4be0
+PODFILE CHECKSUM: e7ad627387b6fd6952a37316937df5fce3c809a2
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

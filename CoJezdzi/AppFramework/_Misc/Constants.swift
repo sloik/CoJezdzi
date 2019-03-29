@@ -46,17 +46,17 @@ struct Constants {
 
         struct Settings {
             struct MenuLabels: Codable { // at the moment only switch cells are connected to this ;)
-                private(set) var filters    = "Filtry"
-                private(set) var tramMarks  = "Poprzednie położenia"
-                private(set) var aboutApp   = "O Aplikacji"
-                private(set) var tramsOnly  = "Tylko 🚋"
-                private(set) var bussesOnly = "Tylko 🚍"
+                var filters    = "Filtry"
+                var tramMarks  = "Poprzednie położenia"
+                var aboutApp   = "O Aplikacji"
+                var tramsOnly  = "Tylko 🚋"
+                var bussesOnly = "Tylko 🚍"
             }
-            private(set) var menuLabels = MenuLabels()
+            var menuLabels = MenuLabels()
         }
-        private(set) var settings = Settings()
+        var settings = Settings()
     }
-     private(set) var ui = UI()
+    var ui = UI()
 
     struct Coordinate {
         private(set) var center = CLLocationCoordinate2D(latitude: 52.2429341157752, longitude: 21.0083538438228) // Warsaw

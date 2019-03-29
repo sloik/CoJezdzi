@@ -29,12 +29,12 @@ func setMocks(){
         let filters = \Environment.constants.ui.settings.menuLabels.filters
 
         // new instance modified based on .mock template
-        Current = with(.mock, concat(
-            set(about, "ciastko"),
-            set(marks, "pizza"),
-            set(aOnly, "AWTOBUS"),
-            set(tOnly, "TRAMŁAJNO"),
-            set(filters, "FILTRYS")))
+//        Current = with(.mock, concat(
+//            set(about, "ciastko"),
+//            set(marks, "pizza"),
+//            set(aOnly, "AWTOBUS"),
+//            set(tOnly, "TRAMŁAJNO"),
+//            set(filters, "FILTRYS")))
 
         return arg
     }

@@ -2,6 +2,10 @@ platform :ios, '12.0'
 
 use_frameworks!
 
+def pod_overture
+  pod 'Overture'
+end
+
 def snapshot_pod
     pod 'SnapshotTesting'
 end
@@ -17,28 +21,27 @@ target 'CoJezdziUITests' do
     inherit! :search_paths
 
     pod 'SBTUITestTunnel/Client'
-    pod 'Overture'
+    pod_overture
 
     snapshot_pod
 end
 
 target 'AppFramework' do
     pod 'Colours'
-    pod 'HTTPStatusCodes'
     pod 'ReSwift'
     pod 'R.swift'
-    pod 'Overture'
+    pod_overture
     pod 'SBTUITestTunnel/Server'
     pod 'GCDWebServer', :inhibit_warnings => true
 end
 
 target 'AppFrameworkTests' do
-    pod 'Overture'
+    pod_overture
     pod 'ReSwift'
 end
 
 target 'TestsHelpper' do
-    pod 'Overture'
+    pod_overture
     pod 'ReSwift'
 end
 
