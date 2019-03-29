@@ -22,7 +22,7 @@ public enum App {
 }
 
 public extension App {
-    static public func registerTunel() {
+    static func registerTunel() {
         #if DEBUG
         #else
         return
@@ -42,7 +42,7 @@ public extension App {
         }
     }
 
-    static public func startServer(){
+    static func startServer(){
         #if DEBUG
         #else
         return

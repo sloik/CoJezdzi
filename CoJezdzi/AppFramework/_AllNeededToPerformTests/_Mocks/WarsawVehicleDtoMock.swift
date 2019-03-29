@@ -1,8 +1,6 @@
 
 import Foundation
 
-@testable import AppFramework
-
 extension WarsawVehicleDto {
     public static let mock = WarsawVehicleDto(
         latitude: 52.2987938,

@@ -1,4 +1,3 @@
-@testable import AppFramework
 
 import Foundation
 

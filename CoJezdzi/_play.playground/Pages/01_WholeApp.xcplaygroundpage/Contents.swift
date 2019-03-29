@@ -13,6 +13,4 @@ let (parent, _) = playgroundControllers(device: .phone5_5inch,
                                         child: window.rootViewController!)
 PlaygroundPage.current.liveView = parent
 
-type(of: \RoutingState.destination)
-
 //:[ToC](ToC) | [Previous](@previous) | [Next](@next)
