@@ -4,7 +4,16 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Build'
-        sh 'echo $(pwd)'
+        sh '''echo $(pwd)
+cd CoJezdzi
+
+
+xcrun xcodebuild -workspace CoJezdzi.xcworkspace \\
+
+    -scheme CoJezdzi \\
+    -sdk iphoneos \\
+    CODE_SIGN_IDENTITY="" \\ 
+    CODE_SIGNING_REQUIRED=NO'''
       }
     }
 
